@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoken English Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Speak Fluent</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="notes.php">Notes</a></li>
+                <li><a href="notes2.php">Notes-2</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <li><a href="admin.php">Admin</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+        <div class="container">
+            <h1>Welcome to SpeakFluent</h1>
+            <p>Master the art of spoken English with our comprehensive courses, practice tools, and downloadable notes. Start your journey today!</p>
+            <a href="notes.php" class="btn-primary">Explore Courses</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose SpeakFluent?</h2>
+            <div class="features-list">
+                <div class="feature">
+                    <h3>Comprehensive Courses</h3>
+                    <p>Tailored for beginners to advanced learners, covering all aspects of spoken English.</p>
+                </div>
+                <div class="feature">
+                    <h3>Downloadable Notes</h3>
+                    <p>Access high-quality notes to reinforce your learning and improve your skills.</p>
+                </div>
+                <div class="feature">
+                    <h3>Interactive Practice</h3>
+                    <p>Engage in speaking, listening, and grammar exercises to achieve fluency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+    <footer>
+        <p>&copy; <b>2024 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+                                 <?php
+include('db.php');
+// कनेक्शन बनाएं
+$conn = new mysqli($host, $username, $password, $database);
+
+// कनेक्शन चेक करें
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// `visit_count` को 1 से बढ़ाएं
+$sql = "UPDATE visitors SET visit_count = visit_count + 1 WHERE id = 1";
+if (!$conn->query($sql)) {
+    die("Error updating count: " . $conn->error);
+}
+
+// करंट काउंट को प्राप्त करें
+$result = $conn->query("SELECT visit_count FROM visitors WHERE id = 1");
+$row = $result->fetch_assoc();
+
+// काउंट को दिखाएं
+echo "Total Visitors: " . $row['visit_count'];
+
+// कनेक्शन बंद करें
+$conn->close();
+?>  
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
