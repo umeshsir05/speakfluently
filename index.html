@@ -3,147 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speak Fluently - Master Spoken English</title>
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <!-- Our CSS File -->
+    <title>Spoken English Website</title>
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Our JavaScript File -->
-    <script src="menu.js" defer></script>
+    <link rel="stylesheet" href="script.js">
 </head>
 <body>
-    <!-- Header with Enhanced Menu -->
     <header>
-        <div class="container header-container">
-            <div class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-comments"></i>
-                </div>
-                <div class="logo-text">
-                    <h1>Speak Fluently</h1>
-                    <p>Master Spoken English</p>
-                </div>
-            </div>
-            
-            <!-- Desktop Menu -->
-            <nav class="nav-menu">
-                <ul class="main-nav">
-                    <li><a href="index.html" class="active"><i class="fas fa-home"></i>Home</a></li>
-                    <li><a href="about.html"><i class="fas fa-info-circle"></i>About</a></li>
-                    <li><a href="notes.html"><i class="fas fa-clock"></i>Tenses</a></li>
-                    <li><a href="notes2.html"><i class="fas fa-sticky-note"></i>Notes-2</a></li>
-                    <li><a href="grammar.html"><i class="fas fa-book-open"></i>Grammar</a></li>
-                    <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
-                    <li><a href="admin.html"><i class="fas fa-user-cog"></i>Admin</a></li>
-                    <div class="menu-indicator"></div>
-                </ul>
-                
-                <div class="menu-cta">
-                    <a href="notes.php" class="cta-btn">
-                        <i class="fas fa-rocket"></i>Start Learning
-                    </a>
-                </div>
-            </nav>
-            
-            <!-- Mobile Menu Toggle -->
-            <div class="menu-toggle">
-                <span>&#9776;</span>
-            </div>
+        <div class="logo">
+            <h1>Speak Fluently</h1>
         </div>
-        
-        <!-- Mobile Menu -->
-        <div class="mobile-menu">
-            <ul class="mobile-nav">
-                <li><a href="index.html" class="active"><i class="fas fa-home"></i>Home</a></li>
-                <li><a href="about.html"><i class="fas fa-info-circle"></i>About</a></li>
-                <li><a href="notes.html"><i class="fas fa-clock"></i>Tenses</a></li>
-                <li><a href="notes2.html"><i class="fas fa-sticky-note"></i>Notes-2</a></li>
-                <li><a href="grammar.html"><i class="fas fa-book-open"></i>Grammar</a></li>
-                <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
-                <li><a href="admin.html"><i class="fas fa-user-cog"></i>Admin</a></li>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="notes.html">Tenses</a></li>
+                <li><a href="notes2.html">Notes-2</a></li>
+
+<li><a href="grammar.html">Grammer</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admin.html">Admin</a></li>
             </ul>
-            
-            <div class="mobile-cta">
-                <a href="notes.php" class="cta-btn" style="width: 100%; justify-content: center;">
-                    <i class="fas fa-rocket"></i>Start Learning Now
-                </a>
-            </div>
+        </nav>
+        <div class="menu-toggle">
+            <span>&#9776;</span>
         </div>
     </header>
-
-    <!-- Hero Section -->
     <main>
         <section class="hero">
-            <div class="container">
-                <div class="hero-content fade-in">
-                    <h3>Welcome to</h3>
-                    <h1>Speak Fluently</h1>
-                    <p>Master the art of spoken English with our comprehensive courses, practice tools, and downloadable notes. Start your journey towards confidence and fluency today!</p>
-                    <a href="notes.php" class="btn-primary fade-in delay-1">
-                        <i class="fas fa-play-circle"></i>Start Free Trial
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="features">
-            <div class="container">
-                <div class="section-title fade-in">
-                    <h2>Why Choose Speak Fluently?</h2>
-                    <p>Our comprehensive approach ensures you gain confidence in spoken English</p>
-                </div>
-                <div class="features-list">
-                    <div class="feature fade-in delay-1">
-                        <div class="feature-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3>Comprehensive Courses</h3>
-                        <p>Tailored for beginners to advanced learners, covering all aspects of spoken English with practical examples and real-world scenarios.</p>
-                    </div>
-                    <div class="feature fade-in delay-2">
-                        <div class="feature-icon">
-                            <i class="fas fa-download"></i>
-                        </div>
-                        <h3>Downloadable Notes</h3>
-                        <p>Access high-quality, well-organized notes to reinforce your learning and improve your skills at your own pace.</p>
-                    </div>
-                    <div class="feature fade-in delay-3">
-                        <div class="feature-icon">
-                            <i class="fas fa-microphone-alt"></i>
-                        </div>
-                        <h3>Interactive Practice</h3>
-                        <p>Engage in speaking, listening, and grammar exercises with instant feedback to achieve fluency faster.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h1><i class="fas fa-comments"></i>Speak Fluently</h1>
+  <h3>Welcome to </h3> 
+<h1>Speak Fluently </h1>
+            <p>Master the art of spoken English with our comprehensive courses, practice tools, and downloadable notes. Start your journey today!</p>
+            <a href="notes.php" class="btn-primary">Explore Courses</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose SpeakFluent?</h2>
+            <div class="features-list">
+                <div class="feature">
+                    <h3>Comprehensive Courses</h3>
+                    <p>Tailored for beginners to advanced learners, covering all aspects of spoken English.</p>
                 </div>
-                <div class="developer-info">
-                    <p>Developed by <strong>Umesh Banjare</strong></p>
-                    <p>Making English learning accessible to everyone</p>
+                <div class="feature">
+                    <h3>Downloadable Notes</h3>
+                    <p>Access high-quality notes to reinforce your learning and improve your skills.</p>
                 </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; <b>2025 Speak Fluently. All rights reserved.</b></p>
+                <div class="feature">
+                    <h3>Interactive Practice</h3>
+                    <p>Engage in speaking, listening, and grammar exercises to achieve fluency.</p>
+                </div>
             </div>
         </div>
+    </section>
+    </main>
+    <footer>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved.Developed by Umesh Banjare</b></p>
+                                 
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
+Make it attractive 
