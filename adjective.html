@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Adjective - English Grammar | Speak Fluently</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles for grammar lesson pages */
+        .lesson-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .lesson-header h1 {
+            font-size: 2.5rem;
+            color: var(--accent, #00b4d8);
+            position: relative;
+            display: inline-block;
+        }
+        .lesson-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent, #00b4d8);
+            border-radius: 2px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.6rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--text-primary, #1e2a3e);
+            margin: 1.2rem 0 0.8rem;
+            font-size: 1.3rem;
+        }
+        body.dark .lesson-content h3 {
+            color: var(--text-primary, #e2e8f0);
+        }
+        .lesson-content p {
+            color: var(--text-secondary, #4a627a);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .lesson-content .example-box {
+            background: var(--glass-bg, rgba(0,180,216,0.05));
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border-left: 3px solid var(--accent, #00b4d8);
+        }
+        .lesson-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--bg, #f4f7fc);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .lesson-content th, .lesson-content td {
+            border: 1px solid var(--border, #ddd);
+            padding: 10px;
+            text-align: left;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .lesson-content th {
+            background: var(--accent, #00b4d8);
+            color: white;
+            font-weight: 600;
+        }
+        body.dark .lesson-content th {
+            background: var(--accent-dark, #0284c7);
+        }
+        .lesson-content ul, .lesson-content ol {
+            margin: 1rem 0 1rem 2rem;
+            color: var(--text-secondary, #4a627a);
+        }
+        .lesson-content li {
+            margin: 0.5rem 0;
+        }
+        .highlight {
+            color: var(--accent, #00b4d8);
+            font-weight: 600;
+        }
+        .grammar-note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-header h1 {
+                font-size: 1.8rem;
+            }
+            .lesson-content {
+                padding: 1rem;
+            }
+            .lesson-content table {
+                font-size: 0.85rem;
+            }
+            .lesson-content th, .lesson-content td {
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Speak Fluently</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
+            </ul>
+        </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="lesson-container">
+            <div class="lesson-header">
+                <h1><i class="fas fa-palette"></i> The Adjective (विशेषण)</h1>
+            </div>
+            <div class="lesson-content">
+                <p><strong>A word which qualifies any Noun or Pronoun is called an Adjective.</strong></p>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    1. Sita is a <span class="highlight">clever</span> girl.<br>
+                    2. He gave me <span class="highlight">five</span> mangoes.<br>
+                    3. There is <span class="highlight">little</span> time for preparation.
+                </div>
+
+                <h2>Formation of Adjectives</h2>
+                <h3>1. From Nouns</h3>
+                <table>
+                    <tr><th>Noun</th><th>Adjective</th></tr>
+                    <tr><td>Man</td><td>Manly</td></tr>
+                    <tr><td>Boy</td><td>Boyish</td></tr>
+                    <tr><td>Sense</td><td>Senseless</td></tr>
+                    <tr><td>Play</td><td>Playful</td></tr>
+                    <tr><td>Dirt</td><td>Dirty</td></tr>
+                    <tr><td>Trouble</td><td>Troublesome</td></tr>
+                    <tr><td>Gift</td><td>Gifted</td></tr>
+                    <tr><td>Laugh</td><td>Laughable</td></tr>
+                    <tr><td>Gold</td><td>Golden</td></tr>
+                    <tr><td>Envy</td><td>Envious</td></tr>
+                    <tr><td>Courage</td><td>Courageous</td></tr>
+                </table>
+
+                <h3>2. From Adjectives</h3>
+                <table>
+                    <tr><th>Adjective</th><th>Adjective (formed)</th></tr>
+                    <tr><td>Tragic</td><td>Tragical</td></tr>
+                    <tr><td>Whole</td><td>Wholesome</td></tr>
+                    <tr><td>Three</td><td>Threefold</td></tr>
+                    <tr><td>Black</td><td>Blackish</td></tr>
+                    <tr><td>White</td><td>Whitish</td></tr>
+                    <tr><td>Sick</td><td>Sickly</td></tr>
+                </table>
+
+                <h3>3. From Verbs</h3>
+                <table>
+                    <tr><th>Verb</th><th>Adjective</th></tr>
+                    <tr><td>Cease</td><td>Ceaseless</td></tr>
+                    <tr><td>Tire</td><td>Tireless</td></tr>
+                    <tr><td>Move</td><td>Moveable</td></tr>
+                    <tr><td>Talk</td><td>Talkative</td></tr>
+                </table>
+
+                <h2>Rules of Adjectives (विशेषण के प्रयोग के नियम)</h2>
+                <p>Adjectives विशेषता बताते हैं। यदि उसी विशेषता (quality) के लिए person या things में की जाती है तो:</p>
+                <ul>
+                    <li>दो व्यक्ति या वस्तु के लिए <strong>Comparative Degree</strong>.</li>
+                    <li>दो से अधिक व्यक्तियों और वस्तुओं के लिए <strong>Superlative Degree</strong>.</li>
+                </ul>
+                <p>सामान्यतया Comparative और Superlative निम्नलिखित विधियों से बनाए जाते हैं:</p>
+                <ul>
+                    <li><strong>(a)</strong> यदि Adjectives का अंतिम अक्षर Single Consonant हो तथा उससे पहले का अक्षर Single Vowel हो तो अंतिम अक्षर की पुनरावृत्ति होती है।<br>
+                    <em>Ex.</em> - Hot → Hotter → Hottest</li>
+                    <li><strong>(b)</strong> Comparative Degree के लिए ‘er’ एवं Superlative Degree के लिए ‘est’ लगाया जाता है।<br>
+                    <em>Ex.</em> - Sweet → Sweeter → Sweetest</li>
+                    <li><strong>(c)</strong> निम्नांकित Adjectives के लिए ‘er/est’ एवं ‘More/Most’ दोनों का प्रयोग होता है:<br>
+                    Polite, Simple, Feeble, Gentle, Narrow, Cruel, Common, Handsome, Stupid, Pleasant.</li>
+                    <li><strong>(d)</strong> ‘Y’ पर समाप्त होने वाले Adjectives के लिए ‘ier’ एवं ‘iest’ प्रयोग किए जाते हैं।<br>
+                    <em>Ex.</em> - Happy → Happier → Happiest</li>
+                    <li><strong>(e)</strong> दो Syllables वाले Adjectives से पहले More (Comparative) एवं Most (Superlative) का प्रयोग होता है।<br>
+                    <em>Ex.</em> - Beautiful → More Beautiful → Most Beautiful</li>
+                    <li><strong>(f)</strong> यदि Adjective के अंत में ‘e’ हो तो Comparative Degree के लिए ‘r’ और Superlative के लिए ‘st’ प्रयोग किए जाते हैं।<br>
+                    <em>Ex.</em> - Brave → Braver → Bravest</li>
+                </ul>
+
+                <h2>Kinds of Adjective</h2>
+                <h3>1. Adjective of Quality (गुणवाचक विशेषण)</h3>
+                <p>ऐसे विशेषण शब्द जो किसी संज्ञा, सर्वनाम के गुण/दोष का बोध कराते हैं।</p>
+                <div class="example-box">
+                    <em>Ex.</em> – He is a <span class="highlight">good</span> boy.<br>
+                    She is an <span class="highlight">honest</span> girl.<br>
+                    He is a <span class="highlight">dishonest</span> man.
+                </div>
+
+                <h3>2. Adjective of Quantity (परिमाणवाचक विशेषण)</h3>
+                <p>ऐसे विशेषण जो किसी संज्ञा, सर्वनाम की मात्रा का बोध कराते हैं।</p>
+                <div class="example-box">
+                    <em>Ex.</em> – There is <span class="highlight">a little</span> water in the bottle.<br>
+                    I have <span class="highlight">some</span> money.
+                </div>
+
+                <h3>3. Possessive Adjective (अधिकार सूचक विशेषण)</h3>
+                <p>अधिकार सूचक शब्द – My, Our, Your, His, Her, Their, Its.</p>
+                <div class="example-box">
+                    <em>Ex.</em> – This is <span class="highlight">my</span> book.<br>
+                    <span class="highlight">My</span> brother has broken his leg.
+                </div>
+
+                <h3>4. Interrogative Adjective (प्रश्नवाचक विशेषण)</h3>
+                <p>प्रश्न पूछने के लिए – What, Which, Whose.</p>
+                <div class="example-box">
+                    <em>Ex.</em> – <span class="highlight">What</span> time does the bus leave?<br>
+                    <span class="highlight">Which</span> book do you read most?
+                </div>
+
+                <h3>5. Adjective of Number (संख्यावाचक विशेषण)</h3>
+                <p>गणना या स्थिति बताने के लिए – दो प्रकार: Cardinal (1,2,3...) और Ordinal (first, second...).</p>
+                <div class="example-box">
+                    <em>Ex.</em> – He was sitting in the <span class="highlight">first</span> row.<br>
+                    Bring me the <span class="highlight">second</span> book.
+                </div>
+
+                <h2>Use of Some Important Adjectives</h2>
+                <h3>MUCH / MANY</h3>
+                <p><strong>Much</strong> – मात्रा के लिए (Uncountable Noun के साथ)</p>
+                <div class="example-box">
+                    ✓ There is <span class="highlight">much</span> water in the pot.<br>
+                    ✗ There is many water in the pot.
+                </div>
+                <p><strong>Many</strong> – संख्या के लिए (Plural Countable Noun के साथ)</p>
+                <div class="example-box">
+                    ✓ There are <span class="highlight">many</span> books in my library.<br>
+                    ✗ There are much books in my library.
+                </div>
+
+                <h3>Elder / Older</h3>
+                <p><strong>Elder</strong> – एक ही परिवार के सदस्यों के बीच बड़े के लिए (इसके बाद 'to' का प्रयोग)</p>
+                <div class="example-box">
+                    Ram is <span class="highlight">elder to</span> Mohan. (✓)<br>
+                    Ram is older than Mohan. (✗ for family elder)
+                </div>
+                <p><strong>Older</strong> – परिवार के बाहर या निर्जीव के लिए (इसके बाद 'than' का प्रयोग)</p>
+                <div class="example-box">
+                    This building is <span class="highlight">older than</span> that one.
+                </div>
+
+                <div class="grammar-note">
+                    <i class="fas fa-lightbulb"></i> <strong>Note:</strong> Adjectives of Quality, Quantity, Number, Possessive, and Interrogative are the main types. Practice with examples to master them.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
+    </footer>
+
+    <script>
+        // ========== DARK MODE TOGGLE ==========
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+
+        // ========== MOBILE MENU TOGGLE ==========
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    navMenu.classList.remove('active');
+                }
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
