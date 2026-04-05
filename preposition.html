@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Preposition - English Grammar | Speak Fluently</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .lesson-header h1 {
+            font-size: 2.5rem;
+            color: var(--accent, #00b4d8);
+            position: relative;
+            display: inline-block;
+        }
+        .lesson-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent, #00b4d8);
+            border-radius: 2px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.6rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--text-primary, #1e2a3e);
+            margin: 1.2rem 0 0.8rem;
+            font-size: 1.3rem;
+        }
+        body.dark .lesson-content h3 {
+            color: var(--text-primary, #e2e8f0);
+        }
+        .lesson-content p {
+            color: var(--text-secondary, #4a627a);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .example-box {
+            background: var(--glass-bg, rgba(0,180,216,0.05));
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border-left: 3px solid var(--accent, #00b4d8);
+        }
+        .rule-card {
+            background: var(--card-bg, white);
+            border-radius: 16px;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--bg, #f4f7fc);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .grammar-table th, .grammar-table td {
+            border: 1px solid var(--border, #ddd);
+            padding: 10px;
+            text-align: left;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .grammar-table th {
+            background: var(--accent, #00b4d8);
+            color: white;
+            font-weight: 600;
+        }
+        body.dark .grammar-table th {
+            background: var(--accent-dark, #0284c7);
+        }
+        .lesson-content ul, .lesson-content ol {
+            margin: 1rem 0 1rem 2rem;
+            color: var(--text-secondary, #4a627a);
+        }
+        .lesson-content li {
+            margin: 0.5rem 0;
+        }
+        .highlight {
+            color: var(--accent, #00b4d8);
+            font-weight: 600;
+        }
+        .grammar-note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-header h1 {
+                font-size: 1.8rem;
+            }
+            .lesson-content {
+                padding: 1rem;
+            }
+            .grammar-table {
+                font-size: 0.85rem;
+            }
+            .grammar-table th, .grammar-table td {
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Speak Fluently</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
+            </ul>
+        </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="lesson-container">
+            <div class="lesson-header">
+                <h1><i class="fas fa-location-arrow"></i> Preposition (पूर्वसर्ग)</h1>
+            </div>
+            <div class="lesson-content">
+                <p>A <strong>preposition</strong> is a word that shows the relationship between a noun (or pronoun) and another word in the sentence. It usually indicates position, direction, time, or manner.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    - The book is <span class="highlight">on</span> the table. (position)<br>
+                    - She came <span class="highlight">after</span> dinner. (time)<br>
+                    - He walked <span class="highlight">towards</span> the door. (direction)
+                </div>
+
+                <h2>Types of Prepositions</h2>
+
+                <h3>1. Preposition of Place (स्थानवाचक)</h3>
+                <p>Indicates where something is located.</p>
+                <table class="grammar-table">
+                    <thead><tr><th>Preposition</th><th>Usage</th><th>Example</th></tr></thead>
+                    <tbody>
+                        <tr><td>in</td><td>inside a space</td><td>He is <span class="highlight">in</span> the room.</td></tr>
+                        <tr><td>on</td><td>on a surface</td><td>The book is <span class="highlight">on</span> the desk.</td></tr>
+                        <tr><td>at</td><td>specific point</td><td>She is waiting <span class="highlight">at</span> the door.</td></tr>
+                        <tr><td>under</td><td>below something</td><td>The cat is <span class="highlight">under</span> the chair.</td></tr>
+                        <tr><td>above</td><td>higher than</td><td>The fan is <span class="highlight">above</span> the bed.</td></tr>
+                        <tr><td>between</td><td>in the middle of two</td><td>He sat <span class="highlight">between</span> Ram and Shyam.</td></tr>
+                        <tr><td>among</td><td>in the middle of many</td><td>She is <span class="highlight">among</span> friends.</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>2. Preposition of Time (समयवाचक)</h3>
+                <p>Indicates when something happens.</p>
+                <table class="grammar-table">
+                    <thead><tr><th>Preposition</th><th>Usage</th><th>Example</th></tr></thead>
+                    <tbody>
+                        <tr><td>at</td><td>clock time, festivals</td><td>Meet me <span class="highlight">at</span> 5 PM.</td></tr>
+                        <tr><td>in</td><td>months, years, centuries</td><td>He was born <span class="highlight">in</span> 2000.</td></tr>
+                        <tr><td>on</td><td>days, dates</td><td>I will come <span class="highlight">on</span> Monday.</td></tr>
+                        <tr><td>since</td><td>starting point</td><td>She has been here <span class="highlight">since</span> morning.</td></tr>
+                        <tr><td>for</td><td>duration</td><td>I waited <span class="highlight">for</span> two hours.</td></tr>
+                        <tr><td>during</td><td>within a period</td><td>He slept <span class="highlight">during</span> the class.</td></tr>
+                        <tr><td>before/after</td><td>earlier/later than</td><td>Come <span class="highlight">before</span> sunset.</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>3. Preposition of Direction/Movement (दिशावाचक)</h3>
+                <p>Indicates movement from one place to another.</p>
+                <table class="grammar-table">
+                    <thead><tr><th>Preposition</th><th>Usage</th><th>Example</th></tr></thead>
+                    <tbody>
+                        <tr><td>to</td><td>movement towards</td><td>She went <span class="highlight">to</span> the market.</td></tr>
+                        <tr><td>from</td><td>starting point</td><td>He came <span class="highlight">from</span> Delhi.</td></tr>
+                        <tr><td>into</td><td>entering</td><td>He jumped <span class="highlight">into</span> the pool.</td></tr>
+                        <tr><td>out of</td><td>exiting</td><td>She walked <span class="highlight">out of</span> the room.</td></tr>
+                        <tr><td>towards</td><td>in the direction of</td><td>He ran <span class="highlight">towards</span> the bus.</td></tr>
+                        <tr><td>through</td><td>going inside a passage</td><td>The train went <span class="highlight">through</span> the tunnel.</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>4. Other Common Prepositions</h3>
+                <ul>
+                    <li><strong>of</strong> (belonging/relation): pages <span class="highlight">of</span> the book</li>
+                    <li><strong>with</strong> (accompaniment): I went <span class="highlight">with</span> my friend</li>
+                    <li><strong>without</strong> (lack): He left <span class="highlight">without</span> saying goodbye</li>
+                    <li><strong>by</strong> (agent/means): written <span class="highlight">by</span> Shakespeare, travel <span class="highlight">by</span> train</li>
+                    <li><strong>for</strong> (purpose): This gift is <span class="highlight">for</span> you</li>
+                    <li><strong>about</strong> (regarding): Tell me <span class="highlight">about</span> yourself</li>
+                </ul>
+
+                <h2>Important Rules and Common Mistakes</h2>
+                <div class="rule-card">
+                    <h3>✅ Prepositions with Time: In, At, On</h3>
+                    <ul>
+                        <li><strong>At</strong> – specific time: at 7 o'clock, at noon, at night</li>
+                        <li><strong>In</strong> – longer periods: in the morning, in July, in 2025</li>
+                        <li><strong>On</strong> – specific days/dates: on Monday, on 15th August</li>
+                    </ul>
+                </div>
+                <div class="rule-card">
+                    <h3>✅ Prepositions with Place: In, At, On</h3>
+                    <ul>
+                        <li><strong>In</strong> – inside a larger area (country, city, room): in India, in Mumbai, in the kitchen</li>
+                        <li><strong>At</strong> – specific point (address, shop, small place): at the door, at 5th Street</li>
+                        <li><strong>On</strong> – on a surface: on the table, on the wall</li>
+                    </ul>
+                </div>
+                <div class="rule-card">
+                    <h3>❌ Common Mistakes to Avoid</h3>
+                    <ul>
+                        <li>Don't use preposition before "home" (I am going <del>to</del> home) → I am going home.</li>
+                        <li>Don't use "in" before last/following/next (He came <del>in</del> last week) → He came last week.</li>
+                        <li>"Discuss" and "emphasize" take no preposition: Let's discuss <del>about</del> the matter → Let's discuss the matter.</li>
+                        <li>"Arrive" is followed by "in" (city/country) or "at" (small place): arrive in Delhi, arrive at the airport.</li>
+                    </ul>
+                </div>
+
+                <h2>List of Commonly Used Prepositions</h2>
+                <div class="example-box">
+                    <strong>One-word prepositions:</strong> about, above, across, after, against, among, around, at, before, behind, below, beneath, beside, between, beyond, by, down, during, except, for, from, in, inside, into, like, near, of, off, on, onto, over, since, through, to, toward, under, until, up, upon, with, within, without.<br><br>
+                    <strong>Compound prepositions (two or more words):</strong> according to, because of, in front of, in spite of, instead of, on behalf of, with regard to.
+                </div>
+
+                <h2>Practice Exercises</h2>
+                <div class="example-box">
+                    <strong>Fill in the blanks with the correct preposition (answers below):</strong><br>
+                    1. The cat is hiding ______ the bed.<br>
+                    2. She has been waiting ______ 2 hours.<br>
+                    3. We will meet ______ Monday morning.<br>
+                    4. He lives ______ Delhi.<br>
+                    5. The train goes ______ the tunnel.<br>
+                    6. She is fond ______ music.<br>
+                    7. He apologized ______ his mistake.<br>
+                    8. The book was written ______ R.K. Narayan.
+                </div>
+                <div class="grammar-note">
+                    <i class="fas fa-lightbulb"></i> <strong>Answers:</strong><br>
+                    1. under 2. for 3. on 4. in 5. through 6. of 7. for 8. by
+                </div>
+
+                <div class="grammar-note">
+                    <i class="fas fa-lightbulb"></i> <strong>Remember:</strong> Prepositions are often tricky because they don't always translate directly from Hindi. The best way to master them is to read and practice regularly. Notice how prepositions are used in sentences you read.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
