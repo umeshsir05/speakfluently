@@ -2,43 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Speak Fluently - Master Spoken English</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoken English Website</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome 6 (Free Icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts: Poppins for modern look -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        /* Quick inline fix to ensure mobile menu icon and dark mode icon never conflict */
-        .menu-toggle span {
-            font-size: 2rem;
-            font-weight: 400;
-            display: inline-block;
-            line-height: 1;
-        }
-        /* Ensure dark mode toggle stays clickable and visible */
-        .dark-mode-toggle {
-            cursor: pointer;
-            user-select: none;
-        }
-        /* Smooth transition for all interactive elements */
-        .nav-menu ul li a i {
-            margin-right: 8px;
-            width: 1.4rem;
-            text-align: center;
-            transition: transform 0.2s ease;
-        }
-        .nav-menu ul li a:hover i {
-            transform: scale(1.1);
-        }
-        /* keep mobile menu icon visible */
-        @media screen and (max-width: 768px) {
-            .menu-toggle span {
-                font-size: 2.2rem;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -56,12 +24,11 @@
                 <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
-        <!-- Dark Mode Toggle Button with icon -->
         <div class="dark-mode-toggle" id="darkModeToggle">
             <i class="fas fa-moon"></i>
         </div>
         <div class="menu-toggle">
-            <span>&#9776;</span>  <!-- classic hamburger icon -->
+            <span>&#9776;</span>
         </div>
     </header>
     <main>
@@ -74,23 +41,22 @@
             </div>
         </section>
 
-        <!-- Features Section -->
         <section class="features">
             <div class="container">
                 <h2>Why Choose SpeakFluent?</h2>
                 <div class="features-list">
                     <div class="feature">
-                        <i class="fas fa-chalkboard-user" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <i class="fas fa-chalkboard-user"></i>
                         <h3>Comprehensive Courses</h3>
                         <p>Tailored for beginners to advanced learners, covering all aspects of spoken English.</p>
                     </div>
                     <div class="feature">
-                        <i class="fas fa-download" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <i class="fas fa-download"></i>
                         <h3>Downloadable Notes</h3>
                         <p>Access high-quality notes to reinforce your learning and improve your skills.</p>
                     </div>
                     <div class="feature">
-                        <i class="fas fa-microphone-alt" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <i class="fas fa-microphone-alt"></i>
                         <h3>Interactive Practice</h3>
                         <p>Engage in speaking, listening, and grammar exercises to achieve fluency.</p>
                     </div>
@@ -103,93 +69,55 @@
     </footer>
 
     <script>
-        (function() {
-            // ---------- DARK MODE TOGGLE (with localStorage) ----------
-            const darkModeToggle = document.getElementById('darkModeToggle');
-            const body = document.body;
-            
-            // Helper to update icon inside toggle button
-            function updateDarkIcon(isDark) {
-                if (!darkModeToggle) return;
-                const icon = darkModeToggle.querySelector('i');
-                if (icon) {
-                    if (isDark) {
-                        icon.classList.remove('fa-moon');
-                        icon.classList.add('fa-sun');
-                    } else {
-                        icon.classList.remove('fa-sun');
-                        icon.classList.add('fa-moon');
-                    }
-                }
-            }
-            
-            // Load saved preference
-            if (localStorage.getItem('darkMode') === 'enabled') {
-                body.classList.add('dark');
-                updateDarkIcon(true);
+        // ========== DARK MODE ==========
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        darkToggle.addEventListener('click', () => {
+            body.classList.toggle('dark');
+            if (body.classList.contains('dark')) {
+                localStorage.setItem('darkMode', 'enabled');
+                darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
             } else {
-                // default light mode (already light)
-                updateDarkIcon(false);
+                localStorage.setItem('darkMode', 'disabled');
+                darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
             }
-            
-            if (darkModeToggle) {
-                darkModeToggle.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    body.classList.toggle('dark');
-                    const isDarkNow = body.classList.contains('dark');
-                    if (isDarkNow) {
-                        localStorage.setItem('darkMode', 'enabled');
-                        updateDarkIcon(true);
-                    } else {
-                        localStorage.setItem('darkMode', 'disabled');
-                        updateDarkIcon(false);
-                    }
-                });
+        });
+
+        // ========== MOBILE MENU TOGGLE (100% WORKING) ==========
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            navMenu.classList.toggle('active');
+        });
+
+        // मेनू के अंदर किसी लिंक पर क्लिक करने पर मेनू बंद हो जाएगा
+        document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // बाहर क्लिक करने पर भी मेनू बंद होगा
+        document.addEventListener('click', function(event) {
+            if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                navMenu.classList.remove('active');
             }
-            
-            // ---------- MOBILE MENU TOGGLE (hamburger) FIXED ----------
-            const menuToggle = document.querySelector('.menu-toggle');
-            const navMenu = document.querySelector('.nav-menu');
-            
-            if (menuToggle && navMenu) {
-                // Toggle menu when clicking on the hamburger icon (three lines)
-                menuToggle.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    navMenu.classList.toggle('active');
-                });
-                
-                // Close mobile menu when clicking on any navigation link
-                const allNavLinks = document.querySelectorAll('.nav-menu ul li a');
-                allNavLinks.forEach(link => {
-                    link.addEventListener('click', function() {
-                        navMenu.classList.remove('active');
-                    });
-                });
-                
-                // Optional but great UX: close menu when clicking outside (anywhere on document)
-                document.addEventListener('click', function(event) {
-                    const isClickInsideMenu = navMenu.contains(event.target);
-                    const isClickOnToggle = menuToggle.contains(event.target);
-                    if (!isClickInsideMenu && !isClickOnToggle && navMenu.classList.contains('active')) {
-                        navMenu.classList.remove('active');
-                    }
-                });
-                
-                // On window resize: if screen becomes larger than 768px, remove active class to avoid stuck overlay
-                window.addEventListener('resize', function() {
-                    if (window.innerWidth > 768) {
-                        if (navMenu.classList.contains('active')) {
-                            navMenu.classList.remove('active');
-                        }
-                    }
-                });
+        });
+
+        // रिसाइज होने पर डेस्कटॉप व्यू में मेनू ठीक रहेगा
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                navMenu.classList.remove('active');
             }
-            
-            // Bonus: small fix to ensure any dynamic content or external script.js doesn't break dark mode
-            // (but we keep original script.js loading if needed - it's safe)
-        })();
+        });
     </script>
-    <!-- Your original script.js remains loaded (does not conflict with above logic) -->
-    <script src="script.js"></script>
 </body>
 </html>
