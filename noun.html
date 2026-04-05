@@ -2,11 +2,136 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
-    <!-- CSS aur JavaScript files -->
-<link rel="stylesheet" href="style.css">
-<script src="menu.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Noun & Its Types - English Grammar | Speak Fluently</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .lesson-header h1 {
+            font-size: 2.5rem;
+            color: var(--accent, #00b4d8);
+            position: relative;
+            display: inline-block;
+        }
+        .lesson-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent, #00b4d8);
+            border-radius: 2px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.6rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--text-primary, #1e2a3e);
+            margin: 1.2rem 0 0.8rem;
+            font-size: 1.3rem;
+        }
+        body.dark .lesson-content h3 {
+            color: var(--text-primary, #e2e8f0);
+        }
+        .lesson-content p {
+            color: var(--text-secondary, #4a627a);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .example-box {
+            background: var(--glass-bg, rgba(0,180,216,0.05));
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border-left: 3px solid var(--accent, #00b4d8);
+        }
+        .rule-card {
+            background: var(--card-bg, white);
+            border-radius: 16px;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--bg, #f4f7fc);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .grammar-table th, .grammar-table td {
+            border: 1px solid var(--border, #ddd);
+            padding: 10px;
+            text-align: left;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .grammar-table th {
+            background: var(--accent, #00b4d8);
+            color: white;
+            font-weight: 600;
+        }
+        body.dark .grammar-table th {
+            background: var(--accent-dark, #0284c7);
+        }
+        .lesson-content ul, .lesson-content ol {
+            margin: 1rem 0 1rem 2rem;
+            color: var(--text-secondary, #4a627a);
+        }
+        .lesson-content li {
+            margin: 0.5rem 0;
+        }
+        .highlight {
+            color: var(--accent, #00b4d8);
+            font-weight: 600;
+        }
+        .grammar-note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-header h1 {
+                font-size: 1.8rem;
+            }
+            .lesson-content {
+                padding: 1rem;
+            }
+            .grammar-table {
+                font-size: 0.85rem;
+            }
+            .grammar-table th, .grammar-table td {
+                padding: 6px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -15,145 +140,173 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
+
     <main>
-        <h2> Noun (संज्ञा) – Meaning and Types</h2>
-
-<br>
-
-What is a Noun? | Noun kya hota hai?<br>
-
-Noun is the name of a person, place, thing, or idea.<br> Noun kisi व्यक्ति, स्थान, वस्तु या भाव का नाम होता है।<br>
-
-Examples | उदाहरण:<br>
-
-Ram (राम)<br>
-
-School (स्कूल)<br>
-
-Book (किताब)<br>
-
-Honesty (ईमानदारी)<br>
-
-
-
----
-
-Types of Noun | संज्ञा के प्रकार<br>
-
-1. Proper Noun | व्यक्तिवाचक संज्ञा<br>
-
-A special name of a person, place, or thing.<br> किसी विशेष व्यक्ति या स्थान का नाम।<br>
-
-Examples:<br>
-
-Ram (राम)<br>
-
-Delhi (दिल्ली)<br>
-
-India (भारत)<br>
-
-Ganga (गंगा)<br>
-
-
-
----
-
-2. Common Noun | जातिवाचक संज्ञा<br>
-
-A general name of a person, place, or thing.<br> किसी जाति या प्रकार का सामान्य नाम।<br>
-
-Examples:<br>
-
-Boy (लड़का)<br>
-
-City (शहर)<br>
-
-River (नदी)<br>
-
-Teacher (शिक्षक)<br>
-
-
-
----
-
-3. Collective Noun | समूहवाचक संज्ञा<br>
-
-A name of a group or collection.<br> किसी समूह का नाम।<br>
-
-Examples:<br>
-
-Class (कक्षा)<br>
-
-Team (टीम)<br>
-
-Crowd (भीड़)<br>
-
-Family (परिवार)<br>
-
-
-
----
-
-4. Material Noun | पदार्थवाचक संज्ञा<br>
-
-Names of materials or substances.<br> किसी पदार्थ का नाम।<br>
-
-Examples:<br>
-
-Gold (सोना)<br>
-
-Water (पानी)<br>
-
-Milk (दूध)<br>
-
-Iron (लोहा)<br>
-
-
-
----
-
-5. Abstract Noun | भाववाचक संज्ञा<br>
-
-Names of qualities, feelings, or ideas that cannot be seen or touched.<br> जो देखे या छुए नहीं जा सकते, केवल महसूस किए जाते हैं।<br>
-
-Examples:<br>
-
-Honesty (ईमानदारी)<br>
-
-Love (प्यार)<br>
-
-Happiness (खुशी)<br>
-
-Courage (साहस)<br>
-
-
-
----
-
-Quick Tip (For Kids):<br>
-
-If you can see, touch, or name it, it is a noun.<br> अगर आप किसी चीज़ का नाम ले सकते हैं, तो वह Noun है।<br>
-
-
-
-
+        <div class="lesson-container">
+            <div class="lesson-header">
+                <h1><i class="fas fa-tag"></i> Noun & Its Types (संज्ञा और उसके प्रकार)</h1>
+            </div>
+            <div class="lesson-content">
+                <p><strong>Noun</strong> is a word used as the name of a person, place, thing, animal, or idea.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    - Person: <span class="highlight">Rohan, teacher, doctor</span><br>
+                    - Place: <span class="highlight">Delhi, school, park</span><br>
+                    - Thing: <span class="highlight">table, phone, book</span><br>
+                    - Animal: <span class="highlight">dog, lion, elephant</span><br>
+                    - Idea: <span class="highlight">love, freedom, happiness</span>
+                </div>
+
+                <h2>Types of Nouns</h2>
+
+                <h3>1. Proper Noun (व्यक्तिवाचक संज्ञा)</h3>
+                <p>A proper noun is the name of a particular person, place, or thing. It always begins with a capital letter.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong> India, Mumbai, Amit, Taj Mahal, Monday, January
+                </div>
+
+                <h3>2. Common Noun (जातिवाचक संज्ञा)</h3>
+                <p>A common noun is a name given in common to every person or thing of the same class or kind.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong> boy, girl, city, country, book, animal, teacher
+                </div>
+
+                <h3>3. Collective Noun (समूहवाचक संज्ञा)</h3>
+                <p>A collective noun is the name of a group or collection of similar persons, animals, or things taken as one whole.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong> team, family, crowd, flock, herd, committee, army, bunch
+                </div>
+
+                <h3>4. Abstract Noun (भाववाचक संज्ञा)</h3>
+                <p>An abstract noun is the name of a quality, action, or state that we can only think of or feel, not touch or see.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong> honesty, kindness, bravery, childhood, poverty, happiness, freedom
+                </div>
+
+                <h3>5. Concrete Noun (मूर्त संज्ञा)</h3>
+                <p>A concrete noun is the name of something that can be seen, touched, tasted, heard, or smelled (perceived by senses).</p>
+                <div class="example-box">
+                    <strong>Examples:</strong> apple, music, perfume, tree, car, phone, dog
+                </div>
+
+                <h3>6. Countable Noun (गणनीय संज्ञा)</h3>
+                <p>Countable nouns are things that can be counted. They have both singular and plural forms.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong> one pen, two pens; a cat, many cats; an apple, five apples
+                </div>
+
+                <h3>7. Uncountable Noun (अगणनीय संज्ञा)</h3>
+                <p>Uncountable nouns are things that cannot be counted. They do not usually have a plural form.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong> water, milk, sugar, rice, information, advice, furniture, money
+                </div>
+
+                <h2>Gender of Nouns</h2>
+                <table class="grammar-table">
+                    <tr><th>Masculine (पुल्लिंग)</th><th>Feminine (स्त्रीलिंग)</th><th>Common (उभयलिंग)</th><th>Neuter (नपुंसकलिंग)</th></tr>
+                    <tr><td>boy</td><td>girl</td><td>teacher</td><td>table</td></tr>
+                    <tr><td>king</td><td>queen</td><td>student</td><td>book</td></tr>
+                    <tr><td>man</td><td>woman</td><td>doctor</td><td>pen</td></tr>
+                    <tr><td>father</td><td>mother</td><td>friend</td><td>chair</td></tr>
+                </table>
+
+                <h2>Number of Nouns (Singular & Plural)</h2>
+                <table class="grammar-table">
+                    <tr><th>Singular</th><th>Plural</th></tr>
+                    <tr><td>cat</td><td>cats</td></tr>
+                    <tr><td>box</td><td>boxes</td></tr>
+                    <tr><td>baby</td><td>babies</td></tr>
+                    <tr><td>knife</td><td>knives</td></tr>
+                    <tr><td>man</td><td>men</td></tr>
+                    <tr><td>child</td><td>children</td></tr>
+                    <tr><td>tooth</td><td>teeth</td></tr>
+                    <tr><td>deer</td><td>deer</td></tr>
+                </table>
+
+                <h2>Noun Formation</h2>
+                <p>Nouns can be formed from verbs and adjectives:</p>
+                <table class="grammar-table">
+                    <tr><th>Verb/Adjective</th><th>Noun Form</th></tr>
+                    <tr><td>act</td><td>action / actor</td></tr>
+                    <tr><td>happy</td><td>happiness</td></tr>
+                    <tr><td>teach</td><td>teacher</td></tr>
+                    <tr><td>dark</td><td>darkness</td></tr>
+                    <tr><td>decide</td><td>decision</td></tr>
+                    <tr><td>beautiful</td><td>beauty</td></tr>
+                </table>
+
+                <div class="grammar-note">
+                    <i class="fas fa-lightbulb"></i> <strong>Important Points:</strong><br>
+                    - Proper nouns always start with a capital letter.<br>
+                    - Collective nouns, though referring to many, are often treated as singular (e.g., "The team <strong>is</strong> playing well").<br>
+                    - Abstract nouns cannot be seen or touched – they express ideas, qualities, or feelings.<br>
+                    - Uncountable nouns do not use "a/an" and take singular verbs (e.g., "Water <strong>is</strong> essential").
+                </div>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2025 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
