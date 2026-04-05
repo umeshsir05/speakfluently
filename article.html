@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Articles - English Grammar | Speak Fluently</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .lesson-header h1 {
+            font-size: 2.5rem;
+            color: var(--accent, #00b4d8);
+            position: relative;
+            display: inline-block;
+        }
+        .lesson-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent, #00b4d8);
+            border-radius: 2px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.6rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--text-primary, #1e2a3e);
+            margin: 1.2rem 0 0.8rem;
+            font-size: 1.3rem;
+        }
+        body.dark .lesson-content h3 {
+            color: var(--text-primary, #e2e8f0);
+        }
+        .lesson-content p {
+            color: var(--text-secondary, #4a627a);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .example-box {
+            background: var(--glass-bg, rgba(0,180,216,0.05));
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border-left: 3px solid var(--accent, #00b4d8);
+        }
+        .rule-card {
+            background: var(--card-bg, white);
+            border-radius: 16px;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--bg, #f4f7fc);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .grammar-table th, .grammar-table td {
+            border: 1px solid var(--border, #ddd);
+            padding: 10px;
+            text-align: left;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .grammar-table th {
+            background: var(--accent, #00b4d8);
+            color: white;
+            font-weight: 600;
+        }
+        body.dark .grammar-table th {
+            background: var(--accent-dark, #0284c7);
+        }
+        .lesson-content ul, .lesson-content ol {
+            margin: 1rem 0 1rem 2rem;
+            color: var(--text-secondary, #4a627a);
+        }
+        .lesson-content li {
+            margin: 0.5rem 0;
+        }
+        .highlight {
+            color: var(--accent, #00b4d8);
+            font-weight: 600;
+        }
+        .grammar-note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-header h1 {
+                font-size: 1.8rem;
+            }
+            .lesson-content {
+                padding: 1rem;
+            }
+            .grammar-table {
+                font-size: 0.85rem;
+            }
+            .grammar-table th, .grammar-table td {
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Speak Fluently</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
+            </ul>
+        </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="lesson-container">
+            <div class="lesson-header">
+                <h1><i class="fas fa-newspaper"></i> Articles (A, An, The)</h1>
+            </div>
+            <div class="lesson-content">
+                <p>Articles are words that define a noun as specific or unspecific. English has <strong>three articles</strong>: <span class="highlight">A, An, The</span>.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    - <span class="highlight">A</span> cat (any cat)<br>
+                    - <span class="highlight">An</span> apple (any apple)<br>
+                    - <span class="highlight">The</span> sun (the only sun)
+                </div>
+
+                <h2>Types of Articles</h2>
+                <h3>1. Indefinite Articles: A / An</h3>
+                <p>Used before singular countable nouns when the noun is not specific or is mentioned for the first time.</p>
+                <ul>
+                    <li><strong>A</strong> is used before words that begin with a <strong>consonant sound</strong>.<br>
+                        <em>a boy, a university (yoo-ni-ver-si-ty), a one-eyed man (wun)</em>
+                    </li>
+                    <li><strong>An</strong> is used before words that begin with a <strong>vowel sound</strong> (a, e, i, o, u).<br>
+                        <em>an apple, an hour (h is silent), an honest man, an MBA (em-bee-ay)</em>
+                    </li>
+                </ul>
+                <div class="example-box">
+                    <strong>More Examples:</strong><br>
+                    - I saw <span class="highlight">a</span> bird. / She ate <span class="highlight">an</span> orange.<br>
+                    - He is <span class="highlight">a</span> European. (Eu sounds like "you")<br>
+                    - It is <span class="highlight">an</span> honor to meet you.
+                </div>
+
+                <h3>2. Definite Article: The</h3>
+                <p>Used before both singular and plural nouns when the noun is specific or already known to the listener/reader.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    - <span class="highlight">The</span> sun rises in the east. (only one sun)<br>
+                    - I liked <span class="highlight">the</span> book you gave me. (specific book)<br>
+                    - <span class="highlight">The</span> rich should help the poor. (referring to a class)
+                </div>
+
+                <h2>Rules for Using Articles</h2>
+                <div class="rule-card">
+                    <h3>✅ Use 'A/An' when:</h3>
+                    <ul>
+                        <li>Introducing something for the first time: <em>I saw <span class="highlight">a</span> dog.</em></li>
+                        <li>Talking about someone's profession: <em>She is <span class="highlight">a</span> doctor.</em></li>
+                        <li>Expressing a rate/price: <em>₹200 <span class="highlight">a</span> kilo.</em></li>
+                        <li>In exclamations with "What": <em>What <span class="highlight">a</span> beautiful day!</em></li>
+                    </ul>
+                </div>
+                <div class="rule-card">
+                    <h3>✅ Use 'The' when:</h3>
+                    <ul>
+                        <li>The noun is unique: <em><span class="highlight">the</span> moon, <span class="highlight">the</span> world</em></li>
+                        <li>The noun has been mentioned before: <em>I saw a bird. <span class="highlight">The</span> bird was singing.</em></li>
+                        <li>Superlatives and ordinals: <em><span class="highlight">the</span> best, <span class="highlight">the</span> first</em></li>
+                        <li>Names of rivers, oceans, mountain ranges, deserts: <em><span class="highlight">the</span> Ganges, <span class="highlight">the</span> Himalayas</em></li>
+                        <li>With adjectives to represent a class: <em><span class="highlight">the</span> poor, <span class="highlight">the</span> rich</em></li>
+                        <li>With musical instruments: <em>play <span class="highlight">the</span> guitar</em></li>
+                        <li>With countries that have plural names or include words like Republic, Kingdom: <em><span class="highlight">the</span> United States, <span class="highlight">the</span> UK</em></li>
+                    </ul>
+                </div>
+                <div class="rule-card">
+                    <h3>❌ Omission of Articles (No Article / Zero Article):</h3>
+                    <ul>
+                        <li>Before plural countable nouns used in general sense: <em>Dogs are loyal. (not "the dogs")</em></li>
+                        <li>Before uncountable nouns used generally: <em>Water is life. (not "the water")</em></li>
+                        <li>Before names of meals: <em>I had breakfast. (not "a breakfast")</em></li>
+                        <li>Before languages and subjects: <em>English is easy. (not "the English")</em></li>
+                        <li>Before most proper nouns (names of people, places): <em>Ram, India</em></li>
+                        <li>Before sports and games: <em>She plays cricket.</em></li>
+                    </ul>
+                </div>
+
+                <h2>Special Exceptions & Common Mistakes</h2>
+                <div class="grammar-table">
+                    <thead>
+                        <tr><th>Rule</th><th>Correct</th><th>Incorrect</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Words starting with 'u' but sound like 'you'</td><td><span class="highlight">a</span> university</td><td>an university</td></tr>
+                        <tr><td>Words starting with silent 'h'</td><td><span class="highlight">an</span> hour, <span class="highlight">an</span> honest man</td><td>a hour, a honest man</td></tr>
+                        <tr><td>Words starting with 'h' pronounced</td><td><span class="highlight">a</span> hotel, <span class="highlight">a</span> house</td><td>an hotel (British old style)</td></tr>
+                        <tr><td>Acronyms pronounced as vowels</td><td><span class="highlight">an</span> MBA, <span class="highlight">an</span> FIR</td><td>a MBA</td></tr>
+                        <tr><td>Acronyms starting with consonant sound</td><td><span class="highlight">a</span> UNESCO, <span class="highlight">a</span> CEO</td><td>an UNESCO</td></tr>
+                    </tbody>
+                </table>
+
+                <h2>Practice Exercises</h2>
+                <div class="example-box">
+                    <strong>Fill in the blanks with a, an, or the (answers below):</strong><br>
+                    1. ______ sun rises in ______ east.<br>
+                    2. She wants to become ______ engineer.<br>
+                    3. I have ______ one-rupee coin.<br>
+                    4. He is ______ honest man.<br>
+                    5. ______ Ganga is ______ sacred river.<br>
+                    6. What ______ beautiful painting!<br>
+                    7. ______ rich should help ______ poor.<br>
+                    8. He plays ______ piano very well.
+                </div>
+                <div class="grammar-note">
+                    <i class="fas fa-lightbulb"></i> <strong>Answers:</strong><br>
+                    1. The, the 2. an 3. a 4. an 5. The, a 6. a 7. The, the 8. the
+                </div>
+
+                <div class="grammar-note">
+                    <i class="fas fa-lightbulb"></i> <strong>Remember:</strong> The choice between 'a' and 'an' depends on the <strong>sound</strong> of the following word, not just the first letter. Use 'the' for specific references, unique objects, and superlatives. Use no article for general plural/uncountable nouns.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
