@@ -1,13 +1,9 @@
-Here is an updated CSS file that transforms your website with a modern, attractive design, a glass-morphism effect, and a fully functional dark mode, without needing to change your HTML file.
-```css
-/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Light theme variables (default) */
 :root {
     --bg: #f4f7fc;
     --card-bg: #ffffff;
@@ -22,10 +18,8 @@ Here is an updated CSS file that transforms your website with a modern, attracti
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     --glass-bg: rgba(255, 255, 255, 0.9);
     --border: rgba(0, 180, 216, 0.2);
-    --code-bg: #f0f4f8;
 }
 
-/* Dark theme overrides */
 body.dark {
     --bg: #0f1724;
     --card-bg: #1e293b;
@@ -40,7 +34,6 @@ body.dark {
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     --glass-bg: rgba(30, 41, 59, 0.9);
     --border: rgba(56, 189, 248, 0.2);
-    --code-bg: #0f1724;
 }
 
 body {
@@ -48,26 +41,18 @@ body {
     background-color: var(--bg);
     color: var(--text-primary);
     transition: background-color 0.3s ease, color 0.3s ease;
-    line-height: 1.6;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-/* Header Styles */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
     background: var(--header-bg);
-    backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: var(--shadow);
-    transition: background 0.3s ease;
 }
 
 header .logo h1 {
@@ -77,59 +62,43 @@ header .logo h1 {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    letter-spacing: -0.5px;
 }
 
-header .nav-menu ul {
+.nav-menu ul {
     list-style: none;
     display: flex;
     gap: 1.5rem;
 }
 
-header .nav-menu ul li a {
+.nav-menu ul li a {
     color: var(--text-primary);
     text-decoration: none;
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 8px;
     transition: all 0.3s ease;
-    position: relative;
 }
 
-header .nav-menu ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: var(--accent);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
+.nav-menu ul li a i {
+    margin-right: 8px;
 }
 
-header .nav-menu ul li a:hover::after {
-    width: 80%;
-}
-
-header .nav-menu ul li a:hover {
+.nav-menu ul li a:hover {
     color: var(--accent);
-    transform: translateY(-2px);
+    background: var(--glass-bg);
 }
 
-/* Dark Mode Toggle Button */
 .dark-mode-toggle {
     background: var(--glass-bg);
     border: 1px solid var(--border);
-    border-radius: 50px;
-    width: 45px;
-    height: 45px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-left: 1rem;
 }
 
 .dark-mode-toggle:hover {
@@ -137,78 +106,29 @@ header .nav-menu ul li a:hover {
     background: var(--accent);
 }
 
-.dark-mode-toggle i {
-    font-size: 1.4rem;
-    color: var(--text-primary);
-    transition: color 0.3s ease;
-}
-
-/* Menu Toggle for Mobile */
 .menu-toggle {
     display: none;
     font-size: 2rem;
     cursor: pointer;
     color: var(--text-primary);
-    transition: transform 0.3s ease;
 }
 
-.menu-toggle:hover {
-    transform: scale(1.1);
-}
-
-/* Hero Section */
 .hero {
     background: var(--hero-bg);
     color: white;
     padding: 100px 20px;
     text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-    animation: rotate 20s linear infinite;
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-.hero .container {
-    position: relative;
-    z-index: 1;
-}
-
-.hero h3 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 0.5rem;
-    letter-spacing: 2px;
 }
 
 .hero h1 {
     font-size: 4rem;
     font-weight: 800;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, #fff, var(--accent-light));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
 }
 
 .hero p {
     font-size: 1.2rem;
     max-width: 600px;
-    margin: 0 auto 2rem;
-    opacity: 0.9;
+    margin: 1rem auto;
 }
 
 .btn-primary {
@@ -220,17 +140,14 @@ header .nav-menu ul li a:hover {
     font-weight: 600;
     display: inline-block;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
     background: var(--accent);
     color: white;
 }
 
-/* Features Section */
 .features {
     padding: 80px 20px;
     background: var(--bg);
@@ -241,19 +158,6 @@ header .nav-menu ul li a:hover {
     font-size: 2.5rem;
     color: var(--accent);
     margin-bottom: 3rem;
-    position: relative;
-}
-
-.features h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background: var(--accent);
-    border-radius: 2px;
 }
 
 .features-list {
@@ -271,76 +175,59 @@ header .nav-menu ul li a:hover {
     padding: 2rem;
     width: 300px;
     text-align: center;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.3s ease;
     box-shadow: var(--shadow);
-    border: 1px solid var(--border);
 }
 
-.feature:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-.feature h3 {
-    font-size: 1.5rem;
+.feature i {
+    font-size: 2.5rem;
     color: var(--accent);
     margin-bottom: 1rem;
 }
 
-.feature p {
-    color: var(--text-secondary);
-    line-height: 1.6;
+.feature:hover {
+    transform: translateY(-10px);
 }
 
-/* Footer */
 footer {
     background: var(--footer-bg);
-    color: var(--text-secondary);
     text-align: center;
     padding: 1.5rem;
-    margin-top: 2rem;
-}
-
-footer p {
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
+    color: var(--text-secondary);
 }
 
 footer b {
     color: var(--accent);
-    font-weight: 600;
 }
 
-/* Mobile Responsive */
 @media screen and (max-width: 768px) {
-    header .nav-menu {
+    .nav-menu {
         display: none;
         position: absolute;
         top: 70px;
         left: 0;
         width: 100%;
         background: var(--header-bg);
-        backdrop-filter: blur(10px);
         padding: 1rem 0;
         box-shadow: var(--shadow);
     }
 
-    header .nav-menu.active {
+    .nav-menu.active {
         display: block;
     }
 
-    header .nav-menu ul {
+    .nav-menu ul {
         flex-direction: column;
         align-items: center;
         gap: 0;
     }
 
-    header .nav-menu ul li {
+    .nav-menu ul li {
         width: 100%;
         text-align: center;
     }
 
-    header .nav-menu ul li a {
+    .nav-menu ul li a {
         display: block;
         padding: 1rem;
     }
@@ -352,55 +239,4 @@ footer b {
     .hero h1 {
         font-size: 2.5rem;
     }
-
-    .hero h3 {
-        font-size: 1.2rem;
-    }
-
-    .features h2 {
-        font-size: 2rem;
-    }
 }
-
-/* Additional Styles for Notes & Grammar Pages (if they exist) */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Smooth transitions for all interactive elements */
-a, button, .feature, .btn-primary {
-    transition: all 0.3s ease;
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--bg);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--accent);
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-dark);
-}
-
-/* Selection Color */
-::selection {
-    background: var(--accent);
-    color: white;
-}
-
-/* Add Font Awesome for icons (optional but recommended) */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
-
-/* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-```
