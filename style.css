@@ -1,110 +1,328 @@
- /* Reset some default styles */
+Here is an updated CSS file that transforms your website with a modern, attractive design, a glass-morphism effect, and a fully functional dark mode, without needing to change your HTML file.
+```css
+/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Light theme variables (default) */
+:root {
+    --bg: #f4f7fc;
+    --card-bg: #ffffff;
+    --text-primary: #1e2a3e;
+    --text-secondary: #4a627a;
+    --header-bg: #1e2a3e;
+    --footer-bg: #1a252f;
+    --accent: #00b4d8;
+    --accent-dark: #0077b6;
+    --accent-light: #90e0ef;
+    --hero-bg: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.9);
+    --border: rgba(0, 180, 216, 0.2);
+    --code-bg: #f0f4f8;
+}
+
+/* Dark theme overrides */
+body.dark {
+    --bg: #0f1724;
+    --card-bg: #1e293b;
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --header-bg: #0f1724;
+    --footer-bg: #0a0f18;
+    --accent: #38bdf8;
+    --accent-dark: #0284c7;
+    --accent-light: #7dd3fc;
+    --hero-bg: linear-gradient(135deg, #0f1724 0%, #1e293b 100%);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    --glass-bg: rgba(30, 41, 59, 0.9);
+    --border: rgba(56, 189, 248, 0.2);
+    --code-bg: #0f1724;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-}
-/* Reset default spacing */
-body, html {
-    margin: 0;
-    padding: 0;
+    font-family: 'Poppins', 'Arial', sans-serif;
+    background-color: var(--bg);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    line-height: 1.6;
 }
 
-header {
-    margin: 0;
-    padding: 0;
+html {
+    scroll-behavior: smooth;
 }
 
+/* Header Styles */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    background-color: #333;
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem 5%;
+    background: var(--header-bg);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+    transition: background 0.3s ease;
 }
 
 header .logo h1 {
-    font-size: 2em;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color:#03befc ; /* Tomato color */
-    margin-right: 20px;
-}
-
-header .nav-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -0.5px;
 }
 
 header .nav-menu ul {
-    list-style-type: none;
+    list-style: none;
     display: flex;
-}
-
-header .nav-menu ul li {
-    margin-left: 20px;
-    position: relative;
+    gap: 1.5rem;
 }
 
 header .nav-menu ul li a {
-    color: white;
+    color: var(--text-primary);
     text-decoration: none;
-    font-size: 1.1em;
-    padding: 10px 15px;
-    display: block;
-    transition: background-color 0.3s, transform 0.3s ease;
-    border-radius: 5px;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-/* Hover effects for desktop */
-header .nav-menu ul li a:hover {
-    background-color: #ff6347;
-    transform: translateY(-5px);
-}
-
-/* Active state for mobile menu */
-header .nav-menu.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+header .nav-menu ul li a::after {
+    content: '';
     position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    z-index: 10;
-    border-top: 2px solid #ff6347;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
-header .nav-menu.active li a {
-    font-size: 1.5em;
-    margin: 20px 0;
+header .nav-menu ul li a:hover::after {
+    width: 80%;
 }
 
-/* Menu toggle button */
-header .menu-toggle {
-    display: none;
+header .nav-menu ul li a:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    background: var(--glass-bg);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    font-size: 2.5em;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+    background: var(--accent);
+}
+
+.dark-mode-toggle i {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+/* Menu Toggle for Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-primary);
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    background: var(--hero-bg);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #fff, var(--accent-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    opacity: 0.9;
+}
+
+.btn-primary {
+    background: white;
+    color: var(--accent-dark);
+    padding: 12px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    background: var(--accent);
     color: white;
 }
 
-/* Mobile Responsive Design */
+/* Features Section */
+.features {
+    padding: 80px 20px;
+    background: var(--bg);
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.features h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+.features-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 300px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.feature p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background: var(--footer-bg);
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+footer b {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Mobile Responsive */
 @media screen and (max-width: 768px) {
     header .nav-menu {
         display: none;
-    }
-
-    header .menu-toggle {
-        display: block;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--header-bg);
+        backdrop-filter: blur(10px);
+        padding: 1rem 0;
+        box-shadow: var(--shadow);
     }
 
     header .nav-menu.active {
@@ -114,202 +332,75 @@ header .menu-toggle {
     header .nav-menu ul {
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        gap: 0;
     }
 
     header .nav-menu ul li {
-        margin-left: 0;
         width: 100%;
         text-align: center;
     }
+
+    header .nav-menu ul li a {
+        display: block;
+        padding: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h3 {
+        font-size: 1.2rem;
+    }
+
+    .features h2 {
+        font-size: 2rem;
+    }
 }
 
-main {
-    padding: 20px;
-    text-align:left;
+/* Additional Styles for Notes & Grammar Pages (if they exist) */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
+/* Smooth transitions for all interactive elements */
+a, button, .feature, .btn-primary {
+    transition: all 0.3s ease;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-dark);
+}
+
+/* Selection Color */
+::selection {
+    background: var(--accent);
     color: white;
 }
 
-footer p {
-    font-size: 1em;
-}
+/* Add Font Awesome for icons (optional but recommended) */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
-/* Smooth scrolling for anchor links */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-a:hover {
-    color: #ff6347;
-}
-/* Hero Section */
-.hero {
-    background: linear-gradient(to right, #0078D7, #005bb5);
-    color: #fff;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.hero .btn-primary {
-    background-color: #fff;
-    color: #0078D7;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.hero .btn-primary:hover {
-    background-color: #0078D7;
-    color: #fff;
-}
-/* Features Section */
-.features {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-.features h2 {
-    font-size: 2.5rem;
-    color: #0078D7;
-    margin-bottom: 40px;
-}
-
-.features-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.feature {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    padding: 20px;
-    text-align: center;
-}
-
-.feature h3 {
-    font-size: 1.8rem;
-    color: #0078D7;
-    margin-bottom: 10px;
-}
-
-.feature p {
-    font-size: 1rem;
-    color: #555;
-}
-
-/* Call-to-Action Section */
-.cta {
-    background: #0078D7;
-    color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.cta h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.cta p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.cta .btn-primary {
-    background-color: #fff;
-    color: #0078D7;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.cta .btn-primary:hover {
-    background-color: #005bb5;
-    color: #fff;
-}
-footer {
-    background-color: #333; /* अपनी पसंद का कलर चुनें */
-    color: #fff; /* टेक्स्ट के लिए सफेद रंग */
-    text-align: center;
-    padding: 10px 0;
-    position: relative; /* अगर फिक्स करना हो तो relative रखें */
-    bottom: 0;
-    width: 100%;
-}
-
-.nav-menu ul li a i {
-    margin-right: 6px;
-}
-
-.logo {
-    margin: 0;
-    padding: 0;
-}
-
-      /* Icon Colors */
-        .fa-users, .fa-bullseye, .fa-star, .fa-chalkboard-user, .fa-handshake-angle {
-            color: #0078D7;
-        }
-
-
-/* Dark Mode Toggle Button */
-.dark-toggle {
-    font-size: 22px;
-    cursor: pointer;
-    margin-left: 15px;
-    color: #333;
-}
-
-.dark-toggle i {
-    transition: 0.3s;
-}
-
-/* Light theme variables */
-:root{
-  --bg:#f8fbff;
-  --card:#e8f0ff;
-  --text:#0f1724;
-  --muted:#6b7280;
-  --accent:#2b6ef6;
-  --glass: rgba(255,255,255,0.6);
-}
-
-/* Dark theme overrides */
-body.dark{
-  --bg: #0b1220;
-  --card: #0e2030;
-  --text: #e6eef9;
-  --muted: #9aa6b6;
-  --accent: #6aa2ff;
-  --glass: rgba(255,255,255,0.04);
-}
-
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+```
