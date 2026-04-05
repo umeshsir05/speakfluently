@@ -2,11 +2,166 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
-    <!-- CSS aur JavaScript files -->
-<link rel="stylesheet" href="style.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Study Notes - Speak Fluently</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Notes2 page specific styles */
+        .notes-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .notes-header h2 {
+            font-size: 2.5rem;
+            color: var(--accent, #00b4d8);
+            position: relative;
+            display: inline-block;
+        }
+        .notes-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent, #00b4d8);
+            border-radius: 2px;
+        }
+        .notes-header p {
+            margin-top: 1rem;
+            color: var(--text-secondary, #4a627a);
+        }
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .stat-card {
+            background: var(--card-bg, white);
+            border-radius: 16px;
+            padding: 0.8rem 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow, 0 5px 15px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .stat-card i {
+            font-size: 1.5rem;
+            color: var(--accent, #00b4d8);
+            margin-right: 8px;
+        }
+        .stat-card span {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .lessons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+        .lesson-card {
+            background: var(--card-bg, white);
+            border-radius: 16px;
+            padding: 1rem 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow, 0 5px 15px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .lesson-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        .lesson-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--accent, #00b4d8), var(--accent-dark, #0077b6));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .lesson-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+        .lesson-content {
+            flex: 1;
+        }
+        .lesson-badge {
+            font-size: 0.7rem;
+            color: var(--accent, #00b4d8);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .lesson-content a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-decoration: none;
+            color: var(--text-primary, #1e2a3e);
+            display: block;
+            transition: color 0.3s ease;
+        }
+        .lesson-content a:hover {
+            color: var(--accent, #00b4d8);
+        }
+        .new-badge {
+            background: #ff4444;
+            color: white;
+            font-size: 0.65rem;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-left: 8px;
+            display: inline-block;
+            font-weight: 600;
+        }
+        .lesson-card .new-img {
+            display: inline-block;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .lesson-card .new-img img {
+            width: 35px;
+            height: 16px;
+            vertical-align: middle;
+        }
+        body.dark .lesson-card {
+            background: var(--card-bg, #1e293b);
+        }
+        body.dark .lesson-content a {
+            color: var(--text-primary, #e2e8f0);
+        }
+        @media screen and (max-width: 768px) {
+            .lessons-grid {
+                grid-template-columns: 1fr;
+            }
+            .notes-header h2 {
+                font-size: 1.8rem;
+            }
+            .stats-bar {
+                gap: 1rem;
+            }
+            .stat-card {
+                padding: 0.5rem 1rem;
+            }
+            .stat-card span {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -15,73 +170,361 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-
-<li><a href="grammar.html">Grammer</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
-    <main>
-        <h2>Study Notes</h2>
-        <ul>
-<li><a href="short_sentence.html">Lesson:1-Short Sentences</a></li>
-<li><a href="2_Short_phrases.html">Lesson:2-Short Phrases.</a></li>
-<li><a href="3_have_has_to.html">Lesson:3-Have to Has to.</a></li>
-<li><a href="4_what_all.html">Lesson:4-What all who all</a></li>
-<li><a href="5_whatAll2.html">Lesson:5-What all how all-2</a></li>
-<li><a href="6_wh_word.html">Lesson:6-WH-words.</a></li>
-<li><a href="7_conversation_english.html">Lesson:7-Conversation English</a></li>
-<li><a href="8_for_teachers.html">Lesson:8-English for Teacher(spoken)</a></li>
-<li><a href="9_word_meaning.html">Lesson:9-Word meaning</a></li>
-<li><a href="10_classroom_eng.html">Lesson:10-Classroom english </a></li>
-<li><a href="11_wh_family2.html">Lesson:11-WH family 2</a></li>
-<li><a href="12_class-management.html">Lesson:12-Classroom Management</a></li>
-<li><a href="13_teaching-instruction.html">Lesson:13-Teaching Instructions.</a></li>
-<li><a href="14_discipline.html">Lesson:14-Classroom Discipline</a></li>
-<li><a href="15_motivation.html">Lesson:15-Motivation </a></li>
-<li><a href="16_classroom_eng2.html">Lesson:16-Class room English 2.</a></li>
-<li><a href="17_command_order.html">Lesson:17-commond/Order sentence </a></li>
-<li><a href="18_homework.html">Lesson:18-Homework/Assignment </a></li>
-<li><a href="19_exammination.html">Lesson:19-Examination Test related sentences</a></li>
-<li><a href="20_classroom-rules.html">Lesson:20-Rules and behavior related sentence </a></li>
-<li><a href="ilove">Lesson:21-Model verbs</a></li>
-<li><a href="22_causative_verbs.html">Lesson:22-CAUSATIVE VERBS.</a></li>
-<li><a href="ilove">Lesson:23-Whateve whenever.</a></li>
-<li><a href="ilove">Lesson:24-Uses of Ask word.</a></li>
-<li><a href="ilove">Lesson:25-Uses of Agree Admit or convince.</a></li>
-<li><a href="ilove">Lesson:26Short sentence phrases.-</a></li>
-<li><a href="ilove">Lesson:27-Short phrases.</a></li>
-<li><a href="ilove">Lesson:28- sentences.</a></li>
-<li><a href="ilove">Lesson:29-What is there to+V1.</a></li>
-<li><a href="ilove">Lesson:30-Poles-Apart.</a></li>
-<li><a href="ilove">Lesson:31-Since-ever.</a></li>
-<li><a href="32_thats_why.html">Lesson:32-That's why.</a></li>
-<li><a href="33_whatever_whenever.html">Lesson:33-Whatever-whenever.</a></li>
-<li><a href="34_tense.html">Lesson:34-Tense</a></li>
-<li><a href="35_Subject_verb_agreement.html">Lesson:35 - Subject Verb Agreement <img src="new.gif" alt="GIF Image" width="40" height="20" style="vertical-align: bottom;">
-</a></li>   </a></li>
-<li><a href="36_Subject_verb_agreement-2.html">Lesson:36:Subject Verb Agreement-2 <img src="new.gif" alt="GIF Image" width="40" height="20" style="vertical-align: bottom;">
-</a></li>   </a></li>
-<li><a href="37_voice.html">Lesson:37 Active and passive voice<img src="new.gif" alt="GIF Image" width="40" height="20" style="vertical-align: bottom;">
-</a></li>   </a></li>
-<li><a href="38_adverb.html">Lesson:38-Adverb<img src="new.gif" alt="GIF Image" width="40" height="20" style="vertical-align: bottom;">
-</a></li>   </a></li>
-<li><a href="39_article.html">Lesson:39-Articles<img src="new.gif" alt="GIF Image" width="40" height="20" style="vertical-align: bottom;">
-</a></li>   </a></li>
-        </ul> 
-    </main>  
+
+    <main style="max-width: 1200px; margin: 2rem auto; padding: 0 20px;">
+        <div class="notes-header">
+            <h2><i class="fas fa-graduation-cap"></i> Study Notes</h2>
+            <p>Complete spoken English learning materials - From basic to advanced</p>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-card">
+                <i class="fas fa-book"></i>
+                <span>39+ Lessons</span>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-clock"></i>
+                <span>Beginner to Advanced</span>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-download"></i>
+                <span>Free Downloadable</span>
+            </div>
+        </div>
+
+        <!-- Lessons Grid -->
+        <div class="lessons-grid">
+            <!-- Lesson 1 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-comment"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 1</div>
+                    <a href="short_sentence.html">Short Sentences</a>
+                </div>
+            </div>
+            <!-- Lesson 2 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-smile"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 2</div>
+                    <a href="2_Short_phrases.html">Short Phrases</a>
+                </div>
+            </div>
+            <!-- Lesson 3 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-hashtag"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 3</div>
+                    <a href="3_have_has_to.html">Have to / Has to</a>
+                </div>
+            </div>
+            <!-- Lesson 4 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-question-circle"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 4</div>
+                    <a href="4_what_all.html">What all / Who all</a>
+                </div>
+            </div>
+            <!-- Lesson 5 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-question"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 5</div>
+                    <a href="5_whatAll2.html">What all / How all - 2</a>
+                </div>
+            </div>
+            <!-- Lesson 6 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-question-circle"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 6</div>
+                    <a href="6_wh_word.html">WH-words</a>
+                </div>
+            </div>
+            <!-- Lesson 7 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-users"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 7</div>
+                    <a href="7_conversation_english.html">Conversation English</a>
+                </div>
+            </div>
+            <!-- Lesson 8 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 8</div>
+                    <a href="8_for_teachers.html">English for Teachers (Spoken)</a>
+                </div>
+            </div>
+            <!-- Lesson 9 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-book"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 9</div>
+                    <a href="9_word_meaning.html">Word Meaning</a>
+                </div>
+            </div>
+            <!-- Lesson 10 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-school"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 10</div>
+                    <a href="10_classroom_eng.html">Classroom English</a>
+                </div>
+            </div>
+            <!-- Lesson 11 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-question"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 11</div>
+                    <a href="11_wh_family2.html">WH Family 2</a>
+                </div>
+            </div>
+            <!-- Lesson 12 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-tasks"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 12</div>
+                    <a href="12_class-management.html">Classroom Management</a>
+                </div>
+            </div>
+            <!-- Lesson 13 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-chalkboard"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 13</div>
+                    <a href="13_teaching-instruction.html">Teaching Instructions</a>
+                </div>
+            </div>
+            <!-- Lesson 14 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-gavel"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 14</div>
+                    <a href="14_discipline.html">Classroom Discipline</a>
+                </div>
+            </div>
+            <!-- Lesson 15 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-star"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 15</div>
+                    <a href="15_motivation.html">Motivation</a>
+                </div>
+            </div>
+            <!-- Lesson 16 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-school"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 16</div>
+                    <a href="16_classroom_eng2.html">Classroom English 2</a>
+                </div>
+            </div>
+            <!-- Lesson 17 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-hand-point-right"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 17</div>
+                    <a href="17_command_order.html">Command / Order Sentences</a>
+                </div>
+            </div>
+            <!-- Lesson 18 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-pencil-alt"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 18</div>
+                    <a href="18_homework.html">Homework / Assignment</a>
+                </div>
+            </div>
+            <!-- Lesson 19 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-file-alt"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 19</div>
+                    <a href="19_exammination.html">Examination / Test Related Sentences</a>
+                </div>
+            </div>
+            <!-- Lesson 20 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-clipboard-list"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 20</div>
+                    <a href="20_classroom-rules.html">Rules & Behavior Related Sentences</a>
+                </div>
+            </div>
+            <!-- Lesson 21 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-brain"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 21</div>
+                    <a href="#">Modal Verbs</a>
+                </div>
+            </div>
+            <!-- Lesson 22 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-link"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 22</div>
+                    <a href="22_causative_verbs.html">Causative Verbs</a>
+                </div>
+            </div>
+            <!-- Lesson 23-31 (ilove links) -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-random"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 23-31</div>
+                    <a href="#">Advanced Phrases & Structures</a>
+                </div>
+            </div>
+            <!-- Lesson 32 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-arrow-right"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 32</div>
+                    <a href="32_thats_why.html">That's Why</a>
+                </div>
+            </div>
+            <!-- Lesson 33 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-infinity"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 33</div>
+                    <a href="33_whatever_whenever.html">Whatever / Whenever</a>
+                </div>
+            </div>
+            <!-- Lesson 34 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-clock"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 34</div>
+                    <a href="34_tense.html">Tense</a>
+                </div>
+            </div>
+            <!-- Lesson 35 - with NEW badge -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-handshake"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 35 <span class="new-badge">NEW</span></div>
+                    <a href="35_Subject_verb_agreement.html">Subject Verb Agreement <span class="new-img"><img src="new.gif" alt="New"></span></a>
+                </div>
+            </div>
+            <!-- Lesson 36 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-handshake"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 36 <span class="new-badge">NEW</span></div>
+                    <a href="36_Subject_verb_agreement-2.html">Subject Verb Agreement-2 <span class="new-img"><img src="new.gif" alt="New"></span></a>
+                </div>
+            </div>
+            <!-- Lesson 37 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-exchange-alt"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 37 <span class="new-badge">NEW</span></div>
+                    <a href="37_voice.html">Active and Passive Voice <span class="new-img"><img src="new.gif" alt="New"></span></a>
+                </div>
+            </div>
+            <!-- Lesson 38 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-paragraph"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 38 <span class="new-badge">NEW</span></div>
+                    <a href="38_adverb.html">Adverb <span class="new-img"><img src="new.gif" alt="New"></span></a>
+                </div>
+            </div>
+            <!-- Lesson 39 -->
+            <div class="lesson-card">
+                <div class="lesson-icon"><i class="fas fa-newspaper"></i></div>
+                <div class="lesson-content">
+                    <div class="lesson-badge">Lesson 39 <span class="new-badge">NEW</span></div>
+                    <a href="39_article.html">Articles <span class="new-img"><img src="new.gif" alt="New"></span></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
     <footer>
-        <p>&copy; <b>2024 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // ========== DARK MODE TOGGLE ==========
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        // Load saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+
+        // Toggle dark mode
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+
+        // ========== MOBILE MENU TOGGLE (FULLY WORKING) ==========
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (menuToggle && navMenu) {
+            // Open/close menu on hamburger click
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+
+            // Close menu when clicking on any nav link
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    navMenu.classList.remove('active');
+                }
+            });
+
+            // On window resize: if screen becomes desktop, remove active class
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
