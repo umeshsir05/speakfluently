@@ -3,16 +3,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
-   <!-- CSS aur JavaScript files -->
-<link rel="stylesheet" href="style.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>About Us - Speak Fluently</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* extra small fixes for about page content */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        main h1 {
+            font-size: 2.5rem;
+            color: var(--accent, #00b4d8);
+            margin-bottom: 1rem;
+            border-left: 5px solid var(--accent, #00b4d8);
+            padding-left: 20px;
+        }
+        main h2 {
+            font-size: 1.8rem;
+            color: var(--text-primary, #1e2a3e);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        body.dark main h2 {
+            color: var(--text-primary, #e2e8f0);
+        }
+        main p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--text-secondary, #4a627a);
+            margin-bottom: 1rem;
+        }
+        body.dark main p {
+            color: var(--text-secondary, #94a3b8);
+        }
+        main ul {
+            margin: 1rem 0 1.5rem 2rem;
+        }
+        main ul li {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            color: var(--text-secondary, #4a627a);
+        }
+        body.dark main ul li {
+            color: var(--text-secondary, #94a3b8);
+        }
+        .about-highlight {
+            background: var(--glass-bg, rgba(0,180,216,0.1));
+            padding: 1.5rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--accent, #00b4d8);
+        }
+        body.dark .about-highlight {
+            background: rgba(56, 189, 248, 0.08);
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <h1>Speak Fluent</h1>
+            <h1>Speak Fluently</h1>
         </div>
         <nav class="nav-menu">
             <ul>
@@ -32,90 +89,103 @@
             <span>&#9776;</span>
         </div>
     </header>
-    <main>            <h1>About Us</h1>
-            <p>Welcome to our Spoken English website! We are dedicated to helping individuals improve their English-speaking skills, whether you're a beginner or looking to refine your communication abilities.The App is developed by Umesh banjare.</p>
 
-            <h2>Our Mission</h2>
+    <main>
+        <h1>About Us</h1>
+        <p>Welcome to our Spoken English website! We are dedicated to helping individuals improve their English-speaking skills, whether you're a beginner or looking to refine your communication abilities. The App is developed by <strong>Umesh Banjare</strong>.</p>
+
+        <div class="about-highlight">
+            <h2>🎯 Our Mission</h2>
             <p>Our mission is to make learning English easy, accessible, and enjoyable for everyone. We believe that language is a powerful tool for personal and professional growth, and we aim to provide effective resources for mastering spoken English.</p>
+        </div>
 
-            <h2>Why Choose Us?</h2>
-            <ul>
-                <li>Experienced instructors who are passionate about teaching.</li>
-                <li>Interactive lessons and activities designed to improve fluency.</li>
-                <li>Flexible learning schedules to suit your needs.</li>
-                <li>Supportive community of learners and experts.</li>
-            </ul>
+        <h2>✨ Why Choose Us?</h2>
+        <ul>
+            <li><i class="fas fa-chalkboard-user" style="margin-right: 8px; color: var(--accent, #00b4d8);"></i> Experienced instructors who are passionate about teaching.</li>
+            <li><i class="fas fa-comments" style="margin-right: 8px; color: var(--accent, #00b4d8);"></i> Interactive lessons and activities designed to improve fluency.</li>
+            <li><i class="fas fa-calendar-alt" style="margin-right: 8px; color: var(--accent, #00b4d8);"></i> Flexible learning schedules to suit your needs.</li>
+            <li><i class="fas fa-users" style="margin-right: 8px; color: var(--accent, #00b4d8);"></i> Supportive community of learners and experts.</li>
+        </ul>
 
-            <h2>Our Approach</h2>
-            <p>We focus on practical communication skills that help you speak English with confidence. Our approach includes:</p>
-            <ul>
-                <li>One-on-one speaking practice sessions</li>
-                <li>Group discussions and debates</li>
-                <li>Listening and pronunciation exercises</li>
-                <li>Real-world scenarios for practical learning</li>
-            </ul>
+        <h2>📚 Our Approach</h2>
+        <p>We focus on practical communication skills that help you speak English with confidence. Our approach includes:</p>
+        <ul>
+            <li>🗣️ One-on-one speaking practice sessions</li>
+            <li>💬 Group discussions and debates</li>
+            <li>🎧 Listening and pronunciation exercises</li>
+            <li>🌍 Real-world scenarios for practical learning</li>
+        </ul>
 
-            <h2>Join Us Today!</h2>
+        <div class="about-highlight">
+            <h2>🚀 Join Us Today!</h2>
             <p>Start your journey towards mastering spoken English with us. Whether you're preparing for a job interview, traveling, or just want to improve your skills, we're here to help you every step of the way!</p>
         </div>
-     </main>
+    </main>
+
     <footer>
-        <p>&copy; <b>2024 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-   <script>
+    <script>
         // ========== DARK MODE TOGGLE ==========
         const darkToggle = document.getElementById('darkModeToggle');
         const body = document.body;
 
-        // चेक करें कि पहले से डार्क मोड सेव है या नहीं
+        // Load saved dark mode preference
         if (localStorage.getItem('darkMode') === 'enabled') {
             body.classList.add('dark');
-            darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            // ensure light mode icon
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
         }
 
-        // डार्क मोड टॉगल करें
-        darkToggle.addEventListener('click', () => {
-            body.classList.toggle('dark');
-            
-            if (body.classList.contains('dark')) {
-                localStorage.setItem('darkMode', 'enabled');
-                darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
-            } else {
-                localStorage.setItem('darkMode', 'disabled');
-                darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
-            }
-        });
+        // Toggle dark mode
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
 
-        // ========== MOBILE MENU TOGGLE (100% WORKING) ==========
+        // ========== MOBILE MENU TOGGLE (FULLY WORKING) ==========
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
 
-        menuToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
-            navMenu.classList.toggle('active');
-        });
-
-        // मेनू के अंदर किसी लिंक पर क्लिक करने पर मेनू बंद करें
-        document.querySelectorAll('.nav-menu ul li a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
+        if (menuToggle && navMenu) {
+            // Open/close menu on hamburger click
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
             });
-        });
 
-        // बाहर क्लिक करने पर मेनू बंद करें
-        document.addEventListener('click', function(event) {
-            if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-                navMenu.classList.remove('active');
-            }
-        });
+            // Close menu when clicking on any nav link
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
 
-        // विंडो रिसाइज होने पर डेस्कटॉप व्यू में मेनू छुपाएं
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                navMenu.classList.remove('active');
-            }
-        });
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    navMenu.classList.remove('active');
+                }
+            });
+
+            // On window resize: if screen becomes desktop, remove active class
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        }
     </script>
 </body>
 </html>
