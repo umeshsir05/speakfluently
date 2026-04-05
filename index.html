@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spoken English Website</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -18,12 +21,15 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="notes.html">Tenses</a></li>
                 <li><a href="notes2.html">Notes-2</a></li>
-
-<li><a href="grammar.html">Grammer</a></li>
+                <li><a href="grammar.html">Grammer</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="admin.html">Admin</a></li>
             </ul>
         </nav>
+        <!-- Dark Mode Toggle Button -->
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
@@ -65,5 +71,57 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle Functionality
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            updateToggleIcon(true);
+        }
+        
+        // Toggle dark mode
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark');
+            
+            if (body.classList.contains('dark')) {
+                localStorage.setItem('darkMode', 'enabled');
+                updateToggleIcon(true);
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                updateToggleIcon(false);
+            }
+        });
+        
+        // Update toggle button icon
+        function updateToggleIcon(isDark) {
+            const icon = darkModeToggle.querySelector('i');
+            if (isDark) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+        
+        // Mobile Menu Toggle Functionality
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-menu ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
