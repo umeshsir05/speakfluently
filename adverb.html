@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Adverb - English Grammar | Speak Fluently</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .lesson-header h1 {
+            font-size: 2.5rem;
+            color: var(--accent, #00b4d8);
+            position: relative;
+            display: inline-block;
+        }
+        .lesson-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent, #00b4d8);
+            border-radius: 2px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.6rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--text-primary, #1e2a3e);
+            margin: 1.2rem 0 0.8rem;
+            font-size: 1.3rem;
+        }
+        body.dark .lesson-content h3 {
+            color: var(--text-primary, #e2e8f0);
+        }
+        .lesson-content p {
+            color: var(--text-secondary, #4a627a);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .example-box {
+            background: var(--glass-bg, rgba(0,180,216,0.05));
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border-left: 3px solid var(--accent, #00b4d8);
+        }
+        .rule-card {
+            background: var(--card-bg, white);
+            border-radius: 16px;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--bg, #f4f7fc);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .grammar-table th, .grammar-table td {
+            border: 1px solid var(--border, #ddd);
+            padding: 10px;
+            text-align: left;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .grammar-table th {
+            background: var(--accent, #00b4d8);
+            color: white;
+            font-weight: 600;
+        }
+        body.dark .grammar-table th {
+            background: var(--accent-dark, #0284c7);
+        }
+        .lesson-content ul, .lesson-content ol {
+            margin: 1rem 0 1rem 2rem;
+            color: var(--text-secondary, #4a627a);
+        }
+        .lesson-content li {
+            margin: 0.5rem 0;
+        }
+        .highlight {
+            color: var(--accent, #00b4d8);
+            font-weight: 600;
+        }
+        .grammar-note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-header h1 {
+                font-size: 1.8rem;
+            }
+            .lesson-content {
+                padding: 1rem;
+            }
+            .grammar-table {
+                font-size: 0.85rem;
+            }
+            .grammar-table th, .grammar-table td {
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Speak Fluently</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
+            </ul>
+        </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="lesson-container">
+            <div class="lesson-header">
+                <h1><i class="fas fa-paragraph"></i> Adverb (क्रिया-विशेषण)</h1>
+            </div>
+            <div class="lesson-content">
+                <p><strong>Adverb</strong> एक ऐसा शब्द है जो किसी <strong>Verb, Adjective</strong> या दूसरे <strong>Adverb</strong> की विशेषता बताता है।</p>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    1. He runs <span class="highlight">fast</span>. (fast – adverb of manner)<br>
+                    2. He runs <span class="highlight">very fast</span>. (very – adverb modifying another adverb)
+                </div>
+
+                <h2>Special Adverbs (Noun/Pronoun की विशेषता)</h2>
+                <p>कुछ Adverb Noun या Pronoun की विशेषता भी बताते हैं: <strong>Even, Only, Almost, At least</strong></p>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    1. <span class="highlight">Only</span> he can solve this problem. (केवल वही)<br>
+                    2. <span class="highlight">Even</span> he can solve this problem. (वह भी)<br>
+                    3. No one can change the history, <span class="highlight">not even</span> God.<br>
+                    4. <span class="highlight">At least</span> you should participate in the competition.
+                </div>
+
+                <h2>Types of Adverbs</h2>
+
+                <h3>1. Adverb of Manner (रीति-वाचक)</h3>
+                <p>कार्य करने की विधि या तरीका दर्शाता है। प्रायः Adjective में <strong>ly</strong> जोड़ने से बनता है।</p>
+                <div class="example-box">
+                    <strong>Examples:</strong> Anger → Angrily, Bad → Badly, Easy → Easily<br>
+                    <em>He writes <span class="highlight">beautifully</span>.</em>
+                </div>
+
+                <h3>2. Adverb of Time (समय-वाचक)</h3>
+                <p>समय का बोध कराता है।</p>
+                <div class="example-box">
+                    <strong>Examples:</strong> Now, then, soon, before, daily, yesterday, today, tomorrow, last month, next week, recently, shortly.<br>
+                    <em>He came <span class="highlight">yesterday</span>. / <span class="highlight">Today</span> he will come.</em>
+                </div>
+
+                <h3>3. Adverb of Place (स्थान-वाचक)</h3>
+                <p>स्थान का बोध कराता है।</p>
+                <div class="example-box">
+                    <strong>Examples:</strong> Here, there, in, out, away, indoor, outdoor, near, far, above, below, everywhere.<br>
+                    <em><span class="highlight">There</span> was a king. / He went <span class="highlight">there</span>.</em>
+                </div>
+
+                <h3>4. Adverb of Frequency (आवृत्ति-वाचक)</h3>
+                <p>कार्य करने की आवृत्ति (कितनी बार) दर्शाता है।</p>
+                <div class="example-box">
+                    <strong>Examples:</strong> Once, twice, always, never, often, seldom, again, rarely, many times, already.<br>
+                    <em>I <span class="highlight">always</span> go there. / He has <span class="highlight">already</span> gone.</em>
+                </div>
+
+                <h2>Position of Adverbs</h2>
+                <ul>
+                    <li>Adverb को उस शब्द के जितना संभव हो उतना पास रखना चाहिए जिसकी वह विशेषता बता रहा हो।</li>
+                    <li><strong>Adverb of manner, time, place</strong> का प्रयोग सामान्यतः Verb के बाद होता है। यदि Object हो तो Object के बाद।<br>
+                        <em>He writes <span class="highlight">beautifully</span>. / He writes a letter <span class="highlight">beautifully</span>.</em>
+                    </li>
+                    <li>Adverb of time और place को वाक्य के शुरू में भी रख सकते हैं।<br>
+                        <em><span class="highlight">Today</span> he will come. / <span class="highlight">There</span> was a king.</em>
+                    </li>
+                    <li><strong>Adverb of frequency</strong> का प्रयोग मुख्य Verb से पहले होता है, लेकिन <strong>never, already, always, often, once, seldom, twice</strong> का प्रयोग main verb के बाद भी हो सकता है।<br>
+                        <em>I have <span class="highlight">never</span> seen the Taj. / He has <span class="highlight">already</span> gone. / I take tea <span class="highlight">twice</span> a day.</em>
+                    </li>
+                </ul>
+
+                <h2>Formation of Adverbs</h2>
+                <ul>
+                    <li>सामान्यतः Adjective में <strong>ly</strong> लगाकर Adverb बनाया जाता है।<br>
+                        <em>Slow → Slowly, Quick → Quickly</em>
+                    </li>
+                    <li><strong>कभी भी दो Adjectives एक साथ प्रयोग नहीं होते</strong> – पहले Adjective को Adverb बनाना चाहिए।<br>
+                        <em>It is <span class="highlight">real important</span> (✗) → It is <span class="highlight">really important</span> (✓)</em><br>
+                        <em>It is <span class="highlight">absolute right</span> (✗) → It is <span class="highlight">absolutely right</span> (✓)</em>
+                    </li>
+                    <li>निम्न शब्दों के अंत में <strong>ly</strong> नहीं लगाया जाता क्योंकि ये Adjective और Adverb दोनों हैं:<br>
+                        <strong>Hard, Fast, Late, So, Straight, Well</strong><br>
+                        <em>He is walking fastly (✗) → He is walking <span class="highlight">fast</span> (✓)</em><br>
+                        <strong>Hard</strong> (कठोर) vs <strong>Hardly</strong> (मुश्किल से)
+                    </li>
+                    <li>निम्न शब्दों के बाद Adverb की जगह Adjective का प्रयोग होता है:<br>
+                        <strong>Smell, felt, taste, seem, appear</strong><br>
+                        <em>She seems angrily (✗) → She seems <span class="highlight">angry</span> (✓)</em><br>
+                        <em>The roses smell sweetly (✗) → The roses smell <span class="highlight">sweet</span> (✓)</em>
+                    </li>
+                </ul>
+
+                <h2>Uses of Some Important Adverbs</h2>
+                <div class="rule-card">
+                    <h3>Hardly / Scarcely ...... when / No Sooner ...... than</h3>
+                    <p>इनका प्रयोग Conjunction के रूप में भी होता है।</p>
+                    <div class="example-box">
+                        <em>Hardly had I reached the station <span class="highlight">when</span> the train left.</em><br>
+                        <em>No sooner did he see me <span class="highlight">than</span> he ran away.</em>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3>Rather</h3>
+                    <p><strong>To</strong> के साथ rather का प्रयोग किया जाता है।</p>
+                    <div class="example-box">
+                        <em>He would <span class="highlight">rather</span> die than beg.</em>
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3>Enough (पर्याप्त)</h3>
+                    <p>Enough का प्रयोग Adverb के रूप में होता है, तब इसकी स्थिति <strong>Adjective + Enough</strong> होती है।</p>
+                    <div class="example-box">
+                        <em>She is <span class="highlight">beautiful enough</span> to attract anyone.</em>
+                    </div>
+                </div>
+
+                <div class="grammar-note">
+                    <i class="fas fa-lightbulb"></i> <strong>Note:</strong> Adverbs add depth to your sentences. Remember the position rules – manner, place, time usually after the verb; frequency before the main verb (except with 'to be' and auxiliaries). Avoid double adjectives – convert the first to adverb.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
