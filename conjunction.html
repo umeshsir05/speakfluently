@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Conjunction - English Grammar | Speak Fluently</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .lesson-header h1 {
+            font-size: 2.5rem;
+            color: var(--accent, #00b4d8);
+            position: relative;
+            display: inline-block;
+        }
+        .lesson-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent, #00b4d8);
+            border-radius: 2px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.6rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--text-primary, #1e2a3e);
+            margin: 1.2rem 0 0.8rem;
+            font-size: 1.3rem;
+        }
+        body.dark .lesson-content h3 {
+            color: var(--text-primary, #e2e8f0);
+        }
+        .lesson-content p {
+            color: var(--text-secondary, #4a627a);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .example-box {
+            background: var(--glass-bg, rgba(0,180,216,0.05));
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border-left: 3px solid var(--accent, #00b4d8);
+        }
+        .rule-card {
+            background: var(--card-bg, white);
+            border-radius: 16px;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--bg, #f4f7fc);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .grammar-table th, .grammar-table td {
+            border: 1px solid var(--border, #ddd);
+            padding: 10px;
+            text-align: left;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .grammar-table th {
+            background: var(--accent, #00b4d8);
+            color: white;
+            font-weight: 600;
+        }
+        body.dark .grammar-table th {
+            background: var(--accent-dark, #0284c7);
+        }
+        .lesson-content ul, .lesson-content ol {
+            margin: 1rem 0 1rem 2rem;
+            color: var(--text-secondary, #4a627a);
+        }
+        .lesson-content li {
+            margin: 0.5rem 0;
+        }
+        .highlight {
+            color: var(--accent, #00b4d8);
+            font-weight: 600;
+        }
+        .grammar-note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-header h1 {
+                font-size: 1.8rem;
+            }
+            .lesson-content {
+                padding: 1rem;
+            }
+            .grammar-table {
+                font-size: 0.85rem;
+            }
+            .grammar-table th, .grammar-table td {
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Speak Fluently</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
+            </ul>
+        </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="lesson-container">
+            <div class="lesson-header">
+                <h1><i class="fas fa-link"></i> Conjunction (संयोजक)</h1>
+            </div>
+            <div class="lesson-content">
+                <p>A <strong>conjunction</strong> is a word that joins two words, phrases, clauses, or sentences together. It connects elements of equal grammatical rank or shows relationship between clauses.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    - Ram <span class="highlight">and</span> Shyam are friends. (joins two nouns)<br>
+                    - She is poor <span class="highlight">but</span> honest. (joins two adjectives)<br>
+                    - I stayed home <span class="highlight">because</span> it was raining. (joins two clauses)
+                </div>
+
+                <h2>Types of Conjunctions</h2>
+
+                <h3>1. Coordinating Conjunctions (समानाधिकरण संयोजक)</h3>
+                <p>These join two independent clauses or elements of equal grammatical rank. There are seven: <strong>For, And, Nor, But, Or, Yet, So</strong> (FANBOYS).</p>
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>Conjunction</th><th>Function</th><th>Example</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="highlight">For</td><td>reason/purpose</td><td>He is happy, <span class="highlight">for</span> he won the prize.</td></tr>
+                        <tr><td class="highlight">And</td><td>addition</td><td>I bought apples <span class="highlight">and</span> oranges.</td></tr>
+                        <tr><td class="highlight">Nor</td><td>negative addition</td><td>He doesn't eat meat, <span class="highlight">nor</span> does he eat fish.</td></tr>
+                        <tr><td class="highlight">But</td><td>contrast</td><td>She is young <span class="highlight">but</span> wise.</td></tr>
+                        <tr><td class="highlight">Or</td><td>alternative/choice</td><td>Would you like tea <span class="highlight">or</span> coffee?</td></tr>
+                        <tr><td class="highlight">Yet</td><td>contrast</td><td>He worked hard, <span class="highlight">yet</span> he failed.</td></tr>
+                        <tr><td class="highlight">So</td><td>result/consequence</td><td>It was late, <span class="highlight">so</span> we went home.</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>2. Subordinating Conjunctions (अधीनस्थ संयोजक)</h3>
+                <p>These join a dependent clause to an independent clause, showing a relationship such as time, cause, condition, contrast, or purpose.</p>
+                <div class="example-box">
+                    <strong>Common Subordinating Conjunctions:</strong> after, although, as, because, before, if, since, than, though, unless, until, when, where, while, as soon as, as long as, in order that, provided that.<br><br>
+                    <strong>Examples:</strong><br>
+                    - I will stay <span class="highlight">until</span> you return. (time)<br>
+                    - He passed <span class="highlight">because</span> he studied hard. (reason)<br>
+                    - <span class="highlight">If</span> it rains, we will cancel the picnic. (condition)<br>
+                    - <span class="highlight">Although</span> he is rich, he is humble. (contrast)
+                </div>
+
+                <h3>3. Correlative Conjunctions (युग्म संयोजक)</h3>
+                <p>These are pairs of conjunctions that work together to join equal elements.</p>
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>Pair</th><th>Example</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>either...or</td><td>You can have <span class="highlight">either</span> tea <span class="highlight">or</span> coffee.</td></tr>
+                        <tr><td>neither...nor</td><td>He is <span class="highlight">neither</span> tall <span class="highlight">nor</span> short.</td></tr>
+                        <tr><td>both...and</td><td>She is <span class="highlight">both</span> intelligent <span class="highlight">and</span> hardworking.</td></tr>
+                        <tr><td>not only...but also</td><td>He <span class="highlight">not only</span> plays cricket <span class="highlight">but also</span> sings.</td></tr>
+                        <tr><td>whether...or</td><td>I don't know <span class="highlight">whether</span> he will come <span class="highlight">or</span> not.</td></tr>
+                        <tr><td>so...as (negative)</td><td>He is <span class="highlight">not so</span> clever <span class="highlight">as</span> his brother.</td></tr>
+                        <tr><td>as...as (positive)</td><td>She is <span class="highlight">as</span> beautiful <span class="highlight">as</span> her mother.</td></tr>
+                    </tbody>
+                </table>
+
+                <h2>Important Rules for Conjunctions</h2>
+                <div class="rule-card">
+                    <h3>✅ Subject-Verb Agreement with Conjunctions</h3>
+                    <ul>
+                        <li>When two subjects are joined by <strong>and</strong>, the verb is plural.<br>
+                            <em>Ram <span class="highlight">and</span> Shyam <span class="highlight">are</span> playing.</em></li>
+                        <li>With <strong>either...or / neither...nor</strong>, the verb agrees with the nearest subject.<br>
+                            <em>Either Sita <span class="highlight">or</span> her sisters <span class="highlight">have</span> come.</em><br>
+                            <em>Neither the boys <span class="highlight">nor</span> the teacher <span class="highlight">is</span> present.</em></li>
+                        <li>With <strong>not only...but also</strong>, the verb agrees with the second subject.<br>
+                            <em>Not only the students <span class="highlight">but also</span> the teacher <span class="highlight">was</span> absent.</em></li>
+                    </ul>
+                </div>
+                <div class="rule-card">
+                    <h3>✅ Punctuation Rules</h3>
+                    <ul>
+                        <li>When a coordinating conjunction joins two independent clauses, use a comma before the conjunction.<br>
+                            <em>I wanted to go, <span class="highlight">but</span> I was too tired.</em></li>
+                        <li>When the independent clauses are short, the comma is optional.<br>
+                            <em>She laughed <span class="highlight">and</span> danced.</em></li>
+                        <li>When a subordinating conjunction begins a sentence, use a comma after the dependent clause.<br>
+                            <em><span class="highlight">Although</span> it rained, we went out.</em></li>
+                    </ul>
+                </div>
+                <div class="rule-card">
+                    <h3>❌ Common Mistakes</h3>
+                    <ul>
+                        <li>Don't use <strong>and</strong> and <strong>but</strong> together in the same clause.</li>
+                        <li>Don't use <strong>because</strong> and <strong>so</strong> together (redundant).<br>
+                            <em>Because he was ill, so he didn't come. (✗)</em><br>
+                            <em>Because he was ill, he didn't come. (✓)</em></li>
+                        <li>Don't use <strong>although</strong> and <strong>but</strong> together.<br>
+                            <em>Although he is rich, but he is humble. (✗)</em><br>
+                            <em>Although he is rich, he is humble. (✓)</em></li>
+                    </ul>
+                </div>
+
+                <h2>List of Common Conjunctions</h2>
+                <div class="example-box">
+                    <strong>Coordinating:</strong> for, and, nor, but, or, yet, so (FANBOYS)<br>
+                    <strong>Subordinating:</strong> after, although, as, because, before, if, since, than, though, unless, until, when, where, while, as soon as, as long as, in order that, provided that, so that<br>
+                    <strong>Correlative:</strong> either...or, neither...nor, both...and, not only...but also, whether...or, as...as, so...as
+                </div>
+
+                <h2>Practice Exercises</h2>
+                <div class="example-box">
+                    <strong>Fill in the blanks with the correct conjunction (answers below):</strong><br>
+                    1. She is smart ______ hardworking. (and/but)<br>
+                    2. He worked hard, ______ he failed. (so/yet)<br>
+                    3. You will succeed ______ you work hard. (if/although)<br>
+                    4. ______ he is old, he is active. (Because/Although)<br>
+                    5. He is ______ a singer ______ a dancer. (both...and / either...or)<br>
+                    6. ______ Ram ______ Shyam has come. (Neither...nor / Both...and)<br>
+                    7. Wait here ______ I return. (until/because)<br>
+                    8. She studied well ______ she passed the exam. (so/because)
+                </div>
+                <div class="grammar-note">
+                    <i class="fas fa-lightbulb"></i> <strong>Answers:</strong><br>
+                    1. and 2. yet 3. if 4. Although 5. both...and 6. Neither...nor 7. until 8. so
+                </div>
+
+                <div class="grammar-note">
+                    <i class="fas fa-lightbulb"></i> <strong>Remember:</strong> Conjunctions are the glue that holds sentences together. Coordinating conjunctions join equal parts; subordinating conjunctions show a relationship of dependence; correlative conjunctions work in pairs. Practice identifying them in everyday reading.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
