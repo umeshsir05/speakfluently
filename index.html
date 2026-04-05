@@ -69,17 +69,20 @@
     </footer>
 
     <script>
-        // ========== DARK MODE ==========
+        // ========== DARK MODE TOGGLE ==========
         const darkToggle = document.getElementById('darkModeToggle');
         const body = document.body;
 
+        // चेक करें कि पहले से डार्क मोड सेव है या नहीं
         if (localStorage.getItem('darkMode') === 'enabled') {
             body.classList.add('dark');
             darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
         }
 
+        // डार्क मोड टॉगल करें
         darkToggle.addEventListener('click', () => {
             body.classList.toggle('dark');
+            
             if (body.classList.contains('dark')) {
                 localStorage.setItem('darkMode', 'enabled');
                 darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
@@ -98,21 +101,21 @@
             navMenu.classList.toggle('active');
         });
 
-        // मेनू के अंदर किसी लिंक पर क्लिक करने पर मेनू बंद हो जाएगा
+        // मेनू के अंदर किसी लिंक पर क्लिक करने पर मेनू बंद करें
         document.querySelectorAll('.nav-menu ul li a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
             });
         });
 
-        // बाहर क्लिक करने पर भी मेनू बंद होगा
+        // बाहर क्लिक करने पर मेनू बंद करें
         document.addEventListener('click', function(event) {
             if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
                 navMenu.classList.remove('active');
             }
         });
 
-        // रिसाइज होने पर डेस्कटॉप व्यू में मेनू ठीक रहेगा
+        // विंडो रिसाइज होने पर डेस्कटॉप व्यू में मेनू छुपाएं
         window.addEventListener('resize', function() {
             if (window.innerWidth > 768) {
                 navMenu.classList.remove('active');
