@@ -11,7 +11,6 @@
     <!-- Google Fonts: Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Additional styles for grammar lesson pages */
         .lesson-container {
             max-width: 1200px;
             margin: 2rem auto;
@@ -65,14 +64,14 @@
             line-height: 1.7;
             margin-bottom: 1rem;
         }
-        .lesson-content .example-box {
+        .example-box {
             background: var(--glass-bg, rgba(0,180,216,0.05));
             padding: 1rem;
             border-radius: 12px;
             margin: 1rem 0;
             border-left: 3px solid var(--accent, #00b4d8);
         }
-        .lesson-content table {
+        .grammar-table {
             width: 100%;
             border-collapse: collapse;
             margin: 1rem 0;
@@ -80,18 +79,18 @@
             border-radius: 12px;
             overflow: hidden;
         }
-        .lesson-content th, .lesson-content td {
+        .grammar-table th, .grammar-table td {
             border: 1px solid var(--border, #ddd);
             padding: 10px;
             text-align: left;
             color: var(--text-primary, #1e2a3e);
         }
-        .lesson-content th {
+        .grammar-table th {
             background: var(--accent, #00b4d8);
             color: white;
             font-weight: 600;
         }
-        body.dark .lesson-content th {
+        body.dark .grammar-table th {
             background: var(--accent-dark, #0284c7);
         }
         .lesson-content ul, .lesson-content ol {
@@ -111,6 +110,13 @@
             border-radius: 12px;
             margin: 1rem 0;
         }
+        .rule-card {
+            background: var(--card-bg, white);
+            border-radius: 16px;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
         @media screen and (max-width: 768px) {
             .lesson-header h1 {
                 font-size: 1.8rem;
@@ -118,10 +124,10 @@
             .lesson-content {
                 padding: 1rem;
             }
-            .lesson-content table {
+            .grammar-table {
                 font-size: 0.85rem;
             }
-            .lesson-content th, .lesson-content td {
+            .grammar-table th, .grammar-table td {
                 padding: 6px;
             }
         }
@@ -157,6 +163,7 @@
                 <h1><i class="fas fa-palette"></i> The Adjective (विशेषण)</h1>
             </div>
             <div class="lesson-content">
+                <!-- Definition -->
                 <p><strong>A word which qualifies any Noun or Pronoun is called an Adjective.</strong></p>
                 <div class="example-box">
                     <strong>Examples:</strong><br>
@@ -165,9 +172,10 @@
                     3. There is <span class="highlight">little</span> time for preparation.
                 </div>
 
+                <!-- Formation of Adjectives -->
                 <h2>Formation of Adjectives</h2>
                 <h3>1. From Nouns</h3>
-                <table>
+                <table class="grammar-table">
                     <tr><th>Noun</th><th>Adjective</th></tr>
                     <tr><td>Man</td><td>Manly</td></tr>
                     <tr><td>Boy</td><td>Boyish</td></tr>
@@ -183,7 +191,7 @@
                 </table>
 
                 <h3>2. From Adjectives</h3>
-                <table>
+                <table class="grammar-table">
                     <tr><th>Adjective</th><th>Adjective (formed)</th></tr>
                     <tr><td>Tragic</td><td>Tragical</td></tr>
                     <tr><td>Whole</td><td>Wholesome</td></tr>
@@ -194,7 +202,7 @@
                 </table>
 
                 <h3>3. From Verbs</h3>
-                <table>
+                <table class="grammar-table">
                     <tr><th>Verb</th><th>Adjective</th></tr>
                     <tr><td>Cease</td><td>Ceaseless</td></tr>
                     <tr><td>Tire</td><td>Tireless</td></tr>
@@ -202,6 +210,7 @@
                     <tr><td>Talk</td><td>Talkative</td></tr>
                 </table>
 
+                <!-- Rules of Adjectives -->
                 <h2>Rules of Adjectives (विशेषण के प्रयोग के नियम)</h2>
                 <p>Adjectives विशेषता बताते हैं। यदि उसी विशेषता (quality) के लिए person या things में की जाती है तो:</p>
                 <ul>
@@ -210,83 +219,134 @@
                 </ul>
                 <p>सामान्यतया Comparative और Superlative निम्नलिखित विधियों से बनाए जाते हैं:</p>
                 <ul>
-                    <li><strong>(a)</strong> यदि Adjectives का अंतिम अक्षर Single Consonant हो तथा उससे पहले का अक्षर Single Vowel हो तो अंतिम अक्षर की पुनरावृत्ति होती है।<br>
-                    <em>Ex.</em> - Hot → Hotter → Hottest</li>
-                    <li><strong>(b)</strong> Comparative Degree के लिए ‘er’ एवं Superlative Degree के लिए ‘est’ लगाया जाता है।<br>
-                    <em>Ex.</em> - Sweet → Sweeter → Sweetest</li>
-                    <li><strong>(c)</strong> निम्नांकित Adjectives के लिए ‘er/est’ एवं ‘More/Most’ दोनों का प्रयोग होता है:<br>
-                    Polite, Simple, Feeble, Gentle, Narrow, Cruel, Common, Handsome, Stupid, Pleasant.</li>
-                    <li><strong>(d)</strong> ‘Y’ पर समाप्त होने वाले Adjectives के लिए ‘ier’ एवं ‘iest’ प्रयोग किए जाते हैं।<br>
-                    <em>Ex.</em> - Happy → Happier → Happiest</li>
-                    <li><strong>(e)</strong> दो Syllables वाले Adjectives से पहले More (Comparative) एवं Most (Superlative) का प्रयोग होता है।<br>
-                    <em>Ex.</em> - Beautiful → More Beautiful → Most Beautiful</li>
-                    <li><strong>(f)</strong> यदि Adjective के अंत में ‘e’ हो तो Comparative Degree के लिए ‘r’ और Superlative के लिए ‘st’ प्रयोग किए जाते हैं।<br>
-                    <em>Ex.</em> - Brave → Braver → Bravest</li>
+                    <li><strong>(a)</strong> यदि Adjectives का अंतिम अक्षर Single Consonant हो तथा उससे पहले का अक्षर Single Vowel हो तो अंतिम अक्षर की पुनरावृत्ति होती है।<br> <em>Ex.</em> - Hot → Hotter → Hottest</li>
+                    <li><strong>(b)</strong> Comparative Degree के लिए ‘er’ एवं Superlative Degree के लिए ‘est’ लगाया जाता है।<br> <em>Ex.</em> - Sweet → Sweeter → Sweetest</li>
+                    <li><strong>(c)</strong> निम्नांकित Adjectives के लिए ‘er/est’ एवं ‘More/Most’ दोनों का प्रयोग होता है:<br> Polite, Simple, Feeble, Gentle, Narrow, Cruel, Common, Handsome, Stupid, Pleasant.</li>
+                    <li><strong>(d)</strong> ‘Y’ पर समाप्त होने वाले Adjectives के लिए ‘ier’ एवं ‘iest’ प्रयोग किए जाते हैं।<br> <em>Ex.</em> - Happy → Happier → Happiest</li>
+                    <li><strong>(e)</strong> दो Syllables वाले Adjectives से पहले More (Comparative) एवं Most (Superlative) का प्रयोग होता है।<br> <em>Ex.</em> - Beautiful → More Beautiful → Most Beautiful</li>
+                    <li><strong>(f)</strong> यदि Adjective के अंत में ‘e’ हो तो Comparative Degree के लिए ‘r’ और Superlative के लिए ‘st’ प्रयोग किए जाते हैं।<br> <em>Ex.</em> - Brave → Braver → Bravest</li>
                 </ul>
 
+                <!-- Kinds of Adjective -->
                 <h2>Kinds of Adjective</h2>
                 <h3>1. Adjective of Quality (गुणवाचक विशेषण)</h3>
                 <p>ऐसे विशेषण शब्द जो किसी संज्ञा, सर्वनाम के गुण/दोष का बोध कराते हैं।</p>
-                <div class="example-box">
-                    <em>Ex.</em> – He is a <span class="highlight">good</span> boy.<br>
-                    She is an <span class="highlight">honest</span> girl.<br>
-                    He is a <span class="highlight">dishonest</span> man.
-                </div>
+                <div class="example-box"> <em>Ex.</em> – He is a <span class="highlight">good</span> boy.<br> She is an <span class="highlight">honest</span> girl.<br> He is a <span class="highlight">dishonest</span> man. </div>
 
                 <h3>2. Adjective of Quantity (परिमाणवाचक विशेषण)</h3>
                 <p>ऐसे विशेषण जो किसी संज्ञा, सर्वनाम की मात्रा का बोध कराते हैं।</p>
-                <div class="example-box">
-                    <em>Ex.</em> – There is <span class="highlight">a little</span> water in the bottle.<br>
-                    I have <span class="highlight">some</span> money.
-                </div>
+                <div class="example-box"> <em>Ex.</em> – There is <span class="highlight">a little</span> water in the bottle.<br> I have <span class="highlight">some</span> money. </div>
 
                 <h3>3. Possessive Adjective (अधिकार सूचक विशेषण)</h3>
                 <p>अधिकार सूचक शब्द – My, Our, Your, His, Her, Their, Its.</p>
-                <div class="example-box">
-                    <em>Ex.</em> – This is <span class="highlight">my</span> book.<br>
-                    <span class="highlight">My</span> brother has broken his leg.
-                </div>
+                <div class="example-box"> <em>Ex.</em> – This is <span class="highlight">my</span> book.<br> <span class="highlight">My</span> brother has broken his leg. </div>
 
                 <h3>4. Interrogative Adjective (प्रश्नवाचक विशेषण)</h3>
                 <p>प्रश्न पूछने के लिए – What, Which, Whose.</p>
-                <div class="example-box">
-                    <em>Ex.</em> – <span class="highlight">What</span> time does the bus leave?<br>
-                    <span class="highlight">Which</span> book do you read most?
-                </div>
+                <div class="example-box"> <em>Ex.</em> – <span class="highlight">What</span> time does the bus leave?<br> <span class="highlight">Which</span> book do you read most? </div>
 
                 <h3>5. Adjective of Number (संख्यावाचक विशेषण)</h3>
                 <p>गणना या स्थिति बताने के लिए – दो प्रकार: Cardinal (1,2,3...) और Ordinal (first, second...).</p>
-                <div class="example-box">
-                    <em>Ex.</em> – He was sitting in the <span class="highlight">first</span> row.<br>
-                    Bring me the <span class="highlight">second</span> book.
-                </div>
+                <div class="example-box"> <em>Ex.</em> – He was sitting in the <span class="highlight">first</span> row.<br> Bring me the <span class="highlight">second</span> book. </div>
 
+                <!-- Important Adjectives: Much/Many, Elder/Older -->
                 <h2>Use of Some Important Adjectives</h2>
                 <h3>MUCH / MANY</h3>
                 <p><strong>Much</strong> – मात्रा के लिए (Uncountable Noun के साथ)</p>
-                <div class="example-box">
-                    ✓ There is <span class="highlight">much</span> water in the pot.<br>
-                    ✗ There is many water in the pot.
-                </div>
+                <div class="example-box"> ✓ There is <span class="highlight">much</span> water in the pot.<br> ✗ There is many water in the pot. </div>
                 <p><strong>Many</strong> – संख्या के लिए (Plural Countable Noun के साथ)</p>
-                <div class="example-box">
-                    ✓ There are <span class="highlight">many</span> books in my library.<br>
-                    ✗ There are much books in my library.
-                </div>
+                <div class="example-box"> ✓ There are <span class="highlight">many</span> books in my library.<br> ✗ There are much books in my library. </div>
 
                 <h3>Elder / Older</h3>
                 <p><strong>Elder</strong> – एक ही परिवार के सदस्यों के बीच बड़े के लिए (इसके बाद 'to' का प्रयोग)</p>
-                <div class="example-box">
-                    Ram is <span class="highlight">elder to</span> Mohan. (✓)<br>
-                    Ram is older than Mohan. (✗ for family elder)
-                </div>
+                <div class="example-box"> Ram is <span class="highlight">elder to</span> Mohan. (✓)<br> Ram is older than Mohan. (✗ for family elder) </div>
                 <p><strong>Older</strong> – परिवार के बाहर या निर्जीव के लिए (इसके बाद 'than' का प्रयोग)</p>
+                <div class="example-box"> This building is <span class="highlight">older than</span> that one. </div>
+
+                <!-- NEW SECTION: LITTLE, A LITTLE, THE LITTLE -->
+                <h2>LITTLE, A LITTLE, THE LITTLE</h2>
+                <p>Little, a little, the little का प्रयोग वाक्य में मात्रा का बोध कराने के लिए किया जाता है। चूंकि इनसे मात्रा का बोध होता है, इसलिए इनके साथ हमेशा Material (Uncountable) Noun का प्रयोग करते हैं।</p>
+                <div class="rule-card">
+                    <h3>🔹 Little</h3>
+                    <p><strong>Little</strong> का अर्थ है ‘कुछ नहीं’ (almost nothing) और इसका प्रयोग वाक्य में <strong>नकारात्मक भाव</strong> व्यक्त करने के लिए singular uncountable noun के साथ किया जाता है।</p>
+                    <div class="example-box">
+                        <strong>Examples:</strong><br>
+                        1. There is <span class="highlight">little</span> water in the pot. (बहुत कम, लगभग नहीं)<br>
+                        2. There is <span class="highlight">little</span> oil in the bottle.
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <h3>🔹 A Little</h3>
+                    <p><strong>A Little</strong> का अर्थ है ‘थोड़ा’ (some, a small amount) और इसका प्रयोग वाक्य में <strong>सकारात्मक भाव</strong> व्यक्त करने के लिए singular uncountable noun के साथ किया जाता है।</p>
+                    <div class="example-box">
+                        <strong>Examples:</strong><br>
+                        1. There is <span class="highlight">a little</span> water in the pot. (थोड़ा पानी है)<br>
+                        2. There is <span class="highlight">a little</span> oil in the bottle.
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <h3>🔹 The Little</h3>
+                    <p><strong>The Little</strong> का अर्थ है ‘जो भी बचा है सब कुछ’ (whatever little is available, all of it) और इसका प्रयोग वाक्य में <strong>संपूर्णता का बोध</strong> कराने के लिए singular uncountable noun के साथ किया जाता है।</p>
+                    <div class="example-box">
+                        <strong>Examples:</strong><br>
+                        1. He gave me <span class="highlight">the little</span> money he had.<br>
+                        2. <span class="highlight">The little</span> water that was in the pot evaporated.
+                    </div>
+                </div>
+
+                <!-- NEW SECTION: FEW, A FEW, THE FEW -->
+                <h2>FEW, A FEW, THE FEW</h2>
+                <p>Few, a few और the few का प्रयोग वाक्य में <strong>संख्या</strong> का बोध कराने के लिए किया जाता है। इसलिए इनके साथ हमेशा <strong>Plural Countable Noun</strong> का प्रयोग किया जाता है।</p>
+                <div class="rule-card">
+                    <h3>🔹 Few</h3>
+                    <p><strong>Few</strong> का अर्थ है ‘कुछ नहीं’ (almost none, not many) और इसका प्रयोग वाक्य में <strong>नकारात्मक भाव</strong> व्यक्त करने के लिए किया जाता है।</p>
+                    <div class="example-box">
+                        <strong>Examples:</strong><br>
+                        1. There are <span class="highlight">few</span> boys in the class. (बहुत कम लड़के, लगभग कोई नहीं)<br>
+                        2. There are <span class="highlight">few</span> coins in this pocket.
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <h3>🔹 A Few</h3>
+                    <p><strong>A Few</strong> का अर्थ है ‘कुछ थोड़े’ (some, a small number) और इसका प्रयोग वाक्य में <strong>सकारात्मक भाव</strong> व्यक्त करने के लिए किया जाता है।</p>
+                    <div class="example-box">
+                        <strong>Examples:</strong><br>
+                        1. There are <span class="highlight">a few</span> boys in the class. (कुछ लड़के हैं)<br>
+                        2. There are <span class="highlight">a few</span> good books in the library.
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <h3>🔹 The Few</h3>
+                    <p><strong>The Few</strong> का अर्थ है ‘जो थोड़े बचे हैं उन सबको’ (all of the few that remain) और इसका प्रयोग संपूर्णता दिखाने के लिए किया जाता है।</p>
+                    <div class="example-box">
+                        <strong>Example:</strong><br>
+                        <span class="highlight">The few</span> friends he had stood by him.
+                    </div>
+                </div>
+
+                <!-- NEW SECTION: LATEST / LAST -->
+                <h2>LATEST / LAST</h2>
+                <p><strong>Latest</strong> का अर्थ होता है ‘नवीनतम’ (newest, most recent). <strong>Last</strong> का अर्थ है ‘अन्तिम’ (final, ultimate).</p>
                 <div class="example-box">
-                    This building is <span class="highlight">older than</span> that one.
+                    <strong>Examples:</strong><br>
+                    1. I want the <span class="highlight">latest</span> edition of the book. (✓) – नवीनतम संस्करण<br>
+                       I want the last edition of the book. (✗) – गलत, क्योंकि अंतिम संस्करण अलग अर्थ देगा<br>
+                    2. Mohan was the <span class="highlight">last</span> boy to leave the class. (✓) – अंतिम लड़का<br>
+                       Mohan was the latest boy to leave the class. (✗) – हाल का, सही नहीं
+                </div>
+
+                <!-- NEW SECTION: LATER / LATTER -->
+                <h2>LATER / LATTER</h2>
+                <p><strong>Later</strong> से <strong>समय (time)</strong> का बोध होता है। <strong>Latter</strong> का अर्थ है ‘बाद वाला’ (second of two things mentioned).</p>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    1. Sita came <span class="highlight">later</span> than Geeta. (✓) – समय में बाद में<br>
+                    2. Mohan reached the institute <span class="highlight">later</span> than Ram. (✓)<br>
+                    3. Raj and Rajesh are brothers, but the former is more intelligent than the <span class="highlight">latter</span>. (✓) – latter = Rajesh (बाद वाला)
                 </div>
 
                 <div class="grammar-note">
-                    <i class="fas fa-lightbulb"></i> <strong>Note:</strong> Adjectives of Quality, Quantity, Number, Possessive, and Interrogative are the main types. Practice with examples to master them.
+                    <i class="fas fa-lightbulb"></i> <strong>Note:</strong> याद रखें – Little/Few नकारात्मक, A little/A few सकारात्मक, The little/The few “जो बचा है उसका पूरा”। Latest = नवीनतम, Last = अंतिम। Later = समय में बाद, Latter = क्रम में बाद वाला।
                 </div>
             </div>
         </div>
@@ -297,17 +357,15 @@
     </footer>
 
     <script>
-        // ========== DARK MODE TOGGLE ==========
+        // Dark Mode Toggle
         const darkToggle = document.getElementById('darkModeToggle');
         const body = document.body;
-
         if (localStorage.getItem('darkMode') === 'enabled') {
             body.classList.add('dark');
             if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
         } else {
             if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
         }
-
         if (darkToggle) {
             darkToggle.addEventListener('click', () => {
                 body.classList.toggle('dark');
@@ -320,30 +378,23 @@
                 }
             });
         }
-
-        // ========== MOBILE MENU TOGGLE ==========
+        // Mobile Menu Toggle
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
-
         if (menuToggle && navMenu) {
             menuToggle.addEventListener('click', function(e) {
                 e.stopPropagation();
                 navMenu.classList.toggle('active');
             });
             document.querySelectorAll('.nav-menu ul li a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
-                });
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
             });
             document.addEventListener('click', function(event) {
-                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
                     navMenu.classList.remove('active');
-                }
             });
             window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
-                    navMenu.classList.remove('active');
-                }
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
             });
         }
     </script>
