@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Interjection - English Grammar | Speak Fluently</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .lesson-header h1 {
+            font-size: 2.5rem;
+            color: var(--accent, #00b4d8);
+            position: relative;
+            display: inline-block;
+        }
+        .lesson-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent, #00b4d8);
+            border-radius: 2px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.6rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--text-primary, #1e2a3e);
+            margin: 1.2rem 0 0.8rem;
+            font-size: 1.3rem;
+        }
+        body.dark .lesson-content h3 {
+            color: var(--text-primary, #e2e8f0);
+        }
+        .lesson-content p {
+            color: var(--text-secondary, #4a627a);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .example-box {
+            background: var(--glass-bg, rgba(0,180,216,0.05));
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border-left: 3px solid var(--accent, #00b4d8);
+        }
+        .rule-card {
+            background: var(--card-bg, white);
+            border-radius: 16px;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--bg, #f4f7fc);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .grammar-table th, .grammar-table td {
+            border: 1px solid var(--border, #ddd);
+            padding: 10px;
+            text-align: left;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .grammar-table th {
+            background: var(--accent, #00b4d8);
+            color: white;
+            font-weight: 600;
+        }
+        body.dark .grammar-table th {
+            background: var(--accent-dark, #0284c7);
+        }
+        .lesson-content ul, .lesson-content ol {
+            margin: 1rem 0 1rem 2rem;
+            color: var(--text-secondary, #4a627a);
+        }
+        .lesson-content li {
+            margin: 0.5rem 0;
+        }
+        .highlight {
+            color: var(--accent, #00b4d8);
+            font-weight: 600;
+        }
+        .grammar-note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+        .interjection-card {
+            display: inline-block;
+            background: var(--accent, #00b4d8);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-weight: 600;
+            margin: 0.2rem;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-header h1 {
+                font-size: 1.8rem;
+            }
+            .lesson-content {
+                padding: 1rem;
+            }
+            .grammar-table {
+                font-size: 0.85rem;
+            }
+            .grammar-table th, .grammar-table td {
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Speak Fluently</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
+            </ul>
+        </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="lesson-container">
+            <div class="lesson-header">
+                <h1><i class="fas fa-exclamation-circle"></i> Interjection (विस्मयादिबोधक)</h1>
+            </div>
+            <div class="lesson-content">
+                <p>An <strong>interjection</strong> is a word or phrase that expresses sudden emotion, feeling, or reaction. It is often followed by an exclamation mark (!) and stands alone or at the beginning of a sentence.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    - <span class="highlight">Wow!</span> That is amazing.<br>
+                    - <span class="highlight">Oh no!</span> I forgot my keys.<br>
+                    - <span class="highlight">Hurray!</span> We won the match.<br>
+                    - <span class="highlight">Alas!</span> He is no more.
+                </div>
+
+                <h2>Common Interjections by Emotion</h2>
+                <div class="rule-card">
+                    <h3>😊 Joy / Happiness (खुशी)</h3>
+                    <p><span class="interjection-card">Hurray!</span> <span class="interjection-card">Wow!</span> <span class="interjection-card">Yay!</span> <span class="interjection-card">Hooray!</span> <span class="interjection-card">Great!</span> <span class="interjection-card">Super!</span> <span class="interjection-card">Fantastic!</span></p>
+                    <div class="example-box">
+                        <em>Hurray! We have a holiday tomorrow.</em><br>
+                        <em>Wow! What a beautiful painting.</em>
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <h3>😢 Sadness / Grief (दुःख)</h3>
+                    <p><span class="interjection-card">Alas!</span> <span class="interjection-card">Oh no!</span> <span class="interjection-card">Ah!</span> <span class="interjection-card">Ouch!</span> <span class="interjection-card">Woe!</span></p>
+                    <div class="example-box">
+                        <em>Alas! My pet dog died.</em><br>
+                        <em>Oh no! I missed the bus.</em>
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <h3>😲 Surprise / Shock (आश्चर्य)</h3>
+                    <p><span class="interjection-card">Oh!</span> <span class="interjection-card">What!</span> <span class="interjection-card">Hey!</span> <span class="interjection-card">Gosh!</span> <span class="interjection-card">My God!</span> <span class="interjection-card">Good heavens!</span></p>
+                    <div class="example-box">
+                        <em>Oh! I didn't see you there.</em><br>
+                        <em>My God! Is that true?</em>
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <h3>😠 Anger / Frustration (गुस्सा)</h3>
+                    <p><span class="interjection-card">Damn!</span> <span class="interjection-card">What!</span> <span class="interjection-card">Oh no!</span> <span class="interjection-card">For heaven's sake!</span> <span class="interjection-card">Blast!</span></p>
+                    <div class="example-box">
+                        <em>Damn! I lost my phone.</em><br>
+                        <em>What! You broke the vase?</em>
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <h3>🤔 Hesitation / Thinking (हिचकिचाहट)</h3>
+                    <p><span class="interjection-card">Well!</span> <span class="interjection-card">Um!</span> <span class="interjection-card">Er!</span> <span class="interjection-card">Hmm!</span> <span class="interjection-card">Ah!</span></p>
+                    <div class="example-box">
+                        <em>Well, I'm not sure about that.</em><br>
+                        <em>Hmm, let me think.</em>
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <h3>👋 Greeting / Calling (अभिवादन)</h3>
+                    <p><span class="interjection-card">Hello!</span> <span class="interjection-card">Hi!</span> <span class="interjection-card">Hey!</span> <span class="interjection-card">Yo!</span></p>
+                    <div class="example-box">
+                        <em>Hello! How are you?</em><br>
+                        <em>Hey! Wait for me.</em>
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <h3>🙏 Relief / Gratitude (राहत / कृतज्ञता)</h3>
+                    <p><span class="interjection-card">Phew!</span> <span class="interjection-card">Thank God!</span> <span class="interjection-card">Thanks!</span> <span class="interjection-card">Whew!</span></p>
+                    <div class="example-box">
+                        <em>Phew! That was a close call.</em><br>
+                        <em>Thank God! You are safe.</em>
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <h3>🤐 Silence / Hushing (चुप कराना)</h3>
+                    <p><span class="interjection-card">Shh!</span> <span class="interjection-card">Hush!</span> <span class="interjection-card">Quiet!</span></p>
+                    <div class="example-box">
+                        <em>Shh! The baby is sleeping.</em>
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <h3>😣 Pain (दर्द)</h3>
+                    <p><span class="interjection-card">Ouch!</span> <span class="interjection-card">Ah!</span> <span class="interjection-card">Ow!</span> <span class="interjection-card">Eek!</span></p>
+                    <div class="example-box">
+                        <em>Ouch! That hurts.</em><br>
+                        <em>Ow! I stubbed my toe.</em>
+                    </div>
+                </div>
+
+                <h2>Punctuation Rules for Interjections</h2>
+                <ul>
+                    <li>Strong interjections are followed by an <strong>exclamation mark (!)</strong>.<br>
+                        <em>Wow! That's incredible.</em></li>
+                    <li>Mild interjections are followed by a <strong>comma (,)</strong> or are part of the sentence.<br>
+                        <em>Well, let's see what happens.</em><br>
+                        <em>Oh, I didn't know that.</em></li>
+                    <li>Interjections can stand alone as a sentence.<br>
+                        <em>Hurray!</em> <em>Alas!</em></li>
+                </ul>
+
+                <h2>Interjections vs. Other Parts of Speech</h2>
+                <p>Some words can be interjections or other parts of speech depending on context.</p>
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>Word</th><th>As Interjection</th><th>As Other Part of Speech</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="highlight">Well</td><td>Well! That's surprising.</td><td>He speaks well (adverb).</td></tr>
+                        <tr><td class="highlight">Oh</td><td>Oh! I see.</td><td>-</td></tr>
+                        <tr><td class="highlight">What</td><td>What! You did that?</td><td>What is your name? (pronoun)</td></tr>
+                        <tr><td class="highlight">Hello</td><td>Hello! How are you?</td><td>Say hello to him (noun).</td></tr>
+                    </tbody>
+                </table>
+
+                <h2>Practice Exercises</h2>
+                <div class="example-box">
+                    <strong>Fill in the blanks with suitable interjections from the box (answers below):</strong><br>
+                    (Alas, Hurray, Oh, Ouch, Well, Shh, Wow, Hello)<br><br>
+                    1. ______ ! We won the championship.<br>
+                    2. ______ ! I have lost my wallet.<br>
+                    3. ______ ! That is a giant elephant.<br>
+                    4. ______ ! The needle pricked me.<br>
+                    5. ______ ! I didn't know you were here.<br>
+                    6. ______ , let's start the meeting.<br>
+                    7. ______ ! The baby is sleeping.<br>
+                    8. ______ ! How are you today?
+                </div>
+                <div class="grammar-note">
+                    <i class="fas fa-lightbulb"></i> <strong>Answers:</strong><br>
+                    1. Hurray 2. Alas 3. Wow 4. Ouch 5. Oh 6. Well 7. Shh 8. Hello
+                </div>
+
+                <div class="grammar-note">
+                    <i class="fas fa-lightbulb"></i> <strong>Remember:</strong> Interjections are spontaneous expressions of emotion. They are not grammatically connected to the rest of the sentence. Use exclamation marks for strong feelings, commas for mild ones. In formal writing, use interjections sparingly.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
