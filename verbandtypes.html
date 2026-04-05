@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Verb & Its Types - English Grammar | Speak Fluently</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .lesson-header h1 {
+            font-size: 2.5rem;
+            color: var(--accent, #00b4d8);
+            position: relative;
+            display: inline-block;
+        }
+        .lesson-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent, #00b4d8);
+            border-radius: 2px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.6rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--text-primary, #1e2a3e);
+            margin: 1.2rem 0 0.8rem;
+            font-size: 1.3rem;
+        }
+        body.dark .lesson-content h3 {
+            color: var(--text-primary, #e2e8f0);
+        }
+        .lesson-content p {
+            color: var(--text-secondary, #4a627a);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .example-box {
+            background: var(--glass-bg, rgba(0,180,216,0.05));
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border-left: 3px solid var(--accent, #00b4d8);
+        }
+        .verb-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--bg, #f4f7fc);
+            border-radius: 12px;
+            overflow-x: auto;
+            display: block;
+        }
+        .verb-table th, .verb-table td {
+            border: 1px solid var(--border, #ddd);
+            padding: 10px;
+            text-align: left;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .verb-table th {
+            background: var(--accent, #00b4d8);
+            color: white;
+            font-weight: 600;
+        }
+        body.dark .verb-table th {
+            background: var(--accent-dark, #0284c7);
+        }
+        .lesson-content ul, .lesson-content ol {
+            margin: 1rem 0 1rem 2rem;
+            color: var(--text-secondary, #4a627a);
+        }
+        .lesson-content li {
+            margin: 0.5rem 0;
+        }
+        .highlight {
+            color: var(--accent, #00b4d8);
+            font-weight: 600;
+        }
+        .grammar-note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-header h1 {
+                font-size: 1.8rem;
+            }
+            .lesson-content {
+                padding: 1rem;
+            }
+            .verb-table {
+                font-size: 0.85rem;
+            }
+            .verb-table th, .verb-table td {
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Speak Fluently</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
+            </ul>
+        </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="lesson-container">
+            <div class="lesson-header">
+                <h1><i class="fas fa-running"></i> Verb (क्रियाएँ)</h1>
+            </div>
+            <div class="lesson-content">
+                <p><strong>Verb is a doing word.</strong> जिस शब्द से किसी काम का होना या करना पाया जाता है, उसे Verb कहते हैं।</p>
+
+                <h2>Types of Verbs</h2>
+                <div class="example-box">
+                    <strong>Modal Verbs:</strong> be, do, have, need, can, may, must, shall, dare, will, ought to, used to<br>
+                    <strong>Ordinary Verbs:</strong> to go, to write, to laugh, to sleep
+                </div>
+
+                <h3>Regular Verbs</h3>
+                <table class="verb-table">
+                    <tr><th>Present (V1)</th><th>Past (V2)</th><th>Past Participle (V3)</th></tr>
+                    <tr><td>Want</td><td>Wanted</td><td>Wanted</td></tr>
+                    <tr><td>Play</td><td>Played</td><td>Played</td></tr>
+                    <tr><td>Finish</td><td>Finished</td><td>Finished</td></tr>
+                </table>
+
+                <h3>Irregular Verbs</h3>
+                <table class="verb-table">
+                    <tr><th>Present (V1)</th><th>Past (V2)</th><th>Past Participle (V3)</th></tr>
+                    <tr><td>Come</td><td>Came</td><td>Come</td></tr>
+                    <tr><td>Go</td><td>Went</td><td>Gone</td></tr>
+                    <tr><td>Eat</td><td>Ate</td><td>Eaten</td></tr>
+                </table>
+
+                <h3>Transitive Verb (सकर्मक क्रिया)</h3>
+                <p>ऐसे Verbs जिन्हें अपना अर्थ स्पष्ट करने के लिए Object की आवश्यकता होती है।</p>
+                <div class="example-box">
+                    Ex. – He plays <span class="highlight">cricket</span>.<br>
+                    They broke <span class="highlight">the chairs</span>.<br>
+                    She invited <span class="highlight">me</span> to the party.
+                </div>
+
+                <h3>Intransitive Verb (अकर्मक क्रिया)</h3>
+                <p>ऐसे Verbs जिन्हें अर्थ स्पष्ट करने के लिए Object की आवश्यकता नहीं होती।</p>
+                <div class="example-box">
+                    Ex. – He is sleeping.<br>
+                    The sun is setting.<br>
+                    She died.<br>
+                    The girl ran down the street.<br>
+                    Birds fly flapping their wings.
+                </div>
+
+                <!-- ========== VERB FORMS TABLES (from images) ========== -->
+                <h2>Verb Forms with Meanings (Present, Past, Past Participle)</h2>
+
+                <h3>Group 1: Overcome, Take, Mistake, Shake, Serve, Observe, Deserve, Shrink, Drink, Throw, Grow, Know, Blow, Blow Up, Blow Out</h3>
+                <table class="verb-table">
+                    <tr><th>Present</th><th>Meaning (Hindi)</th><th>Past</th><th>Past Participle</th></tr>
+                    <tr><td>Overcome</td><td>समस्या पर विजय पाना</td><td>Overcame</td><td>Overcome</td></tr>
+                    <tr><td>Take</td><td>लेना / प्राप्त करना</td><td>Took</td><td>Taken</td></tr>
+                    <tr><td>Mistake</td><td>गलती करना</td><td>Mistook</td><td>Mistaken</td></tr>
+                    <tr><td>Shake</td><td>हिलना / हिलाना</td><td>Shook</td><td>Shaken</td></tr>
+                    <tr><td>Serve</td><td>सेवा करना</td><td>Served</td><td>Served</td></tr>
+                    <tr><td>Observe</td><td>अवलोकन / निरीक्षण करना</td><td>Observed</td><td>Observed</td></tr>
+                    <tr><td>Deserve</td><td>योग्य / लायक होना</td><td>Deserved</td><td>Deserved</td></tr>
+                    <tr><td>Shrink</td><td>सिकुड़ना</td><td>Shrank</td><td>Shrunken</td></tr>
+                    <tr><td>Drink</td><td>पीना</td><td>Drank</td><td>Drunk</td></tr>
+                    <tr><td>Throw</td><td>फेंकना</td><td>Threw</td><td>Thrown</td></tr>
+                    <tr><td>Grow</td><td>उगाना / बढ़ना</td><td>Grew</td><td>Grown</td></tr>
+                    <tr><td>Know</td><td>जानना</td><td>Knew</td><td>Known</td></tr>
+                    <tr><td>Blow</td><td>हवा का बहना</td><td>Blew</td><td>Blown</td></tr>
+                    <tr><td>Blow Up</td><td>विस्फोट से उड़ाना</td><td>Blew Up</td><td>Blown Up</td></tr>
+                    <tr><td>Blow Out</td><td>फूंक से बुझाना</td><td>Blew Out</td><td>Blown Out</td></tr>
+                </table>
+
+                <h3>Group 2: Close, Disclose, Smell, Spell, Prove, Improve, Dip, Clap, Slap, Light, Delight, Alight</h3>
+                <table class="verb-table">
+                    <tr><th>Present</th><th>Meaning (Hindi)</th><th>Past</th><th>Past Participle</th></tr>
+                    <tr><td>Close</td><td>बंद होना / बंद करना</td><td>Closed</td><td>Closed</td></tr>
+                    <tr><td>Disclose</td><td>प्रकट करना / अनावृत करना</td><td>Disclosed</td><td>Disclosed</td></tr>
+                    <tr><td>Smell</td><td>सूंघना / गंध आना</td><td>Smelt</td><td>Smelt</td></tr>
+                    <tr><td>Spell</td><td>हिज्जे करना / वर्तनी लिखना</td><td>Spelt</td><td>Spelt</td></tr>
+                    <tr><td>Prove</td><td>साबित करना / प्रमाणित करना</td><td>Proved</td><td>Proved</td></tr>
+                    <tr><td>Improve</td><td>सुधारना</td><td>Improved</td><td>Improved</td></tr>
+                    <tr><td>Dip</td><td>डुबोना / डुबकी लगाना</td><td>Dipped</td><td>Dipped</td></tr>
+                    <tr><td>Clap</td><td>ताली बजाना</td><td>Clapped</td><td>Clapped</td></tr>
+                    <tr><td>Slap</td><td>थप्पड़ मारना</td><td>Slapped</td><td>Slapped</td></tr>
+                    <tr><td>Light</td><td>जलाना / प्रकाश करना</td><td>Lighted</td><td>Lighted</td></tr>
+                    <tr><td>Delight</td><td>खुशी देना / खुश होना</td><td>Delighted</td><td>Delighted</td></tr>
+                    <tr><td>Alight</td><td>घोड़े या वाहन से उतरना</td><td>Alighted</td><td>Alighted</td></tr>
+                </table>
+
+                <h3>Group 3: Appoint, Disappoint, Resign, Assign, Design, Collect, Leave</h3>
+                <table class="verb-table">
+                    <tr><th>Present</th><th>Meaning (Hindi)</th><th>Past</th><th>Past Participle</th></tr>
+                    <tr><td>Appoint</td><td>नियुक्त करना</td><td>Appointed</td><td>Appointed</td></tr>
+                    <tr><td>Disappoint</td><td>निराश करना / होना</td><td>Disappointed</td><td>Disappointed</td></tr>
+                    <tr><td>Resign</td><td>इस्तीफा देना</td><td>Resigned</td><td>Resigned</td></tr>
+                    <tr><td>Assign</td><td>काम की जिम्मेदारी सौंपना</td><td>Assigned</td><td>Assigned</td></tr>
+                    <tr><td>Design</td><td>आकार तैयार करना</td><td>Designed</td><td>Designed</td></tr>
+                    <tr><td>Collect</td><td>इकट्ठा करना</td><td>Collected</td><td>Collected</td></tr>
+                    <tr><td>Leave</td><td>छोड़ना / निकलना</td><td>Left</td><td>Left</td></tr>
+                </table>
+
+                <h3>Group 4: Verbs from "Present (Pronunciation)" – Hurry, Worry, Say, Carry, Pay, Supply, etc.</h3>
+                <table class="verb-table">
+                    <tr><th>Present</th><th>Meaning (Hindi)</th><th>Past</th><th>Past Participle</th></tr>
+                    <tr><td>Hurry</td><td>जल्दी करना</td><td>Hurried</td><td>Hurried</td></tr>
+                    <tr><td>Worry</td><td>चिंता करना</td><td>Worried</td><td>Worried</td></tr>
+                    <tr><td>Say</td><td>कहना</td><td>Said</td><td>Said</td></tr>
+                    <tr><td>Carry</td><td>ले जाना / ढोना</td><td>Carried</td><td>Carried</td></tr>
+                    <tr><td>Pay</td><td>भुगतान करना</td><td>Paid</td><td>Paid</td></tr>
+                    <tr><td>Supply</td><td>आपूर्ति करना</td><td>Supplied</td><td>Supplied</td></tr>
+                    <tr><td>Try</td><td>कोशिश करना</td><td>Tried</td><td>Tried</td></tr>
+                    <tr><td>Fry</td><td>तलना</td><td>Fried</td><td>Fried</td></tr>
+                    <tr><td>Dry</td><td>सुखाना</td><td>Dried</td><td>Dried</td></tr>
+                    <tr><td>Apply</td><td>आवेदन देना / लागू होना</td><td>Applied</td><td>Applied</td></tr>
+                </table>
+
+                <h3>Group 5: Important Verbs (Give up, Tear, Bear, Wear, Swear, Stand, Understand, Vanish, Fear, Rear, Tease, Find, Bind, Refuse, Defuse, Sell, Tell, Come, Become)</h3>
+                <table class="verb-table">
+                    <tr><th>Present</th><th>Meaning (Hindi)</th><th>Past</th><th>Past Participle</th></tr>
+                    <tr><td>Give Up</td><td>छोड़ देना / त्याग देना</td><td>Gave Up</td><td>Given Up</td></tr>
+                    <tr><td>Tear</td><td>फाड़ना</td><td>Tore</td><td>Torn</td></tr>
+                    <tr><td>Bear</td><td>सहन करना / जन्म देना</td><td>Bore</td><td>Born / Borne</td></tr>
+                    <tr><td>Wear</td><td>पहनना</td><td>Wore</td><td>Worn</td></tr>
+                    <tr><td>Swear</td><td>शपथ लेना / गाली देना</td><td>Swore</td><td>Sworn</td></tr>
+                    <tr><td>Stand</td><td>खड़ा होना</td><td>Stood</td><td>Stood</td></tr>
+                    <tr><td>Understand</td><td>समझना</td><td>Understood</td><td>Understood</td></tr>
+                    <tr><td>Vanish</td><td>गायब होना</td><td>Vanished</td><td>Vanished</td></tr>
+                    <tr><td>Fear</td><td>डरना</td><td>Feared</td><td>Feared</td></tr>
+                    <tr><td>Rear</td><td>पालन-पोषण करना / सिर उठाना</td><td>Reared</td><td>Reared</td></tr>
+                    <tr><td>Tease</td><td>चिढ़ाना / सताना</td><td>Teased</td><td>Teased</td></tr>
+                    <tr><td>Find</td><td>पाना / ढूंढ़ना</td><td>Found</td><td>Found</td></tr>
+                    <tr><td>Bind</td><td>बाँधना</td><td>Bound</td><td>Bound</td></tr>
+                    <tr><td>Refuse</td><td>अस्वीकार करना / मना करना</td><td>Refused</td><td>Refused</td></tr>
+                    <tr><td>Defuse</td><td>निष्क्रिय करना (बम/तनाव)</td><td>Defused</td><td>Defused</td></tr>
+                    <tr><td>Sell</td><td>बेचना</td><td>Sold</td><td>Sold</td></tr>
+                    <tr><td>Tell</td><td>बताना</td><td>Told</td><td>Told</td></tr>
+                    <tr><td>Come</td><td>आना</td><td>Came</td><td>Come</td></tr>
+                    <tr><td>Become</td><td>बनना / होना</td><td>Became</td><td>Become</td></tr>
+                    <tr><td>Bring</td><td>लाना</td><td>Brought</td><td>Brought</td></tr>
+                    <tr><td>Buy</td><td>खरीदना</td><td>Bought</td><td>Bought</td></tr>
+                </table>
+
+                <div class="grammar-note">
+                    <i class="fas fa-lightbulb"></i> <strong>Note:</strong> Verbs are the heart of a sentence. Regular verbs follow a pattern (-ed), while irregular verbs change form. Transitive verbs need an object; intransitive do not. Modal verbs help express possibility, necessity, or permission.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
