@@ -2,9 +2,136 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Pronoun & Its Types - English Grammar | Speak Fluently</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .lesson-header h1 {
+            font-size: 2.5rem;
+            color: var(--accent, #00b4d8);
+            position: relative;
+            display: inline-block;
+        }
+        .lesson-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent, #00b4d8);
+            border-radius: 2px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.6rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--text-primary, #1e2a3e);
+            margin: 1.2rem 0 0.8rem;
+            font-size: 1.3rem;
+        }
+        body.dark .lesson-content h3 {
+            color: var(--text-primary, #e2e8f0);
+        }
+        .lesson-content p {
+            color: var(--text-secondary, #4a627a);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .example-box {
+            background: var(--glass-bg, rgba(0,180,216,0.05));
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border-left: 3px solid var(--accent, #00b4d8);
+        }
+        .rule-card {
+            background: var(--card-bg, white);
+            border-radius: 16px;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--bg, #f4f7fc);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .grammar-table th, .grammar-table td {
+            border: 1px solid var(--border, #ddd);
+            padding: 10px;
+            text-align: left;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .grammar-table th {
+            background: var(--accent, #00b4d8);
+            color: white;
+            font-weight: 600;
+        }
+        body.dark .grammar-table th {
+            background: var(--accent-dark, #0284c7);
+        }
+        .lesson-content ul, .lesson-content ol {
+            margin: 1rem 0 1rem 2rem;
+            color: var(--text-secondary, #4a627a);
+        }
+        .lesson-content li {
+            margin: 0.5rem 0;
+        }
+        .highlight {
+            color: var(--accent, #00b4d8);
+            font-weight: 600;
+        }
+        .grammar-note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-header h1 {
+                font-size: 1.8rem;
+            }
+            .lesson-content {
+                padding: 1rem;
+            }
+            .grammar-table {
+                font-size: 0.85rem;
+            }
+            .grammar-table th, .grammar-table td {
+                padding: 6px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,98 +140,175 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
+
     <main>
-        <h2> Pronoun – Meaning and Types</h2>
+        <div class="lesson-container">
+            <div class="lesson-header">
+                <h1><i class="fas fa-user"></i> Pronoun & Its Types (सर्वनाम और उसके प्रकार)</h1>
+            </div>
+            <div class="lesson-content">
+                <p><strong>Pronoun</strong> is a word that is used in place of a noun to avoid repetition.</p>
+                <div class="example-box">
+                    <strong>Example:</strong> <span class="highlight">Ram</span> is a good boy. <span class="highlight">He</span> studies hard.<br>
+                    (Here, 'He' is a pronoun used for 'Ram')
+                </div>
 
-<br>
+                <h2>Types of Pronouns</h2>
 
-<br>
+                <h3>1. Personal Pronoun (पुरुषवाचक सर्वनाम)</h3>
+                <p>Personal pronouns refer to specific persons or things. They change form based on person, number, gender, and case.</p>
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>Person</th><th>Singular</th><th>Plural</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1st Person (Speaker)</td><td>I, me, my, mine</td><td>we, us, our, ours</td></tr>
+                        <tr><td>2nd Person (Listener)</td><td colspan="2">you, your, yours</td></tr>
+                        <tr><td>3rd Person (Person/Thing spoken about)</td><td>he, him, his, she, her, hers, it, its</td><td>they, them, their, theirs</td></tr>
+                    </tbody>
+                </table>
+                <div class="example-box">
+                    <strong>Examples:</strong> <span class="highlight">I</span> am a teacher. / <span class="highlight">You</span> are my friend. / <span class="highlight">He</span> is playing. / <span class="highlight">She</span> sings well. / <span class="highlight">It</span> is a cat. / <span class="highlight">We</span> are going. / <span class="highlight">They</span> are happy.
+                </div>
 
-What is a Pronoun?<br>
+                <h3>2. Possessive Pronoun (अधिकारवाचक सर्वनाम)</h3>
+                <p>Possessive pronouns show ownership or possession. They stand alone and are not followed by a noun.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong> This book is <span class="highlight">mine</span>. / That car is <span class="highlight">yours</span>. / The red bag is <span class="highlight">hers</span>. / The house is <span class="highlight">ours</span>. / The decision is <span class="highlight">theirs</span>.
+                </div>
 
-A pronoun is a word used instead of a noun to avoid repeating the noun again and again.<br> Pronoun वह शब्द है जो noun के बदले में इस्तेमाल होता है।<br>
+                <h3>3. Reflexive Pronoun (निजवाचक सर्वनाम)</h3>
+                <p>Reflexive pronouns are used when the subject and object of the sentence are the same. They end in -self (singular) or -selves (plural).</p>
+                <div class="example-box">
+                    <strong>Examples:</strong> I hurt <span class="highlight">myself</span>. / You should believe <span class="highlight">yourself</span>. / He killed <span class="highlight">himself</span>. / She looked at <span class="highlight">herself</span> in the mirror. / They enjoyed <span class="highlight">themselves</span>.
+                </div>
 
-Example<br>
+                <h3>4. Demonstrative Pronoun (संकेतवाचक सर्वनाम)</h3>
+                <p>Demonstrative pronouns point to specific persons or things. They are: <strong>this, that, these, those</strong>.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong> <span class="highlight">This</span> is my pen. / <span class="highlight">That</span> is a beautiful flower. / <span class="highlight">These</span> are my friends. / <span class="highlight">Those</span> are mountains.
+                </div>
 
-Ravi is my friend. He is very kind.<br> यहाँ He = Ravi (noun की जगह)<br>
+                <h3>5. Interrogative Pronoun (प्रश्नवाचक सर्वनाम)</h3>
+                <p>Interrogative pronouns are used to ask questions. They are: <strong>who, whom, whose, which, what</strong>.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong> <span class="highlight">Who</span> is at the door? / <span class="highlight">Whom</span> did you meet? / <span class="highlight">Whose</span> is this car? / <span class="highlight">Which</span> is your favorite color? / <span class="highlight">What</span> is your name?
+                </div>
 
+                <h3>6. Relative Pronoun (संबंधवाचक सर्वनाम)</h3>
+                <p>Relative pronouns connect a clause or phrase to a noun or pronoun. They are: <strong>who, whom, whose, which, that</strong>.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong> The man <span class="highlight">who</span> came here is my uncle. / The book <span class="highlight">which</span> I bought is interesting. / This is the house <span class="highlight">that</span> Jack built.
+                </div>
 
----
+                <h3>7. Indefinite Pronoun (अनिश्चितवाचक सर्वनाम)</h3>
+                <p>Indefinite pronouns refer to non-specific persons or things. Examples: <strong>somebody, anyone, nobody, everyone, something, anything, nothing, everything, few, many, several, all, some, none, each, either, neither</strong>.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong> <span class="highlight">Somebody</span> is knocking. / <span class="highlight">Everyone</span> enjoyed the party. / <span class="highlight">Nothing</span> is impossible. / <span class="highlight">Many</span> were invited. / <span class="highlight">All</span> is well.
+                </div>
 
-Types of Pronoun (सर्वनाम के प्रकार)<br>
+                <h3>8. Distributive Pronoun (विभागवाचक सर्वनाम)</h3>
+                <p>Distributive pronouns refer to persons or things one at a time. They are: <strong>each, either, neither</strong>.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong> <span class="highlight">Each</span> of the boys got a prize. / <span class="highlight">Either</span> of the roads leads to the station. / <span class="highlight">Neither</span> of them was guilty.
+                </div>
 
-1. Personal Pronoun (व्यक्तिवाचक सर्वनाम)<br> Used for people or things.<br> लोगों या चीज़ों के लिए प्रयोग होता है।<br> Examples: I, we, you, he, she, it, they<br> She is a teacher.<br> They are playing.<br>
+                <h3>9. Reciprocal Pronoun (परस्परवाचक सर्वनाम)</h3>
+                <p>Reciprocal pronouns express mutual action or relationship. They are: <strong>each other, one another</strong>.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong> They love <span class="highlight">each other</span>. / The students helped <span class="highlight">one another</span>.
+                </div>
 
+                <h2>Pronoun Case Chart</h2>
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>Person</th><th>Nominative (Subject)</th><th>Objective (Object)</th><th>Possessive (Adjective)</th><th>Possessive (Pronoun)</th><th>Reflexive</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1st Sg</td><td>I</td><td>me</td><td>my</td><td>mine</td><td>myself</td></tr>
+                        <tr><td>2nd Sg</td><td>you</td><td>you</td><td>your</td><td>yours</td><td>yourself</td></tr>
+                        <tr><td>3rd Sg (M)</td><td>he</td><td>him</td><td>his</td><td>his</td><td>himself</td></tr>
+                        <tr><td>3rd Sg (F)</td><td>she</td><td>her</td><td>her</td><td>hers</td><td>herself</td></tr>
+                        <tr><td>3rd Sg (N)</td><td>it</td><td>it</td><td>its</td><td>(its)</td><td>itself</td></tr>
+                        <tr><td>1st Pl</td><td>we</td><td>us</td><td>our</td><td>ours</td><td>ourselves</td></tr>
+                        <tr><td>2nd Pl</td><td>you</td><td>you</td><td>your</td><td>yours</td><td>yourselves</td></tr>
+                        <tr><td>3rd Pl</td><td>they</td><td>them</td><td>their</td><td>theirs</td><td>themselves</td></tr>
+                    </tbody>
+                </table>
 
-2. Possessive Pronoun (अधिकार सूचक सर्वनाम)<br> Shows ownership.<br> किसी चीज़ पर अधिकार बताता है।<br> Examples: mine, yours, his, hers, ours, theirs<br> This book is mine.<br> That house is hers.<br>
-
-
-3. Demonstrative Pronoun (संकेतवाचक सर्वनाम)<br> Points to something.<br> किसी चीज़ की ओर इशारा करता है।<br> Examples: this, that, these, those<br> This is my pen.<br> Those are apples.<br>
-
-
-4. Interrogative Pronoun (प्रश्नवाचक सर्वनाम)<br> Used to ask questions.<br> प्रश्न पूछने के लिए।<br> Examples: who, what, which, whom<br> Who is your teacher?<br> What is your name?<br>
-
-
-5. Reflexive Pronoun (आत्मवाचक सर्वनाम)<br> Action comes back to the subject.<br> जब काम करने वाला खुद पर ही काम करे।<br> Examples: myself, himself, herself, ourselves<br> I did it myself.<br> He hurt himself.<br>
-
-
-
-
----
-
-Noun (संज्ञा) – Types with Examples<br>
-
-What is a Noun?<br>
-
-A noun is the name of a person, place, animal, or thing.<br> Noun किसी व्यक्ति, स्थान, वस्तु या जानवर का नाम होता है।<br>
-
-
----
-
-Types of Noun (संज्ञा के प्रकार)<br>
-
-1. Proper Noun (व्यक्तिवाचक संज्ञा)<br> Special name of a person or place.<br> किसी विशेष व्यक्ति या स्थान का नाम।<br> Examples: Ram, Delhi, India, Ganga<br> Ram lives in Delhi.<br>
-
-
-2. Common Noun (जातिवाचक संज्ञा)<br> General name.<br> सामान्य नाम।<br> Examples: boy, city, river, teacher<br> The boy is running.<br>
-
-
-3. Collective Noun (समूहवाचक संज्ञा)<br> Name of a group.<br> समूह का नाम।<br> Examples: team, class, crowd, army<br> Our class is very quiet.<br>
-
-
-4. Material Noun (द्रव्यवाचक संज्ञा)<br> Names of materials or substances.<br> पदार्थों के नाम।<br> Examples: gold, water, milk, iron<br> Gold is expensive.<br>
-
-
-5. Abstract Noun (भाववाचक संज्ञा)<br> Things we cannot see or touch.<br> जो महसूस की जाती हैं, देखी नहीं जातीं।<br> Examples: honesty, love, bravery, happiness<br> Honesty is the best policy.<br>
-
-
-
-
----
-
-Quick Tip for Kids<br>
-
-Noun = Name<br> Pronoun = Name’s replacement<br>
-
-
-
+                <div class="grammar-note">
+                    <i class="fas fa-lightbulb"></i> <strong>Important Points:</strong><br>
+                    - A pronoun must agree with its antecedent in number, gender, and person.<br>
+                    - Use subjective case (I, he, she, we, they) when the pronoun is the subject of a verb.<br>
+                    - Use objective case (me, him, her, us, them) when the pronoun is the object of a verb or preposition.<br>
+                    - Reflexive pronouns cannot be used as subjects (e.g., "Myself went" is incorrect).<br>
+                    - "Each other" is used for two persons; "one another" for more than two.
+                </div>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2025 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
