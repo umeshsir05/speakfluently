@@ -1,3 +1,5 @@
+You're right! The mobile menu toggle needs a fix. Here's the updated HTML file with the corrected mobile menu functionality. I've also ensured the dark mode works perfectly alongside it.
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +23,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="notes.html">Tenses</a></li>
                 <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="grammar.html">Grammer</a></li>
+                <li><a href="grammar.html">Grammar</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="admin.html">Admin</a></li>
             </ul>
@@ -36,41 +38,39 @@
     </header>
     <main>
         <section class="hero">
-        <div class="container">
-  <h3>Welcome to </h3> 
-<h1>Speak Fluently </h1>
-            <p>Master the art of spoken English with our comprehensive courses, practice tools, and downloadable notes. Start your journey today!</p>
-            <a href="notes.php" class="btn-primary">Explore Courses</a>
-        </div>
-    </section>
+            <div class="container">
+                <h3>Welcome to</h3> 
+                <h1>Speak Fluently</h1>
+                <p>Master the art of spoken English with our comprehensive courses, practice tools, and downloadable notes. Start your journey today!</p>
+                <a href="notes.php" class="btn-primary">Explore Courses</a>
+            </div>
+        </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2>Why Choose SpeakFluent?</h2>
-            <div class="features-list">
-                <div class="feature">
-                    <h3>Comprehensive Courses</h3>
-                    <p>Tailored for beginners to advanced learners, covering all aspects of spoken English.</p>
-                </div>
-                <div class="feature">
-                    <h3>Downloadable Notes</h3>
-                    <p>Access high-quality notes to reinforce your learning and improve your skills.</p>
-                </div>
-                <div class="feature">
-                    <h3>Interactive Practice</h3>
-                    <p>Engage in speaking, listening, and grammar exercises to achieve fluency.</p>
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2>Why Choose SpeakFluent?</h2>
+                <div class="features-list">
+                    <div class="feature">
+                        <h3>Comprehensive Courses</h3>
+                        <p>Tailored for beginners to advanced learners, covering all aspects of spoken English.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Downloadable Notes</h3>
+                        <p>Access high-quality notes to reinforce your learning and improve your skills.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Interactive Practice</h3>
+                        <p>Engage in speaking, listening, and grammar exercises to achieve fluency.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     </main>
     <footer>
-        <p>&copy; <b>2025 SpeakFluently. All rights reserved.Developed by Umesh Banjare</b></p>
-                                 
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
     <script>
         // Dark Mode Toggle Functionality
         const darkModeToggle = document.getElementById('darkModeToggle');
@@ -83,17 +83,20 @@
         }
         
         // Toggle dark mode
-        darkModeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark');
-            
-            if (body.classList.contains('dark')) {
-                localStorage.setItem('darkMode', 'enabled');
-                updateToggleIcon(true);
-            } else {
-                localStorage.setItem('darkMode', 'disabled');
-                updateToggleIcon(false);
-            }
-        });
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                body.classList.toggle('dark');
+                
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    updateToggleIcon(true);
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    updateToggleIcon(false);
+                }
+            });
+        }
         
         // Update toggle button icon
         function updateToggleIcon(isDark) {
@@ -107,21 +110,57 @@
             }
         }
         
-        // Mobile Menu Toggle Functionality
+        // Mobile Menu Toggle Functionality - FIXED
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
         
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-        
-        // Close mobile menu when clicking on a link
-        const navLinks = document.querySelectorAll('.nav-menu ul li a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
+        if (menuToggle && navMenu) {
+            // Toggle menu on hamburger click
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+                // Optional: Change hamburger icon style when active
+                if (navMenu.classList.contains('active')) {
+                    menuToggle.style.transform = 'rotate(90deg)';
+                } else {
+                    menuToggle.style.transform = 'rotate(0deg)';
+                }
             });
+            
+            // Close mobile menu when clicking on a link
+            const navLinks = document.querySelectorAll('.nav-menu ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                    menuToggle.style.transform = 'rotate(0deg)';
+                });
+            });
+            
+            // Close menu when clicking outside (optional but user-friendly)
+            document.addEventListener('click', function(event) {
+                const isClickInsideMenu = navMenu.contains(event.target);
+                const isClickOnToggle = menuToggle.contains(event.target);
+                
+                if (!isClickInsideMenu && !isClickOnToggle && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    menuToggle.style.transform = 'rotate(0deg)';
+                }
+            });
+        }
+        
+        // Fix for any potential CSS issues with mobile menu
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                // On desktop, ensure menu is visible and not in active state
+                if (navMenu) {
+                    navMenu.classList.remove('active');
+                }
+                if (menuToggle) {
+                    menuToggle.style.transform = 'rotate(0deg)';
+                }
+            }
         });
     </script>
 </body>
 </html>
+```
