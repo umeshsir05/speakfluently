@@ -2,11 +2,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
-    <!-- CSS aur JavaScript files -->
-<link rel="stylesheet" href="style.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Tenses - Speak Fluently</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Tenses page specific styles */
+        .tenses-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .tenses-header h2 {
+            font-size: 2.5rem;
+            color: var(--accent, #00b4d8);
+            position: relative;
+            display: inline-block;
+        }
+        .tenses-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent, #00b4d8);
+            border-radius: 2px;
+        }
+        .tenses-header p {
+            margin-top: 1rem;
+            color: var(--text-secondary, #4a627a);
+        }
+        .tense-section {
+            margin-bottom: 2rem;
+        }
+        .tense-section h3 {
+            font-size: 1.5rem;
+            color: var(--accent, #00b4d8);
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+        }
+        .tense-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        .tense-card {
+            background: var(--card-bg, white);
+            border-radius: 16px;
+            padding: 1rem 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow, 0 5px 15px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .tense-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        .tense-card i {
+            font-size: 2rem;
+            color: var(--accent, #00b4d8);
+            width: 50px;
+            text-align: center;
+        }
+        .tense-card .card-content {
+            flex: 1;
+        }
+        .tense-card .card-content a {
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            color: var(--text-primary, #1e2a3e);
+            display: block;
+            transition: color 0.3s ease;
+        }
+        .tense-card .card-content a:hover {
+            color: var(--accent, #00b4d8);
+        }
+        .tense-card .lesson-badge {
+            font-size: 0.75rem;
+            color: var(--accent, #00b4d8);
+            font-weight: 500;
+        }
+        hr {
+            margin: 1rem 0;
+            border-color: var(--border, rgba(0,180,216,0.2));
+        }
+        body.dark .tense-card {
+            background: var(--card-bg, #1e293b);
+        }
+        body.dark .tense-card .card-content a {
+            color: var(--text-primary, #e2e8f0);
+        }
+        @media screen and (max-width: 768px) {
+            .tense-grid {
+                grid-template-columns: 1fr;
+            }
+            .tenses-header h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -15,44 +120,198 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-
-<li><a href="grammar.html">Grammer</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
-    <main>
-        <h2>All Tenses</h2>
-        <ul>
-<li><a href="present_tense.html">Lesson:1-Present indefinite tense</a></li>
-<li><a href ="present_continuous.html">Lesson:2-Present Continueous tense</a></li>
 
-<li><a href="present_perfect.html">Lesson:3-Present Perfect Tense</a></li>
-<li><a href="present_perfect_conti.html">Lesson:4-Present Perfect Continuous</a></li><br>
-<hr>
-<li><a href="past_indefinite.html">Lesson:5-Past Simple tense </a></li>
-<li><a href="past_continuous.html">Lesson:6-Past Continuous Tense </a></li>
-<li><a href="past_perfect.html">Lesson:7-Past Perfect Tense </a></li>
-<li><a href="past_perfect_continuous.html">Lesson:8-Past Perfect Tense </a></li><br>
-<hr>
-<li><a href="future_simple.html">Lesson:9-Future Simple Tense </a></li>
-<li><a href="future_continuous.html">Lesson:10-Future Continuous Tense </a></li>
-<li><a href="future_perfect.html">Lesson:11-Future Perfect Tense </a></li>
-<li><a href="future_perfect_continuous.html">Lesson:12-Future Perfect Continuous Tense </a></li>
+    <main style="max-width: 1200px; margin: 2rem auto; padding: 0 20px;">
+        <div class="tenses-header">
+            <h2><i class="fas fa-language"></i> All Tenses</h2>
+            <p>Master English grammar with our complete tense lessons</p>
+        </div>
 
+        <!-- Present Tenses -->
+        <div class="tense-section">
+            <h3><i class="fas fa-clock"></i> Present Tenses</h3>
+            <div class="tense-grid">
+                <div class="tense-card">
+                    <i class="fas fa-pen-alt"></i>
+                    <div class="card-content">
+                        <span class="lesson-badge">Lesson 1</span>
+                        <a href="present_tense.html">Present Indefinite Tense</a>
+                    </div>
+                </div>
+                <div class="tense-card">
+                    <i class="fas fa-running"></i>
+                    <div class="card-content">
+                        <span class="lesson-badge">Lesson 2</span>
+                        <a href="present_continuous.html">Present Continuous Tense</a>
+                    </div>
+                </div>
+                <div class="tense-card">
+                    <i class="fas fa-check-circle"></i>
+                    <div class="card-content">
+                        <span class="lesson-badge">Lesson 3</span>
+                        <a href="present_perfect.html">Present Perfect Tense</a>
+                    </div>
+                </div>
+                <div class="tense-card">
+                    <i class="fas fa-hourglass-half"></i>
+                    <div class="card-content">
+                        <span class="lesson-badge">Lesson 4</span>
+                        <a href="present_perfect_conti.html">Present Perfect Continuous</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Past Tenses -->
+        <div class="tense-section">
+            <h3><i class="fas fa-history"></i> Past Tenses</h3>
+            <div class="tense-grid">
+                <div class="tense-card">
+                    <i class="fas fa-undo-alt"></i>
+                    <div class="card-content">
+                        <span class="lesson-badge">Lesson 5</span>
+                        <a href="past_indefinite.html">Past Simple Tense</a>
+                    </div>
+                </div>
+                <div class="tense-card">
+                    <i class="fas fa-video"></i>
+                    <div class="card-content">
+                        <span class="lesson-badge">Lesson 6</span>
+                        <a href="past_continuous.html">Past Continuous Tense</a>
+                    </div>
+                </div>
+                <div class="tense-card">
+                    <i class="fas fa-check-double"></i>
+                    <div class="card-content">
+                        <span class="lesson-badge">Lesson 7</span>
+                        <a href="past_perfect.html">Past Perfect Tense</a>
+                    </div>
+                </div>
+                <div class="tense-card">
+                    <i class="fas fa-infinity"></i>
+                    <div class="card-content">
+                        <span class="lesson-badge">Lesson 8</span>
+                        <a href="past_perfect_continuous.html">Past Perfect Continuous</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Future Tenses -->
+        <div class="tense-section">
+            <h3><i class="fas fa-future"></i> Future Tenses</h3>
+            <div class="tense-grid">
+                <div class="tense-card">
+                    <i class="fas fa-eye"></i>
+                    <div class="card-content">
+                        <span class="lesson-badge">Lesson 9</span>
+                        <a href="future_simple.html">Future Simple Tense</a>
+                    </div>
+                </div>
+                <div class="tense-card">
+                    <i class="fas fa-chart-line"></i>
+                    <div class="card-content">
+                        <span class="lesson-badge">Lesson 10</span>
+                        <a href="future_continuous.html">Future Continuous Tense</a>
+                    </div>
+                </div>
+                <div class="tense-card">
+                    <i class="fas fa-star"></i>
+                    <div class="card-content">
+                        <span class="lesson-badge">Lesson 11</span>
+                        <a href="future_perfect.html">Future Perfect Tense</a>
+                    </div>
+                </div>
+                <div class="tense-card">
+                    <i class="fas fa-chart-simple"></i>
+                    <div class="card-content">
+                        <span class="lesson-badge">Lesson 12</span>
+                        <a href="future_perfect_continuous.html">Future Perfect Continuous</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2025 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // ========== DARK MODE TOGGLE ==========
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        // Load saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+
+        // Toggle dark mode
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+
+        // ========== MOBILE MENU TOGGLE (FULLY WORKING) ==========
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (menuToggle && navMenu) {
+            // Open/close menu on hamburger click
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+
+            // Close menu when clicking on any nav link
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    navMenu.classList.remove('active');
+                }
+            });
+
+            // On window resize: if screen becomes desktop, remove active class
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
