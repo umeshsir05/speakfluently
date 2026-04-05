@@ -4,66 +4,77 @@
     box-sizing: border-box;
 }
 
-:root {
-    --bg: #f4f7fc;
-    --card-bg: #ffffff;
-    --text-primary: #1e2a3e;
-    --text-secondary: #4a627a;
-    --header-bg: #1e2a3e;
-    --footer-bg: #1a252f;
-    --accent: #00b4d8;
-    --accent-dark: #0077b6;
-    --accent-light: #90e0ef;
-    --hero-bg: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    --glass-bg: rgba(255, 255, 255, 0.9);
-    --border: rgba(0, 180, 216, 0.2);
-}
-
-body.dark {
-    --bg: #0f1724;
-    --card-bg: #1e293b;
-    --text-primary: #e2e8f0;
-    --text-secondary: #94a3b8;
-    --header-bg: #0f1724;
-    --footer-bg: #0a0f18;
-    --accent: #38bdf8;
-    --accent-dark: #0284c7;
-    --accent-light: #7dd3fc;
-    --hero-bg: linear-gradient(135deg, #0f1724 0%, #1e293b 100%);
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    --glass-bg: rgba(30, 41, 59, 0.9);
-    --border: rgba(56, 189, 248, 0.2);
-}
-
 body {
     font-family: 'Poppins', 'Arial', sans-serif;
-    background-color: var(--bg);
-    color: var(--text-primary);
+    background-color: #f4f7fc;
+    color: #1e2a3e;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* डार्क मोड कलर - बिना CSS variables के ताकि कोई कन्फ्लिक्ट न हो */
+body.dark {
+    background-color: #0f1724;
+    color: #e2e8f0;
+}
+
+body.dark header {
+    background-color: #0f1724;
+}
+
+body.dark .nav-menu {
+    background-color: #0f1724;
+}
+
+body.dark .feature {
+    background-color: #1e293b;
+    color: #e2e8f0;
+}
+
+body.dark footer {
+    background-color: #0a0f18;
+    color: #94a3b8;
+}
+
+body.dark .features {
+    background-color: #0f1724;
+}
+
+body.dark .feature p {
+    color: #94a3b8;
+}
+
+body.dark .dark-mode-toggle {
+    background-color: #1e293b;
+    border-color: #38bdf8;
+}
+
+body.dark .dark-mode-toggle i {
+    color: #38bdf8;
+}
+
+/* Header Styles */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background: var(--header-bg);
+    background-color: #1e2a3e;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: var(--shadow);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 header .logo h1 {
     font-size: 1.8rem;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    background: linear-gradient(135deg, #00b4d8, #90e0ef);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 
+/* Navigation Menu */
 .nav-menu ul {
     list-style: none;
     display: flex;
@@ -71,7 +82,7 @@ header .logo h1 {
 }
 
 .nav-menu ul li a {
-    color: var(--text-primary);
+    color: white;
     text-decoration: none;
     font-weight: 500;
     padding: 0.5rem 1rem;
@@ -84,13 +95,24 @@ header .logo h1 {
 }
 
 .nav-menu ul li a:hover {
-    color: var(--accent);
-    background: var(--glass-bg);
+    color: #00b4d8;
+    background: rgba(255, 255, 255, 0.1);
 }
 
+/* डार्क मोड में नेविगेशन लिंक का कलर */
+body.dark .nav-menu ul li a {
+    color: #e2e8f0;
+}
+
+body.dark .nav-menu ul li a:hover {
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.1);
+}
+
+/* Dark Mode Toggle Button */
 .dark-mode-toggle {
-    background: var(--glass-bg);
-    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 180, 216, 0.3);
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -101,63 +123,121 @@ header .logo h1 {
     transition: all 0.3s ease;
 }
 
-.dark-mode-toggle:hover {
-    transform: scale(1.1);
-    background: var(--accent);
+.dark-mode-toggle i {
+    font-size: 1.2rem;
+    color: white;
+    transition: color 0.3s ease;
 }
 
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+    background: #00b4d8;
+}
+
+/* Menu Toggle (Hamburger) */
 .menu-toggle {
     display: none;
     font-size: 2rem;
     cursor: pointer;
-    color: var(--text-primary);
+    color: white;
+    transition: transform 0.3s ease;
 }
 
+.menu-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Hero Section */
 .hero {
-    background: var(--hero-bg);
+    background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
     color: white;
     padding: 100px 20px;
     text-align: center;
 }
 
+body.dark .hero {
+    background: linear-gradient(135deg, #0f1724 0%, #1e293b 100%);
+}
+
+.hero h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
 .hero h1 {
     font-size: 4rem;
     font-weight: 800;
+    margin-bottom: 1rem;
 }
 
 .hero p {
     font-size: 1.2rem;
     max-width: 600px;
-    margin: 1rem auto;
+    margin: 0 auto 2rem;
+    opacity: 0.9;
 }
 
 .btn-primary {
     background: white;
-    color: var(--accent-dark);
+    color: #0077b6;
     padding: 12px 32px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     display: inline-block;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary i {
+    margin-right: 8px;
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    background: var(--accent);
+    background: #00b4d8;
     color: white;
 }
 
+body.dark .btn-primary {
+    background: #1e293b;
+    color: #38bdf8;
+}
+
+body.dark .btn-primary:hover {
+    background: #38bdf8;
+    color: #0f1724;
+}
+
+/* Features Section */
 .features {
     padding: 80px 20px;
-    background: var(--bg);
+    background-color: #f4f7fc;
 }
 
 .features h2 {
     text-align: center;
     font-size: 2.5rem;
-    color: var(--accent);
+    color: #00b4d8;
     margin-bottom: 3rem;
+    position: relative;
+}
+
+.features h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #00b4d8;
+    border-radius: 2px;
+}
+
+body.dark .features h2::after {
+    background: #38bdf8;
 }
 
 .features-list {
@@ -170,36 +250,58 @@ header .logo h1 {
 }
 
 .feature {
-    background: var(--card-bg);
+    background: white;
     border-radius: 20px;
     padding: 2rem;
     width: 300px;
     text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow);
-}
-
-.feature i {
-    font-size: 2.5rem;
-    color: var(--accent);
-    margin-bottom: 1rem;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .feature:hover {
     transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
+.feature i {
+    font-size: 2.5rem;
+    color: #00b4d8;
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    color: #1e2a3e;
+    margin-bottom: 1rem;
+}
+
+body.dark .feature h3 {
+    color: #38bdf8;
+}
+
+.feature p {
+    color: #4a627a;
+    line-height: 1.6;
+}
+
+/* Footer */
 footer {
-    background: var(--footer-bg);
+    background-color: #1a252f;
     text-align: center;
     padding: 1.5rem;
-    color: var(--text-secondary);
+    color: #94a3b8;
 }
 
 footer b {
-    color: var(--accent);
+    color: #00b4d8;
 }
 
+body.dark footer b {
+    color: #38bdf8;
+}
+
+/* ========== MOBILE RESPONSIVE ========== */
 @media screen and (max-width: 768px) {
     .nav-menu {
         display: none;
@@ -207,9 +309,15 @@ footer b {
         top: 70px;
         left: 0;
         width: 100%;
-        background: var(--header-bg);
+        background-color: #1e2a3e;
         padding: 1rem 0;
-        box-shadow: var(--shadow);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+    }
+
+    /* डार्क मोड में मोबाइल मेनू का बैकग्राउंड */
+    body.dark .nav-menu {
+        background-color: #0f1724;
     }
 
     .nav-menu.active {
@@ -230,6 +338,11 @@ footer b {
     .nav-menu ul li a {
         display: block;
         padding: 1rem;
+        color: white;
+    }
+
+    body.dark .nav-menu ul li a {
+        color: #e2e8f0;
     }
 
     .menu-toggle {
@@ -239,4 +352,45 @@ footer b {
     .hero h1 {
         font-size: 2.5rem;
     }
+
+    .hero h3 {
+        font-size: 1.2rem;
+    }
+
+    .features h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f4f7fc;
+}
+
+body.dark ::-webkit-scrollbar-track {
+    background: #0f1724;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00b4d8;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0077b6;
+}
+
+/* Selection Color */
+::selection {
+    background: #00b4d8;
+    color: white;
 }
