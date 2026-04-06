@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Synonyms & Antonyms - English Grammar | Speak Fluently</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #f4f7fc;
+            --card-bg: #ffffff;
+            --text-primary: #1e2a3e;
+            --text-secondary: #4a627a;
+            --header-bg: #1e2a3e;
+            --footer-bg: #1a252f;
+            --accent: #00b4d8;
+            --accent-dark: #0077b6;
+            --accent-light: #90e0ef;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --glass-bg: rgba(255, 255, 255, 0.9);
+            --border: rgba(0, 180, 216, 0.2);
+        }
+
+        body.dark {
+            --bg: #0f1724;
+            --card-bg: #1e293b;
+            --text-primary: #e2e8f0;
+            --text-secondary: #94a3b8;
+            --header-bg: #0f1724;
+            --footer-bg: #0a0f18;
+            --accent: #38bdf8;
+            --accent-dark: #0284c7;
+            --accent-light: #7dd3fc;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --glass-bg: rgba(30, 41, 59, 0.9);
+            --border: rgba(56, 189, 248, 0.2);
+        }
+
+        body {
+            font-family: 'Poppins', 'Arial', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background-color: var(--header-bg);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        header .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        body.dark .nav-menu ul li a {
+            color: var(--text-primary);
+        }
+
+        .nav-menu ul li a i {
+            margin-right: 8px;
+        }
+
+        .nav-menu ul li a:hover {
+            color: var(--accent);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .dark-mode-toggle {
+            background: var(--glass-bg);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dark-mode-toggle:hover {
+            transform: scale(1.1);
+            background: var(--accent);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: white;
+        }
+
+        body.dark .menu-toggle {
+            color: var(--text-primary);
+        }
+
+        /* Main Container */
+        .lesson-container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        .lesson-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .lesson-header h1 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            position: relative;
+            display: inline-block;
+        }
+
+        .lesson-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .lesson-header p {
+            margin-top: 1rem;
+            color: var(--text-secondary);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 0.8rem 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .stat-card i {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-right: 8px;
+        }
+
+        .stat-card span {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Search Bar */
+        .search-container {
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .search-box {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px 20px;
+            border: 2px solid var(--border);
+            border-radius: 50px;
+            background: var(--card-bg);
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(0,180,216,0.1);
+        }
+
+        /* Category Filters */
+        .category-filters {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 8px 18px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        /* Table */
+        .table-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+            border-radius: 20px;
+            background: var(--card-bg);
+            box-shadow: var(--shadow);
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-table th, .data-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-primary);
+        }
+
+        .data-table th {
+            background: var(--accent);
+            color: white;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+        }
+
+        body.dark .data-table th {
+            background: var(--accent-dark);
+        }
+
+        .data-table tr:hover {
+            background: rgba(0,180,216,0.05);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+        }
+
+        footer {
+            background-color: var(--footer-bg);
+            text-align: center;
+            padding: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        footer b {
+            color: var(--accent);
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--header-bg);
+                padding: 1rem 0;
+                box-shadow: var(--shadow);
+                z-index: 999;
+            }
+
+            .nav-menu.active {
+                display: block;
+            }
+
+            .nav-menu ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
+            }
+
+            .nav-menu ul li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-menu ul li a {
+                display: block;
+                padding: 1rem;
+                color: white;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .lesson-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .data-table th, .data-table td {
+                padding: 10px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Speak Fluently</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
+            </ul>
+        </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="lesson-container">
+            <div class="lesson-header">
+                <h1><i class="fas fa-book"></i> Synonyms & Antonyms</h1>
+                <p>400+ important synonyms and antonyms for competitive exams (SSC, Banking, UPSC, etc.)</p>
+            </div>
+
+            <div class="stats-bar">
+                <div class="stat-card">
+                    <i class="fas fa-database"></i>
+                    <span>400+ Words</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Synonyms + Antonyms</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Exam Oriented</span>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-box" placeholder="🔍 Search by word, synonym, or antonym...">
+            </div>
+
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="A">A - D</button>
+                <button class="filter-btn" data-category="E">E - H</button>
+                <button class="filter-btn" data-category="I">I - L</button>
+                <button class="filter-btn" data-category="M">M - P</button>
+                <button class="filter-btn" data-category="Q">Q - T</button>
+                <button class="filter-btn" data-category="U">U - Z</button>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table" id="synonymsTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Word</th>
+                            <th>Synonyms</th>
+                            <th>Antonyms</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Data will be loaded by JavaScript -->
+                    </tbody>
+                </table>
+                <div id="noResults" class="no-results" style="display: none;">
+                    <i class="fas fa-search"></i> No results found. Try another word.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
+    </footer>
+
+    <script>
+        // Comprehensive list of 400+ words with synonyms and antonyms
+        const wordsData = [
+            { word: "Abandon", synonyms: "Forsake, leave, desert, relinquish", antonyms: "Keep, retain, continue", category: "A" },
+            { word: "Abate", synonyms: "Subside, decrease, lessen, diminish", antonyms: "Increase, intensify, escalate", category: "A" },
+            { word: "Abbreviate", synonyms: "Shorten, condense, compress, truncate", antonyms: "Lengthen, expand, extend", category: "A" },
+            { word: "Abduct", synonyms: "Kidnap, seize, capture, carry off", antonyms: "Release, free, return", category: "A" },
+            { word: "Aberration", synonyms: "Anomaly, deviation, irregularity", antonyms: "Normality, conformity, regularity", category: "A" },
+            { word: "Abet", synonyms: "Aid, assist, support, encourage", antonyms: "Hinder, obstruct, discourage", category: "A" },
+            { word: "Abhor", synonyms: "Hate, detest, loathe, despise", antonyms: "Love, admire, cherish", category: "A" },
+            { word: "Abide", synonyms: "Tolerate, endure, bear, comply", antonyms: "Reject, resist, defy", category: "A" },
+            { word: "Abolish", synonyms: "Eliminate, annul, cancel, repeal", antonyms: "Establish, create, institute", category: "A" },
+            { word: "Abrupt", synonyms: "Sudden, unexpected, hasty, brusque", antonyms: "Gradual, gentle, courteous", category: "A" },
+            { word: "Absolve", synonyms: "Pardon, forgive, exonerate, acquit", antonyms: "Blame, convict, condemn", category: "A" },
+            { word: "Absorb", synonyms: "Assimilate, consume, engross, soak", antonyms: "Emit, exude, release", category: "A" },
+            { word: "Abstract", synonyms: "Theoretical, conceptual, abstruse", antonyms: "Concrete, tangible, specific", category: "A" },
+            { word: "Abundant", synonyms: "Plentiful, ample, copious, profuse", antonyms: "Scarce, rare, deficient", category: "A" },
+            { word: "Accelerate", synonyms: "Hasten, quicken, expedite, speed", antonyms: "Decelerate, slow, delay", category: "A" },
+            { word: "Accentuate", synonyms: "Emphasize, highlight, stress", antonyms: "Downplay, minimize, understate", category: "A" },
+            { word: "Accept", synonyms: "Receive, agree, approve, acknowledge", antonyms: "Refuse, reject, decline", category: "A" },
+            { word: "Access", synonyms: "Entry, admission, approach, entrance", antonyms: "Exit, exclusion, barrier", category: "A" },
+            { word: "Accommodate", synonyms: "Adapt, adjust, oblige, house", antonyms: "Inconvenience, disarrange", category: "A" },
+            { word: "Accomplish", synonyms: "Achieve, attain, complete, realize", antonyms: "Fail, abandon, neglect", category: "A" },
+            { word: "Accord", synonyms: "Agreement, harmony, grant, bestow", antonyms: "Disagreement, discord, withhold", category: "A" },
+            { word: "Accost", synonyms: "Approach, confront, address, greet", antonyms: "Avoid, ignore, shun", category: "A" },
+            { word: "Accredit", synonyms: "Authorize, certify, recognize, approve", antonyms: "Discredit, reject, deny", category: "A" },
+            { word: "Accrue", synonyms: "Accumulate, amass, collect, gather", antonyms: "Diminish, decrease, dwindle", category: "A" },
+            { word: "Accumulate", synonyms: "Gather, collect, amass, hoard", antonyms: "Scatter, disperse, waste", category: "A" },
+            { word: "Accurate", synonyms: "Correct, precise, exact, true", antonyms: "Inaccurate, wrong, false", category: "A" },
+            { word: "Accuse", synonyms: "Charge, blame, indict, implicate", antonyms: "Defend, exonerate, absolve", category: "A" },
+            { word: "Acknowledge", synonyms: "Admit, confess, accept, recognize", antonyms: "Deny, ignore, disregard", category: "A" },
+            { word: "Acquaint", synonyms: "Familiarize, introduce, notify, inform", antonyms: "Ignore, conceal, withhold", category: "A" },
+            { word: "Acquiesce", synonyms: "Consent, agree, comply, assent", antonyms: "Dissent, resist, object", category: "A" },
+            { word: "Acquire", synonyms: "Obtain, gain, procure, secure", antonyms: "Lose, forfeit, surrender", category: "A" },
+            { word: "Acquit", synonyms: "Exonerate, absolve, clear, release", antonyms: "Convict, condemn, sentence", category: "A" },
+            { word: "Acrimonious", synonyms: "Bitter, harsh, caustic, spiteful", antonyms: "Harmonious, pleasant, sweet", category: "A" },
+            { word: "Adapt", synonyms: "Adjust, modify, accommodate, conform", antonyms: "Disrupt, derange, unfit", category: "A" },
+            { word: "Addict", synonyms: "Enthusiast, devotee, fanatic", antonyms: "Critic, detractor, opponent", category: "A" },
+            { word: "Adept", synonyms: "Skilled, proficient, expert, masterful", antonyms: "Inept, clumsy, unskilled", category: "A" },
+            { word: "Adhere", synonyms: "Stick, cling, hold, comply", antonyms: "Separate, detach, loosen", category: "A" },
+            { word: "Adjacent", synonyms: "Nearby, adjoining, contiguous, neighboring", antonyms: "Distant, far, remote", category: "A" },
+            { word: "Adjourn", synonyms: "Postpone, suspend, defer, delay", antonyms: "Continue, proceed, advance", category: "A" },
+            { word: "Admire", synonyms: "Appreciate, praise, adore, respect", antonyms: "Despise, condemn, dislike", category: "A" },
+            { word: "Admit", synonyms: "Confess, acknowledge, allow, permit", antonyms: "Deny, exclude, reject", category: "A" },
+            { word: "Admonish", synonyms: "Reprove, caution, warn, rebuke", antonyms: "Praise, applaud, encourage", category: "A" },
+            { word: "Adopt", synonyms: "Embrace, assume, take up, foster", antonyms: "Abandon, reject, disown", category: "A" },
+            { word: "Adore", synonyms: "Love, cherish, worship, idolize", antonyms: "Hate, despise, loathe", category: "A" },
+            { word: "Adorn", synonyms: "Decorate, beautify, embellish, ornament", antonyms: "Disfigure, mar, spoil", category: "A" },
+            { word: "Adroit", synonyms: "Dexterous, skillful, clever, deft", antonyms: "Clumsy, awkward, inept", category: "A" },
+            { word: "Adulation", synonyms: "Flattery, praise, worship, idolization", antonyms: "Criticism, condemnation, abuse", category: "A" },
+            { word: "Adverse", synonyms: "Unfavorable, hostile, contrary, negative", antonyms: "Favorable, beneficial, positive", category: "A" },
+            { word: "Advocate", synonyms: "Support, recommend, champion, promote", antonyms: "Oppose, criticize, denounce", category: "A" },
+            { word: "Affable", synonyms: "Friendly, amiable, cordial, genial", antonyms: "Unfriendly, hostile, rude", category: "A" },
+            { word: "Affect", synonyms: "Influence, impact, move, touch", antonyms: "Unaffected, ignore, neglect", category: "A" },
+            { word: "Affection", synonyms: "Love, fondness, attachment, warmth", antonyms: "Hatred, indifference, aversion", category: "A" },
+            { word: "Affirm", synonyms: "Assert, declare, confirm, attest", antonyms: "Deny, contradict, refute", category: "A" },
+            { word: "Affluent", synonyms: "Rich, wealthy, prosperous, opulent", antonyms: "Poor, destitute, impoverished", category: "A" },
+            { word: "Aggravate", synonyms: "Worsen, intensify, exacerbate, provoke", antonyms: "Soothe, calm, alleviate", category: "A" },
+            { word: "Aggressive", synonyms: "Hostile, assertive, belligerent, pushy", antonyms: "Passive, peaceful, gentle", category: "A" },
+            { word: "Agile", synonyms: "Nimble, swift, sprightly, lively", antonyms: "Clumsy, slow, sluggish", category: "A" },
+            { word: "Agony", synonyms: "Pain, suffering, torment, anguish", antonyms: "Pleasure, joy, comfort", category: "A" },
+            { word: "Agree", synonyms: "Consent, concur, assent, comply", antonyms: "Disagree, differ, dissent", category: "A" },
+            { word: "Aid", synonyms: "Help, assist, support, facilitate", antonyms: "Hinder, obstruct, impede", category: "A" },
+            { word: "Alacrity", synonyms: "Eagerness, willingness, enthusiasm, zeal", antonyms: "Reluctance, apathy, indifference", category: "A" },
+            { word: "Alien", synonyms: "Foreigner, outsider, stranger", antonyms: "Native, citizen, local", category: "A" },
+            { word: "Allege", synonyms: "Claim, assert, declare, contend", antonyms: "Deny, refute, disprove", category: "A" },
+            { word: "Alleviate", synonyms: "Ease, relieve, mitigate, soothe", antonyms: "Worsen, aggravate, intensify", category: "A" },
+            { word: "Alliance", synonyms: "Union, partnership, coalition, league", antonyms: "Separation, division, rift", category: "A" },
+            { word: "Allure", synonyms: "Attract, charm, entice, tempt", antonyms: "Repel, discourage, dissuade", category: "A" },
+            { word: "Alter", synonyms: "Change, modify, adjust, transform", antonyms: "Preserve, maintain, keep", category: "A" },
+            { word: "Amateur", synonyms: "Novice, beginner, learner, enthusiast", antonyms: "Expert, professional, master", category: "A" },
+            { word: "Ambitious", synonyms: "Aspirational, driven, enterprising, determined", antonyms: "Lazy, unambitious, apathetic", category: "A" },
+            { word: "Ameliorate", synonyms: "Improve, enhance, upgrade, refine", antonyms: "Worsen, deteriorate, degrade", category: "A" },
+            { word: "Amiable", synonyms: "Friendly, cordial, pleasant, likable", antonyms: "Unfriendly, hostile, disagreeable", category: "A" },
+            { word: "Ample", synonyms: "Plentiful, abundant, copious, spacious", antonyms: "Scant, insufficient, meager", category: "A" },
+            { word: "Amuse", synonyms: "Entertain, delight, please, divert", antonyms: "Bore, tire, weary", category: "A" },
+            { word: "Analyze", synonyms: "Examine, study, inspect, scrutinize", antonyms: "Ignore, neglect, overlook", category: "A" },
+            { word: "Ancient", synonyms: "Old, antique, archaic, primitive", antonyms: "Modern, new, contemporary", category: "A" },
+            { word: "Anger", synonyms: "Rage, fury, wrath, indignation", antonyms: "Calm, peace, tranquility", category: "A" },
+            { word: "Anguish", synonyms: "Distress, agony, torment, pain", antonyms: "Joy, relief, happiness", category: "A" },
+            { word: "Annihilate", synonyms: "Destroy, obliterate, eradicate, demolish", antonyms: "Create, build, preserve", category: "A" },
+            { word: "Announce", synonyms: "Declare, proclaim, broadcast, publicize", antonyms: "Conceal, hide, suppress", category: "A" },
+            { word: "Annual", synonyms: "Yearly, perennial, each year", antonyms: "Occasional, irregular", category: "A" },
+            { word: "Answer", synonyms: "Reply, respond, retort, rejoin", antonyms: "Question, ask, inquire", category: "A" },
+            { word: "Antagonize", synonyms: "Provoke, irritate, annoy, offend", antonyms: "Pacify, appease, soothe", category: "A" },
+            { word: "Anxious", synonyms: "Worried, nervous, uneasy, apprehensive", antonyms: "Calm, confident, relaxed", category: "A" },
+            { word: "Apathetic", synonyms: "Indifferent, unconcerned, uninterested, detached", antonyms: "Passionate, eager, enthusiastic", category: "A" },
+            { word: "Apparent", synonyms: "Evident, obvious, clear, visible", antonyms: "Hidden, obscure, unclear", category: "A" },
+            { word: "Appeal", synonyms: "Pleading, request, attraction, charm", antonyms: "Repulsion, denial, refusal", category: "A" },
+            { word: "Appear", synonyms: "Seem, emerge, surface, materialize", antonyms: "Disappear, vanish, fade", category: "A" },
+            { word: "Appease", synonyms: "Calm, pacify, soothe, placate", antonyms: "Provoke, anger, irritate", category: "A" },
+            { word: "Applaud", synonyms: "Praise, acclaim, cheer, compliment", antonyms: "Criticize, boo, condemn", category: "A" },
+            { word: "Apply", synonyms: "Use, utilize, employ, request", antonyms: "Ignore, neglect, avoid", category: "A" },
+            { word: "Appoint", synonyms: "Assign, designate, nominate, name", antonyms: "Dismiss, fire, remove", category: "A" },
+            { word: "Appreciate", synonyms: "Value, admire, enjoy, recognize", antonyms: "Underrate, disregard, despise", category: "A" },
+            { word: "Approach", synonyms: "Method, way, near, advance", antonyms: "Retreat, avoid, distance", category: "A" },
+            { word: "Appropriate", synonyms: "Suitable, proper, fitting, apt", antonyms: "Inappropriate, unsuitable, wrong", category: "A" },
+            { word: "Approve", synonyms: "Endorse, accept, support, consent", antonyms: "Disapprove, reject, oppose", category: "A" },
+            { word: "Arbitrary", synonyms: "Random, capricious, subjective, dictatorial", antonyms: "Rational, logical, consistent", category: "A" },
+            { word: "Arduous", synonyms: "Difficult, strenuous, laborious, hard", antonyms: "Easy, effortless, simple", category: "A" },
+            { word: "Argue", synonyms: "Debate, dispute, contend, quarrel", antonyms: "Agree, concede, comply", category: "A" },
+            { word: "Arid", synonyms: "Dry, barren, parched, infertile", antonyms: "Wet, fertile, lush", category: "A" },
+            { word: "Arise", synonyms: "Emerge, appear, rise, originate", antonyms: "Disappear, end, cease", category: "A" },
+            { word: "Arrogant", synonyms: "Haughty, proud, conceited, pompous", antonyms: "Humble, modest, meek", category: "A" },
+            { word: "Artificial", synonyms: "Fake, synthetic, simulated, man-made", antonyms: "Natural, real, genuine", category: "A" },
+            { word: "Ascend", synonyms: "Rise, climb, mount, scale", antonyms: "Descend, fall, drop", category: "A" },
+            { word: "Ascertain", synonyms: "Determine, discover, verify, confirm", antonyms: "Guess, assume, speculate", category: "A" },
+            { word: "Aspire", synonyms: "Aim, desire, strive, seek", antonyms: "Lack ambition, ignore", category: "A" },
+            { word: "Assault", synonyms: "Attack, strike, charge, assail", antonyms: "Defend, protect, shield", category: "A" },
+            { word: "Assemble", synonyms: "Gather, collect, convene, congregate", antonyms: "Disperse, scatter, separate", category: "A" },
+            { word: "Assert", synonyms: "Declare, affirm, state, claim", antonyms: "Deny, contradict, refute", category: "A" },
+            { word: "Assess", synonyms: "Evaluate, judge, estimate, appraise", antonyms: "Guess, ignore, neglect", category: "A" },
+            { word: "Assign", synonyms: "Allocate, designate, delegate, appoint", antonyms: "Keep, retain, withhold", category: "A" },
+            { word: "Assist", synonyms: "Help, aid, support, facilitate", antonyms: "Hinder, obstruct, impede", category: "A" },
+            { word: "Associate", synonyms: "Connect, link, relate, join", antonyms: "Separate, disconnect, divide", category: "A" },
+            { word: "Assume", synonyms: "Presume, suppose, guess, take", antonyms: "Know, verify, confirm", category: "A" },
+            { word: "Assure", synonyms: "Guarantee, promise, reassure, convince", antonyms: "Doubt, undermine, distress", category: "A" },
+            { word: "Astonish", synonyms: "Amaze, surprise, shock, stun", antonyms: "Expect, anticipate, bore", category: "A" },
+            { word: "Astonishment", synonyms: "Amazement, surprise, shock, wonder", antonyms: "Indifference, calmness", category: "A" },
+            { word: "Astute", synonyms: "Clever, shrewd, sharp, intelligent", antonyms: "Dull, stupid, ignorant", category: "A" },
+            { word: "Attach", synonyms: "Fasten, connect, join, secure", antonyms: "Detach, remove, separate", category: "A" },
+            { word: "Attack", synonyms: "Assault, strike, charge, invade", antonyms: "Defend, protect, guard", category: "A" },
+            { word: "Attain", synonyms: "Achieve, reach, acquire, accomplish", antonyms: "Fail, lose, miss", category: "A" },
+            { word: "Attentive", synonyms: "Alert, observant, mindful, focused", antonyms: "Inattentive, distracted, careless", category: "A" },
+            { word: "Attitude", synonyms: "Viewpoint, perspective, outlook, stance", antonyms: "Disinterest, indifference", category: "A" },
+            { word: "Attract", synonyms: "Draw, lure, entice, appeal", antonyms: "Repel, deter, discourage", category: "A" },
+            { word: "Audacious", synonyms: "Bold, daring, fearless, courageous", antonyms: "Timid, cowardly, meek", category: "A" },
+            { word: "Auspicious", synonyms: "Favorable, promising, fortunate, lucky", antonyms: "Unfavorable, ominous, inauspicious", category: "A" },
+            { word: "Authentic", synonyms: "Genuine, real, true, legitimate", antonyms: "Fake, counterfeit, false", category: "A" },
+            { word: "Authorize", synonyms: "Approve, permit, sanction, empower", antonyms: "Forbid, prohibit, ban", category: "A" },
+            { word: "Autonomous", synonyms: "Independent, self-governing, sovereign", antonyms: "Dependent, subordinate, subject", category: "A" },
+            { word: "Avenge", synonyms: "Retaliate, revenge, vindicate, punish", antonyms: "Forgive, pardon, excuse", category: "A" },
+            { word: "Avoid", synonyms: "Evade, shun, escape, dodge", antonyms: "Face, confront, meet", category: "A" },
+            { word: "Awake", synonyms: "Alert, conscious, wakeful, aware", antonyms: "Asleep, unconscious, unaware", category: "A" },
+            { word: "Aware", synonyms: "Conscious, informed, mindful, alert", antonyms: "Unaware, ignorant, oblivious", category: "A" },
+            { word: "Awful", synonyms: "Terrible, dreadful, horrible, appalling", antonyms: "Wonderful, pleasant, delightful", category: "A" },
+            { word: "Awkward", synonyms: "Clumsy, uncoordinated, ungainly, embarrassing", antonyms: "Graceful, smooth, comfortable", category: "A" },
+            { word: "Baffle", synonyms: "Confuse, perplex, puzzle, bewilder", antonyms: "Clarify, explain, enlighten", category: "B" },
+            { word: "Balanced", synonyms: "Stable, equitable, fair, even", antonyms: "Unbalanced, biased, extreme", category: "B" },
+            { word: "Barren", synonyms: "Infertile, desolate, unproductive, arid", antonyms: "Fertile, productive, lush", category: "B" },
+            { word: "Base", synonyms: "Foundation, bottom, immoral, low", antonyms: "Top, peak, noble, lofty", category: "B" },
+            { word: "Beautiful", synonyms: "Attractive, lovely, gorgeous, stunning", antonyms: "Ugly, hideous, repulsive", category: "B" },
+            { word: "Beg", synonyms: "Plead, request, implore, beseech", antonyms: "Demand, command, refuse", category: "B" },
+            { word: "Begin", synonyms: "Start, commence, initiate, launch", antonyms: "End, finish, conclude", category: "B" },
+            { word: "Behave", synonyms: "Act, conduct oneself, function", antonyms: "Misbehave, malfunction", category: "B" },
+            { word: "Belief", synonyms: "Faith, trust, conviction, confidence", antonyms: "Doubt, disbelief, skepticism", category: "B" },
+            { word: "Belittle", synonyms: "Disparage, denigrate, deprecate, underrate", antonyms: "Praise, compliment, exalt", category: "B" },
+            { word: "Belligerent", synonyms: "Hostile, aggressive, combative, quarrelsome", antonyms: "Peaceful, friendly, cooperative", category: "B" },
+            { word: "Beneficial", synonyms: "Helpful, advantageous, favorable, useful", antonyms: "Harmful, detrimental, damaging", category: "B" },
+            { word: "Benefit", synonyms: "Advantage, profit, gain, benefit", antonyms: "Disadvantage, loss, drawback", category: "B" },
+            { word: "Benevolent", synonyms: "Kind, generous, charitable, altruistic", antonyms: "Selfish, miserly, malevolent", category: "B" },
+            { word: "Betray", synonyms: "Deceive, backstab, double-cross, reveal", antonyms: "Loyal, protect, conceal", category: "B" },
+            { word: "Bewilder", synonyms: "Confuse, baffle, perplex, mystify", antonyms: "Enlighten, clarify, explain", category: "B" },
+            { word: "Bias", synonyms: "Prejudice, partiality, favoritism, inclination", antonyms: "Impartiality, fairness, objectivity", category: "B" },
+            { word: "Big", synonyms: "Large, huge, enormous, gigantic", antonyms: "Small, tiny, minute", category: "B" },
+            { word: "Bitter", synonyms: "Sour, acrid, resentful, harsh", antonyms: "Sweet, pleasant, friendly", category: "B" },
+            { word: "Bizarre", synonyms: "Strange, odd, weird, eccentric", antonyms: "Normal, ordinary, common", category: "B" },
+            { word: "Blame", synonyms: "Accuse, criticize, condemn, reproach", antonyms: "Praise, commend, exonerate", category: "B" },
+            { word: "Bleak", synonyms: "Gloomy, desolate, dreary, grim", antonyms: "Cheerful, bright, hopeful", category: "B" },
+            { word: "Blessing", synonyms: "Benefit, boon, advantage, godsend", antonyms: "Curse, misfortune, bane", category: "B" },
+            { word: "Blunt", synonyms: "Dull, abrupt, frank, candid", antonyms: "Sharp, subtle, tactful", category: "B" },
+            { word: "Bold", synonyms: "Brave, daring, courageous, fearless", antonyms: "Timid, cowardly, afraid", category: "B" },
+            { word: "Bore", synonyms: "Dull, tire, weary, annoy", antonyms: "Excite, interest, entertain", category: "B" },
+            { word: "Boundary", synonyms: "Border, limit, edge, frontier", antonyms: "Center, interior, middle", category: "B" },
+            { word: "Brave", synonyms: "Courageous, fearless, heroic, valiant", antonyms: "Cowardly, timid, fearful", category: "B" },
+            { word: "Break", synonyms: "Crack, fracture, smash, shatter", antonyms: "Fix, repair, mend", category: "B" },
+            { word: "Brief", synonyms: "Short, concise, succinct, fleeting", antonyms: "Long, lengthy, extended", category: "B" },
+            { word: "Bright", synonyms: "Shining, luminous, intelligent, vivid", antonyms: "Dark, dull, dim", category: "B" },
+            { word: "Brilliant", synonyms: "Smart, bright, genius, radiant", antonyms: "Dull, stupid, dark", category: "B" },
+            { word: "Broad", synonyms: "Wide, expansive, extensive, general", antonyms: "Narrow, limited, specific", category: "B" },
+            { word: "Brutal", synonyms: "Cruel, savage, vicious, harsh", antonyms: "Gentle, kind, humane", category: "B" },
+            { word: "Busy", synonyms: "Occupied, active, engaged, bustling", antonyms: "Idle, free, inactive", category: "B" },
+            { word: "Calamity", synonyms: "Disaster, catastrophe, tragedy, misfortune", antonyms: "Blessing, fortune, success", category: "C" },
+            { word: "Callous", synonyms: "Hardened, unfeeling, insensitive, heartless", antonyms: "Compassionate, caring, empathetic", category: "C" },
+            { word: "Calm", synonyms: "Peaceful, tranquil, serene, quiet", antonyms: "Agitated, stormy, chaotic", category: "C" },
+            { word: "Cancel", synonyms: "Revoke, annul, abolish, rescind", antonyms: "Confirm, approve, uphold", category: "C" },
+            { word: "Capable", synonyms: "Able, competent, skilled, proficient", antonyms: "Incapable, incompetent, unskilled", category: "C" },
+            { word: "Capricious", synonyms: "Fickle, impulsive, whimsical, unpredictable", antonyms: "Consistent, steady, reliable", category: "C" },
+            { word: "Careful", synonyms: "Cautious, attentive, meticulous, vigilant", antonyms: "Careless, reckless, negligent", category: "C" },
+            { word: "Cautious", synonyms: "Careful, wary, alert, prudent", antonyms: "Reckless, impulsive, rash", category: "C" },
+            { word: "Celebrate", synonyms: "Commemorate, honor, rejoice, observe", antonyms: "Mourn, ignore, forget", category: "C" },
+            { word: "Censor", synonyms: "Suppress, edit, cut, ban", antonyms: "Approve, permit, allow", category: "C" },
+            { word: "Censure", synonyms: "Criticize, condemn, reprimand, denounce", antonyms: "Praise, commend, applaud", category: "C" },
+            { word: "Certain", synonyms: "Sure, definite, confident, convinced", antonyms: "Uncertain, doubtful, unsure", category: "C" },
+            { word: "Challenge", synonyms: "Dare, confront, dispute, test", antonyms: "Accept, yield, comply", category: "C" },
+            { word: "Chaotic", synonyms: "Disorderly, confused, messy, tumultuous", antonyms: "Orderly, organized, systematic", category: "C" },
+            { word: "Characteristic", synonyms: "Trait, feature, quality, attribute", antonyms: "Uncharacteristic, atypical", category: "C" },
+            { word: "Charm", synonyms: "Attraction, appeal, allure, magnetism", antonyms: "Repulsion, ugliness, boredom", category: "C" },
+            { word: "Chaste", synonyms: "Pure, modest, virtuous, celibate", antonyms: "Immoral, promiscuous, impure", category: "C" },
+            { word: "Cheap", synonyms: "Inexpensive, affordable, low-cost, economical", antonyms: "Expensive, costly, pricey", category: "C" },
+            { word: "Cheerful", synonyms: "Happy, joyful, lively, buoyant", antonyms: "Sad, gloomy, depressed", category: "C" },
+            { word: "Choice", synonyms: "Option, selection, preference, alternative", antonyms: "Compulsion, necessity", category: "C" },
+            { word: "Chronic", synonyms: "Persistent, constant, continuous, enduring", antonyms: "Acute, temporary, occasional", category: "C" },
+            { word: "Chuckle", synonyms: "Laugh, giggle, snicker, titter", antonyms: "Cry, sob, weep", category: "C" },
+            { word: "Civic", synonyms: "Municipal, public, community, civil", antonyms: "Private, personal", category: "C" },
+            { word: "Civilized", synonyms: "Cultured, refined, educated, polite", antonyms: "Uncivilized, barbaric, primitive", category: "C" },
+            { word: "Clarity", synonyms: "Clearness, lucidity, precision, transparency", antonyms: "Confusion, ambiguity, obscurity", category: "C" },
+            { word: "Classic", synonyms: "Typical, standard, exemplary, timeless", antonyms: "Atypical, inferior, modern", category: "C" },
+            { word: "Clever", synonyms: "Smart, intelligent, sharp, witty", antonyms: "Dull, stupid, slow", category: "C" },
+            { word: "Clumsy", synonyms: "Awkward, uncoordinated, bumbling, inept", antonyms: "Graceful, dexterous, nimble", category: "C" },
+            { word: "Coarse", synonyms: "Rough, crude, harsh, unrefined", antonyms: "Fine, smooth, refined", category: "C" },
+            { word: "Coherent", synonyms: "Logical, consistent, clear, articulate", antonyms: "Incoherent, confused, disjointed", category: "C" },
+            { word: "Collaborate", synonyms: "Cooperate, work together, join forces", antonyms: "Compete, oppose, work alone", category: "C" },
+            { word: "Comfort", synonyms: "Ease, relief, consolation, solace", antonyms: "Discomfort, distress, pain", category: "C" },
+            { word: "Comical", synonyms: "Funny, humorous, amusing, hilarious", antonyms: "Serious, sad, tragic", category: "C" },
+            { word: "Command", synonyms: "Order, direct, instruct, rule", antonyms: "Obey, follow, comply", category: "C" },
+            { word: "Commend", synonyms: "Praise, applaud, compliment, acclaim", antonyms: "Criticize, condemn, blame", category: "C" },
+            { word: "Commitment", synonyms: "Dedication, devotion, loyalty, obligation", antonyms: "Indifference, apathy, irresponsibility", category: "C" },
+            { word: "Common", synonyms: "Ordinary, usual, frequent, shared", antonyms: "Rare, unusual, uncommon", category: "C" },
+            { word: "Communicate", synonyms: "Convey, express, impart, relay", antonyms: "Conceal, withhold, hide", category: "C" },
+            { word: "Compassion", synonyms: "Sympathy, empathy, kindness, mercy", antonyms: "Cruelty, indifference, harshness", category: "C" },
+            { word: "Compel", synonyms: "Force, oblige, coerce, pressure", antonyms: "Persuade, convince, attract", category: "C" },
+            { word: "Competent", synonyms: "Capable, skilled, proficient, qualified", antonyms: "Incompetent, unskilled, inept", category: "C" },
+            { word: "Complain", synonyms: "Protest, grumble, whine, criticize", antonyms: "Appreciate, praise, accept", category: "C" },
+            { word: "Complete", synonyms: "Entire, whole, total, finished", antonyms: "Incomplete, partial, unfinished", category: "C" },
+            { word: "Complex", synonyms: "Complicated, intricate, involved, convoluted", antonyms: "Simple, straightforward, easy", category: "C" },
+            { word: "Compliant", synonyms: "Obedient, submissive, yielding, docile", antonyms: "Rebellious, defiant, disobedient", category: "C" },
+            { word: "Comprehend", synonyms: "Understand, grasp, realize, perceive", antonyms: "Misunderstand, confuse, ignore", category: "C" },
+            { word: "Compromise", synonyms: "Settle, concede, negotiate, arbitrate", antonyms: "Disagree, conflict, fight", category: "C" },
+            { word: "Conceal", synonyms: "Hide, cover, mask, disguise", antonyms: "Reveal, expose, show", category: "C" },
+            { word: "Concede", synonyms: "Admit, yield, grant, allow", antonyms: "Deny, reject, dispute", category: "C" },
+            { word: "Conceive", synonyms: "Imagine, formulate, think, devise", antonyms: "Ignore, neglect, forget", category: "C" },
+            { word: "Concentrate", synonyms: "Focus, attend, center, consolidate", antonyms: "Distract, ignore, disperse", category: "C" },
+            { word: "Concern", synonyms: "Worry, care, interest, anxiety", antonyms: "Indifference, apathy, unconcern", category: "C" },
+            { word: "Concise", synonyms: "Brief, succinct, short, compact", antonyms: "Long-winded, verbose, rambling", category: "C" },
+            { word: "Conclude", synonyms: "Finish, end, complete, finalize", antonyms: "Begin, start, initiate", category: "C" },
+            { word: "Concrete", synonyms: "Specific, tangible, real, solid", antonyms: "Abstract, vague, theoretical", category: "C" },
+            { word: "Condemn", synonyms: "Denounce, criticize, blame, sentence", antonyms: "Praise, exonerate, acquit", category: "C" },
+            { word: "Condense", synonyms: "Compress, shorten, summarize, contract", antonyms: "Expand, lengthen, amplify", category: "C" },
+            { word: "Confess", synonyms: "Admit, acknowledge, concede, reveal", antonyms: "Deny, conceal, hide", category: "C" },
+            { word: "Confidence", synonyms: "Trust, belief, certainty, self-assurance", antonyms: "Doubt, uncertainty, hesitation", category: "C" },
+            { word: "Confine", synonyms: "Restrict, limit, bound, imprison", antonyms: "Release, free, expand", category: "C" },
+            { word: "Confirm", synonyms: "Verify, validate, prove, affirm", antonyms: "Deny, contradict, refute", category: "C" },
+            { word: "Conflict", synonyms: "Dispute, clash, fight, struggle", antonyms: "Agreement, harmony, peace", category: "C" },
+            { word: "Conform", synonyms: "Comply, adapt, follow, obey", antonyms: "Differ, rebel, deviate", category: "C" },
+            { word: "Confuse", synonyms: "Bewilder, puzzle, perplex, disorient", antonyms: "Clarify, enlighten, explain", category: "C" },
+            { word: "Connect", synonyms: "Link, join, attach, associate", antonyms: "Separate, disconnect, divide", category: "C" },
+            { word: "Conscious", synonyms: "Aware, alert, mindful, deliberate", antonyms: "Unconscious, unaware, careless", category: "C" },
+            { word: "Consent", synonyms: "Agree, permit, allow, approve", antonyms: "Refuse, deny, forbid", category: "C" },
+            { word: "Consequence", synonyms: "Result, effect, outcome, aftermath", antonyms: "Cause, origin, source", category: "C" },
+            { word: "Consider", synonyms: "Think, contemplate, ponder, reflect", antonyms: "Ignore, disregard, neglect", category: "C" },
+            { word: "Consistent", synonyms: "Constant, steady, uniform, regular", antonyms: "Inconsistent, variable, erratic", category: "C" },
+            { word: "Conspicuous", synonyms: "Obvious, noticeable, prominent, striking", antonyms: "Hidden, inconspicuous, subtle", category: "C" },
+            { word: "Constant", synonyms: "Continuous, perpetual, incessant, steady", antonyms: "Intermittent, sporadic, variable", category: "C" },
+            { word: "Construct", synonyms: "Build, erect, assemble, create", antonyms: "Destroy, demolish, dismantle", category: "C" },
+            { word: "Consume", synonyms: "Eat, drink, devour, use up", antonyms: "Save, preserve, conserve", category: "C" },
+            { word: "Contain", synonyms: "Hold, include, enclose, accommodate", antonyms: "Exclude, release, omit", category: "C" },
+            { word: "Contempt", synonyms: "Disdain, scorn, disrespect, dislike", antonyms: "Respect, admiration, esteem", category: "C" },
+            { word: "Contend", synonyms: "Fight, compete, argue, assert", antonyms: "Surrender, yield, concede", category: "C" },
+            { word: "Content", synonyms: "Satisfied, pleased, comfortable, happy", antonyms: "Dissatisfied, unhappy, discontent", category: "C" },
+            { word: "Contest", synonyms: "Competition, match, challenge, dispute", antonyms: "Agreement, accord, harmony", category: "C" },
+            { word: "Continue", synonyms: "Persist, proceed, sustain, endure", antonyms: "Stop, cease, discontinue", category: "C" },
+            { word: "Contradict", synonyms: "Deny, oppose, refute, counter", antonyms: "Agree, confirm, support", category: "C" },
+            { word: "Contrast", synonyms: "Difference, distinction, disparity, variation", antonyms: "Similarity, likeness, resemblance", category: "C" },
+            { word: "Contribute", synonyms: "Give, donate, provide, add", antonyms: "Take, withhold, keep", category: "C" },
+            { word: "Contrive", synonyms: "Devise, plan, scheme, invent", antonyms: "Spontaneity, improvise", category: "C" },
+            { word: "Controversial", synonyms: "Debatable, contentious, disputable, arguable", antonyms: "Agreed, undisputed, settled", category: "C" },
+            { word: "Convenient", synonyms: "Handy, accessible, suitable, comfortable", antonyms: "Inconvenient, awkward, difficult", category: "C" },
+            { word: "Conventional", synonyms: "Traditional, customary, orthodox, standard", antonyms: "Unconventional, radical, innovative", category: "C" },
+            { word: "Converse", synonyms: "Talk, chat, speak, communicate", antonyms: "Be silent, listen", category: "C" },
+            { word: "Convert", synonyms: "Change, transform, alter, adapt", antonyms: "Keep, maintain, preserve", category: "C" },
+            { word: "Convince", synonyms: "Persuade, assure, satisfy, sway", antonyms: "Dissuade, discourage, deter", category: "C" },
+            { word: "Cooperative", synonyms: "Collaborative, helpful, joint, mutual", antonyms: "Competitive, uncooperative, individualistic", category: "C" },
+            { word: "Cope", synonyms: "Manage, handle, survive, endure", antonyms: "Fail, succumb, collapse", category: "C" },
+            { word: "Corrupt", synonyms: "Dishonest, crooked, immoral, depraved", antonyms: "Honest, upright, moral", category: "C" },
+            { word: "Courage", synonyms: "Bravery, valor, fearlessness, gallantry", antonyms: "Cowardice, timidity, fear", category: "C" },
+            { word: "Courteous", synonyms: "Polite, respectful, gracious, civil", antonyms: "Rude, discourteous, disrespectful", category: "C" },
+            { word: "Crafty", synonyms: "Sly, cunning, deceitful, tricky", antonyms: "Honest, naive, trustworthy", category: "C" },
+            { word: "Create", synonyms: "Make, produce, generate, design", antonyms: "Destroy, demolish, eliminate", category: "C" },
+            { word: "Credible", synonyms: "Believable, trustworthy, reliable, plausible", antonyms: "Incredible, unbelievable, dubious", category: "C" },
+            { word: "Credit", synonyms: "Praise, recognition, honor, approval", antonyms: "Blame, discredit, disgrace", category: "C" },
+            { word: "Crisis", synonyms: "Emergency, catastrophe, disaster, predicament", antonyms: "Stability, peace, calm", category: "C" },
+            { word: "Criticize", synonyms: "Condemn, censure, blame, denounce", antonyms: "Praise, commend, applaud", category: "C" },
+            { word: "Crucial", synonyms: "Critical, vital, essential, decisive", antonyms: "Unimportant, trivial, minor", category: "C" },
+            { word: "Crude", synonyms: "Raw, unrefined, primitive, coarse", antonyms: "Refined, polished, sophisticated", category: "C" },
+            { word: "Cruel", synonyms: "Brutal, harsh, vicious, merciless", antonyms: "Kind, compassionate, gentle", category: "C" },
+            { word: "Cultivate", synonyms: "Foster, nurture, develop, grow", antonyms: "Neglect, abandon, destroy", category: "C" },
+            { word: "Curious", synonyms: "Inquisitive, interested, questioning, eager", antonyms: "Indifferent, apathetic, uninterested", category: "C" },
+            { word: "Current", synonyms: "Present, contemporary, ongoing, modern", antonyms: "Past, obsolete, outdated", category: "C" },
+            { word: "Curtail", synonyms: "Reduce, shorten, diminish, decrease", antonyms: "Extend, increase, expand", category: "C" },
+            { word: "Custom", synonyms: "Tradition, practice, habit, convention", antonyms: "Innovation, novelty", category: "C" },
+            { word: "Cynical", synonyms: "Skeptical, distrustful, pessimistic, mocking", antonyms: "Optimistic, trusting, hopeful", category: "C" },
+            { word: "Damage", synonyms: "Harm, hurt, injure, impair", antonyms: "Repair, fix, improve", category: "D" },
+            { word: "Dangerous", synonyms: "Hazardous, risky, perilous, unsafe", antonyms: "Safe, secure, harmless", category: "D" },
+            { word: "Daring", synonyms: "Bold, courageous, fearless, adventurous", antonyms: "Timid, cautious, cowardly", category: "D" },
+            { word: "Dazzling", synonyms: "Brilliant, radiant, sparkling, shining", antonyms: "Dull, dim, dark", category: "D" },
+            { word: "Dear", synonyms: "Beloved, cherished, precious, darling", antonyms: "Hated, despised, worthless", category: "D" },
+            { word: "Debate", synonyms: "Discuss, argue, deliberate, dispute", antonyms: "Agree, consent, yield", category: "D" },
+            { word: "Decay", synonyms: "Rot, decompose, deteriorate, decline", antonyms: "Grow, flourish, thrive", category: "D" },
+            { word: "Deceive", synonyms: "Trick, mislead, cheat, dupe", antonyms: "Enlighten, inform, guide", category: "D" },
+            { word: "Decent", synonyms: "Proper, respectable, suitable, modest", antonyms: "Indecent, improper, vulgar", category: "D" },
+            { word: "Decide", synonyms: "Determine, resolve, conclude, settle", antonyms: "Hesitate, waver, postpone", category: "D" },
+            { word: "Declare", synonyms: "Announce, proclaim, state, assert", antonyms: "Conceal, hide, suppress", category: "D" },
+            { word: "Decline", synonyms: "Decrease, diminish, refuse, reject", antonyms: "Increase, accept, rise", category: "D" },
+            { word: "Decorate", synonyms: "Adorn, ornament, embellish, beautify", antonyms: "Disfigure, mar, spoil", category: "D" },
+            { word: "Decrease", synonyms: "Reduce, lessen, diminish, decline", antonyms: "Increase, grow, expand", category: "D" },
+            { word: "Dedicate", synonyms: "Devote, commit, assign, consecrate", antonyms: "Neglect, ignore, abandon", category: "D" },
+            { word: "Defeat", synonyms: "Beat, conquer, vanquish, overcome", antonyms: "Lose, surrender, yield", category: "D" },
+            { word: "Defend", synonyms: "Protect, guard, shield, safeguard", antonyms: "Attack, assault, harm", category: "D" },
+            { word: "Defer", synonyms: "Delay, postpone, put off, adjourn", antonyms: "Advance, expedite, hasten", category: "D" },
+            { word: "Deficient", synonyms: "Lacking, insufficient, inadequate, scarce", antonyms: "Sufficient, ample, abundant", category: "D" },
+            { word: "Define", synonyms: "Explain, describe, specify, clarify", antonyms: "Confuse, obscure, distort", category: "D" },
+            { word: "Definite", synonyms: "Certain, specific, clear, fixed", antonyms: "Indefinite, vague, uncertain", category: "D" },
+            { word: "Defy", synonyms: "Disobey, resist, challenge, oppose", antonyms: "Obey, submit, comply", category: "D" },
+            { word: "Degrade", synonyms: "Lower, demean, humiliate, demote", antonyms: "Elevate, honor, upgrade", category: "D" },
+            { word: "Delay", synonyms: "Postpone, defer, detain, hold up", antonyms: "Hasten, expedite, advance", category: "D" },
+            { word: "Deliberate", synonyms: "Intentional, planned, calculated, purposeful", antonyms: "Accidental, unintentional, random", category: "D" },
+            { word: "Delicate", synonyms: "Fragile, fine, tender, subtle", antonyms: "Rough, sturdy, coarse", category: "D" },
+            { word: "Delight", synonyms: "Pleasure, joy, happiness, glee", antonyms: "Displeasure, sorrow, disappointment", category: "D" },
+            { word: "Deliver", synonyms: "Distribute, hand over, transfer, supply", antonyms: "Keep, withhold, retain", category: "D" },
+            { word: "Demand", synonyms: "Request, require, order, claim", antonyms: "Offer, give, supply", category: "D" },
+            { word: "Demonstrate", synonyms: "Show, display, exhibit, prove", antonyms: "Hide, conceal, disprove", category: "D" },
+            { word: "Deny", synonyms: "Refute, reject, contradict, disavow", antonyms: "Admit, acknowledge, accept", category: "D" },
+            { word: "Depart", synonyms: "Leave, go, exit, withdraw", antonyms: "Arrive, stay, remain", category: "D" },
+            { word: "Depend", synonyms: "Rely, trust, count, lean", antonyms: "Distrust, doubt, suspect", category: "D" },
+            { word: "Depict", synonyms: "Portray, represent, illustrate, describe", antonyms: "Distort, misrepresent", category: "D" },
+            { word: "Deplete", synonyms: "Exhaust, drain, reduce, use up", antonyms: "Refill, replenish, increase", category: "D" },
+            { word: "Depress", synonyms: "Sadden, discourage, dispirit, lower", antonyms: "Cheer, uplift, encourage", category: "D" },
+            { word: "Deprive", synonyms: "Deny, strip, divest, dispossess", antonyms: "Provide, give, bestow", category: "D" },
+            { word: "Derive", synonyms: "Obtain, acquire, gain, originate", antonyms: "Lose, forfeit, surrender", category: "D" },
+            { word: "Descend", synonyms: "Go down, fall, drop, decline", antonyms: "Ascend, rise, climb", category: "D" },
+            { word: "Describe", synonyms: "Explain, depict, detail, narrate", antonyms: "Conceal, distort, misrepresent", category: "D" },
+            { word: "Desert", synonyms: "Abandon, forsake, leave, ditch", antonyms: "Stay, remain, stay with", category: "D" },
+            { word: "Deserve", synonyms: "Earn, merit, warrant, justify", antonyms: "Forfeit, lose", category: "D" },
+            { word: "Design", synonyms: "Plan, blueprint, draft, pattern", antonyms: "Randomness, accident", category: "D" },
+            { word: "Desire", synonyms: "Want, wish, crave, long for", antonyms: "Dislike, hate, abhor", category: "D" },
+            { word: "Despair", synonyms: "Hopelessness, dejection, desperation, gloom", antonyms: "Hope, optimism, cheer", category: "D" },
+            { word: "Desperate", synonyms: "Hopeless, despairing, frantic, urgent", antonyms: "Hopeful, calm, composed", category: "D" },
+            { word: "Despite", synonyms: "Notwithstanding, regardless of, in spite of", antonyms: "Because of, due to", category: "D" },
+            { word: "Destiny", synonyms: "Fate, fortune, lot, future", antonyms: "Free will, choice", category: "D" },
+            { word: "Destroy", synonyms: "Demolish, ruin, annihilate, wreck", antonyms: "Create, build, preserve", category: "D" },
+            { word: "Detach", synonyms: "Separate, disconnect, disengage, unfasten", antonyms: "Attach, connect, fasten", category: "D" },
+            { word: "Detail", synonyms: "Specific, particular, itemize, list", antonyms: "General, summary, overview", category: "D" },
+            { word: "Detect", synonyms: "Discover, spot, notice, observe", antonyms: "Miss, overlook, ignore", category: "D" },
+            { word: "Deter", synonyms: "Discourage, prevent, dissuade, hinder", antonyms: "Encourage, promote, aid", category: "D" },
+            { word: "Determine", synonyms: "Decide, resolve, conclude, settle", antonyms: "Hesitate, waver, doubt", category: "D" },
+            { word: "Develop", synonyms: "Grow, evolve, advance, expand", antonyms: "Regress, shrink, decline", category: "D" },
+            { word: "Deviate", synonyms: "Diverge, stray, differ, veer", antonyms: "Conform, comply, agree", category: "D" },
+            { word: "Devise", synonyms: "Create, invent, formulate, design", antonyms: "Copy, imitate, mimic", category: "D" },
+            { word: "Devote", synonyms: "Dedicate, commit, consecrate, assign", antonyms: "Neglect, ignore, abandon", category: "D" },
+            { word: "Devour", synonyms: "Eat, consume, gobble, gorge", antonyms: "Starve, abstain, fast", category: "D" },
+            { word: "Dexterous", synonyms: "Skillful, adroit, agile, nimble", antonyms: "Clumsy, inept, awkward", category: "D" },
+            { word: "Diabolic", synonyms: "Evil, devilish, wicked, demonic", antonyms: "Angelic, good, virtuous", category: "D" },
+            { word: "Dictate", synonyms: "Command, order, prescribe, impose", antonyms: "Request, ask, suggest", category: "D" },
+            { word: "Different", synonyms: "Distinct, unlike, diverse, various", antonyms: "Same, similar, identical", category: "D" },
+            { word: "Difficult", synonyms: "Hard, challenging, tough, arduous", antonyms: "Easy, simple, effortless", category: "D" },
+            { word: "Diffuse", synonyms: "Spread, disperse, scatter, disseminate", antonyms: "Concentrate, focus, gather", category: "D" },
+            { word: "Digress", synonyms: "Stray, ramble, deviate, wander", antonyms: "Focus, concentrate, stay", category: "D" },
+            { word: "Diligent", synonyms: "Hardworking, industrious, assiduous, meticulous", antonyms: "Lazy, negligent, careless", category: "D" },
+            { word: "Diminish", synonyms: "Reduce, lessen, decrease, shrink", antonyms: "Increase, grow, amplify", category: "D" },
+            { word: "Direct", synonyms: "Guide, lead, instruct, manage", antonyms: "Mislead, confuse, follow", category: "D" },
+            { word: "Disagree", synonyms: "Differ, argue, dispute, dissent", antonyms: "Agree, concur, accept", category: "D" },
+            { word: "Disappear", synonyms: "Vanish, fade, evaporate, dissolve", antonyms: "Appear, materialize, emerge", category: "D" },
+            { word: "Disappoint", synonyms: "Let down, disillusion, dismay, dissatisfy", antonyms: "Satisfy, please, delight", category: "D" },
+            { word: "Discern", synonyms: "Perceive, detect, notice, distinguish", antonyms: "Overlook, miss, ignore", category: "D" },
+            { word: "Discipline", synonyms: "Control, order, training, regulation", antonyms: "Chaos, disorder, negligence", category: "D" },
+            { word: "Disclose", synonyms: "Reveal, expose, divulge, uncover", antonyms: "Conceal, hide, cover", category: "D" },
+            { word: "Discord", synonyms: "Conflict, disagreement, strife, friction", antonyms: "Harmony, agreement, peace", category: "D" },
+            { word: "Discourage", synonyms: "Dissuade, deter, dishearten, demoralize", antonyms: "Encourage, support, inspire", category: "D" },
+            { word: "Discreet", synonyms: "Prudent, cautious, tactful, careful", antonyms: "Indiscreet, careless, reckless", category: "D" },
+            { word: "Discrete", synonyms: "Separate, distinct, individual, detached", antonyms: "Continuous, connected, joined", category: "D" },
+            { word: "Discriminate", synonyms: "Differentiate, distinguish, separate, segregate", antonyms: "Confuse, mix, combine", category: "D" },
+            { word: "Discuss", synonyms: "Talk, debate, deliberate, converse", antonyms: "Ignore, avoid, silence", category: "D" },
+            { word: "Disdain", synonyms: "Scorn, contempt, disrespect, derision", antonyms: "Respect, admiration, esteem", category: "D" },
+            { word: "Disease", synonyms: "Illness, sickness, ailment, disorder", antonyms: "Health, wellness, fitness", category: "D" },
+            { word: "Disgrace", synonyms: "Shame, dishonor, humiliation, stigma", antonyms: "Honor, pride, glory", category: "D" },
+            { word: "Disguise", synonyms: "Camouflage, conceal, mask, hide", antonyms: "Reveal, expose, uncover", category: "D" },
+            { word: "Disgust", synonyms: "Revulsion, repulsion, nausea, loathing", antonyms: "Attraction, liking, pleasure", category: "D" },
+            { word: "Dishonest", synonyms: "Deceitful, corrupt, fraudulent, untruthful", antonyms: "Honest, truthful, upright", category: "D" },
+            { word: "Dislike", synonyms: "Hate, detest, loathe, abhor", antonyms: "Like, love, enjoy", category: "D" },
+            { word: "Dismal", synonyms: "Gloomy, dreary, bleak, depressing", antonyms: "Bright, cheerful, sunny", category: "D" },
+            { word: "Dismiss", synonyms: "Fire, discharge, reject, ignore", antonyms: "Hire, accept, retain", category: "D" },
+            { word: "Disobey", synonyms: "Defy, ignore, violate, resist", antonyms: "Obey, comply, follow", category: "D" },
+            { word: "Display", synonyms: "Show, exhibit, demonstrate, present", antonyms: "Hide, conceal, cover", category: "D" },
+            { word: "Dispose", synonyms: "Arrange, settle, discard, manage", antonyms: "Keep, retain, hold", category: "D" },
+            { word: "Dispute", synonyms: "Argue, debate, quarrel, contest", antonyms: "Agree, accept, concede", category: "D" },
+            { word: "Disrespect", synonyms: "Insult, rudeness, contempt, impudence", antonyms: "Respect, courtesy, politeness", category: "D" },
+            { word: "Disrupt", synonyms: "Disturb, interrupt, break, upset", antonyms: "Organize, arrange, fix", category: "D" },
+            { word: "Dissatisfy", synonyms: "Displease, disappoint, frustrate, upset", antonyms: "Satisfy, please, delight", category: "D" },
+            { word: "Disseminate", synonyms: "Spread, circulate, distribute, broadcast", antonyms: "Conceal, suppress, gather", category: "D" },
+            { word: "Dissent", synonyms: "Disagree, differ, oppose, protest", antonyms: "Agree, consent, accept", category: "D" },
+            { word: "Dissolve", synonyms: "Melt, liquefy, disintegrate, disperse", antonyms: "Solidify, congeal, harden", category: "D" },
+            { word: "Distant", synonyms: "Far, remote, aloof, faraway", antonyms: "Near, close, friendly", category: "D" },
+            { word: "Distinct", synonyms: "Clear, different, separate, definite", antonyms: "Vague, similar, indistinct", category: "D" },
+            { word: "Distinguish", synonyms: "Differentiate, discern, recognize, tell apart", antonyms: "Confuse, mix, combine", category: "D" },
+            { word: "Distort", synonyms: "Twist, deform, misrepresent, falsify", antonyms: "Straighten, correct, represent", category: "D" },
+            { word: "Distract", synonyms: "Divert, disturb, sidetrack, unsettle", antonyms: "Focus, concentrate, engage", category: "D" },
+            { word: "Distress", synonyms: "Suffering, anguish, pain, misery", antonyms: "Comfort, relief, joy", category: "D" },
+            { word: "Distribute", synonyms: "Dispense, allocate, share, scatter", antonyms: "Collect, gather, hoard", category: "D" },
+            { word: "Disturb", synonyms: "Interrupt, bother, upset, agitate", antonyms: "Calm, soothe, settle", category: "D" },
+            { word: "Diverse", synonyms: "Varied, different, mixed, assorted", antonyms: "Uniform, identical, same", category: "D" },
+            { word: "Divert", synonyms: "Redirect, distract, deflect, amuse", antonyms: "Focus, direct, maintain", category: "D" },
+            { word: "Divide", synonyms: "Split, separate, partition, segregate", antonyms: "Unite, combine, merge", category: "D" },
+            { word: "Divine", synonyms: "Heavenly, godly, sacred, celestial", antonyms: "Earthly, mortal, profane", category: "D" },
+            { word: "Divulge", synonyms: "Reveal, disclose, expose, tell", antonyms: "Conceal, hide, keep secret", category: "D" },
+            { word: "Doctrine", synonyms: "Belief, creed, dogma, teaching", antonyms: "Heresy, disbelief", category: "D" },
+            { word: "Dodge", synonyms: "Avoid, evade, duck, elude", antonyms: "Face, confront, meet", category: "D" },
+            { word: "Dogmatic", synonyms: "Assertive, opinionated, rigid, inflexible", antonyms: "Open-minded, flexible, tolerant", category: "D" },
+            { word: "Domestic", synonyms: "Home, household, internal, tame", antonyms: "Foreign, wild, external", category: "D" },
+            { word: "Dominant", synonyms: "Prevailing, leading, controlling, commanding", antonyms: "Submissive, weak, inferior", category: "D" },
+            { word: "Donate", synonyms: "Give, contribute, bestow, grant", antonyms: "Keep, withhold, take", category: "D" },
+            { word: "Dormant", synonyms: "Inactive, sleeping, latent, quiescent", antonyms: "Active, awake, lively", category: "D" },
+            { word: "Doubt", synonyms: "Uncertainty, skepticism, suspicion, distrust", antonyms: "Certainty, trust, confidence", category: "D" },
+            { word: "Drab", synonyms: "Dull, dreary, colorless, lifeless", antonyms: "Bright, colorful, lively", category: "D" },
+            { word: "Drain", synonyms: "Empty, exhaust, deplete, sap", antonyms: "Fill, replenish, supply", category: "D" },
+            { word: "Dramatic", synonyms: "Theatrical, striking, vivid, exciting", antonyms: "Dull, ordinary, mundane", category: "D" },
+            { word: "Drastic", synonyms: "Extreme, severe, radical, harsh", antonyms: "Mild, moderate, gentle", category: "D" },
+            { word: "Drawback", synonyms: "Disadvantage, flaw, obstacle, shortcoming", antonyms: "Advantage, benefit, asset", category: "D" },
+            { word: "Dread", synonyms: "Fear, terror, anxiety, apprehension", antonyms: "Courage, confidence, calm", category: "D" },
+            { word: "Dreary", synonyms: "Gloomy, dull, bleak, depressing", antonyms: "Cheerful, sunny, bright", category: "D" },
+            { word: "Drench", synonyms: "Soak, wet, saturate, douse", antonyms: "Dry, parch, dehydrate", category: "D" },
+            { word: "Drift", synonyms: "Float, wander, stray, meander", antonyms: "Stay, anchor, direct", category: "D" },
+            { word: "Drill", synonyms: "Train, practice, exercise, discipline", antonyms: "Neglect, ignore", category: "D" },
+            { word: "Drink", synonyms: "Beverage, sip, swallow, imbibe", antonyms: "Starve, thirst", category: "D" },
+            { word: "Drip", synonyms: "Trickle, drop, leak, dribble", antonyms: "Gush, pour, flood", category: "D" },
+            { word: "Drive", synonyms: "Push, propel, motivate, impel", antonyms: "Stop, halt, discourage", category: "D" },
+            { word: "Droll", synonyms: "Humorous, amusing, funny, comical", antonyms: "Serious, dull, boring", category: "D" },
+            { word: "Drought", synonyms: "Dryness, aridity, water shortage, famine", antonyms: "Flood, rain, abundance", category: "D" },
+            { word: "Drowsy", synonyms: "Sleepy, tired, lethargic, sluggish", antonyms: "Alert, awake, energetic", category: "D" },
+            { word: "Dubious", synonyms: "Doubtful, uncertain, skeptical, questionable", antonyms: "Certain, reliable, trustworthy", category: "D" },
+            { word: "Dull", synonyms: "Boring, blunt, stupid, slow", antonyms: "Sharp, bright, exciting", category: "D" },
+            { word: "Dumb", synonyms: "Silent, mute, speechless, stupid", antonyms: "Talkative, vocal, intelligent", category: "D" },
+            { word: "Durable", synonyms: "Sturdy, strong, lasting, resilient", antonyms: "Fragile, weak, temporary", category: "D" },
+            { word: "Dusk", synonyms: "Twilight, sunset, evening, sundown", antonyms: "Dawn, sunrise, morning", category: "D" },
+            { word: "Dwarf", synonyms: "Miniature, small, tiny, diminutive", antonyms: "Giant, huge, enormous", category: "D" },
+            { word: "Dwell", synonyms: "Reside, live, stay, inhabit", antonyms: "Leave, depart, move", category: "D" },
+            { word: "Dynamic", synonyms: "Energetic, active, vigorous, lively", antonyms: "Static, inactive, passive", category: "D" },
+            { word: "Eager", synonyms: "Enthusiastic, keen, excited, impatient", antonyms: "Apathetic, indifferent, reluctant", category: "E" },
+            { word: "Early", synonyms: "Premature, initial, beforehand, advance", antonyms: "Late, delayed, tardy", category: "E" },
+            { word: "Earn", synonyms: "Gain, obtain, acquire, deserve", antonyms: "Lose, forfeit, waste", category: "E" },
+            { word: "Earnest", synonyms: "Sincere, serious, dedicated, genuine", antonyms: "Insincere, frivolous, flippant", category: "E" },
+            { word: "Earthly", synonyms: "Terrestrial, worldly, physical, mortal", antonyms: "Heavenly, spiritual, divine", category: "E" },
+            { word: "Ease", synonyms: "Comfort, relief, simplicity, effortlessness", antonyms: "Difficulty, discomfort, hardship", category: "E" },
+            { word: "Easy", synonyms: "Simple, effortless, uncomplicated, light", antonyms: "Difficult, hard, complex", category: "E" },
+            { word: "Ebb", synonyms: "Recede, decline, diminish, wane", antonyms: "Flow, rise, increase", category: "E" },
+            { word: "Eccentric", synonyms: "Odd, strange, quirky, unconventional", antonyms: "Normal, conventional, ordinary", category: "E" },
+            { word: "Echo", synonyms: "Repeat, reverberate, reflect, mimic", antonyms: "Original, initial", category: "E" },
+            { word: "Eclipse", synonyms: "Overshadow, surpass, outshine, obscure", antonyms: "Illuminate, reveal, expose", category: "E" },
+            { word: "Economic", synonyms: "Financial, fiscal, monetary, budgetary", antonyms: "Nonfinancial, charitable", category: "E" },
+            { word: "Ecstasy", synonyms: "Joy, delight, bliss, euphoria", antonyms: "Misery, despair, sorrow", category: "E" },
+            { word: "Edge", synonyms: "Border, boundary, brink, verge", antonyms: "Center, middle, interior", category: "E" },
+            { word: "Edible", synonyms: "Eatable, palatable, consumable, safe", antonyms: "Inedible, poisonous, toxic", category: "E" },
+            { word: "Edify", synonyms: "Educate, enlighten, instruct, teach", antonyms: "Corrupt, mislead, degrade", category: "E" },
+            { word: "Effect", synonyms: "Result, consequence, outcome, impact", antonyms: "Cause, origin, source", category: "E" },
+            { word: "Effective", synonyms: "Productive, efficient, capable, potent", antonyms: "Ineffective, useless, inefficient", category: "E" },
+            { word: "Effervescent", synonyms: "Bubbly, lively, enthusiastic, vivacious", antonyms: "Flat, dull, lifeless", category: "E" },
+            { word: "Efficient", synonyms: "Productive, organized, effective, capable", antonyms: "Inefficient, wasteful, unproductive", category: "E" },
+            { word: "Effort", synonyms: "Struggle, exertion, work, labor", antonyms: "Ease, idleness, laziness", category: "E" },
+            { word: "Elaborate", synonyms: "Detailed, complex, intricate, thorough", antonyms: "Simple, plain, basic", category: "E" },
+            { word: "Elastic", synonyms: "Flexible, stretchy, pliable, adaptable", antonyms: "Rigid, stiff, inflexible", category: "E" },
+            { word: "Elegant", synonyms: "Graceful, refined, stylish, sophisticated", antonyms: "Clumsy, coarse, ugly", category: "E" },
+            { word: "Elementary", synonyms: "Basic, fundamental, primary, simple", antonyms: "Advanced, complex, complicated", category: "E" },
+            { word: "Elevate", synonyms: "Raise, lift, upgrade, promote", antonyms: "Lower, drop, demote", category: "E" },
+            { word: "Elicit", synonyms: "Draw out, evoke, extract, obtain", antonyms: "Suppress, hide, conceal", category: "E" },
+            { word: "Eligible", synonyms: "Qualified, entitled, suitable, fit", antonyms: "Ineligible, unqualified, unfit", category: "E" },
+            { word: "Eliminate", synonyms: "Remove, eradicate, destroy, exclude", antonyms: "Include, keep, add", category: "E" },
+            { word: "Eloquent", synonyms: "Fluent, articulate, expressive, persuasive", antonyms: "Inarticulate, tongue-tied, clumsy", category: "E" },
+            { word: "Emaciated", synonyms: "Thin, gaunt, wasted, skeletal", antonyms: "Plump, fat, healthy", category: "E" },
+            { word: "Embarrass", synonyms: "Shame, humiliate, mortify, disconcert", antonyms: "Honor, praise, compliment", category: "E" },
+            { word: "Embellish", synonyms: "Decorate, adorn, exaggerate, ornament", antonyms: "Simplify, strip, understate", category: "E" },
+            { word: "Embrace", synonyms: "Hug, accept, welcome, adopt", antonyms: "Reject, shun, exclude", category: "E" },
+            { word: "Emerge", synonyms: "Appear, surface, arise, materialize", antonyms: "Disappear, vanish, submerge", category: "E" },
+            { word: "Emigrate", synonyms: "Move, migrate, relocate, leave", antonyms: "Immigrate, stay, remain", category: "E" },
+            { word: "Eminent", synonyms: "Famous, distinguished, renowned, prominent", antonyms: "Unknown, obscure, insignificant", category: "E" },
+            { word: "Emotion", synonyms: "Feeling, sentiment, passion, sensation", antonyms: "Rationality, logic, indifference", category: "E" },
+            { word: "Emphasize", synonyms: "Stress, highlight, underscore, accentuate", antonyms: "Understate, minimize, downplay", category: "E" },
+            { word: "Employ", synonyms: "Hire, use, utilize, engage", antonyms: "Fire, dismiss, ignore", category: "E" },
+            { word: "Empower", synonyms: "Authorize, enable, permit, license", antonyms: "Restrict, forbid, prohibit", category: "E" },
+            { word: "Empty", synonyms: "Vacant, hollow, void, barren", antonyms: "Full, occupied, filled", category: "E" },
+            { word: "Emulate", synonyms: "Imitate, mimic, copy, follow", antonyms: "Originate, pioneer, lead", category: "E" },
+            { word: "Enable", synonyms: "Allow, permit, facilitate, empower", antonyms: "Prevent, hinder, block", category: "E" },
+            { word: "Enact", synonyms: "Legislate, pass, decree, execute", antonyms: "Repeal, cancel, abolish", category: "E" },
+            { word: "Enchant", synonyms: "Charm, delight, captivate, fascinate", antonyms: "Repel, disgust, bore", category: "E" },
+            { word: "Encourage", synonyms: "Inspire, motivate, support, cheer", antonyms: "Discourage, dissuade, deter", category: "E" },
+            { word: "Endanger", synonyms: "Threaten, jeopardize, risk, imperil", antonyms: "Protect, safeguard, secure", category: "E" },
+            { word: "Endeavor", synonyms: "Attempt, try, strive, undertake", antonyms: "Neglect, abandon, idle", category: "E" },
+            { word: "Endless", synonyms: "Infinite, eternal, perpetual, boundless", antonyms: "Limited, finite, temporary", category: "E" },
+            { word: "Endorse", synonyms: "Support, approve, sanction, back", antonyms: "Oppose, criticize, reject", category: "E" },
+            { word: "Endure", synonyms: "Bear, tolerate, withstand, survive", antonyms: "Succumb, yield, fail", category: "E" },
+            { word: "Enemy", synonyms: "Adversary, foe, opponent, rival", antonyms: "Friend, ally, supporter", category: "E" },
+            { word: "Energetic", synonyms: "Vigorous, active, lively, dynamic", antonyms: "Lazy, lethargic, inactive", category: "E" },
+            { word: "Enforce", synonyms: "Implement, impose, execute, compel", antonyms: "Ignore, neglect, abandon", category: "E" },
+            { word: "Engage", synonyms: "Involve, occupy, participate, hire", antonyms: "Dismiss, ignore, exclude", category: "E" },
+            { word: "Enhance", synonyms: "Improve, boost, increase, enrich", antonyms: "Reduce, diminish, worsen", category: "E" },
+            { word: "Enjoy", synonyms: "Like, relish, appreciate, savor", antonyms: "Dislike, hate, despise", category: "E" },
+            { word: "Enlarge", synonyms: "Expand, increase, amplify, extend", antonyms: "Shrink, reduce, contract", category: "E" },
+            { word: "Enlighten", synonyms: "Inform, educate, clarify, instruct", antonyms: "Confuse, mislead, obfuscate", category: "E" },
+            { word: "Enlist", synonyms: "Recruit, enroll, register, sign up", antonyms: "Dismiss, discharge, exclude", category: "E" },
+            { word: "Enmity", synonyms: "Hostility, animosity, antagonism, hatred", antonyms: "Friendship, goodwill, affection", category: "E" },
+            { word: "Enormous", synonyms: "Huge, massive, gigantic, colossal", antonyms: "Tiny, small, minute", category: "E" },
+            { word: "Enough", synonyms: "Sufficient, adequate, ample, plenty", antonyms: "Insufficient, lacking, scarce", category: "E" },
+            { word: "Enrage", synonyms: "Anger, infuriate, provoke, incense", antonyms: "Calm, pacify, soothe", category: "E" },
+            { word: "Enrich", synonyms: "Improve, enhance, augment, supplement", antonyms: "Impoverish, deplete, reduce", category: "E" },
+            { word: "Enroll", synonyms: "Register, enlist, sign up, join", antonyms: "Drop out, withdraw, leave", category: "E" },
+            { word: "Ensue", synonyms: "Follow, result, proceed, develop", antonyms: "Precede, cause, lead", category: "E" },
+            { word: "Ensure", synonyms: "Guarantee, assure, secure, certify", antonyms: "Risk, endanger, jeopardize", category: "E" },
+            { word: "Entail", synonyms: "Involve, require, necessitate, demand", antonyms: "Exclude, omit, avoid", category: "E" },
+            { word: "Entertain", synonyms: "Amuse, delight, please, host", antonyms: "Bore, tire, annoy", category: "E" },
+            { word: "Enthusiasm", synonyms: "Zeal, passion, excitement, eagerness", antonyms: "Apathy, indifference, lethargy", category: "E" },
+            { word: "Entire", synonyms: "Whole, complete, total, full", antonyms: "Partial, incomplete, fragmented", category: "E" },
+            { word: "Entitle", synonyms: "Qualify, authorize, permit, allow", antonyms: "Disqualify, forbid, prohibit", category: "E" },
+            { word: "Entrance", synonyms: "Entry, door, access, admission", antonyms: "Exit, departure, exclusion", category: "E" },
+            { word: "Entrap", synonyms: "Trap, capture, ensnare, catch", antonyms: "Free, release, liberate", category: "E" },
+            { word: "Entreat", synonyms: "Beg, plead, implore, beseech", antonyms: "Command, demand, order", category: "E" },
+            { word: "Entry", synonyms: "Access, admission, entrance, passage", antonyms: "Exit, refusal, exclusion", category: "E" },
+            { word: "Enumerate", synonyms: "List, count, itemize, specify", antonyms: "Estimate, guess, ignore", category: "E" },
+            { word: "Envelop", synonyms: "Wrap, cover, surround, encircle", antonyms: "Unwrap, expose, uncover", category: "E" },
+            { word: "Envy", synonyms: "Jealousy, covetousness, resentment, desire", antonyms: "Generosity, contentment, admiration", category: "E" },
+            { word: "Epic", synonyms: "Grand, heroic, monumental, majestic", antonyms: "Trivial, minor, unimportant", category: "E" },
+            { word: "Epitome", synonyms: "Example, model, embodiment, representation", antonyms: "Antithesis, opposite", category: "E" },
+            { word: "Equal", synonyms: "Equivalent, identical, uniform, same", antonyms: "Unequal, different, varied", category: "E" },
+            { word: "Equate", synonyms: "Compare, equalize, match, balance", antonyms: "Differentiate, separate", category: "E" },
+            { word: "Equilibrium", synonyms: "Balance, stability, harmony, poise", antonyms: "Imbalance, instability, chaos", category: "E" },
+            { word: "Equip", synonyms: "Supply, furnish, provide, outfit", antonyms: "Strip, deprive, divest", category: "E" },
+            { word: "Equity", synonyms: "Fairness, justice, impartiality, integrity", antonyms: "Bias, inequality, injustice", category: "E" },
+            { word: "Equivalent", synonyms: "Equal, comparable, synonymous, alike", antonyms: "Different, dissimilar, opposite", category: "E" },
+            { word: "Eradicate", synonyms: "Destroy, eliminate, abolish, uproot", antonyms: "Establish, create, foster", category: "E" },
+            { word: "Erase", synonyms: "Delete, remove, cancel, eliminate", antonyms: "Write, record, preserve", category: "E" },
+            { word: "Erect", synonyms: "Build, construct, raise, assemble", antonyms: "Demolish, destroy, dismantle", category: "E" },
+            { word: "Erode", synonyms: "Wear away, corrode, diminish, destroy", antonyms: "Build, strengthen, reinforce", category: "E" },
+            { word: "Error", synonyms: "Mistake, fault, blunder, oversight", antonyms: "Accuracy, correctness, truth", category: "E" },
+            { word: "Erratic", synonyms: "Unpredictable, inconsistent, irregular, volatile", antonyms: "Consistent, steady, stable", category: "E" },
+            { word: "Erroneous", synonyms: "Wrong, incorrect, false, mistaken", antonyms: "Correct, accurate, right", category: "E" },
+            { word: "Erupt", synonyms: "Explode, burst, vent, break out", antonyms: "Subside, calm, quiet", category: "E" },
+            { word: "Escalate", synonyms: "Increase, intensify, rise, expand", antonyms: "Decrease, diminish, de-escalate", category: "E" },
+            { word: "Escape", synonyms: "Flee, avoid, evade, elude", antonyms: "Stay, face, confront", category: "E" },
+            { word: "Esoteric", synonyms: "Obscure, mysterious, cryptic, arcane", antonyms: "Common, known, familiar", category: "E" },
+            { word: "Essential", synonyms: "Necessary, crucial, vital, fundamental", antonyms: "Unnecessary, optional, minor", category: "E" },
+            { word: "Establish", synonyms: "Found, create, set up, institute", antonyms: "Abolish, close, destroy", category: "E" },
+            { word: "Esteem", synonyms: "Respect, admire, value, honor", antonyms: "Disrespect, scorn, disdain", category: "E" },
+            { word: "Estimate", synonyms: "Calculate, assess, approximate, guess", antonyms: "Measure, compute, know", category: "E" },
+            { word: "Eternal", synonyms: "Everlasting, perpetual, infinite, endless", antonyms: "Temporary, fleeting, mortal", category: "E" },
+            { word: "Evaluate", synonyms: "Assess, judge, appraise, estimate", antonyms: "Ignore, neglect, disregard", category: "E" },
+            { word: "Evaporate", synonyms: "Vaporize, disappear, vanish, dissolve", antonyms: "Condense, appear, solidify", category: "E" },
+            { word: "Even", synonyms: "Level, flat, smooth, equal", antonyms: "Uneven, rough, irregular", category: "E" },
+            { word: "Eventual", synonyms: "Ultimate, final, consequent, resulting", antonyms: "Immediate, initial, preliminary", category: "E" },
+            { word: "Everlasting", synonyms: "Eternal, perpetual, endless, infinite", antonyms: "Finite, temporary, short-lived", category: "E" },
+            { word: "Everyday", synonyms: "Ordinary, common, daily, routine", antonyms: "Special, rare, extraordinary", category: "E" },
+            { word: "Evidence", synonyms: "Proof, testimony, indication, data", antonyms: "Disproof, contradiction, denial", category: "E" },
+            { word: "Evident", synonyms: "Obvious, clear, apparent, manifest", antonyms: "Hidden, obscure, unclear", category: "E" },
+            { word: "Evil", synonyms: "Wicked, immoral, sinful, malevolent", antonyms: "Good, virtuous, righteous", category: "E" },
+            { word: "Evolve", synonyms: "Develop, progress, advance, unfold", antonyms: "Regress, stagnate, decline", category: "E" },
+            { word: "Exact", synonyms: "Precise, accurate, correct, specific", antonyms: "Vague, approximate, inaccurate", category: "E" },
+            { word: "Exaggerate", synonyms: "Overstate, embellish, magnify, amplify", antonyms: "Understate, minimize, downplay", category: "E" },
+            { word: "Exalt", synonyms: "Praise, acclaim, glorify, elevate", antonyms: "Criticize, denounce, degrade", category: "E" },
+            { word: "Examine", synonyms: "Inspect, scrutinize, analyze, review", antonyms: "Ignore, overlook, neglect", category: "E" },
+            { word: "Example", synonyms: "Instance, illustration, sample, model", antonyms: "Counterexample, exception", category: "E" },
+            { word: "Exceed", synonyms: "Surpass, outdo, exceed, transcend", antonyms: "Fall behind, underperform", category: "E" },
+            { word: "Excellent", synonyms: "Outstanding, superb, exceptional, superb", antonyms: "Poor, mediocre, inferior", category: "E" },
+            { word: "Excess", synonyms: "Surplus, extra, overflow, overabundance", antonyms: "Scarcity, lack, deficiency", category: "E" },
+            { word: "Excite", synonyms: "Thrill, energize, stimulate, arouse", antonyms: "Bore, calm, depress", category: "E" },
+            { word: "Exclaim", synonyms: "Shout, cry, call out, declare", antonyms: "Whisper, mutter, mumble", category: "E" },
+            { word: "Exclude", synonyms: "Omit, leave out, bar, reject", antonyms: "Include, admit, accept", category: "E" },
+            { word: "Excuse", synonyms: "Pardon, forgive, justify, explain", antonyms: "Blame, punish, condemn", category: "E" },
+            { word: "Execute", synonyms: "Perform, carry out, complete, accomplish", antonyms: "Fail, neglect, abandon", category: "E" },
+            { word: "Exemplify", synonyms: "Illustrate, demonstrate, embody, represent", antonyms: "Confuse, misrepresent", category: "E" },
+            { word: "Exempt", synonyms: "Excused, released, immune, excluded", antonyms: "Required, liable, subject", category: "E" },
+            { word: "Exercise", synonyms: "Activity, practice, drill, workout", antonyms: "Rest, idleness, laziness", category: "E" },
+            { word: "Exert", synonyms: "Apply, use, wield, put forth", antonyms: "Conserve, save, rest", category: "E" },
+            { word: "Exhaust", synonyms: "Deplete, drain, tire, use up", antonyms: "Refill, energize, replenish", category: "E" },
+            { word: "Exhibit", synonyms: "Display, show, present, demonstrate", antonyms: "Hide, conceal, cover", category: "E" },
+            { word: "Exhilarate", synonyms: "Thrill, excite, invigorate, elate", antonyms: "Depress, bore, tire", category: "E" },
+            { word: "Exile", synonyms: "Banish, expel, deport, oust", antonyms: "Welcome, admit, allow", category: "E" },
+            { word: "Exist", synonyms: "Live, survive, occur, be present", antonyms: "Die, cease, disappear", category: "E" },
+            { word: "Expand", synonyms: "Enlarge, extend, increase, grow", antonyms: "Contract, shrink, reduce", category: "E" },
+            { word: "Expatiate", synonyms: "Elaborate, expand, explain, detail", antonyms: "Summarize, condense, abbreviate", category: "E" },
+            { word: "Expect", synonyms: "Anticipate, await, hope, predict", antonyms: "Doubt, distrust, ignore", category: "E" },
+            { word: "Expedite", synonyms: "Hasten, accelerate, speed, quicken", antonyms: "Delay, hinder, slow", category: "E" },
+            { word: "Expel", synonyms: "Eject, banish, dismiss, evict", antonyms: "Admit, welcome, accept", category: "E" },
+            { word: "Expense", synonyms: "Cost, expenditure, outlay, price", antonyms: "Income, revenue, profit", category: "E" },
+            { word: "Experience", synonyms: "Encounter, undergo, endure, know", antonyms: "Ignore, avoid, miss", category: "E" },
+            { word: "Expert", synonyms: "Master, specialist, professional, adept", antonyms: "Novice, beginner, amateur", category: "E" },
+            { word: "Explain", synonyms: "Clarify, elucidate, interpret, describe", antonyms: "Confuse, obscure, mystify", category: "E" },
+            { word: "Explicit", synonyms: "Clear, direct, precise, unmistakable", antonyms: "Vague, ambiguous, implicit", category: "E" },
+            { word: "Explode", synonyms: "Burst, blow up, erupt, detonate", antonyms: "Implode, calm, defuse", category: "E" },
+            { word: "Exploit", synonyms: "Utilize, leverage, use, take advantage", antonyms: "Neglect, ignore, underuse", category: "E" },
+            { word: "Explore", synonyms: "Investigate, examine, probe, search", antonyms: "Ignore, neglect, disregard", category: "E" },
+            { word: "Expose", synonyms: "Reveal, uncover, disclose, show", antonyms: "Conceal, hide, cover", category: "E" },
+            { word: "Express", synonyms: "Convey, voice, state, articulate", antonyms: "Suppress, conceal, hide", category: "E" },
+            { word: "Expulsion", synonyms: "Ejection, removal, banishment, eviction", antonyms: "Admission, welcome, inclusion", category: "E" },
+            { word: "Extend", synonyms: "Lengthen, expand, broaden, increase", antonyms: "Shorten, contract, reduce", category: "E" },
+            { word: "Extinct", synonyms: "Vanished, dead, gone, lost", antonyms: "Alive, living, extant", category: "E" },
+            { word: "Extinguish", synonyms: "Quench, put out, snuff, eliminate", antonyms: "Ignite, light, kindle", category: "E" },
+            { word: "Extol", synonyms: "Praise, glorify, laud, acclaim", antonyms: "Criticize, condemn, disparage", category: "E" },
+            { word: "Extract", synonyms: "Remove, take out, withdraw, obtain", antonyms: "Insert, add, include", category: "E" },
+            { word: "Extravagant", synonyms: "Lavish, excessive, wasteful, opulent", antonyms: "Frugal, modest, economical", category: "E" },
+            { word: "Extreme", synonyms: "Intense, severe, radical, utmost", antonyms: "Mild, moderate, slight", category: "E" },
+            { word: "Exuberant", synonyms: "Energetic, enthusiastic, lively, cheerful", antonyms: "Depressed, apathetic, dull", category: "E" }
+        ];
+
+        // DOM elements
+        const tbody = document.getElementById('tableBody');
+        const searchInput = document.getElementById('searchInput');
+        const noResults = document.getElementById('noResults');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+
+        let currentFilter = 'all';
+        let currentSearch = '';
+
+        function renderTable() {
+            const filtered = wordsData.filter(item => {
+                if (currentFilter !== 'all' && item.category !== currentFilter) return false;
+                if (currentSearch) {
+                    const searchLower = currentSearch.toLowerCase();
+                    return item.word.toLowerCase().includes(searchLower) ||
+                           item.synonyms.toLowerCase().includes(searchLower) ||
+                           item.antonyms.toLowerCase().includes(searchLower);
+                }
+                return true;
+            });
+
+            if (filtered.length === 0) {
+                tbody.innerHTML = '';
+                noResults.style.display = 'block';
+                return;
+            }
+
+            noResults.style.display = 'none';
+            tbody.innerHTML = filtered.map((item, idx) => `
+                <tr>
+                    <td>${idx + 1}</td>
+                    <td><strong>${item.word}</strong></td>
+                    <td>${item.synonyms}</td>
+                    <td>${item.antonyms}</td>
+                </tr>
+            `).join('');
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            currentSearch = e.target.value;
+            renderTable();
+        });
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.category;
+                renderTable();
+            });
+        });
+
+        renderTable();
+
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
