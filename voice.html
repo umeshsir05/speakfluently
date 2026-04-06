@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Active & Passive Voice - English Grammar | Speak Fluently</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .lesson-header h1 {
+            font-size: 2.5rem;
+            color: var(--accent, #00b4d8);
+            position: relative;
+            display: inline-block;
+        }
+        .lesson-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent, #00b4d8);
+            border-radius: 2px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.6rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--text-primary, #1e2a3e);
+            margin: 1.2rem 0 0.8rem;
+            font-size: 1.3rem;
+        }
+        body.dark .lesson-content h3 {
+            color: var(--text-primary, #e2e8f0);
+        }
+        .lesson-content p {
+            color: var(--text-secondary, #4a627a);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .example-box {
+            background: var(--glass-bg, rgba(0,180,216,0.05));
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border-left: 3px solid var(--accent, #00b4d8);
+        }
+        .rule-card {
+            background: var(--card-bg, white);
+            border-radius: 16px;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--bg, #f4f7fc);
+            border-radius: 12px;
+            overflow-x: auto;
+            display: block;
+        }
+        .grammar-table th, .grammar-table td {
+            border: 1px solid var(--border, #ddd);
+            padding: 10px;
+            text-align: left;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .grammar-table th {
+            background: var(--accent, #00b4d8);
+            color: white;
+            font-weight: 600;
+        }
+        body.dark .grammar-table th {
+            background: var(--accent-dark, #0284c7);
+        }
+        .lesson-content ul, .lesson-content ol {
+            margin: 1rem 0 1rem 2rem;
+            color: var(--text-secondary, #4a627a);
+        }
+        .lesson-content li {
+            margin: 0.5rem 0;
+        }
+        .highlight {
+            color: var(--accent, #00b4d8);
+            font-weight: 600;
+        }
+        .grammar-note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-header h1 {
+                font-size: 1.8rem;
+            }
+            .lesson-content {
+                padding: 1rem;
+            }
+            .grammar-table {
+                font-size: 0.85rem;
+            }
+            .grammar-table th, .grammar-table td {
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Speak Fluently</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
+            </ul>
+        </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="lesson-container">
+            <div class="lesson-header">
+                <h1><i class="fas fa-exchange-alt"></i> Active & Passive Voice (कर्तृवाच्य & कर्मवाच्य)</h1>
+            </div>
+            <div class="lesson-content">
+                <p><strong>Voice</strong> is the form of a verb that indicates whether the subject performs the action (active) or receives the action (passive).</p>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    - <span class="highlight">Active:</span> Ram <strong>writes</strong> a letter. (Subject does action)<br>
+                    - <span class="highlight">Passive:</span> A letter <strong>is written</strong> by Ram. (Subject receives action)
+                </div>
+
+                <h2>Rules for Converting Active to Passive</h2>
+                <ul>
+                    <li>The object of the active sentence becomes the subject of the passive sentence.</li>
+                    <li>The subject of the active sentence becomes the object of the passive sentence (often with "by").</li>
+                    <li>The main verb is changed to its <strong>past participle (V3)</strong> form.</li>
+                    <li>A suitable form of the verb <strong>"to be"</strong> (is, am, are, was, were, being, been) is added according to the tense.</li>
+                    <li>Only transitive verbs (verbs that take an object) can be changed into passive.</li>
+                </ul>
+
+                <h2>Tense-wise Conversion Table</h2>
+                <div class="grammar-table">
+                    <table style="width:100%; border-collapse: collapse;">
+                        <thead>
+                            <tr><th>Tense</th><th>Active Structure</th><th>Passive Structure</th><th>Example (Active → Passive)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Simple Present</td><td>V1/V5</td><td>is/am/are + V3</td><td>He <strong>writes</strong> a letter → A letter <strong>is written</strong> by him.</td></tr>
+                            <tr><td>Present Continuous</td><td>is/am/are + V-ing</td><td>is/am/are + being + V3</td><td>He <strong>is writing</strong> a letter → A letter <strong>is being written</strong> by him.</td></tr>
+                            <tr><td>Present Perfect</td><td>has/have + V3</td><td>has/have + been + V3</td><td>He <strong>has written</strong> a letter → A letter <strong>has been written</strong> by him.</td></tr>
+                            <tr><td>Simple Past</td><td>V2</td><td>was/were + V3</td><td>He <strong>wrote</strong> a letter → A letter <strong>was written</strong> by him.</td></tr>
+                            <tr><td>Past Continuous</td><td>was/were + V-ing</td><td>was/were + being + V3</td><td>He <strong>was writing</strong> a letter → A letter <strong>was being written</strong> by him.</td></tr>
+                            <tr><td>Past Perfect</td><td>had + V3</td><td>had + been + V3</td><td>He <strong>had written</strong> a letter → A letter <strong>had been written</strong> by him.</td></tr>
+                            <tr><td>Simple Future</td><td>will + V1</td><td>will + be + V3</td><td>He <strong>will write</strong> a letter → A letter <strong>will be written</strong> by him.</td></tr>
+                            <tr><td>Future Perfect</td><td>will have + V3</td><td>will have + been + V3</td><td>He <strong>will have written</strong> a letter → A letter <strong>will have been written</strong> by him.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Passive Voice with Modal Verbs</h2>
+                <div class="example-box">
+                    <strong>Structure:</strong> Modal + be + V3<br><br>
+                    <strong>Examples:</strong><br>
+                    - Active: He <strong>can solve</strong> this problem.<br>
+                    - Passive: This problem <strong>can be solved</strong> by him.<br><br>
+                    - Active: You <strong>should obey</strong> your parents.<br>
+                    - Passive: Your parents <strong>should be obeyed</strong> by you.<br><br>
+                    - Active: She <strong>must finish</strong> the work.<br>
+                    - Passive: The work <strong>must be finished</strong> by her.
+                </div>
+
+                <h2>Passive Voice without "By"</h2>
+                <p>Sometimes the agent (doer) is unknown, unimportant, or obvious, so it is omitted.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    - <span class="highlight">Active:</span> Someone stole my wallet.<br>
+                    - <span class="highlight">Passive:</span> My wallet was stolen. (by someone omitted)<br><br>
+                    - <span class="highlight">Active:</span> People speak English all over the world.<br>
+                    - <span class="highlight">Passive:</span> English is spoken all over the world.
+                </div>
+
+                <h2>Double Object Verbs</h2>
+                <p>Some verbs take two objects (direct and indirect). Either object can become the subject in passive voice.</p>
+                <div class="example-box">
+                    <strong>Example:</strong> She gave me a gift.<br>
+                    - Passive 1: I <strong>was given</strong> a gift by her.<br>
+                    - Passive 2: A gift <strong>was given</strong> to me by her.
+                </div>
+
+                <h2>Imperative Sentences (Commands/Requests)</h2>
+                <p>Use "Let" + object + be + V3</p>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    - Active: Open the door.<br>
+                    - Passive: <span class="highlight">Let the door be opened.</span><br><br>
+                    - Active: Please help me.<br>
+                    - Passive: <span class="highlight">You are requested to help me.</span>
+                </div>
+
+                <h2>Interrogative Sentences (Questions)</h2>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    - Active: Did you complete the project?<br>
+                    - Passive: Was the project completed by you?<br><br>
+                    - Active: Who broke the window?<br>
+                    - Passive: By whom was the window broken?
+                </div>
+
+                <h2>Common Mistakes to Avoid</h2>
+                <ul>
+                    <li>❌ Intransitive verbs (e.g., sleep, go, happen) cannot be passive.<br>
+                        <em>He sleeps. (No passive)</em></li>
+                    <li>❌ Don't change the meaning or tense incorrectly.</li>
+                    <li>❌ Don't forget to use the correct form of "to be".</li>
+                    <li>✅ Use passive when the doer is unknown, unimportant, or you want to emphasize the action.</li>
+                </ul>
+
+                <h2>Practice Exercises</h2>
+                <div class="example-box">
+                    <strong>Change the following sentences from Active to Passive Voice (answers below):</strong><br><br>
+                    1. The chef cooks delicious food.<br>
+                    2. She is painting a beautiful picture.<br>
+                    3. They have completed the project.<br>
+                    4. The teacher praised the student.<br>
+                    5. He will deliver the speech.<br>
+                    6. Someone has stolen my bicycle.<br>
+                    7. You must obey the rules.<br>
+                    8. Who wrote this book?
+                </div>
+                <div class="grammar-note">
+                    <i class="fas fa-lightbulb"></i> <strong>Answers:</strong><br>
+                    1. Delicious food is cooked by the chef.<br>
+                    2. A beautiful picture is being painted by her.<br>
+                    3. The project has been completed by them.<br>
+                    4. The student was praised by the teacher.<br>
+                    5. The speech will be delivered by him.<br>
+                    6. My bicycle has been stolen. (by someone omitted)<br>
+                    7. The rules must be obeyed by you.<br>
+                    8. By whom was this book written?
+                </div>
+
+                <div class="grammar-note">
+                    <i class="fas fa-lightbulb"></i> <strong>Remember:</strong> Active voice is more direct and common in everyday speech. Passive voice is useful in formal writing, scientific reports, and when the doer is unknown or less important than the action.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
