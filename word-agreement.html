@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Subject-Verb Agreement - English Grammar | Speak Fluently</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .lesson-header h1 {
+            font-size: 2.5rem;
+            color: var(--accent, #00b4d8);
+            position: relative;
+            display: inline-block;
+        }
+        .lesson-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent, #00b4d8);
+            border-radius: 2px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.6rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--text-primary, #1e2a3e);
+            margin: 1.2rem 0 0.8rem;
+            font-size: 1.3rem;
+        }
+        body.dark .lesson-content h3 {
+            color: var(--text-primary, #e2e8f0);
+        }
+        .lesson-content p {
+            color: var(--text-secondary, #4a627a);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .example-box {
+            background: var(--glass-bg, rgba(0,180,216,0.05));
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border-left: 3px solid var(--accent, #00b4d8);
+        }
+        .rule-card {
+            background: var(--card-bg, white);
+            border-radius: 16px;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--bg, #f4f7fc);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .grammar-table th, .grammar-table td {
+            border: 1px solid var(--border, #ddd);
+            padding: 10px;
+            text-align: left;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .grammar-table th {
+            background: var(--accent, #00b4d8);
+            color: white;
+            font-weight: 600;
+        }
+        body.dark .grammar-table th {
+            background: var(--accent-dark, #0284c7);
+        }
+        .lesson-content ul, .lesson-content ol {
+            margin: 1rem 0 1rem 2rem;
+            color: var(--text-secondary, #4a627a);
+        }
+        .lesson-content li {
+            margin: 0.5rem 0;
+        }
+        .highlight {
+            color: var(--accent, #00b4d8);
+            font-weight: 600;
+        }
+        .grammar-note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-header h1 {
+                font-size: 1.8rem;
+            }
+            .lesson-content {
+                padding: 1rem;
+            }
+            .grammar-table {
+                font-size: 0.85rem;
+            }
+            .grammar-table th, .grammar-table td {
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Speak Fluently</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
+            </ul>
+        </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="lesson-container">
+            <div class="lesson-header">
+                <h1><i class="fas fa-handshake"></i> Subject-Verb Agreement (संज्ञा-क्रिया सामंजस्य)</h1>
+            </div>
+            <div class="lesson-content">
+                <p><strong>Subject-Verb Agreement</strong> means that the subject and verb in a sentence must agree in number (singular/plural) and person (first/second/third).</p>
+                <div class="example-box">
+                    <strong>Basic Rule:</strong><br>
+                    - Singular subject → Singular verb (adds -s/-es)<br>
+                    - Plural subject → Plural verb (base form)<br>
+                    <em>He <span class="highlight">runs</span> fast. (Singular)</em><br>
+                    <em>They <span class="highlight">run</span> fast. (Plural)</em>
+                </div>
+
+                <h2>Important Rules of Subject-Verb Agreement</h2>
+
+                <div class="rule-card">
+                    <h3>Rule 1: Singular vs. Plural Subjects</h3>
+                    <p>A singular subject takes a singular verb (usually ending in -s). A plural subject takes a plural verb (no -s).</p>
+                    <div class="example-box">
+                        <strong>Examples:</strong><br>
+                        - The boy <span class="highlight">plays</span> cricket. (Singular)<br>
+                        - The boys <span class="highlight">play</span> cricket. (Plural)<br>
+                        - She <span class="highlight">writes</span> a letter. / They <span class="highlight">write</span> a letter.
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3>Rule 2: Subjects joined by "and"</h3>
+                    <p>When two or more subjects are joined by <strong>and</strong>, use a plural verb.</p>
+                    <div class="example-box">
+                        <strong>Examples:</strong><br>
+                        - Ram <span class="highlight">and</span> Shyam <span class="highlight">are</span> friends.<br>
+                        - Bread <span class="highlight">and</span> butter <span class="highlight">are</span> available.<br>
+                        <strong>Exception:</strong> If the two subjects refer to the same person/thing, use singular verb.<br>
+                        - The author <span class="highlight">and</span> poet <span class="highlight">is</span> coming. (same person)
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3>Rule 3: Subjects joined by "or / nor / either...or / neither...nor"</h3>
+                    <p>The verb agrees with the subject <strong>closest to it</strong> (nearest subject rule).</p>
+                    <div class="example-box">
+                        <strong>Examples:</strong><br>
+                        - Either Ram <span class="highlight">or</span> his brothers <span class="highlight">have</span> done it.<br>
+                        - Neither the students <span class="highlight">nor</span> the teacher <span class="highlight">is</span> present.<br>
+                        - Either Sita <span class="highlight">or</span> I <span class="highlight">am</span> going.
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3>Rule 4: Indefinite Pronouns (everyone, someone, nobody, each, either, neither, etc.)</h3>
+                    <p>These pronouns are <strong>always singular</strong> and take singular verbs.</p>
+                    <div class="example-box">
+                        <strong>Examples:</strong><br>
+                        - <span class="highlight">Everyone</span> <span class="highlight">wants</span> to succeed.<br>
+                        - <span class="highlight">Somebody</span> <span class="highlight">has</span> taken my pen.<br>
+                        - <span class="highlight">Nothing</span> <span class="highlight">was</span> done.<br>
+                        - <span class="highlight">Each</span> of the boys <span class="highlight">is</span> honest.<br>
+                        - <span class="highlight">Neither</span> of the answers <span class="highlight">is</span> correct.
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3>Rule 5: Collective Nouns (team, family, committee, audience, etc.)</h3>
+                    <p>Collective nouns take a <strong>singular verb</strong> when the group acts as a single unit. They take a <strong>plural verb</strong> when the members act individually.</p>
+                    <div class="example-box">
+                        <strong>Examples:</strong><br>
+                        - The team <span class="highlight">is</span> playing well. (as a unit)<br>
+                        - The team <span class="highlight">are</span> arguing among themselves. (individuals)<br>
+                        - My family <span class="highlight">is</span> large. / The family <span class="highlight">have</span> gone to different cities.
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3>Rule 6: Uncountable Nouns (water, rice, information, furniture, etc.)</h3>
+                    <p>Uncountable nouns are <strong>always singular</strong> and take singular verbs.</p>
+                    <div class="example-box">
+                        <strong>Examples:</strong><br>
+                        - Water <span class="highlight">is</span> essential for life.<br>
+                        - The furniture <span class="highlight">looks</span> beautiful.<br>
+                        - This information <span class="highlight">is</span> useful.
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3>Rule 7: Nouns that are plural in form but singular in meaning (Mathematics, Physics, News, etc.)</h3>
+                    <p>These take <strong>singular verbs</strong>.</p>
+                    <div class="example-box">
+                        <strong>Examples:</strong><br>
+                        - Mathematics <span class="highlight">is</span> my favorite subject.<br>
+                        - The news <span class="highlight">was</span> shocking.<br>
+                        - Physics <span class="highlight">deals</span> with matter and energy.
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3>Rule 8: Subjects with "each" and "every"</h3>
+                    <p>When <strong>each</strong> or <strong>every</strong> comes before a compound subject, use a singular verb.</p>
+                    <div class="example-box">
+                        <strong>Examples:</strong><br>
+                        - <span class="highlight">Each</span> boy and girl <span class="highlight">has</span> a pen.<br>
+                        - <span class="highlight">Every</span> man, woman, and child <span class="highlight">was</span> affected.
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3>Rule 9: Expressions of quantity (a lot of, some, all, most, half, etc.)</h3>
+                    <p>Verb agrees with the <strong>noun after the preposition "of"</strong>.</p>
+                    <div class="example-box">
+                        <strong>Examples:</strong><br>
+                        - A lot of water <span class="highlight">has</span> been wasted. (uncountable)<br>
+                        - A lot of students <span class="highlight">have</span> passed. (countable plural)<br>
+                        - Some of the cake <span class="highlight">is</span> left. / Some of the cakes <span class="highlight">are</span> left.
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3>Rule 10: There / Here sentences</h3>
+                    <p>The verb agrees with the <strong>subject that comes after</strong> "there" or "here".</p>
+                    <div class="example-box">
+                        <strong>Examples:</strong><br>
+                        - There <span class="highlight">is</span> a book on the table.<br>
+                        - There <span class="highlight">are</span> many books on the table.<br>
+                        - Here <span class="highlight">comes</span> the bus. / Here <span class="highlight">come</span> the buses.
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3>Rule 11: Titles, names, and quotes</h3>
+                    <p>Titles of books, movies, songs, etc. are treated as <strong>singular</strong> even if plural in form.</p>
+                    <div class="example-box">
+                        <strong>Examples:</strong><br>
+                        - "The Lord of the Rings" <span class="highlight">is</span> a famous trilogy.<br>
+                        - "Friends" <span class="highlight">was</span> a popular TV show.
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3>Rule 12: Relative Pronouns (who, which, that)</h3>
+                    <p>The verb in the relative clause agrees with the <strong>antecedent</strong> (the noun the pronoun refers to).</p>
+                    <div class="example-box">
+                        <strong>Examples:</strong><br>
+                        - He is one of the boys who <span class="highlight">have</span> done it. (antecedent: boys → plural)<br>
+                        - He is the only one of the boys who <span class="highlight">has</span> done it. (antecedent: one → singular)
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3>Rule 13: Money, time, distance, weight</h3>
+                    <p>These are treated as <strong>singular</strong> when considered as a single unit.</p>
+                    <div class="example-box">
+                        <strong>Examples:</strong><br>
+                        - Fifty dollars <span class="highlight">is</span> too much for this shirt.<br>
+                        - Three years <span class="highlight">is</span> a long time.<br>
+                        - Ten kilometers <span class="highlight">is</span> a long walk.
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3>Rule 14: Gerunds as subjects</h3>
+                    <p>When a gerund (-ing form) or infinitive phrase acts as the subject, it takes a <strong>singular verb</strong>.</p>
+                    <div class="example-box">
+                        <strong>Examples:</strong><br>
+                        - Running <span class="highlight">is</span> good exercise.<br>
+                        - To err <span class="highlight">is</span> human.<br>
+                        - Smoking <span class="highlight">causes</span> cancer.
+                    </div>
+                </div>
+
+                <div class="rule-card">
+                    <h3>Rule 15: Inverted sentences (questions, "here/there")</h3>
+                    <p>Identify the true subject before choosing the verb.</p>
+                    <div class="example-box">
+                        <strong>Examples:</strong><br>
+                        - Where <span class="highlight">are</span> your friends? (subject: friends)<br>
+                        - Here <span class="highlight">comes</span> the sun. (subject: sun)
+                    </div>
+                </div>
+
+                <h2>Common Mistakes to Avoid</h2>
+                <ul>
+                    <li>❌ Ignoring words between subject and verb (e.g., "The box of chocolates <span class="highlight">is</span> [not are] empty.")</li>
+                    <li>❌ Using plural verb with "each/every/anyone/nobody"</li>
+                    <li>❌ Forgetting that "news, mathematics" are singular</li>
+                    <li>❌ Incorrectly matching verb with object of preposition instead of subject</li>
+                </ul>
+
+                <h2>Practice Exercises</h2>
+                <div class="example-box">
+                    <strong>Fill in the blanks with the correct form of the verb (answers below):</strong><br><br>
+                    1. The list of items ______ (is/are) on the table.<br>
+                    2. Neither the teacher nor the students ______ (was/were) present.<br>
+                    3. Everyone ______ (want/wants) to be happy.<br>
+                    4. The team ______ (play/plays) their best every match.<br>
+                    5. Mathematics ______ (is/are) my favorite subject.<br>
+                    6. A lot of people ______ (has/have) attended the meeting.<br>
+                    7. There ______ (is/are) five books on the shelf.<br>
+                    8. Ten thousand rupees ______ (is/are) not a small amount.<br>
+                    9. Each of the girls ______ (has/have) a dress.<br>
+                    10. The news ______ (was/were) very sad.
+                </div>
+                <div class="grammar-note">
+                    <i class="fas fa-lightbulb"></i> <strong>Answers:</strong><br>
+                    1. is 2. were 3. wants 4. plays 5. is 6. have 7. are 8. is 9. has 10. was
+                </div>
+
+                <div class="grammar-note">
+                    <i class="fas fa-lightbulb"></i> <strong>Remember:</strong> Always identify the true subject of the sentence. Ignore prepositional phrases that come between the subject and verb. Practice these rules regularly to avoid common errors in writing and speaking.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
