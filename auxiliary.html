@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Auxiliary Verbs - English Grammar | Speak Fluently</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .lesson-header h1 {
+            font-size: 2.5rem;
+            color: var(--accent, #00b4d8);
+            position: relative;
+            display: inline-block;
+        }
+        .lesson-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent, #00b4d8);
+            border-radius: 2px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.6rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--text-primary, #1e2a3e);
+            margin: 1.2rem 0 0.8rem;
+            font-size: 1.3rem;
+        }
+        body.dark .lesson-content h3 {
+            color: var(--text-primary, #e2e8f0);
+        }
+        .lesson-content p {
+            color: var(--text-secondary, #4a627a);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .example-box {
+            background: var(--glass-bg, rgba(0,180,216,0.05));
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border-left: 3px solid var(--accent, #00b4d8);
+        }
+        .rule-card {
+            background: var(--card-bg, white);
+            border-radius: 16px;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--bg, #f4f7fc);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .grammar-table th, .grammar-table td {
+            border: 1px solid var(--border, #ddd);
+            padding: 10px;
+            text-align: left;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .grammar-table th {
+            background: var(--accent, #00b4d8);
+            color: white;
+            font-weight: 600;
+        }
+        body.dark .grammar-table th {
+            background: var(--accent-dark, #0284c7);
+        }
+        .lesson-content ul, .lesson-content ol {
+            margin: 1rem 0 1rem 2rem;
+            color: var(--text-secondary, #4a627a);
+        }
+        .lesson-content li {
+            margin: 0.5rem 0;
+        }
+        .highlight {
+            color: var(--accent, #00b4d8);
+            font-weight: 600;
+        }
+        .grammar-note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-header h1 {
+                font-size: 1.8rem;
+            }
+            .lesson-content {
+                padding: 1rem;
+            }
+            .grammar-table {
+                font-size: 0.85rem;
+            }
+            .grammar-table th, .grammar-table td {
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Speak Fluently</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
+            </ul>
+        </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="lesson-container">
+            <div class="lesson-header">
+                <h1><i class="fas fa-question-circle"></i> Auxiliary Verbs (सहायक क्रियाएँ)</h1>
+            </div>
+            <div class="lesson-content">
+                <p><strong>Auxiliary verbs</strong> (also called helping verbs) are verbs that help the main verb to form tenses, moods, voices, or questions. They cannot usually stand alone as the main verb in a sentence.</p>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    - She <span class="highlight">is</span> writing a letter. (is – auxiliary, writing – main verb)<br>
+                    - They <span class="highlight">have</span> finished their work. (have – auxiliary, finished – main verb)<br>
+                    - <span class="highlight">Do</span> you like coffee? (do – auxiliary, like – main verb)
+                </div>
+
+                <h2>Types of Auxiliary Verbs</h2>
+                <p>There are two main types: <strong>Primary Auxiliaries</strong> and <strong>Modal Auxiliaries</strong>.</p>
+
+                <h3>1. Primary Auxiliaries (प्राथमिक सहायक क्रियाएँ)</h3>
+                <p>These are: <strong>Be, Do, Have</strong>. They can also function as main verbs.</p>
+                <div class="grammar-table">
+                    <table style="width:100%">
+                        <thead><tr><th>Auxiliary</th><th>Forms</th><th>Uses</th><th>Examples</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Be</strong></td><td>am, is, are, was, were, being, been</td><td>Continuous tenses, passive voice, to be + adjective/noun</td><td>He <span class="highlight">is</span> sleeping. / The cake <span class="highlight">was</span> eaten.</td></tr>
+                            <tr><td><strong>Do</strong></td><td>do, does, did</td><td>Questions, negatives, emphasis</td><td><span class="highlight">Do</span> you know? / I <span class="highlight">do not</span> like it. / She <span class="highlight">does</span> work hard.</td></tr>
+                            <tr><td><strong>Have</strong></td><td>have, has, had, having</td><td>Perfect tenses</td><td>They <span class="highlight">have</span> arrived. / She <span class="highlight">had</span> finished.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="rule-card">
+                    <h3>📌 Primary Auxiliary 'Be' – Detailed Uses</h3>
+                    <ul>
+                        <li><strong>Continuous tenses:</strong> I <span class="highlight">am</span> going. / They <span class="highlight">were</span> playing.</li>
+                        <li><strong>Passive voice:</strong> The letter <span class="highlight">was</span> written.</li>
+                        <li><strong>To be + complement:</strong> She <span class="highlight">is</span> a doctor. / We <span class="highlight">are</span> happy.</li>
+                        <li><strong>To be + infinitive (plan/arrangement):</strong> We <span class="highlight">are to</span> meet at 5 PM.</li>
+                    </ul>
+                </div>
+
+                <div class="rule-card">
+                    <h3>📌 Primary Auxiliary 'Do' – Detailed Uses</h3>
+                    <ul>
+                        <li><strong>Questions:</strong> <span class="highlight">Do</span> you speak English? / <span class="highlight">Did</span> she come?</li>
+                        <li><strong>Negatives:</strong> I <span class="highlight">do not</span> know. / He <span class="highlight">doesn't</span> like tea.</li>
+                        <li><strong>Emphasis (affirmative):</strong> I <span class="highlight">do</span> want to help! / She <span class="highlight">does</span> work hard.</li>
+                        <li><strong>To avoid repetition (short answers):</strong> "Do you like it?" "Yes, I <span class="highlight">do</span>."</li>
+                    </ul>
+                </div>
+
+                <div class="rule-card">
+                    <h3>📌 Primary Auxiliary 'Have' – Detailed Uses</h3>
+                    <ul>
+                        <li><strong>Present Perfect:</strong> I <span class="highlight">have</span> seen that movie.</li>
+                        <li><strong>Past Perfect:</strong> She <span class="highlight">had</span> already left when I arrived.</li>
+                        <li><strong>Future Perfect:</strong> They <span class="highlight">will have</span> finished by noon.</li>
+                        <li><strong>Have to (obligation):</strong> We <span class="highlight">have to</span> go now.</li>
+                    </ul>
+                </div>
+
+                <h3>2. Modal Auxiliaries (मोडल सहायक क्रियाएँ)</h3>
+                <p>Modals express possibility, necessity, permission, ability, obligation, etc. They are followed by the base form of the main verb (without 'to').</p>
+                <div class="grammar-table">
+                    <table style="width:100%">
+                        <thead><tr><th>Modal</th><th>Meaning/Use</th><th>Example</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Can</strong></td><td>Ability, permission, possibility</td><td>I <span class="highlight">can</span> swim. / You <span class="highlight">can</span> go now. / It <span class="highlight">can</span> rain today.</td></tr>
+                            <tr><td><strong>Could</strong></td><td>Past ability, polite request, possibility</td><td>She <span class="highlight">could</span> run fast. / <span class="highlight">Could</span> you help me? / It <span class="highlight">could</span> be true.</td></tr>
+                            <tr><td><strong>May</strong></td><td>Permission, possibility (formal)</td><td>You <span class="highlight">may</span> leave. / It <span class="highlight">may</span> rain.</td></tr>
+                            <tr><td><strong>Might</strong></td><td>Less certain possibility</td><td>He <span class="highlight">might</span> come late.</td></tr>
+                            <tr><td><strong>Will</strong></td><td>Future, intention, promise</td><td>I <span class="highlight">will</span> call you. / It <span class="highlight">will</span> rain.</td></tr>
+                            <tr><td><strong>Would</strong></td><td>Past habit, polite request, conditional</td><td>He <span class="highlight">would</span> visit us. / <span class="highlight">Would</span> you like tea? / If I were you, I <span class="highlight">would</span> go.</td></tr>
+                            <tr><td><strong>Shall</strong></td><td>Future (I/we), suggestion, obligation</td><td>I <span class="highlight">shall</span> return. / <span class="highlight">Shall</span> we dance? / You <span class="highlight">shall</span> obey.</td></tr>
+                            <tr><td><strong>Should</strong></td><td>Advice, obligation, expectation</td><td>You <span class="highlight">should</span> study. / The train <span class="highlight">should</span> arrive soon.</td></tr>
+                            <tr><td><strong>Must</strong></td><td>Strong obligation, necessity, certainty</td><td>You <span class="highlight">must</span> stop. / It <span class="highlight">must</span> be true.</td></tr>
+                            <tr><td><strong>Ought to</strong></td><td>Moral obligation, advice</td><td>You <span class="highlight">ought to</span> respect elders.</td></tr>
+                            <tr><td><strong>Used to</strong></td><td>Past habit, past state</td><td>I <span class="highlight">used to</span> smoke. / There <span class="highlight">used to</span> be a park.</td></tr>
+                            <tr><td><strong>Need</strong></td><td>Necessity (negative/interrogative)</td><td>You <span class="highlight">need not</span> worry. / <span class="highlight">Need</span> I go?</td></tr>
+                            <tr><td><strong>Dare</strong></td><td>Courage to do something (negative/interrogative)</td><td>He <span class="highlight">dare not</span> speak. / <span class="highlight">Dare</span> you challenge me?</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Important Rules for Using Modals</h2>
+                <ul>
+                    <li>Modals are always followed by the <strong>base form</strong> of the main verb (no -s, -ed, -ing).<br>
+                        <em>✓ She can <span class="highlight">sing</span>.  ✗ She can sings.</em></li>
+                    <li>Modals do not change form for person or number (no 's' for third person).<br>
+                        <em>✓ He may <span class="highlight">come</span>.  ✗ He may comes.</em></li>
+                    <li>To form negatives, add 'not' after the modal.<br>
+                        <em>cannot (can't), will not (won't), must not (mustn't).</em></li>
+                    <li>To form questions, invert the subject and modal.<br>
+                        <em>Can you help me? / Should we go?</em></li>
+                    <li>Modals have no past tense forms (except could, would, should, might). Use other expressions to talk about past ability/obligation (e.g., "had to" for past obligation).</li>
+                </ul>
+
+                <h2>Differences Between Similar Modals</h2>
+                <div class="grammar-table">
+                    <table style="width:100%">
+                        <thead><tr><th>Pair</th><th>Difference</th><th>Examples</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Can vs. May</strong></td><td>Can = ability/informal permission; May = formal permission/possibility</td><td>Can you swim? / May I come in?</td></tr>
+                            <tr><td><strong>Will vs. Shall</strong></td><td>Will = future for all; Shall = formal future with I/we, suggestions</td><td>I will go. / Shall we start?</td></tr>
+                            <tr><td><strong>Should vs. Must</strong></td><td>Should = advice (less strong); Must = strong obligation/necessity</td><td>You should exercise. / You must stop smoking.</td></tr>
+                            <tr><td><strong>Must vs. Have to</strong></td><td>Must = internal obligation (speaker's feeling); Have to = external obligation (rules)</td><td>I must study (I feel). / I have to work (my job requires).</td></tr>
+                            <tr><td><strong>Could vs. Was able to</strong></td><td>Could = general ability; Was able to = specific achievement</td><td>I could swim (general). / I was able to escape (specific).</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Modal Verbs in Different Tenses</h2>
+                <div class="example-box">
+                    <strong>Present/Future:</strong> can, may, will, shall, must, should, etc. + base verb<br>
+                    <em>He can speak French. / You must go now.</em><br><br>
+                    <strong>Past forms:</strong> could, would, should, might + base verb (for hypothetical or reported past)<br>
+                    <em>She said she would come. / I could run fast when I was young.</em><br><br>
+                    <strong>Perfect modals (past possibility/regret):</strong> modal + have + past participle (V3)<br>
+                    <em>You should have called me. / He might have forgotten. / She must have left.</em>
+                </div>
+
+                <h2>Practice Exercises</h2>
+                <div class="example-box">
+                    <strong>Fill in the blanks with the correct auxiliary verb (primary or modal):</strong><br><br>
+                    1. She ______ (be) working on the project right now.<br>
+                    2. ______ you like some coffee? (polite request)<br>
+                    3. I ______ (have) already finished my homework.<br>
+                    4. You ______ (must/should) not smoke here; it's prohibited.<br>
+                    5. When I was a child, I ______ (can/could) climb trees easily.<br>
+                    6. ______ (Do/Does) he speak English?<br>
+                    7. We ______ (shall/will) meet at the station tomorrow.<br>
+                    8. She ______ (might/must) be at home; the lights are on.<br>
+                    9. You ______ (ought to / need to) apologize for your mistake.<br>
+                    10. He ______ (dare/dared) not tell the truth.
+                </div>
+                <div class="grammar-note">
+                    <i class="fas fa-lightbulb"></i> <strong>Answers:</strong><br>
+                    1. is 2. Would 3. have 4. must 5. could 6. Does 7. will 8. must 9. ought to 10. dare
+                </div>
+
+                <div class="grammar-note">
+                    <i class="fas fa-lightbulb"></i> <strong>Remember:</strong> Primary auxiliaries (be, do, have) help form tenses and questions. Modal auxiliaries express mood (possibility, necessity, permission). Learn their specific uses to improve your English accuracy.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
