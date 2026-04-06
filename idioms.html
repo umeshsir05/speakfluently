@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Idioms & Phrases - English Grammar | Speak Fluently</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #f4f7fc;
+            --card-bg: #ffffff;
+            --text-primary: #1e2a3e;
+            --text-secondary: #4a627a;
+            --header-bg: #1e2a3e;
+            --footer-bg: #1a252f;
+            --accent: #00b4d8;
+            --accent-dark: #0077b6;
+            --accent-light: #90e0ef;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --glass-bg: rgba(255, 255, 255, 0.9);
+            --border: rgba(0, 180, 216, 0.2);
+        }
+
+        body.dark {
+            --bg: #0f1724;
+            --card-bg: #1e293b;
+            --text-primary: #e2e8f0;
+            --text-secondary: #94a3b8;
+            --header-bg: #0f1724;
+            --footer-bg: #0a0f18;
+            --accent: #38bdf8;
+            --accent-dark: #0284c7;
+            --accent-light: #7dd3fc;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --glass-bg: rgba(30, 41, 59, 0.9);
+            --border: rgba(56, 189, 248, 0.2);
+        }
+
+        body {
+            font-family: 'Poppins', 'Arial', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background-color: var(--header-bg);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        header .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        body.dark .nav-menu ul li a {
+            color: var(--text-primary);
+        }
+
+        .nav-menu ul li a i {
+            margin-right: 8px;
+        }
+
+        .nav-menu ul li a:hover {
+            color: var(--accent);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .dark-mode-toggle {
+            background: var(--glass-bg);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dark-mode-toggle:hover {
+            transform: scale(1.1);
+            background: var(--accent);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: white;
+        }
+
+        body.dark .menu-toggle {
+            color: var(--text-primary);
+        }
+
+        /* Main Container */
+        .lesson-container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        .lesson-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .lesson-header h1 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            position: relative;
+            display: inline-block;
+        }
+
+        .lesson-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .lesson-header p {
+            margin-top: 1rem;
+            color: var(--text-secondary);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 0.8rem 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .stat-card i {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-right: 8px;
+        }
+
+        .stat-card span {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Search Bar */
+        .search-container {
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .search-box {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px 20px;
+            border: 2px solid var(--border);
+            border-radius: 50px;
+            background: var(--card-bg);
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(0,180,216,0.1);
+        }
+
+        /* Category Filters */
+        .category-filters {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 8px 18px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        /* Idioms Table */
+        .idioms-table-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+            border-radius: 20px;
+            background: var(--card-bg);
+            box-shadow: var(--shadow);
+        }
+
+        .idioms-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .idioms-table th, .idioms-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-primary);
+        }
+
+        .idioms-table th {
+            background: var(--accent);
+            color: white;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+        }
+
+        body.dark .idioms-table th {
+            background: var(--accent-dark);
+        }
+
+        .idioms-table tr:hover {
+            background: rgba(0,180,216,0.05);
+        }
+
+        .idiom-category {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            font-size: 0.7rem;
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+
+        .example-text {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .hindi-meaning {
+            color: var(--accent);
+            font-size: 0.85rem;
+            margin-top: 3px;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+        }
+
+        footer {
+            background-color: var(--footer-bg);
+            text-align: center;
+            padding: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        footer b {
+            color: var(--accent);
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--header-bg);
+                padding: 1rem 0;
+                box-shadow: var(--shadow);
+                z-index: 999;
+            }
+
+            .nav-menu.active {
+                display: block;
+            }
+
+            .nav-menu ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
+            }
+
+            .nav-menu ul li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-menu ul li a {
+                display: block;
+                padding: 1rem;
+                color: white;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .lesson-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .idioms-table th, .idioms-table td {
+                padding: 10px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Speak Fluently</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
+            </ul>
+        </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="lesson-container">
+            <div class="lesson-header">
+                <h1><i class="fas fa-comment-dots"></i> Idioms & Phrases</h1>
+                <p>400+ most important idioms and phrases for competitive exams with meanings, Hindi translations, and examples</p>
+            </div>
+
+            <div class="stats-bar">
+                <div class="stat-card">
+                    <i class="fas fa-book"></i>
+                    <span>400+ Idioms</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-language"></i>
+                    <span>Hindi Meanings</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Exam Oriented</span>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-box" placeholder="🔍 Search idioms by keyword, meaning, or example...">
+            </div>
+
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="Emotion">😊 Emotion</button>
+                <button class="filter-btn" data-category="Action">⚡ Action</button>
+                <button class="filter-btn" data-category="Time">⏰ Time</button>
+                <button class="filter-btn" data-category="Money">💰 Money</button>
+                <button class="filter-btn" data-category="Body">👤 Body Parts</button>
+                <button class="filter-btn" data-category="Animals">🐾 Animals</button>
+                <button class="filter-btn" data-category="Common">⭐ Common</button>
+            </div>
+
+            <div class="idioms-table-container">
+                <table class="idioms-table" id="idiomsTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Idiom / Phrase</th>
+                            <th>Meaning (English)</th>
+                            <th>अर्थ (Hindi)</th>
+                            <th>Example Sentence</th>
+                        </tr>
+                    </thead>
+                    <tbody id="idiomsTableBody">
+                        <!-- Idioms will be dynamically loaded from JavaScript -->
+                    </tbody>
+                </table>
+                <div id="noResults" class="no-results" style="display: none;">
+                    <i class="fas fa-search"></i> No idioms found matching your search. Try another keyword!
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
+    </footer>
+
+    <script>
+        // Comprehensive list of 400+ idioms and phrases for competitive exams
+        const idiomsData = [
+            { idiom: "A blessing in disguise", meaning: "Something good that isn't recognized at first", hindi: "छिपा हुआ वरदान", example: "Losing that job was a blessing in disguise.", category: "Common" },
+            { idiom: "A dime a dozen", meaning: "Something common and not valuable", hindi: "आम और सस्ता", example: "Those cheap souvenirs are a dime a dozen.", category: "Money" },
+            { idiom: "A drop in the bucket", meaning: "A very small amount compared to what is needed", hindi: "बहुत छोटा अंश", example: "Our donation is just a drop in the bucket.", category: "Common" },
+            { idiom: "A hot potato", meaning: "A controversial issue", hindi: "विवादित मुद्दा", example: "The tax reform is a hot potato.", category: "Common" },
+            { idiom: "A penny for your thoughts", meaning: "Asking someone what they're thinking", hindi: "तुम क्या सोच रहे हो?", example: "You're quiet; a penny for your thoughts.", category: "Money" },
+            { idiom: "A piece of cake", meaning: "Something very easy", hindi: "बहुत आसान", example: "The exam was a piece of cake.", category: "Common" },
+            { idiom: "Actions speak louder than words", meaning: "What you do is more important than what you say", hindi: "करनी कथनी से बड़ी होती है", example: "Don't just promise; actions speak louder.", category: "Common" },
+            { idiom: "Add fuel to the fire", meaning: "To make a bad situation worse", hindi: "आग में घी डालना", example: "His comments added fuel to the fire.", category: "Action" },
+            { idiom: "Add insult to injury", meaning: "To make a bad situation even worse", hindi: "बेइज्जती बढ़ाना", example: "He not only refused but added insult to injury.", category: "Action" },
+            { idiom: "Against the clock", meaning: "Rushed and short on time", hindi: "समय के खिलाफ", example: "We worked against the clock to finish.", category: "Time" },
+            { idiom: "All ears", meaning: "Listening attentively", hindi: "ध्यान से सुनना", example: "Tell me your story; I'm all ears.", category: "Body" },
+            { idiom: "All in the same boat", meaning: "In the same difficult situation", hindi: "एक जैसी स्थिति में", example: "We're all in the same boat during this crisis.", category: "Common" },
+            { idiom: "An arm and a leg", meaning: "Very expensive", hindi: "बहुत महंगा", example: "The car cost an arm and a leg.", category: "Money" },
+            { idiom: "Apple of my eye", meaning: "Someone dearly loved", hindi: "आँख का तारा", example: "My daughter is the apple of my eye.", category: "Body" },
+            { idiom: "At the drop of a hat", meaning: "Immediately, without hesitation", hindi: "बिना देर किए", example: "He's ready to help at the drop of a hat.", category: "Time" },
+            { idiom: "Back to the drawing board", meaning: "Start over after a failure", hindi: "फिर से शुरू करना", example: "Our plan failed; back to the drawing board.", category: "Action" },
+            { idiom: "Barking up the wrong tree", meaning: "Looking in the wrong place", hindi: "गलत जगह तलाश करना", example: "If you think I stole it, you're barking up the wrong tree.", category: "Animals" },
+            { idiom: "Beat around the bush", meaning: "Avoid the main topic", hindi: "घुमा-फिरा कर बात करना", example: "Stop beating around the bush.", category: "Action" },
+            { idiom: "Better late than never", meaning: "Doing something late is better than not at all", hindi: "देर आयद दुरुस्त आयद", example: "He finally apologized; better late than never.", category: "Time" },
+            { idiom: "Between a rock and a hard place", meaning: "A difficult situation with no good options", hindi: "मुश्किल विकल्पों के बीच", example: "I'm between a rock and a hard place.", category: "Common" },
+            { idiom: "Bite the bullet", meaning: "Face a difficult situation bravely", hindi: "मुश्किल का सामना करना", example: "You'll have to bite the bullet and apologize.", category: "Action" },
+            { idiom: "Bite off more than you can chew", meaning: "Take on more than you can handle", hindi: "अपनी हैसियत से ज्यादा काम लेना", example: "He bit off more than he could chew.", category: "Action" },
+            { idiom: "Blow off steam", meaning: "Release strong emotions", hindi: "गुस्सा निकालना", example: "He went for a walk to blow off steam.", category: "Action" },
+            { idiom: "Break a leg", meaning: "Good luck", hindi: "शुभकामनाएं", example: "Break a leg in your performance!", category: "Body" },
+            { idiom: "Break the ice", meaning: "Start a conversation in a social setting", hindi: "बातचीत शुरू करना", example: "He told a joke to break the ice.", category: "Action" },
+            { idiom: "Burn the midnight oil", meaning: "Work or study late", hindi: "रात भर पढ़ाई करना", example: "She burned the midnight oil before exams.", category: "Time" },
+            { idiom: "By the skin of your teeth", meaning: "Just barely", hindi: "बाल-बाल बचना", example: "He passed the exam by the skin of his teeth.", category: "Body" },
+            { idiom: "Call it a day", meaning: "Stop working for the day", hindi: "दिन का काम समाप्त करना", example: "Let's call it a day and go home.", category: "Time" },
+            { idiom: "Can't judge a book by its cover", meaning: "Don't judge based on appearance", hindi: "बाहरी दिखावे से निर्णय न लें", example: "He looks grumpy but is kind; can't judge a book by its cover.", category: "Common" },
+            { idiom: "Chip on your shoulder", meaning: "Holding a grudge", hindi: "पुरानी रंजिश रखना", example: "He has a chip on his shoulder about that incident.", category: "Body" },
+            { idiom: "Cold feet", meaning: "Nervous before an event", hindi: "घबराहट होना", example: "I got cold feet before the interview.", category: "Body" },
+            { idiom: "Cost an arm and a leg", meaning: "Very expensive", hindi: "बहुत महंगा", example: "That watch cost an arm and a leg.", category: "Money" },
+            { idiom: "Cry over spilled milk", meaning: "Worry about past mistakes", hindi: "गिरा दूध पर रोना", example: "There's no use crying over spilled milk.", category: "Common" },
+            { idiom: "Cut corners", meaning: "Do something poorly to save money/time", hindi: "घटिया काम करना", example: "Don't cut corners on safety.", category: "Money" },
+            { idiom: "Cut to the chase", meaning: "Get to the point", hindi: "मुद्दे पर आओ", example: "Let's cut to the chase and discuss the main issue.", category: "Action" },
+            { idiom: "Devil's advocate", meaning: "Argue the opposite side for debate", hindi: "विपक्ष की दलील देना", example: "He played devil's advocate during the meeting.", category: "Common" },
+            { idiom: "Don't count your chickens before they hatch", meaning: "Don't assume success too early", hindi: "अंडे से पहले मुर्गियां न गिनें", example: "Wait for results; don't count your chickens.", category: "Animals" },
+            { idiom: "Down in the dumps", meaning: "Feeling sad or depressed", hindi: "उदास होना", example: "He's been down in the dumps lately.", category: "Emotion" },
+            { idiom: "Elephant in the room", meaning: "An obvious problem everyone ignores", hindi: "साफ़ समस्या जिसे अनदेखा किया जाए", example: "We need to address the elephant in the room.", category: "Animals" },
+            { idiom: "Face the music", meaning: "Accept consequences", hindi: "परिणाम भोगना", example: "He must face the music for his actions.", category: "Action" },
+            { idiom: "Feeling under the weather", meaning: "Feeling ill", hindi: "बीमार महसूस करना", example: "I'm feeling under the weather today.", category: "Emotion" },
+            { idiom: "Fish out of water", meaning: "Out of one's comfort zone", hindi: "अपने माहौल से बाहर", example: "At the formal party, he felt like a fish out of water.", category: "Animals" },
+            { idiom: "Get a taste of your own medicine", meaning: "Experience the same bad treatment you give", hindi: "जैसी करनी वैसी भरनी", example: "He got a taste of his own medicine.", category: "Common" },
+            { idiom: "Get out of hand", meaning: "Become uncontrollable", hindi: "हाथ से बाहर होना", example: "The party got out of hand.", category: "Action" },
+            { idiom: "Give the benefit of the doubt", meaning: "Believe someone without proof", hindi: "बिना सबूत के विश्वास करना", example: "I'll give him the benefit of the doubt.", category: "Common" },
+            { idiom: "Go the extra mile", meaning: "Do more than expected", hindi: "अतिरिक्त प्रयास करना", example: "She always goes the extra mile for customers.", category: "Action" },
+            { idiom: "Go with the flow", meaning: "Follow what's happening", hindi: "हालात के साथ चलना", example: "Just relax and go with the flow.", category: "Action" },
+            { idiom: "Hang in there", meaning: "Don't give up", hindi: "हिम्मत मत हारो", example: "Times are tough, but hang in there.", category: "Emotion" },
+            { idiom: "Hit the nail on the head", meaning: "Describe exactly what's wrong", hindi: "बिल्कुल सही बात कहना", example: "You hit the nail on the head with that analysis.", category: "Action" },
+            { idiom: "Hit the sack", meaning: "Go to bed", hindi: "सोने जाना", example: "I'm tired; time to hit the sack.", category: "Action" },
+            { idiom: "Hold your horses", meaning: "Wait, be patient", hindi: "रुको, धैर्य रखो", example: "Hold your horses, we're not ready yet.", category: "Animals" },
+            { idiom: "In hot water", meaning: "In trouble", hindi: "मुसीबत में", example: "He's in hot water with his boss.", category: "Common" },
+            { idiom: "In the same boat", meaning: "In the same situation", hindi: "एक जैसी स्थिति में", example: "We're all in the same boat during the recession.", category: "Common" },
+            { idiom: "It takes two to tango", meaning: "Both sides are responsible", hindi: "दोष दोनों पक्षों का है", example: "It takes two to tango in an argument.", category: "Common" },
+            { idiom: "Jump on the bandwagon", meaning: "Join a popular activity", hindi: "लोकप्रियता के साथ चलना", example: "Many companies jumped on the bandwagon.", category: "Action" },
+            { idiom: "Kill two birds with one stone", meaning: "Accomplish two things at once", hindi: "एक पत्थर से दो निशाने मारना", example: "I killed two birds by studying on the train.", category: "Animals" },
+            { idiom: "Last straw", meaning: "Final problem that causes collapse", hindi: "आखिरी बूंद", example: "That was the last straw; I quit.", category: "Common" },
+            { idiom: "Let sleeping dogs lie", meaning: "Don't bring up old problems", hindi: "पुरानी बातें न छेड़ो", example: "Let's not argue; let sleeping dogs lie.", category: "Animals" },
+            { idiom: "Let the cat out of the bag", meaning: "Reveal a secret", hindi: "रहस्य खोल देना", example: "He let the cat out of the bag about the surprise.", category: "Animals" },
+            { idiom: "Make a long story short", meaning: "Summarize briefly", hindi: "संक्षेप में कहना", example: "To make a long story short, we won.", category: "Action" },
+            { idiom: "Make ends meet", meaning: "Live within one's income", hindi: "गुजारा करना", example: "It's hard to make ends meet these days.", category: "Money" },
+            { idiom: "Miss the boat", meaning: "Lose an opportunity", hindi: "अवसर गँवाना", example: "I missed the boat on that deal.", category: "Common" },
+            { idiom: "Not playing with a full deck", meaning: "Not very intelligent", hindi: "बुद्धू होना", example: "I think he's not playing with a full deck.", category: "Common" },
+            { idiom: "Off the beaten track", meaning: "Unusual, less traveled", hindi: "असामान्य रास्ता", example: "We found a restaurant off the beaten track.", category: "Action" },
+            { idiom: "On cloud nine", meaning: "Very happy", hindi: "बहुत खुश", example: "She was on cloud nine after her success.", category: "Emotion" },
+            { idiom: "Once in a blue moon", meaning: "Very rarely", hindi: "कभी-कभार", example: "He visits us once in a blue moon.", category: "Time" },
+            { idiom: "Piece of cake", meaning: "Very easy", hindi: "बहुत आसान", example: "The test was a piece of cake.", category: "Common" },
+            { idiom: "Play devil's advocate", meaning: "Argue the opposite side", hindi: "विपक्ष में बहस करना", example: "Let me play devil's advocate for a moment.", category: "Common" },
+            { idiom: "Pull someone's leg", meaning: "Joke or tease someone", hindi: "मज़ाक करना", example: "Are you pulling my leg?", category: "Body" },
+            { idiom: "Put all your eggs in one basket", meaning: "Risk everything on one thing", hindi: "एक ही जगह सब कुछ लगा देना", example: "Don't put all your eggs in one basket.", category: "Animals" },
+            { idiom: "Rain cats and dogs", meaning: "Rain heavily", hindi: "मूसलाधार बारिश", example: "It's raining cats and dogs outside.", category: "Animals" },
+            { idiom: "Ring a bell", meaning: "Sound familiar", hindi: "परिचित लगना", example: "That name rings a bell.", category: "Common" },
+            { idiom: "Rise and shine", meaning: "Wake up and be energetic", hindi: "जागो और तैयार हो जाओ", example: "Rise and shine, it's a new day!", category: "Action" },
+            { idiom: "Sit on the fence", meaning: "Not take sides", hindi: "तटस्थ रहना", example: "He sat on the fence during the debate.", category: "Action" },
+            { idiom: "Speak of the devil", meaning: "The person just mentioned appears", hindi: "शैतान की शक्ल", example: "Speak of the devil, here he comes.", category: "Common" },
+            { idiom: "Spill the beans", meaning: "Reveal a secret", hindi: "राज़ खोल देना", example: "She spilled the beans about the party.", category: "Action" },
+            { idiom: "Steal someone's thunder", meaning: "Take credit for someone's idea", hindi: "किसी की बढ़ती पर पानी फेरना", example: "He stole my thunder with his announcement.", category: "Action" },
+            { idiom: "Take it with a grain of salt", meaning: "Don't take too seriously", hindi: "हल्के में लेना", example: "Take his advice with a grain of salt.", category: "Common" },
+            { idiom: "Take the bull by the horns", meaning: "Face a problem directly", hindi: "मुश्किल का सीधा सामना करना", example: "She took the bull by the horns and solved it.", category: "Animals" },
+            { idiom: "The ball is in your court", meaning: "It's your decision now", hindi: "अब निर्णय आपका है", example: "I've done my part; the ball is in your court.", category: "Action" },
+            { idiom: "The best of both worlds", meaning: "Enjoy two different benefits", hindi: "दोनों दुनियाओं का लाभ", example: "Working from home gives me the best of both worlds.", category: "Common" },
+            { idiom: "Through thick and thin", meaning: "Through good and bad times", hindi: "हर हाल में साथ देना", example: "We've been friends through thick and thin.", category: "Common" },
+            { idiom: "Throw in the towel", meaning: "Give up", hindi: "हार मान लेना", example: "After many attempts, he threw in the towel.", category: "Action" },
+            { idiom: "Tie the knot", meaning: "Get married", hindi: "शादी करना", example: "They tied the knot last summer.", category: "Action" },
+            { idiom: "Time flies", meaning: "Time passes quickly", hindi: "समय उड़ता है", example: "Time flies when you're having fun.", category: "Time" },
+            { idiom: "Turn a blind eye", meaning: "Ignore deliberately", hindi: "नज़रअंदाज़ करना", example: "The teacher turned a blind eye to the prank.", category: "Body" },
+            { idiom: "Under the weather", meaning: "Feeling sick", hindi: "बीमार", example: "I'm a bit under the weather today.", category: "Emotion" },
+            { idiom: "Up in the air", meaning: "Not yet decided", hindi: "अनिश्चित", example: "Our vacation plans are up in the air.", category: "Common" },
+            { idiom: "When pigs fly", meaning: "Never happening", hindi: "कभी नहीं होगा", example: "He'll clean his room when pigs fly.", category: "Animals" },
+            { idiom: "Wild goose chase", meaning: "Futile search", hindi: "व्यर्थ की खोज", example: "They sent us on a wild goose chase.", category: "Animals" },
+            { idiom: "You can't teach an old dog new tricks", meaning: "Hard to change habits", hindi: "बूढ़ा बंदर नहीं सीख सकता", example: "My grandfather won't use a smartphone; you can't teach an old dog new tricks.", category: "Animals" },
+            { idiom: "A bird in the hand is worth two in the bush", meaning: "Something certain is better than risking for more", hindi: "हाथ का सिक्का गँवाने से अच्छा है", example: "I'll take this job offer; a bird in the hand is worth two in the bush.", category: "Animals" },
+            { idiom: "A bull in a china shop", meaning: "Someone who breaks things or causes damage", hindi: "अनाड़ी व्यक्ति", example: "He's like a bull in a china shop.", category: "Animals" },
+            { idiom: "A fish out of water", meaning: "Uncomfortable in a situation", hindi: "बेचैन", example: "I felt like a fish out of water at the formal dinner.", category: "Animals" },
+            { idiom: "A wolf in sheep's clothing", meaning: "Someone pretending to be harmless", hindi: "भेड़ की खाल में भेड़िया", example: "Be careful of him; he's a wolf in sheep's clothing.", category: "Animals" },
+            { idiom: "At sixes and sevens", meaning: "Confused and disorganized", hindi: "अव्यवस्थित", example: "The team was at sixes and sevens.", category: "Common" },
+            { idiom: "Back to the wall", meaning: "In a difficult situation", hindi: "मुश्किल हालात में", example: "With his back to the wall, he fought hard.", category: "Body" },
+            { idiom: "Bury the hatchet", meaning: "Make peace", hindi: "समझौता करना", example: "They buried the hatchet after years of rivalry.", category: "Action" },
+            { idiom: "Call the shots", meaning: "Be in charge", hindi: "कमान संभालना", example: "The manager calls the shots here.", category: "Action" },
+            { idiom: "Cat got your tongue", meaning: "Why aren't you speaking?", hindi: "चुप क्यों हो?", example: "What's wrong? Cat got your tongue?", category: "Animals" },
+            { idiom: "Chew the cud", meaning: "Ponder or think deeply", hindi: "सोचना, विचार करना", example: "He sat chewing the cud for hours.", category: "Animals" },
+            { idiom: "Cross that bridge when you come to it", meaning: "Deal with problems as they arise", hindi: "जब आए तब देखेंगे", example: "Don't worry yet; we'll cross that bridge when we come to it.", category: "Common" },
+            { idiom: "Cry over spilt milk", meaning: "Waste time regretting the past", hindi: "गिरा दूध पर रोना", example: "Stop crying over spilt milk and move on.", category: "Common" },
+            { idiom: "Cut to the chase", meaning: "Get to the main point", hindi: "मुद्दे पर आना", example: "Let's cut to the chase; what's the problem?", category: "Action" },
+            { idiom: "Don't put all your eggs in one basket", meaning: "Don't risk everything on one plan", hindi: "सब कुछ एक जगह न लगाएं", example: "Invest in different stocks; don't put all your eggs in one basket.", category: "Animals" },
+            { idiom: "Face the music", meaning: "Accept the consequences", hindi: "परिणाम भुगतना", example: "He must face the music for his mistakes.", category: "Action" },
+            { idiom: "Get a kick out of", meaning: "Enjoy something", hindi: "मज़ा लेना", example: "I get a kick out of watching comedy shows.", category: "Action" },
+            { idiom: "Get something off your chest", meaning: "Confess or share a burden", hindi: "मन की बात कहना", example: "I need to get this off my chest.", category: "Body" },
+            { idiom: "Get your act together", meaning: "Organize yourself", hindi: "खुद को संभालना", example: "You need to get your act together.", category: "Action" },
+            { idiom: "Give someone the cold shoulder", meaning: "Ignore someone", hindi: "नज़रअंदाज़ करना", example: "She gave him the cold shoulder.", category: "Body" },
+            { idiom: "Go cold turkey", meaning: "Quit something abruptly", hindi: "एकाएक छोड़ देना", example: "He went cold turkey on smoking.", category: "Action" },
+            { idiom: "Hear it on the grapevine", meaning: "Hear a rumor", hindi: "अफवाह सुनना", example: "I heard it on the grapevine that he's leaving.", category: "Common" },
+            { idiom: "Hit the books", meaning: "Study hard", hindi: "पढ़ाई करना", example: "I need to hit the books tonight.", category: "Action" },
+            { idiom: "Hold your horses", meaning: "Wait, be patient", hindi: "रुको, धीरज रखो", example: "Hold your horses, we're not ready yet.", category: "Animals" },
+            { idiom: "In a nutshell", meaning: "In brief, summarized", hindi: "संक्षेप में", example: "In a nutshell, we need more money.", category: "Common" },
+            { idiom: "It's not rocket science", meaning: "Not difficult to understand", hindi: "कोई बड़ी बात नहीं", example: "It's not rocket science; just do it.", category: "Common" },
+            { idiom: "Keep an eye on", meaning: "Watch carefully", hindi: "नज़र रखना", example: "Please keep an eye on my bag.", category: "Body" },
+            { idiom: "Keep your chin up", meaning: "Stay positive", hindi: "हिम्मत रखो", example: "Keep your chin up; things will get better.", category: "Body" },
+            { idiom: "Kill time", meaning: "Do something while waiting", hindi: "समय बिताना", example: "We killed time at the mall before the movie.", category: "Time" },
+            { idiom: "Learn the ropes", meaning: "Learn the basics", hindi: "मूल बातें सीखना", example: "It took me a month to learn the ropes.", category: "Action" },
+            { idiom: "Let your hair down", meaning: "Relax and enjoy", hindi: "खुल कर आनंद लेना", example: "Let your hair down at the party.", category: "Body" },
+            { idiom: "Make a mountain out of a molehill", meaning: "Exaggerate a minor issue", hindi: "राई का पहाड़ बनाना", example: "Don't make a mountain out of a molehill.", category: "Common" },
+            { idiom: "Make waves", meaning: "Cause trouble", hindi: "हलचल मचाना", example: "He doesn't want to make waves at work.", category: "Action" },
+            { idiom: "Not your cup of tea", meaning: "Not your preference", hindi: "पसंद नहीं होना", example: "This music isn't my cup of tea.", category: "Common" },
+            { idiom: "On the ball", meaning: "Alert and capable", hindi: "सतर्क", example: "The new assistant is on the ball.", category: "Body" },
+            { idiom: "On the fence", meaning: "Undecided", hindi: "अनिर्णीत", example: "I'm on the fence about the new policy.", category: "Common" },
+            { idiom: "Out of the blue", meaning: "Unexpectedly", hindi: "अचानक", example: "He showed up out of the blue.", category: "Time" },
+            { idiom: "Play it by ear", meaning: "Improvise, decide as you go", hindi: "स्थिति के अनुसार करना", example: "We don't have a plan; let's play it by ear.", category: "Body" },
+            { idiom: "Pull yourself together", meaning: "Calm down", hindi: "संभल जाओ", example: "Pull yourself together and focus.", category: "Action" },
+            { idiom: "Put your foot in your mouth", meaning: "Say something embarrassing", hindi: "अनाप-शनाप कहना", example: "I really put my foot in my mouth today.", category: "Body" },
+            { idiom: "Rule of thumb", meaning: "General principle", hindi: "सामान्य नियम", example: "A good rule of thumb is to save 20% of your income.", category: "Body" },
+            { idiom: "Save for a rainy day", meaning: "Save for the future", hindi: "कठिन समय के लिए बचत करना", example: "You should save some money for a rainy day.", category: "Money" },
+            { idiom: "See eye to eye", meaning: "Agree", hindi: "सहमत होना", example: "We don't see eye to eye on politics.", category: "Body" },
+            { idiom: "Shed crocodile tears", meaning: "Fake sadness", hindi: "मगरमच्छ के आंसू बहाना", example: "Don't shed crocodile tears; you wanted this.", category: "Animals" },
+            { idiom: "Steal the show", meaning: "Be the center of attention", hindi: "सबका ध्यान अपनी ओर खींचना", example: "The child stole the show with his dance.", category: "Action" },
+            { idiom: "Take a rain check", meaning: "Postpone an invitation", hindi: "बाद के लिए टालना", example: "Can I take a rain check on lunch?", category: "Common" },
+            { idiom: "Take the cake", meaning: "Be the most extreme", hindi: "सबसे अजीब", example: "His excuse takes the cake!", category: "Common" },
+            { idiom: "The last straw", meaning: "Final problem", hindi: "आखिरी बूंद", example: "Her constant complaints were the last straw.", category: "Common" },
+            { idiom: "Throw caution to the wind", meaning: "Take a risk", hindi: "जोखिम उठाना", example: "He threw caution to the wind and invested everything.", category: "Action" },
+            { idiom: "Turn the tables", meaning: "Reverse a situation", hindi: "पलटी मारना", example: "He turned the tables on his accuser.", category: "Action" },
+            { idiom: "Up a creek without a paddle", meaning: "In a difficult situation with no help", hindi: "मुश्किल में फंसना", example: "We're up a creek without a paddle.", category: "Common" },
+            { idiom: "Wear your heart on your sleeve", meaning: "Show emotions openly", hindi: "भावनाएं ज़ाहिर करना", example: "He always wears his heart on his sleeve.", category: "Body" },
+            { idiom: "When it rains, it pours", meaning: "Troubles come all at once", hindi: "मुसीबत एक साथ आती है", example: "First my car broke, then I lost my job; when it rains, it pours.", category: "Common" },
+            { idiom: "You can say that again", meaning: "I agree", hindi: "सही कहा", example: "You can say that again; it's very hot.", category: "Common" },
+            { idiom: "A piece of the pie", meaning: "A share of something", hindi: "हिस्सा", example: "Everyone wants a piece of the pie.", category: "Common" },
+            { idiom: "All bark and no bite", meaning: "All talk, no action", hindi: "आवाज़ का सैलाब, हकीकत में कुछ नहीं", example: "He threatens a lot but is all bark and no bite.", category: "Animals" },
+            { idiom: "Bend over backwards", meaning: "Try very hard", hindi: "बहुत कोशिश करना", example: "She bent over backwards to help us.", category: "Body" },
+            { idiom: "Blow a fuse", meaning: "Get angry", hindi: "गुस्सा हो जाना", example: "He blew a fuse when he saw the bill.", category: "Action" },
+            { idiom: "Break a sweat", meaning: "Work hard", hindi: "पसीना बहाना", example: "He solved it without breaking a sweat.", category: "Body" },
+            { idiom: "Burning the candle at both ends", meaning: "Working too hard", hindi: "ज़रूरत से ज़्यादा मेहनत करना", example: "He's burning the candle at both ends.", category: "Action" },
+            { idiom: "By hook or by crook", meaning: "By any means necessary", hindi: "किसी भी तरह से", example: "He plans to win by hook or by crook.", category: "Action" },
+            { idiom: "Catch someone red-handed", meaning: "Catch in the act", hindi: "रंगे हाथों पकड़ना", example: "The police caught him red-handed.", category: "Body" },
+            { idiom: "Close but no cigar", meaning: "Almost but not quite", hindi: "लगभग सही पर नहीं", example: "Your answer is close but no cigar.", category: "Common" },
+            { idiom: "Couch potato", meaning: "Lazy person who watches TV", hindi: "आलसी व्यक्ति", example: "Don't be a couch potato; go outside!", category: "Common" },
+            { idiom: "Cry wolf", meaning: "Give a false alarm", hindi: "झूठा अलार्म देना", example: "If you cry wolf too often, no one will believe you.", category: "Animals" },
+            { idiom: "Curiosity killed the cat", meaning: "Don't be too curious", hindi: "बहुत जिज्ञासा खतरनाक हो सकती है", example: "He had to know; curiosity killed the cat.", category: "Animals" },
+            { idiom: "Dig your heels in", meaning: "Refuse to change", hindi: "अड़ जाना", example: "He dug his heels in and wouldn't agree.", category: "Body" },
+            { idiom: "Drive someone up the wall", meaning: "Annoy greatly", hindi: "परेशान करना", example: "His constant humming drives me up the wall.", category: "Body" },
+            { idiom: "Eat like a horse", meaning: "Eat a lot", hindi: "बहुत ज़्यादा खाना", example: "After the workout, he ate like a horse.", category: "Animals" },
+            { idiom: "Every cloud has a silver lining", meaning: "Good can come from bad", hindi: "हर मुश्किल में अच्छाई होती है", example: "Don't worry; every cloud has a silver lining.", category: "Common" },
+            { idiom: "Fit as a fiddle", meaning: "Healthy", hindi: "स्वस्थ", example: "At 80, he's still fit as a fiddle.", category: "Common" },
+            { idiom: "Get a word in edgewise", meaning: "Speak in a conversation", hindi: "बातचीत में बोलना", example: "She talks so much I can't get a word in edgewise.", category: "Action" },
+            { idiom: "Get off on the wrong foot", meaning: "Start a relationship badly", hindi: "गलत शुरुआत करना", example: "We got off on the wrong foot, but now we're friends.", category: "Body" },
+            { idiom: "Give the shirt off your back", meaning: "Be very generous", hindi: "बहुत उदार होना", example: "He'd give you the shirt off his back.", category: "Body" },
+            { idiom: "Go back to the drawing board", meaning: "Start over", hindi: "फिर से शुरू करना", example: "The plan failed; back to the drawing board.", category: "Action" },
+            { idiom: "Green with envy", meaning: "Jealous", hindi: "ईर्ष्या करना", example: "She was green with envy when she saw his new car.", category: "Emotion" },
+            { idiom: "Have a ball", meaning: "Have fun", hindi: "मज़ा करना", example: "We had a ball at the party.", category: "Action" },
+            { idiom: "Have butterflies in your stomach", meaning: "Be nervous", hindi: "घबराना", example: "I have butterflies before the exam.", category: "Body" },
+            { idiom: "Head over heels", meaning: "Deeply in love", hindi: "बहुत प्यार में", example: "He's head over heels for her.", category: "Body" },
+            { idiom: "Hit the roof", meaning: "Become very angry", hindi: "बहुत गुस्सा होना", example: "Dad hit the roof when he saw the damage.", category: "Action" },
+            { idiom: "In the black", meaning: "Profitable", hindi: "लाभ में", example: "The company is finally in the black.", category: "Money" },
+            { idiom: "In the red", meaning: "In debt", hindi: "कर्ज़ में", example: "We're in the red this quarter.", category: "Money" },
+            { idiom: "It's a small world", meaning: "Unexpected coincidence", hindi: "बहुत छोटी दुनिया है", example: "We have mutual friends; it's a small world.", category: "Common" },
+            { idiom: "Keep your fingers crossed", meaning: "Hope for good luck", hindi: "उम्मीद करना", example: "Keep your fingers crossed for me.", category: "Body" },
+            { idiom: "Kick the bucket", meaning: "Die", hindi: "मर जाना", example: "He kicked the bucket at age 90.", category: "Action" },
+            { idiom: "Leave no stone unturned", meaning: "Search thoroughly", hindi: "कोई कसर न छोड़ना", example: "We'll leave no stone unturned.", category: "Action" },
+            { idiom: "Let the cat out of the bag", meaning: "Reveal a secret", hindi: "राज़ खोलना", example: "I accidentally let the cat out of the bag.", category: "Animals" },
+            { idiom: "Make a long story short", meaning: "Summarize", hindi: "संक्षेप में कहना", example: "To make a long story short, we won.", category: "Action" },
+            { idiom: "Make hay while the sun shines", meaning: "Take advantage of opportunities", hindi: "अवसर का लाभ उठाएं", example: "Let's make hay while the sun shines.", category: "Time" },
+            { idiom: "On pins and needles", meaning: "Anxious", hindi: "बेचैन", example: "I've been on pins and needles waiting.", category: "Body" },
+            { idiom: "Once bitten, twice shy", meaning: "More cautious after a bad experience", hindi: "दूध का जला छाछ भी फूंक-फूंक पीता है", example: "He won't invest again; once bitten, twice shy.", category: "Common" },
+            { idiom: "Out of the frying pan and into the fire", meaning: "From bad to worse", hindi: "कुआँ से खाई में गिरना", example: "He left one problem and landed in another; out of the frying pan into the fire.", category: "Common" },
+            { idiom: "Play second fiddle", meaning: "Be less important", hindi: "कम महत्वपूर्ण होना", example: "He doesn't want to play second fiddle.", category: "Action" },
+            { idiom: "Pull someone's leg", meaning: "Tease", hindi: "मज़ाक करना", example: "I'm just pulling your leg.", category: "Body" },
+            { idiom: "Put your money where your mouth is", meaning: "Back up words with action", hindi: "कहने के बजाय करके दिखाएं", example: "If you believe that, put your money where your mouth is.", category: "Money" },
+            { idiom: "Raining cats and dogs", meaning: "Heavy rain", hindi: "मूसलाधार बारिश", example: "It's raining cats and dogs outside.", category: "Animals" },
+            { idiom: "Read between the lines", meaning: "Understand hidden meaning", hindi: "छिपा अर्थ समझना", example: "Read between the lines of his message.", category: "Action" },
+            { idiom: "Rome wasn't built in a day", meaning: "Big tasks take time", hindi: "रोम एक दिन में नहीं बना था", example: "Be patient; Rome wasn't built in a day.", category: "Time" },
+            { idiom: "Saving for a rainy day", meaning: "Saving for the future", hindi: "भविष्य के लिए बचत", example: "She's saving for a rainy day.", category: "Money" },
+            { idiom: "Sit tight", meaning: "Wait patiently", hindi: "धीरज से प्रतीक्षा करना", example: "Just sit tight; help is coming.", category: "Action" },
+            { idiom: "Sleep on it", meaning: "Think overnight", hindi: "रात भर सोचना", example: "Don't decide now; sleep on it.", category: "Time" },
+            { idiom: "Stand in your shoes", meaning: "Understand your situation", hindi: "अपनी जगह समझना", example: "If I stood in your shoes, I'd do the same.", category: "Body" },
+            { idiom: "Take a back seat", meaning: "Be less involved", hindi: "पीछे हटना", example: "He took a back seat in the project.", category: "Action" },
+            { idiom: "The early bird catches the worm", meaning: "Success comes to those who act early", hindi: "जल्दी उठने वाले को लाभ मिलता है", example: "I arrived early and got the best seats; the early bird catches the worm.", category: "Time" },
+            { idiom: "Throw a curveball", meaning: "Do something unexpected", hindi: "अप्रत्याशित करना", example: "Life threw a curveball at him.", category: "Action" },
+            { idiom: "Too many cooks spoil the broth", meaning: "Too many people ruin a task", hindi: "बहुत सारे रसोइए शोरबा खराब करते हैं", example: "We need one leader; too many cooks spoil the broth.", category: "Common" },
+            { idiom: "Turn over a new leaf", meaning: "Change behavior for the better", hindi: "नई शुरुआत करना", example: "He turned over a new leaf and quit smoking.", category: "Action" },
+            { idiom: "Two heads are better than one", meaning: "Collaboration is better", hindi: "दो दिमाग एक से बेहतर होते हैं", example: "Let's work together; two heads are better than one.", category: "Common" },
+            { idiom: "Under your belt", meaning: "Experience you've gained", hindi: "अनुभव होना", example: "With five years under his belt, he's ready for promotion.", category: "Body" },
+            { idiom: "Up in the air", meaning: "Uncertain", hindi: "अनिश्चित", example: "Our plans are up in the air right now.", category: "Common" },
+            { idiom: "Walk on eggshells", meaning: "Be careful not to upset", hindi: "सावधानी से बात करना", example: "We have to walk on eggshells around him.", category: "Action" },
+            { idiom: "When in Rome, do as the Romans do", meaning: "Follow local customs", hindi: "जैसा देश वैसा भेष", example: "We ate with our hands; when in Rome, do as the Romans do.", category: "Common" },
+            { idiom: "Wrap your head around", meaning: "Understand something", hindi: "समझना", example: "I can't wrap my head around this concept.", category: "Body" },
+            { idiom: "You can't judge a book by its cover", meaning: "Don't judge by appearance", hindi: "किताब को उसके आवरण से मत आंकिए", example: "He looks serious but is fun; can't judge a book by its cover.", category: "Common" },
+            { idiom: "At the drop of a hat", meaning: "Without any delay", hindi: "तुरंत", example: "She's ready to help at the drop of a hat.", category: "Time" },
+            { idiom: "Beat a dead horse", meaning: "Waste time on a pointless issue", hindi: "बेकार की बात पर समय बर्बाद करना", example: "We've already decided; you're beating a dead horse.", category: "Animals" },
+            { idiom: "Burn the candle at both ends", meaning: "Exhaust yourself by working too hard", hindi: "अपनी क्षमता से अधिक काम करना", example: "He's burning the candle at both ends and will get sick.", category: "Action" },
+            { idiom: "By the seat of your pants", meaning: "Do something without planning", hindi: "बिना योजना के करना", example: "We navigated the crisis by the seat of our pants.", category: "Body" },
+            { idiom: "Call a spade a spade", meaning: "Speak frankly", hindi: "सीधी बात कहना", example: "He calls a spade a spade, even if it offends.", category: "Action" },
+            { idiom: "Cast iron stomach", meaning: "Able to eat anything without getting sick", hindi: "मजबूत पेट", example: "He has a cast iron stomach; he eats anything.", category: "Body" },
+            { idiom: "Champ at the bit", meaning: "Be impatient to start", hindi: "बेसब्र होना", example: "The team is champing at the bit to begin.", category: "Animals" },
+            { idiom: "Close the barn door after the horse escapes", meaning: "Act too late to prevent something", hindi: "देर आयद दुरुस्त आयद", example: "He installed a lock after the theft; closing the barn door after the horse escapes.", category: "Animals" },
+            { idiom: "Come to terms with", meaning: "Accept a difficult situation", hindi: "स्वीकार करना", example: "She came to terms with the loss.", category: "Action" },
+            { idiom: "Cry wolf", meaning: "Raise a false alarm", hindi: "झूठा अलार्म देना", example: "Don't cry wolf, or no one will believe you later.", category: "Animals" },
+            { idiom: "Dead as a doornail", meaning: "Completely dead", hindi: "पूरी तरह मरा हुआ", example: "The battery is dead as a doornail.", category: "Common" },
+            { idiom: "Dog eat dog", meaning: "Competitive and ruthless", hindi: "क्रूर प्रतिस्पर्धा", example: "The business world is dog eat dog.", category: "Animals" },
+            { idiom: "Don't cry over spilled milk", meaning: "Don't regret the past", hindi: "गिरा दूध पर रोना बेकार है", example: "We lost the game, but don't cry over spilled milk.", category: "Common" },
+            { idiom: "Don't give up the day job", meaning: "Stick to your main profession", hindi: "अपनी नौकरी मत छोड़ो", example: "You're not a good singer; don't give up the day job.", category: "Action" },
+            { idiom: "Don't put all your eggs in one basket", meaning: "Spread your risk", hindi: "सब कुछ एक जगह न लगाएं", example: "Invest in different funds; don't put all your eggs in one basket.", category: "Animals" },
+            { idiom: "Drop in the bucket", meaning: "Very small amount compared to the whole", hindi: "बहुत छोटा हिस्सा", example: "Our donation is a drop in the bucket.", category: "Common" },
+            { idiom: "Eat your heart out", meaning: "Be jealous", hindi: "ईर्ष्या करना", example: "Eat your heart out, I'm going to Paris!", category: "Body" },
+            { idiom: "Every dog has its day", meaning: "Everyone gets a chance eventually", hindi: "हर किसी का समय आता है", example: "Don't worry; every dog has its day.", category: "Animals" },
+            { idiom: "Face the music", meaning: "Accept the consequences", hindi: "परिणाम भुगतना", example: "He must face the music for his mistake.", category: "Action" },
+            { idiom: "Feather in one's cap", meaning: "An achievement to be proud of", hindi: "गर्व की बात", example: "Winning the award is a feather in his cap.", category: "Body" },
+            { idiom: "Fool's gold", meaning: "Something that seems valuable but isn't", hindi: "बेकार वस्तु", example: "That scheme was fool's gold; we lost money.", category: "Money" },
+            { idiom: "For a song", meaning: "Very cheaply", hindi: "बहुत सस्ता", example: "I bought this car for a song.", category: "Money" },
+            { idiom: "Get a grip", meaning: "Control your emotions", hindi: "खुद पर नियंत्रण रखें", example: "Get a grip and calm down.", category: "Action" },
+            { idiom: "Get off your high horse", meaning: "Stop acting superior", hindi: "घमंड छोड़ो", example: "Get off your high horse and listen.", category: "Animals" },
+            { idiom: "Get the show on the road", meaning: "Start something", hindi: "शुरू करना", example: "Let's get the show on the road.", category: "Action" },
+            { idiom: "Give the benefit of the doubt", meaning: "Trust someone despite doubt", hindi: "संदेह का लाभ देना", example: "I'll give him the benefit of the doubt.", category: "Common" },
+            { idiom: "Go Dutch", meaning: "Split the bill", hindi: "बिल बांटना", example: "Let's go Dutch on dinner.", category: "Money" },
+            { idiom: "Go out on a limb", meaning: "Take a risk", hindi: "जोखिम लेना", example: "I'll go out on a limb and support him.", category: "Action" },
+            { idiom: "Haste makes waste", meaning: "Rushing causes mistakes", hindi: "जल्दी का काम शैतान का", example: "Take your time; haste makes waste.", category: "Time" },
+            { idiom: "Have a chip on your shoulder", meaning: "Be angry about past mistreatment", hindi: "पुरानी शिकायत रखना", example: "He has a chip on his shoulder from his childhood.", category: "Body" },
+            { idiom: "Have an ace up your sleeve", meaning: "Have a secret advantage", hindi: "गुप्त फायदा होना", example: "She has an ace up her sleeve for the negotiation.", category: "Body" },
+            { idiom: "Hit the ground running", meaning: "Start quickly and effectively", hindi: "तेजी से शुरू करना", example: "The new manager hit the ground running.", category: "Action" },
+            { idiom: "In a pickle", meaning: "In a difficult situation", hindi: "मुश्किल में", example: "I'm in a pickle with this deadline.", category: "Common" },
+            { idiom: "In the bag", meaning: "Guaranteed to be achieved", hindi: "पक्का", example: "The victory is in the bag.", category: "Common" },
+            { idiom: "Keep your nose to the grindstone", meaning: "Work hard without distraction", hindi: "लगन से काम करना", example: "He keeps his nose to the grindstone.", category: "Body" },
+            { idiom: "Let someone off the hook", meaning: "Release from responsibility", hindi: "बरी कर देना", example: "The teacher let him off the hook.", category: "Action" },
+            { idiom: "Make a mountain out of a molehill", meaning: "Exaggerate", hindi: "राई का पहाड़ बनाना", example: "Stop making a mountain out of a molehill.", category: "Common" },
+            { idiom: "Make waves", meaning: "Cause disruption", hindi: "हलचल मचाना", example: "He's afraid to make waves at work.", category: "Action" },
+            { idiom: "Method to your madness", meaning: "Reason behind strange actions", hindi: "पागलपन के पीछे का तरीका", example: "I see the method to your madness now.", category: "Action" },
+            { idiom: "No pain, no gain", meaning: "Suffering is needed for success", hindi: "बिना मेहनत के सफलता नहीं", example: "I work out daily; no pain, no gain.", category: "Action" },
+            { idiom: "Off the cuff", meaning: "Impromptu, without preparation", hindi: "बिना तैयारी के", example: "He gave an off the cuff speech.", category: "Action" },
+            { idiom: "On the back burner", meaning: "Low priority", hindi: "कम प्राथमिकता पर", example: "Let's put that idea on the back burner.", category: "Action" },
+            { idiom: "On the nose", meaning: "Exactly", hindi: "बिल्कुल सही", example: "Your guess was on the nose.", category: "Body" },
+            { idiom: "Out of the frying pan and into the fire", meaning: "From bad to worse", hindi: "बद से बदतर स्थिति", example: "He left one job and got a worse one; out of the frying pan into the fire.", category: "Common" },
+            { idiom: "Play with fire", meaning: "Take a foolish risk", hindi: "आग से खेलना", example: "You're playing with fire by lying.", category: "Action" },
+            { idiom: "Put the cart before the horse", meaning: "Do things in the wrong order", hindi: "अंधेर नगरी", example: "You're putting the cart before the horse.", category: "Animals" },
+            { idiom: "Raise the bar", meaning: "Set a higher standard", hindi: "मानक बढ़ाना", example: "The new software raises the bar.", category: "Action" },
+            { idiom: "Red tape", meaning: "Excessive bureaucracy", hindi: "लालफीताशाही", example: "We're stuck in red tape.", category: "Common" },
+            { idiom: "Rob Peter to pay Paul", meaning: "Take from one to give to another", hindi: "एक कर्ज चुकाने के लिए दूसरा कर्ज लेना", example: "He's robbing Peter to pay Paul.", category: "Action" },
+            { idiom: "Sell like hotcakes", meaning: "Sell very quickly", hindi: "बहुत तेजी से बिकना", example: "The tickets are selling like hotcakes.", category: "Money" },
+            { idiom: "Shoot the breeze", meaning: "Chat casually", hindi: "बातें करना", example: "We shot the breeze for an hour.", category: "Action" },
+            { idiom: "Sink or swim", meaning: "Succeed or fail on your own", hindi: "खुद ही संभलना", example: "The new job is sink or swim.", category: "Action" },
+            { idiom: "Skating on thin ice", meaning: "In a risky situation", hindi: "खतरे में होना", example: "You're skating on thin ice with your boss.", category: "Action" },
+            { idiom: "Steal thunder", meaning: "Take credit away", hindi: "श्रेय चुराना", example: "He stole my thunder with his announcement.", category: "Action" },
+            { idiom: "Strike while the iron is hot", meaning: "Act at the right moment", hindi: "मौका देख कर काम करना", example: "We should strike while the iron is hot.", category: "Time" },
+            { idiom: "Take with a grain of salt", meaning: "Be skeptical", hindi: "संदेह के साथ लेना", example: "Take his advice with a grain of salt.", category: "Common" },
+            { idiom: "The ball is in your court", meaning: "Your turn to act", hindi: "अब आपकी बारी है", example: "I've done my part; the ball is in your court.", category: "Action" },
+            { idiom: "The pot calling the kettle black", meaning: "Hypocrisy", hindi: "उल्टा चोर कोतवाल को डांटे", example: "He's accusing me of being late; that's the pot calling the kettle black.", category: "Common" },
+            { idiom: "Through thick and thin", meaning: "Through all circumstances", hindi: "हर हाल में", example: "She stuck with me through thick and thin.", category: "Common" },
+            { idiom: "Throw in the towel", meaning: "Give up", hindi: "हार मान लेना", example: "After many failures, he threw in the towel.", category: "Action" },
+            { idiom: "Turn a blind eye", meaning: "Ignore deliberately", hindi: "नज़रअंदाज़ करना", example: "The security guard turned a blind eye.", category: "Body" },
+            { idiom: "Up a creek without a paddle", meaning: "In trouble with no solution", hindi: "मुश्किल में फंसना", example: "We're up a creek without a paddle.", category: "Common" },
+            { idiom: "Waste of breath", meaning: "Useless talk", hindi: "बेकार की बात", example: "Talking to him is a waste of breath.", category: "Action" },
+            { idiom: "Wet blanket", meaning: "A person who spoils fun", hindi: "मज़ा किरकिरा करने वाला", example: "Don't be a wet blanket at the party.", category: "Common" },
+            { idiom: "You can't have your cake and eat it too", meaning: "Can't have everything", hindi: "एक ही समय में दो चीजें नहीं मिल सकतीं", example: "You want freedom and safety; you can't have your cake and eat it too.", category: "Common" },
+            { idiom: "Zero hour", meaning: "The scheduled time for an event", hindi: "नियत समय", example: "The launch is set for zero hour.", category: "Time" },
+            { idiom: "A bed of roses", meaning: "An easy or pleasant situation", hindi: "गुलाब की सेज", example: "Life is not a bed of roses.", category: "Common" },
+            { idiom: "A bone of contention", meaning: "A subject of dispute", hindi: "विवाद का विषय", example: "Money is a bone of contention in their marriage.", category: "Common" },
+            { idiom: "A fool's paradise", meaning: "False sense of happiness", hindi: "झूठी खुशी", example: "He's living in a fool's paradise if he thinks she'll return.", category: "Emotion" },
+            { idiom: "A wild goose chase", meaning: "A pointless search", hindi: "बेकार की खोज", example: "The police sent us on a wild goose chase.", category: "Animals" },
+            { idiom: "Above board", meaning: "Honest and legal", hindi: "ईमानदार", example: "The deal was above board.", category: "Common" },
+            { idiom: "Alive and kicking", meaning: "Still active and healthy", hindi: "जीवंत और सक्रिय", example: "My grandfather is alive and kicking at 85.", category: "Body" },
+            { idiom: "As clear as mud", meaning: "Not clear at all", hindi: "बहुत अस्पष्ट", example: "His explanation was as clear as mud.", category: "Common" },
+            { idiom: "At loose ends", meaning: "Restless, with nothing to do", hindi: "बेचैन", example: "I've been at loose ends since the project ended.", category: "Emotion" },
+            { idiom: "Backhanded compliment", meaning: "A compliment that is also insulting", hindi: "तारीफ जो अपमान भी हो", example: "He said my speech was 'interesting'; that's a backhanded compliment.", category: "Common" },
+            { idiom: "Bad blood", meaning: "Ill will", hindi: "बुरी भावना", example: "There's bad blood between them.", category: "Emotion" },
+            { idiom: "Bend over backwards", meaning: "Try very hard to please", hindi: "बहुत कोशिश करना", example: "She bent over backwards to help him.", category: "Action" },
+            { idiom: "Bite the hand that feeds you", meaning: "Harm someone who helps you", hindi: "नमकहरामी करना", example: "He criticized his mentor; biting the hand that feeds you.", category: "Action" },
+            { idiom: "Blow your top", meaning: "Get very angry", hindi: "गुस्सा हो जाना", example: "Dad blew his top when he saw the mess.", category: "Action" },
+            { idiom: "Bolt from the blue", meaning: "Complete surprise", hindi: "अचानक आघात", example: "The news was a bolt from the blue.", category: "Time" },
+            { idiom: "Breathe down someone's neck", meaning: "Watch closely and pressure", hindi: "पीछे पड़े रहना", example: "My boss is breathing down my neck.", category: "Body" },
+            { idiom: "Bright-eyed and bushy-tailed", meaning: "Energetic and enthusiastic", hindi: "ऊर्जावान", example: "She arrived bright-eyed and bushy-tailed.", category: "Animals" },
+            { idiom: "By the book", meaning: "Follow rules strictly", hindi: "नियमों के अनुसार", example: "He always does everything by the book.", category: "Action" },
+            { idiom: "Call a spade a spade", meaning: "Speak honestly and directly", hindi: "सीधी बात कहना", example: "Let's call a spade a spade; you're wrong.", category: "Action" },
+            { idiom: "Call it quits", meaning: "End something", hindi: "समाप्त करना", example: "We decided to call it quits.", category: "Action" },
+            { idiom: "Carrot and stick", meaning: "Reward and punishment", hindi: "लालच और सजा", example: "The manager uses carrot and stick tactics.", category: "Common" },
+            { idiom: "Cheap shot", meaning: "An unfair criticism", hindi: "अनुचित आलोचना", example: "That was a cheap shot during the debate.", category: "Action" },
+            { idiom: "Clean slate", meaning: "A fresh start", hindi: "नई शुरुआत", example: "After the apology, we started with a clean slate.", category: "Action" },
+            { idiom: "Come clean", meaning: "Confess", hindi: "सच मान लेना", example: "He finally came clean about the mistake.", category: "Action" },
+            { idiom: "Cost an arm and a leg", meaning: "Very expensive", hindi: "बहुत महंगा", example: "The repairs cost an arm and a leg.", category: "Money" },
+            { idiom: "Cut no ice", meaning: "Not impress or influence", hindi: "कोई असर नहीं करना", example: "His excuses cut no ice with me.", category: "Common" },
+            { idiom: "Dead ringer", meaning: "An exact duplicate", hindi: "बिल्कुल समान", example: "He's a dead ringer for his father.", category: "Common" },
+            { idiom: "Do a double take", meaning: "Look again in surprise", hindi: "दो बार देखना", example: "He did a double take when he saw her.", category: "Action" },
+            { idiom: "Down to earth", meaning: "Practical and realistic", hindi: "व्यावहारिक", example: "She's very down to earth.", category: "Common" },
+            { idiom: "Drive a hard bargain", meaning: "Negotiate aggressively", hindi: "कड़ी सौदेबाजी करना", example: "He drives a hard bargain at the flea market.", category: "Money" },
+            { idiom: "Eager beaver", meaning: "Enthusiastic worker", hindi: "उत्साही व्यक्ति", example: "The new intern is an eager beaver.", category: "Animals" },
+            { idiom: "Eat crow", meaning: "Admit you were wrong", hindi: "गलती मान लेना", example: "He had to eat crow after his prediction failed.", category: "Animals" },
+            { idiom: "Fall on deaf ears", meaning: "Be ignored", hindi: "अनसुना कर देना", example: "My advice fell on deaf ears.", category: "Body" },
+            { idiom: "Feeling blue", meaning: "Sad", hindi: "उदास", example: "I've been feeling blue all week.", category: "Emotion" },
+            { idiom: "Fender bender", meaning: "Minor car accident", hindi: "छोटी कार दुर्घटना", example: "I was in a fender bender on my way to work.", category: "Action" },
+            { idiom: "Fight tooth and nail", meaning: "Fight fiercely", hindi: "जी जान से लड़ना", example: "She fought tooth and nail for her rights.", category: "Body" },
+            { idiom: "Fine print", meaning: "Hidden terms", hindi: "बारीक प्रिंट", example: "Always read the fine print before signing.", category: "Common" },
+            { idiom: "Flea market", meaning: "A market selling second-hand goods", hindi: "पुरानी चीजों का बाजार", example: "I found this vintage lamp at a flea market.", category: "Money" },
+            { idiom: "Flesh and blood", meaning: "Family", hindi: "रक्त संबंधी", example: "He's my own flesh and blood.", category: "Body" },
+            { idiom: "Flying colors", meaning: "Great success", hindi: "बहुत सफलता", example: "She passed the exam with flying colors.", category: "Common" },
+            { idiom: "Fork over", meaning: "Give money reluctantly", hindi: "अनिच्छा से देना", example: "He forked over the cash for the ticket.", category: "Money" },
+            { idiom: "Full of beans", meaning: "Energetic", hindi: "ऊर्जा से भरा", example: "The kids are full of beans today.", category: "Food" },
+            { idiom: "Get down to brass tacks", meaning: "Discuss the essentials", hindi: "मुद्दे पर आना", example: "Let's get down to brass tacks and sign the contract.", category: "Action" },
+            { idiom: "Get your ducks in a row", meaning: "Get organized", hindi: "व्यवस्थित होना", example: "I need to get my ducks in a row before the meeting.", category: "Animals" },
+            { idiom: "Give a run for your money", meaning: "Compete well", hindi: "कड़ी टक्कर देना", example: "The young athlete gave the champion a run for his money.", category: "Money" },
+            { idiom: "Go for broke", meaning: "Risk everything", hindi: "सब कुछ दांव पर लगाना", example: "He went for broke with his final bet.", category: "Money" },
+            { idiom: "Go the extra mile", meaning: "Do more than expected", hindi: "अतिरिक्त प्रयास करना", example: "She always goes the extra mile for her clients.", category: "Action" },
+            { idiom: "Hand over fist", meaning: "Quickly and in large amounts", hindi: "तेजी से और बड़ी मात्रा में", example: "They're making money hand over fist.", category: "Body" },
+            { idiom: "Have a field day", meaning: "Enjoy something", hindi: "मज़ा करना", example: "The press had a field day with the scandal.", category: "Action" },
+            { idiom: "Have your hands full", meaning: "Be very busy", hindi: "बहुत व्यस्त होना", example: "I have my hands full with three kids.", category: "Body" },
+            { idiom: "Head in the clouds", meaning: "Not paying attention", hindi: "ध्यान नहीं देना", example: "He has his head in the clouds during meetings.", category: "Body" },
+            { idiom: "Hit the nail on the head", meaning: "Exactly right", hindi: "बिल्कुल सही कहना", example: "You hit the nail on the head with that diagnosis.", category: "Action" },
+            { idiom: "Hold the fort", meaning: "Take care of things", hindi: "संभालना", example: "Please hold the fort while I'm away.", category: "Action" },
+            { idiom: "Horse of a different color", meaning: "A different matter", hindi: "अलग मामला", example: "That's a horse of a different color entirely.", category: "Animals" },
+            { idiom: "In the limelight", meaning: "Public attention", hindi: "सुर्खियों में", example: "He loves being in the limelight.", category: "Common" },
+            { idiom: "Jump the gun", meaning: "Act too early", hindi: "जल्दबाजी करना", example: "Don't jump the gun; wait for the signal.", category: "Action" },
+            { idiom: "Keep an eye on", meaning: "Watch carefully", hindi: "नज़र रखना", example: "Keep an eye on the pot so it doesn't boil over.", category: "Body" },
+            { idiom: "Keep up with the Joneses", meaning: "Compete with neighbors", hindi: "पड़ोसियों से स्पर्धा करना", example: "We're tired of trying to keep up with the Joneses.", category: "Common" },
+            { idiom: "Knock on wood", meaning: "Hope for good luck", hindi: "खटखटाना", example: "I've never been sick, knock on wood.", category: "Action" },
+            { idiom: "Laughing stock", meaning: "Someone ridiculed", hindi: "हंसी का पात्र", example: "His proposal made him a laughing stock.", category: "Emotion" },
+            { idiom: "Lend an ear", meaning: "Listen", hindi: "सुनना", example: "Lend an ear to her problems.", category: "Body" },
+            { idiom: "Let bygones be bygones", meaning: "Forget past problems", hindi: "पुरानी बातों को भूल जाओ", example: "Let's let bygones be bygones and be friends.", category: "Time" },
+            { idiom: "Live from hand to mouth", meaning: "Live on basic necessities", hindi: "गुजर बसर करना", example: "They live from hand to mouth.", category: "Body" },
+            { idiom: "Mend fences", meaning: "Repair relationships", hindi: "रिश्ते सुधारना", example: "He tried to mend fences after the argument.", category: "Action" },
+            { idiom: "Midas touch", meaning: "Ability to make money", hindi: "पैसा बनाने की क्षमता", example: "He has the Midas touch in business.", category: "Money" },
+            { idiom: "Mum's the word", meaning: "Keep it secret", hindi: "चुप रहना", example: "Don't tell anyone; mum's the word.", category: "Action" },
+            { idiom: "Nick of time", meaning: "Just in time", hindi: "समय पर", example: "We arrived in the nick of time.", category: "Time" },
+            { idiom: "Nip in the bud", meaning: "Stop at an early stage", hindi: "शुरू में ही रोकना", example: "We need to nip this problem in the bud.", category: "Action" },
+            { idiom: "No use crying over spilled milk", meaning: "Don't regret the past", hindi: "गिरा दूध पर रोना बेकार है", example: "We lost, but no use crying over spilled milk.", category: "Common" },
+            { idiom: "Off the record", meaning: "Not for publication", hindi: "गोपनीय", example: "He told me off the record.", category: "Action" },
+            { idiom: "On cloud nine", meaning: "Very happy", hindi: "बहुत खुश", example: "She's been on cloud nine since the engagement.", category: "Emotion" },
+            { idiom: "On the rocks", meaning: "In a difficult state", hindi: "मुश्किल में", example: "Their marriage is on the rocks.", category: "Common" },
+            { idiom: "Once in a blue moon", meaning: "Rarely", hindi: "कभी-कभार", example: "We go out once in a blue moon.", category: "Time" },
+            { idiom: "Out of the question", meaning: "Impossible", hindi: "असंभव", example: "A vacation is out of the question this year.", category: "Common" },
+            { idiom: "Pay through the nose", meaning: "Pay too much", hindi: "बहुत अधिक भुगतान करना", example: "We paid through the nose for the tickets.", category: "Money" },
+            { idiom: "Play hard to get", meaning: "Pretend disinterest", hindi: "मुश्किल से मिलना", example: "She's playing hard to get.", category: "Action" },
+            { idiom: "Play with fire", meaning: "Take a foolish risk", hindi: "आग से खेलना", example: "Lying to him is playing with fire.", category: "Action" },
+            { idiom: "Pull yourself together", meaning: "Calm down", hindi: "संभल जाओ", example: "Pull yourself together and focus.", category: "Action" },
+            { idiom: "Put a sock in it", meaning: "Stop talking", hindi: "चुप हो जाओ", example: "Put a sock in it, please.", category: "Action" },
+            { idiom: "Put the brakes on", meaning: "Slow or stop", hindi: "रोकना", example: "We need to put the brakes on spending.", category: "Action" },
+            { idiom: "Rags to riches", meaning: "From poverty to wealth", hindi: "गरीबी से अमीरी तक", example: "His story is a rags to riches tale.", category: "Money" },
+            { idiom: "Ride shotgun", meaning: "Sit in the front passenger seat", hindi: "आगे की सीट पर बैठना", example: "I'll ride shotgun if you drive.", category: "Action" },
+            { idiom: "Rip off", meaning: "Cheat by charging too much", hindi: "ठगना", example: "That vendor ripped me off.", category: "Money" },
+            { idiom: "Rule out", meaning: "Eliminate", hindi: "खारिज करना", example: "We can't rule out any possibilities.", category: "Action" },
+            { idiom: "Run like the wind", meaning: "Run very fast", hindi: "बहुत तेज दौड़ना", example: "He ran like the wind to catch the bus.", category: "Action" },
+            { idiom: "Saved by the bell", meaning: "Rescued at the last moment", hindi: "आखिरी समय पर बचना", example: "I was saved by the bell when my phone rang.", category: "Time" },
+            { idiom: "See the light", meaning: "Understand", hindi: "समझना", example: "He finally saw the light and apologized.", category: "Action" },
+            { idiom: "Selling like hotcakes", meaning: "Selling very fast", hindi: "बहुत तेज बिकना", example: "The tickets are selling like hotcakes.", category: "Money" },
+            { idiom: "Shake a leg", meaning: "Hurry up", hindi: "जल्दी करो", example: "Shake a leg, we'll be late.", category: "Body" },
+            { idiom: "Shed light on", meaning: "Explain", hindi: "स्पष्ट करना", example: "Can you shed light on this issue?", category: "Action" },
+            { idiom: "Shoot the breeze", meaning: "Chat casually", hindi: "बातें करना", example: "We shot the breeze for a while.", category: "Action" },
+            { idiom: "Sit on the fence", meaning: "Not take sides", hindi: "तटस्थ रहना", example: "You can't sit on the fence forever.", category: "Action" },
+            { idiom: "Skating on thin ice", meaning: "Doing something risky", hindi: "जोखिम भरा काम", example: "You're skating on thin ice with that comment.", category: "Action" },
+            { idiom: "Sleep on it", meaning: "Wait before deciding", hindi: "सोचना", example: "Let's sleep on it and decide tomorrow.", category: "Time" },
+            { idiom: "Sling mud", meaning: "Make insulting remarks", hindi: "बदनाम करना", example: "Politicians often sling mud at each other.", category: "Action" },
+            { idiom: "Smell a rat", meaning: "Suspect something is wrong", hindi: "शक होना", example: "I smell a rat about this deal.", category: "Animals" },
+            { idiom: "Smooth sailing", meaning: "Easy progress", hindi: "आसान प्रगति", example: "After the initial hurdles, it's smooth sailing.", category: "Action" },
+            { idiom: "Sour grapes", meaning: "Pretend dislike for what you can't have", hindi: "नाखुशी का दिखावा", example: "His criticism is just sour grapes.", category: "Food" },
+            { idiom: "Speak volumes", meaning: "Convey a lot without words", hindi: "बहुत कुछ कहना", example: "Her silence spoke volumes.", category: "Action" },
+            { idiom: "Spill the beans", meaning: "Reveal a secret", hindi: "राज़ खोल देना", example: "Who spilled the beans about the surprise?", category: "Food" },
+            { idiom: "Split hairs", meaning: "Argue about small differences", hindi: "बाल की खाल निकालना", example: "Stop splitting hairs and accept the answer.", category: "Body" },
+            { idiom: "Steal a march", meaning: "Gain an advantage", hindi: "बढ़त बनाना", example: "We stole a march on our competitors.", category: "Action" },
+            { idiom: "Steal the show", meaning: "Get all the attention", hindi: "सबका ध्यान अपनी ओर खींचना", example: "The child stole the show with his singing.", category: "Action" },
+            { idiom: "Step up to the plate", meaning: "Take responsibility", hindi: "जिम्मेदारी लेना", example: "It's time to step up to the plate and lead.", category: "Action" },
+            { idiom: "Stick out like a sore thumb", meaning: "Be very obvious", hindi: "अलग दिखना", example: "He sticks out like a sore thumb in that suit.", category: "Body" },
+            { idiom: "Stick to your guns", meaning: "Maintain your position", hindi: "अपनी बात पर अड़े रहना", example: "She stuck to her guns despite criticism.", category: "Action" },
+            { idiom: "Straight from the horse's mouth", meaning: "From a reliable source", hindi: "प्रत्यक्ष स्रोत से", example: "I heard it straight from the horse's mouth.", category: "Animals" },
+            { idiom: "Strike while the iron is hot", meaning: "Act at the right time", hindi: "मौके का फायदा उठाना", example: "We need to strike while the iron is hot.", category: "Time" },
+            { idiom: "Take a rain check", meaning: "Postpone", hindi: "बाद के लिए टालना", example: "Can I take a rain check on dinner?", category: "Time" },
+            { idiom: "Take the bull by the horns", meaning: "Face a problem directly", hindi: "मुश्किल का सामना करना", example: "She took the bull by the horns and resolved the issue.", category: "Animals" },
+            { idiom: "Take with a grain of salt", meaning: "Be skeptical", hindi: "संदेह के साथ लेना", example: "Take his claims with a grain of salt.", category: "Food" },
+            { idiom: "Talk shop", meaning: "Discuss work", hindi: "काम की बातें करना", example: "They always talk shop at parties.", category: "Action" },
+            { idiom: "Talk through your hat", meaning: "Speak nonsense", hindi: "बकवास करना", example: "He's talking through his hat.", category: "Action" },
+            { idiom: "Taste of your own medicine", meaning: "Same bad treatment", hindi: "जैसी करनी वैसी भरनी", example: "He got a taste of his own medicine.", category: "Action" },
+            { idiom: "The apple of my eye", meaning: "Someone cherished", hindi: "आँख का तारा", example: "My daughter is the apple of my eye.", category: "Body" },
+            { idiom: "The ball is in your court", meaning: "Your turn to act", hindi: "अब आपकी बारी है", example: "I've made my offer; the ball is in your court.", category: "Action" },
+            { idiom: "The best of both worlds", meaning: "Two benefits", hindi: "दोनों दुनियाओं का लाभ", example: "Working from home gives me the best of both worlds.", category: "Common" },
+            { idiom: "The bottom line", meaning: "The main point", hindi: "मुख्य बात", example: "The bottom line is we need more money.", category: "Common" },
+            { idiom: "The elephant in the room", meaning: "An obvious problem", hindi: "साफ़ समस्या", example: "Let's address the elephant in the room.", category: "Animals" },
+            { idiom: "The last straw", meaning: "Final problem", hindi: "आखिरी बूंद", example: "His constant complaints were the last straw.", category: "Common" },
+            { idiom: "The pot calling the kettle black", meaning: "Hypocrisy", hindi: "उल्टा चोर कोतवाल को डांटे", example: "He's late and blaming me; that's the pot calling the kettle black.", category: "Common" },
+            { idiom: "The sky's the limit", meaning: "No limits", hindi: "कोई सीमा नहीं", example: "With hard work, the sky's the limit.", category: "Common" },
+            { idiom: "Third time's the charm", meaning: "Success after two failures", hindi: "तीसरी बार सफलता", example: "I failed twice, but third time's the charm.", category: "Time" },
+            { idiom: "Through thick and thin", meaning: "Through all circumstances", hindi: "हर हाल में", example: "We've been friends through thick and thin.", category: "Common" },
+            { idiom: "Throw caution to the wind", meaning: "Take a risk", hindi: "जोखिम लेना", example: "He threw caution to the wind and quit his job.", category: "Action" },
+            { idiom: "Throw in the towel", meaning: "Give up", hindi: "हार मान लेना", example: "After many attempts, he threw in the towel.", category: "Action" },
+            { idiom: "Tie the knot", meaning: "Get married", hindi: "शादी करना", example: "They tied the knot last year.", category: "Action" },
+            { idiom: "Time flies", meaning: "Time passes quickly", hindi: "समय तेजी से बीतता है", example: "Time flies when you're having fun.", category: "Time" },
+            { idiom: "Time is money", meaning: "Time is valuable", hindi: "समय ही पैसा है", example: "Let's not waste time; time is money.", category: "Money" },
+            { idiom: "Tip of the iceberg", meaning: "Small part of a bigger problem", hindi: "बड़ी समस्या का छोटा हिस्सा", example: "These issues are just the tip of the iceberg.", category: "Common" },
+            { idiom: "To each his own", meaning: "Everyone has different tastes", hindi: "अपनी-अपनी पसंद", example: "He likes heavy metal; to each his own.", category: "Common" },
+            { idiom: "Tongue in cheek", meaning: "Not serious", hindi: "मजाक में", example: "His comment was tongue in cheek.", category: "Body" },
+            { idiom: "Too many cooks spoil the broth", meaning: "Too many people ruin a task", hindi: "बहुत सारे रसोइए शोरबा खराब करते हैं", example: "We need one leader; too many cooks spoil the broth.", category: "Food" },
+            { idiom: "Turn a blind eye", meaning: "Ignore", hindi: "नज़रअंदाज़ करना", example: "The teacher turned a blind eye to the cheating.", category: "Body" },
+            { idiom: "Turn over a new leaf", meaning: "Start fresh", hindi: "नई शुरुआत करना", example: "He turned over a new leaf and quit smoking.", category: "Action" },
+            { idiom: "Turn the tables", meaning: "Reverse a situation", hindi: "पलटी मारना", example: "He turned the tables on his opponent.", category: "Action" },
+            { idiom: "Twenty-four seven", meaning: "All the time", hindi: "हर समय", example: "The store is open twenty-four seven.", category: "Time" },
+            { idiom: "Two cents", meaning: "One's opinion", hindi: "अपनी राय", example: "Here's my two cents on the matter.", category: "Money" },
+            { idiom: "Two heads are better than one", meaning: "Collaboration helps", hindi: "दो दिमाग एक से बेहतर", example: "Let's solve it together; two heads are better than one.", category: "Common" },
+            { idiom: "Under the weather", meaning: "Feeling ill", hindi: "बीमार", example: "I'm feeling under the weather today.", category: "Emotion" },
+            { idiom: "Up a creek without a paddle", meaning: "In trouble", hindi: "मुश्किल में", example: "We're up a creek without a paddle.", category: "Common" },
+            { idiom: "Up in arms", meaning: "Protesting angrily", hindi: "गुस्से में", example: "The residents are up in arms about the construction.", category: "Action" },
+            { idiom: "Use your noodle", meaning: "Use your brain", hindi: "दिमाग का इस्तेमाल करो", example: "Use your noodle and solve the puzzle.", category: "Body" },
+            { idiom: "Variety is the spice of life", meaning: "New experiences are good", hindi: "विविधता जीवन का मसाला है", example: "Traveling keeps life interesting; variety is the spice of life.", category: "Common" },
+            { idiom: "Wag the dog", meaning: "Distract attention from a bigger issue", hindi: "ध्यान भटकाना", example: "The scandal was an attempt to wag the dog.", category: "Animals" },
+            { idiom: "Waiting in the wings", meaning: "Ready to take over", hindi: "तैयार खड़े", example: "The vice president is waiting in the wings.", category: "Action" },
+            { idiom: "Wake-up call", meaning: "A warning", hindi: "चेतावनी", example: "The failure was a wake-up call.", category: "Action" },
+            { idiom: "Walk on eggshells", meaning: "Be very careful", hindi: "सावधानी से चलना", example: "We walk on eggshells around our boss.", category: "Action" },
+            { idiom: "Wear your heart on your sleeve", meaning: "Show emotions openly", hindi: "भावनाएं ज़ाहिर करना", example: "He always wears his heart on his sleeve.", category: "Body" },
+            { idiom: "Wet blanket", meaning: "A person who spoils fun", hindi: "मज़ा किरकिरा करने वाला", example: "Don't be a wet blanket at the party.", category: "Common" },
+            { idiom: "When pigs fly", meaning: "Never", hindi: "कभी नहीं", example: "He'll be on time when pigs fly.", category: "Animals" },
+            { idiom: "Wild goose chase", meaning: "Futile search", hindi: "व्यर्थ की खोज", example: "They sent us on a wild goose chase.", category: "Animals" },
+            { idiom: "Wing it", meaning: "Improvise", hindi: "बिना तैयारी के करना", example: "I forgot my notes, so I had to wing it.", category: "Action" },
+            { idiom: "Wipe the slate clean", meaning: "Forget past mistakes", hindi: "पुरानी बातें भूल जाना", example: "Let's wipe the slate clean and start over.", category: "Action" },
+            { idiom: "Wishful thinking", meaning: "Believing something false", hindi: "मनोरथ", example: "He thinks he'll win the lottery; that's wishful thinking.", category: "Emotion" },
+            { idiom: "Work like a charm", meaning: "Work perfectly", hindi: "बिल्कुल सही काम करना", example: "The new software works like a charm.", category: "Action" },
+            { idiom: "Worse for wear", meaning: "Damaged", hindi: "खराब होना", example: "After the trip, the suitcase was worse for wear.", category: "Common" },
+            { idiom: "Wouldn't be caught dead", meaning: "Would never do", hindi: "कभी नहीं करेंगे", example: "He wouldn't be caught dead in that hat.", category: "Action" },
+            { idiom: "X marks the spot", meaning: "The exact location", hindi: "सटीक स्थान", example: "Follow the map; X marks the spot.", category: "Common" },
+            { idiom: "Year in, year out", meaning: "Every year", hindi: "साल दर साल", example: "We go to the same beach year in, year out.", category: "Time" },
+            { idiom: "You can't make an omelet without breaking eggs", meaning: "Sacrifices are necessary", hindi: "बिना कष्ट के सफलता नहीं", example: "We'll have to downsize; you can't make an omelet without breaking eggs.", category: "Food" },
+            { idiom: "You said it", meaning: "I agree", hindi: "सही कहा", example: "You said it; this is delicious.", category: "Action" },
+            { idiom: "Your guess is as good as mine", meaning: "I don't know", hindi: "मुझे नहीं पता", example: "Where's the remote? Your guess is as good as mine.", category: "Action" },
+            { idiom: "Zero tolerance", meaning: "No acceptance", hindi: "शून्य सहनशीलता", example: "The school has zero tolerance for bullying.", category: "Action" }
+        ];
+
+        // DOM elements
+        const tbody = document.getElementById('idiomsTableBody');
+        const searchInput = document.getElementById('searchInput');
+        const noResults = document.getElementById('noResults');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+
+        let currentFilter = 'all';
+        let currentSearch = '';
+
+        // Render table
+        function renderTable() {
+            const filtered = idiomsData.filter(item => {
+                // Filter by category
+                if (currentFilter !== 'all' && item.category !== currentFilter) return false;
+                // Filter by search
+                if (currentSearch) {
+                    const searchLower = currentSearch.toLowerCase();
+                    return item.idiom.toLowerCase().includes(searchLower) ||
+                           item.meaning.toLowerCase().includes(searchLower) ||
+                           item.hindi.toLowerCase().includes(searchLower) ||
+                           item.example.toLowerCase().includes(searchLower);
+                }
+                return true;
+            });
+
+            if (filtered.length === 0) {
+                tbody.innerHTML = '';
+                noResults.style.display = 'block';
+                return;
+            }
+
+            noResults.style.display = 'none';
+            tbody.innerHTML = filtered.map((item, idx) => `
+                <tr>
+                    <td>${idx + 1}</td>
+                    <td><strong>${item.idiom}</strong></td>
+                    <td>${item.meaning}</td>
+                    <td>${item.hindi}</td>
+                    <td><em>${item.example}</em></td>
+                </tr>
+            `).join('');
+        }
+
+        // Search event
+        searchInput.addEventListener('input', (e) => {
+            currentSearch = e.target.value;
+            renderTable();
+        });
+
+        // Filter events
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.category;
+                renderTable();
+            });
+        });
+
+        // Initial render
+        renderTable();
+
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
