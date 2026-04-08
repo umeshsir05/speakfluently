@@ -2,9 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Short Sentences - Speak Fluently</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 0 0 0.5rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+        .sentence-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        .sentence-card {
+            background: var(--glass-bg, rgba(0,180,216,0.03));
+            padding: 0.6rem 1rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent, #00b4d8);
+            transition: transform 0.2s;
+        }
+        .sentence-card:hover {
+            transform: translateX(5px);
+            background: rgba(0,180,216,0.08);
+        }
+        .eng {
+            font-weight: 600;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .hindi {
+            color: var(--text-secondary, #4a627a);
+            font-size: 0.9rem;
+            margin-top: 4px;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-content {
+                padding: 1rem;
+            }
+            .sentence-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,71 +80,290 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
+
     <main>
-        <h2>Short sentences</h2>
-        <pre>
-1. Ask yourself - अपने आप से पूछो
+        <div class="lesson-container">
+            <div class="lesson-content">
+                <h2>📖 Short Sentences for Daily Use</h2>
+                <p>Master these simple English sentences for everyday conversation. Each sentence comes with Hindi meaning.</p>
 
+                <!-- Category 1: Basic Commands -->
+                <h3>🔹 Basic Commands & Requests</h3>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><div class="eng">1. Ask yourself</div><div class="hindi">अपने आप से पूछो</div></div>
+                    <div class="sentence-card"><div class="eng">2. Say goodbye</div><div class="hindi">बाय बोलो</div></div>
+                    <div class="sentence-card"><div class="eng">3. Wave goodbye</div><div class="hindi">बाय करो</div></div>
+                    <div class="sentence-card"><div class="eng">4. Go and play</div><div class="hindi">जाकर खेलो</div></div>
+                    <div class="sentence-card"><div class="eng">5. Don’t peep</div><div class="hindi">झाँको मत</div></div>
+                    <div class="sentence-card"><div class="eng">6. Hold this / Hold it</div><div class="hindi">इसे पकड़ो</div></div>
+                    <div class="sentence-card"><div class="eng">7. Wake up</div><div class="hindi">जाग जाओ</div></div>
+                    <div class="sentence-card"><div class="eng">8. Get up</div><div class="hindi">उठ जाओ</div></div>
+                    <div class="sentence-card"><div class="eng">9. Take a bath</div><div class="hindi">नहा लो</div></div>
+                    <div class="sentence-card"><div class="eng">10. Eat slowly</div><div class="hindi">धीरे-धीरे खाओ</div></div>
+                    <div class="sentence-card"><div class="eng">11. Chew well</div><div class="hindi">अच्छे से चबाओ</div></div>
+                    <div class="sentence-card"><div class="eng">12. Take a bite</div><div class="hindi">एक निवाला खाओ</div></div>
+                    <div class="sentence-card"><div class="eng">13. Take a sip</div><div class="hindi">एक घूँट पियो</div></div>
+                    <div class="sentence-card"><div class="eng">14. It seems so</div><div class="hindi">लगता तो है</div></div>
+                    <div class="sentence-card"><div class="eng">15. It seems not</div><div class="hindi">लगता तो नहीं</div></div>
+                </div>
 
-2. Say Good bye - बाय बोलो
+                <!-- Category 2: Daily Routine -->
+                <h3>🌅 Daily Routine</h3>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><div class="eng">16. Brush your teeth</div><div class="hindi">दाँत साफ करो</div></div>
+                    <div class="sentence-card"><div class="eng">17. Comb your hair</div><div class="hindi">बाल संवारो</div></div>
+                    <div class="sentence-card"><div class="eng">18. Get dressed</div><div class="hindi">कपड़े पहनो</div></div>
+                    <div class="sentence-card"><div class="eng">19. Have breakfast</div><div class="hindi">नाश्ता करो</div></div>
+                    <div class="sentence-card"><div class="eng">20. Pack your bag</div><div class="hindi">बैग पैक करो</div></div>
+                    <div class="sentence-card"><div class="eng">21. Go to school</div><div class="hindi">स्कूल जाओ</div></div>
+                    <div class="sentence-card"><div class="eng">22. Come home</div><div class="hindi">घर आओ</div></div>
+                    <div class="sentence-card"><div class="eng">23. Do your homework</div><div class="hindi">होमवर्क करो</div></div>
+                    <div class="sentence-card"><div class="eng">24. Watch TV</div><div class="hindi">टीवी देखो</div></div>
+                    <div class="sentence-card"><div class="eng">25. Go to bed</div><div class="hindi">सोने जाओ</div></div>
+                    <div class="sentence-card"><div class="eng">26. Turn off the light</div><div class="hindi">लाइट बंद करो</div></div>
+                    <div class="sentence-card"><div class="eng">27. Lock the door</div><div class="hindi">दरवाजा बंद करो</div></div>
+                </div>
 
+                <!-- Category 3: Polite Requests -->
+                <h3>🙏 Polite Requests</h3>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><div class="eng">28. Please come in</div><div class="hindi">कृपया अंदर आइए</div></div>
+                    <div class="sentence-card"><div class="eng">29. Please sit down</div><div class="hindi">कृपया बैठिए</div></div>
+                    <div class="sentence-card"><div class="eng">30. Please wait</div><div class="hindi">कृपया रुकिए</div></div>
+                    <div class="sentence-card"><div class="eng">31. Please help me</div><div class="hindi">कृपया मेरी मदद करो</div></div>
+                    <div class="sentence-card"><div class="eng">32. Please listen</div><div class="hindi">कृपया सुनो</div></div>
+                    <div class="sentence-card"><div class="eng">33. Please repeat</div><div class="hindi">कृपया दोहराइए</div></div>
+                    <div class="sentence-card"><div class="eng">34. Please speak slowly</div><div class="hindi">कृपया धीरे बोलो</div></div>
+                    <div class="sentence-card"><div class="eng">35. Please give me water</div><div class="hindi">कृपया मुझे पानी दो</div></div>
+                </div>
 
-3. Wave good bye - बाय करो
+                <!-- Category 4: Classroom/Study Phrases -->
+                <h3>📚 Classroom & Study Phrases</h3>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><div class="eng">36. Open your book</div><div class="hindi">किताब खोलो</div></div>
+                    <div class="sentence-card"><div class="eng">37. Close your book</div><div class="hindi">किताब बंद करो</div></div>
+                    <div class="sentence-card"><div class="eng">38. Read aloud</div><div class="hindi">जोर से पढ़ो</div></div>
+                    <div class="sentence-card"><div class="eng">39. Write it down</div><div class="hindi">इसे लिखो</div></div>
+                    <div class="sentence-card"><div class="eng">40. Pay attention</div><div class="hindi">ध्यान दो</div></div>
+                    <div class="sentence-card"><div class="eng">41. Raise your hand</div><div class="hindi">हाथ उठाओ</div></div>
+                    <div class="sentence-card"><div class="eng">42. Stand up</div><div class="hindi">खड़े हो जाओ</div></div>
+                    <div class="sentence-card"><div class="eng">43. Sit down</div><div class="hindi">बैठ जाओ</div></div>
+                    <div class="sentence-card"><div class="eng">44. Come to the board</div><div class="hindi">बोर्ड पर आओ</div></div>
+                    <div class="sentence-card"><div class="eng">45. Be quiet</div><div class="hindi">शांत रहो</div></div>
+                    <div class="sentence-card"><div class="eng">46. Make a line</div><div class="hindi">लाइन बनाओ</div></div>
+                    <div class="sentence-card"><div class="eng">47. May I come in?</div><div class="hindi">क्या मैं अंदर आ सकता हूँ?</div></div>
+                    <div class="sentence-card"><div class="eng">48. May I go out?</div><div class="hindi">क्या मैं बाहर जा सकता हूँ?</div></div>
+                    <div class="sentence-card"><div class="eng">49. I have a question</div><div class="hindi">मेरा एक सवाल है</div></div>
+                    <div class="sentence-card"><div class="eng">50. I don't understand</div><div class="hindi">मुझे समझ नहीं आया</div></div>
+                </div>
 
+                <!-- Category 5: Home & Family -->
+                <h3>🏠 Home & Family</h3>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><div class="eng">51. I am hungry</div><div class="hindi">मुझे भूख लगी है</div></div>
+                    <div class="sentence-card"><div class="eng">52. I am thirsty</div><div class="hindi">मुझे प्यास लगी है</div></div>
+                    <div class="sentence-card"><div class="eng">53. I am tired</div><div class="hindi">मैं थक गया हूँ</div></div>
+                    <div class="sentence-card"><div class="eng">54. I am sleepy</div><div class="hindi">मुझे नींद आ रही है</div></div>
+                    <div class="sentence-card"><div class="eng">55. I am happy</div><div class="hindi">मैं खुश हूँ</div></div>
+                    <div class="sentence-card"><div class="eng">56. I am sad</div><div class="hindi">मैं उदास हूँ</div></div>
+                    <div class="sentence-card"><div class="eng">57. I am busy</div><div class="hindi">मैं व्यस्त हूँ</div></div>
+                    <div class="sentence-card"><div class="eng">58. I am sorry</div><div class="hindi">मुझे माफ करो</div></div>
+                    <div class="sentence-card"><div class="eng">59. I love you</div><div class="hindi">मैं तुमसे प्यार करता हूँ</div></div>
+                    <div class="sentence-card"><div class="eng">60. Take care</div><div class="hindi">अपना ख्याल रखना</div></div>
+                    <div class="sentence-card"><div class="eng">61. Don't worry</div><div class="hindi">चिंता मत करो</div></div>
+                    <div class="sentence-card"><div class="eng">62. Never mind</div><div class="hindi">कोई बात नहीं</div></div>
+                    <div class="sentence-card"><div class="eng">63. It's okay</div><div class="hindi">ठीक है</div></div>
+                    <div class="sentence-card"><div class="eng">64. That's great</div><div class="hindi">यह बहुत अच्छा है</div></div>
+                </div>
 
-4. Go and play - जाकर खेलो
+                <!-- Category 6: Common Expressions -->
+                <h3>💬 Common Everyday Expressions</h3>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><div class="eng">65. What is your name?</div><div class="hindi">तुम्हारा नाम क्या है?</div></div>
+                    <div class="sentence-card"><div class="eng">66. My name is...</div><div class="hindi">मेरा नाम... है</div></div>
+                    <div class="sentence-card"><div class="eng">67. How are you?</div><div class="hindi">आप कैसे हैं?</div></div>
+                    <div class="sentence-card"><div class="eng">68. I am fine</div><div class="hindi">मैं ठीक हूँ</div></div>
+                    <div class="sentence-card"><div class="eng">69. Where are you from?</div><div class="hindi">आप कहाँ से हैं?</div></div>
+                    <div class="sentence-card"><div class="eng">70. How old are you?</div><div class="hindi">आपकी उम्र क्या है?</div></div>
+                    <div class="sentence-card"><div class="eng">71. What do you do?</div><div class="hindi">आप क्या करते हैं?</div></div>
+                    <div class="sentence-card"><div class="eng">72. Nice to meet you</div><div class="hindi">आपसे मिलकर खुशी हुई</div></div>
+                    <div class="sentence-card"><div class="eng">73. See you later</div><div class="hindi">बाद में मिलते हैं</div></div>
+                    <div class="sentence-card"><div class="eng">74. Have a nice day</div><div class="hindi">आपका दिन शुभ हो</div></div>
+                    <div class="sentence-card"><div class="eng">75. Good luck</div><div class="hindi">शुभकामनाएँ</div></div>
+                    <div class="sentence-card"><div class="eng">76. Congratulations</div><div class="hindi">बधाई हो</div></div>
+                    <div class="sentence-card"><div class="eng">77. Excuse me</div><div class="hindi">माफ़ कीजिए</div></div>
+                    <div class="sentence-card"><div class="eng">78. Thank you</div><div class="hindi">धन्यवाद</div></div>
+                    <div class="sentence-card"><div class="eng">79. You're welcome</div><div class="hindi">आपका स्वागत है</div></div>
+                </div>
 
+                <!-- Category 7: Emergency/Help -->
+                <h3>🚨 Emergency & Help</h3>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><div class="eng">80. Help me!</div><div class="hindi">मेरी मदद करो!</div></div>
+                    <div class="sentence-card"><div class="eng">81. Call the doctor</div><div class="hindi">डॉक्टर को बुलाओ</div></div>
+                    <div class="sentence-card"><div class="eng">82. Call the police</div><div class="hindi">पुलिस को बुलाओ</div></div>
+                    <div class="sentence-card"><div class="eng">83. I am lost</div><div class="hindi">मैं खो गया हूँ</div></div>
+                    <div class="sentence-card"><div class="eng">84. It's an emergency</div><div class="hindi">यह आपातकाल है</div></div>
+                    <div class="sentence-card"><div class="eng">85. Be careful</div><div class="hindi">सावधान रहो</div></div>
+                    <div class="sentence-card"><div class="eng">86. Stop!</div><div class="hindi">रुको!</div></div>
+                    <div class="sentence-card"><div class="eng">87. Go away</div><div class="hindi">यहाँ से जाओ</div></div>
+                </div>
 
-5. Don’t peep - झाँको मत
+                <!-- Category 8: Time & Weather -->
+                <h3>⏰ Time & Weather</h3>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><div class="eng">88. What time is it?</div><div class="hindi">क्या समय हुआ है?</div></div>
+                    <div class="sentence-card"><div class="eng">89. It's early</div><div class="hindi">जल्दी है</div></div>
+                    <div class="sentence-card"><div class="eng">90. It's late</div><div class="hindi">देर हो गई है</div></div>
+                    <div class="sentence-card"><div class="eng">91. It's hot today</div><div class="hindi">आज गर्मी है</div></div>
+                    <div class="sentence-card"><div class="eng">92. It's cold today</div><div class="hindi">आज ठंड है</div></div>
+                    <div class="sentence-card"><div class="eng">93. It's raining</div><div class="hindi">बारिश हो रही है</div></div>
+                    <div class="sentence-card"><div class="eng">94. It's sunny</div><div class="hindi">धूप है</div></div>
+                    <div class="sentence-card"><div class="eng">95. What's the weather like?</div><div class="hindi">मौसम कैसा है?</div></div>
+                </div>
 
+                <!-- Category 9: Shopping & Eating Out -->
+                <h3>🛍️ Shopping & Eating Out</h3>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><div class="eng">96. How much is this?</div><div class="hindi">यह कितने का है?</div></div>
+                    <div class="sentence-card"><div class="eng">97. I want this</div><div class="hindi">मुझे यह चाहिए</div></div>
+                    <div class="sentence-card"><div class="eng">98. Do you have...?</div><div class="hindi">क्या आपके पास... है?</div></div>
+                    <div class="sentence-card"><div class="eng">99. Can I get a discount?</div><div class="hindi">क्या छूट मिल सकती है?</div></div>
+                    <div class="sentence-card"><div class="eng">100. I'll take it</div><div class="hindi">मैं यह लूँगा</div></div>
+                    <div class="sentence-card"><div class="eng">101. The bill, please</div><div class="hindi">बिल लाइए</div></div>
+                    <div class="sentence-card"><div class="eng">102. Can I pay by card?</div><div class="hindi">क्या मैं कार्ड से भुगतान कर सकता हूँ?</div></div>
+                    <div class="sentence-card"><div class="eng">103. It's too expensive</div><div class="hindi">यह बहुत महंगा है</div></div>
+                </div>
 
-6. Hold this / Hold it - इसे पकड़ो
+                <!-- Category 10: Travel & Directions -->
+                <h3>🗺️ Travel & Directions</h3>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><div class="eng">104. Where is the station?</div><div class="hindi">स्टेशन कहाँ है?</div></div>
+                    <div class="sentence-card"><div class="eng">105. Turn left</div><div class="hindi">बाएँ मुड़ो</div></div>
+                    <div class="sentence-card"><div class="eng">106. Turn right</div><div class="hindi">दाएँ मुड़ो</div></div>
+                    <div class="sentence-card"><div class="eng">107. Go straight</div><div class="hindi">सीधे जाओ</div></div>
+                    <div class="sentence-card"><div class="eng">108. It's near</div><div class="hindi">यह पास है</div></div>
+                    <div class="sentence-card"><div class="eng">109. It's far</div><div class="hindi">यह दूर है</div></div>
+                    <div class="sentence-card"><div class="eng">110. How can I get there?</div><div class="hindi">वहाँ कैसे पहुँचूँ?</div></div>
+                    <div class="sentence-card"><div class="eng">111. Take a taxi</div><div class="hindi">टैक्सी ले लो</div></div>
+                    <div class="sentence-card"><div class="eng">112. Where is the toilet?</div><div class="hindi">शौचालय कहाँ है?</div></div>
+                </div>
 
+                <!-- Category 11: Feelings & Opinions -->
+                <h3>😊 Feelings & Opinions</h3>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><div class="eng">113. I think so</div><div class="hindi">मुझे ऐसा लगता है</div></div>
+                    <div class="sentence-card"><div class="eng">114. I don't think so</div><div class="hindi">मुझे ऐसा नहीं लगता</div></div>
+                    <div class="sentence-card"><div class="eng">115. You are right</div><div class="hindi">तुम सही हो</div></div>
+                    <div class="sentence-card"><div class="eng">116. You are wrong</div><div class="hindi">तुम गलत हो</div></div>
+                    <div class="sentence-card"><div class="eng">117. I agree</div><div class="hindi">मैं सहमत हूँ</div></div>
+                    <div class="sentence-card"><div class="eng">118. I disagree</div><div class="hindi">मैं असहमत हूँ</div></div>
+                    <div class="sentence-card"><div class="eng">119. That's amazing</div><div class="hindi">यह अद्भुत है</div></div>
+                    <div class="sentence-card"><div class="eng">120. That's terrible</div><div class="hindi">यह भयानक है</div></div>
+                </div>
 
-7. Wake-up - जाग जाओ
+                <!-- Category 12: Telephone & Messaging -->
+                <h3>📞 Telephone & Messaging</h3>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><div class="eng">121. Hello, who is speaking?</div><div class="hindi">नमस्ते, कौन बोल रहा है?</div></div>
+                    <div class="sentence-card"><div class="eng">122. Can I speak to...?</div><div class="hindi">क्या मैं... से बात कर सकता हूँ?</div></div>
+                    <div class="sentence-card"><div class="eng">123. Hold on, please</div><div class="hindi">कृपया रुकिए</div></div>
+                    <div class="sentence-card"><div class="eng">124. I'll call you back</div><div class="hindi">मैं तुम्हें वापस कॉल करूँगा</div></div>
+                    <div class="sentence-card"><div class="eng">125. Send me a message</div><div class="hindi">मुझे मैसेज भेजो</div></div>
+                </div>
 
+                <!-- Category 13: Useful Questions -->
+                <h3>❓ Useful Questions</h3>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><div class="eng">126. Why not?</div><div class="hindi">क्यों नहीं?</div></div>
+                    <div class="sentence-card"><div class="eng">127. What's wrong?</div><div class="hindi">क्या हुआ?</div></div>
+                    <div class="sentence-card"><div class="eng">128. What's the matter?</div><div class="hindi">समस्या क्या है?</div></div>
+                    <div class="sentence-card"><div class="eng">129. Are you sure?</div><div class="hindi">क्या तुम्हें यकीन है?</div></div>
+                    <div class="sentence-card"><div class="eng">130. Is that clear?</div><div class="hindi">क्या यह स्पष्ट है?</div></div>
+                    <div class="sentence-card"><div class="eng">131. Can you do it?</div><div class="hindi">क्या तुम यह कर सकते हो?</div></div>
+                    <div class="sentence-card"><div class="eng">132. Do you need help?</div><div class="hindi">क्या तुम्हें मदद चाहिए?</div></div>
+                    <div class="sentence-card"><div class="eng">133. What happened?</div><div class="hindi">क्या हुआ?</div></div>
+                </div>
 
-8. Get-up - उठ जाओ
+                <!-- Category 14: Encouragement & Advice -->
+                <h3>💪 Encouragement & Advice</h3>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><div class="eng">134. Don't give up</div><div class="hindi">हार मत मानो</div></div>
+                    <div class="sentence-card"><div class="eng">135. Try again</div><div class="hindi">फिर से कोशिश करो</div></div>
+                    <div class="sentence-card"><div class="eng">136. You can do it</div><div class="hindi">तुम यह कर सकते हो</div></div>
+                    <div class="sentence-card"><div class="eng">137. Believe in yourself</div><div class="hindi">अपने आप पर विश्वास करो</div></div>
+                    <div class="sentence-card"><div class="eng">138. Take it easy</div><div class="hindi">आराम से करो</div></div>
+                    <div class="sentence-card"><div class="eng">139. Be positive</div><div class="hindi">सकारात्मक रहो</div></div>
+                    <div class="sentence-card"><div class="eng">140. Work hard</div><div class="hindi">मेहनत करो</div></div>
+                    <div class="sentence-card"><div class="eng">141. Stay strong</div><div class="hindi">मजबूत रहो</div></div>
+                </div>
 
-
-9. Take a bath - नहा लो
-
-
-10. Eat slowly - धीरे-धीरे खाओ
-
-
-11. Chew well - अच्छे से चबाओ
-
-
-12. Take a bit - एक निवाला खाओ
-
-
-13. Take a sip - एक घूँट पियो
-
-
-14. It seems so - लगता तो है
-
-
-15. It seems not - लगता तो नहीं
-
-</pre>
+                <p style="margin-top: 1.5rem; text-align: center; color: var(--accent);"><i class="fas fa-smile"></i> Keep practicing these sentences daily to improve your spoken English!</p>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2024 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
