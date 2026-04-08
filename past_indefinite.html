@@ -2,9 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Past Simple Tense - Speak Fluently</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles for tense lesson pages */
+        .lesson-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 0 0 1rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--text-primary, #1e2a3e);
+            margin: 1.5rem 0 0.5rem;
+            font-size: 1.3rem;
+        }
+        body.dark .lesson-content h3 {
+            color: var(--text-primary, #e2e8f0);
+        }
+        .lesson-content p, .lesson-content li {
+            color: var(--text-secondary, #4a627a);
+            line-height: 1.7;
+        }
+        .lesson-content b, .lesson-content strong {
+            color: var(--accent, #00b4d8);
+        }
+        .example-box {
+            background: var(--glass-bg, rgba(0,180,216,0.05));
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border-left: 3px solid var(--accent, #00b4d8);
+        }
+        hr {
+            margin: 1rem 0;
+            border-color: var(--border, rgba(0,180,216,0.2));
+        }
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent, #00b4d8);
+        }
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--bg, #f4f7fc);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .summary-table th, .summary-table td {
+            border: 1px solid var(--border, #ddd);
+            padding: 10px;
+            text-align: left;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .summary-table th {
+            background: var(--accent, #00b4d8);
+            color: white;
+            font-weight: 600;
+        }
+        body.dark .summary-table th {
+            background: var(--accent-dark, #0284c7);
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-content {
+                padding: 1rem;
+            }
+            .lesson-content h2 {
+                font-size: 1.5rem;
+            }
+            .summary-table {
+                font-size: 0.85rem;
+            }
+            .summary-table th, .summary-table td {
+                padding: 6px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,127 +109,132 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
+
     <main>
-        <h2>🎯 Past Simple Tense क्या है? </h2>
-<br>
-<br>
+        <div class="lesson-container">
+            <div class="lesson-content">
+                <h2>🎯 Past Simple Tense क्या है?</h2>
+                <p><strong>📖 Past Indefinite Tense (Simple Past Tense)</strong></p>
+                <p>👉 इसका उपयोग हम बीती हुई घटनाओं या कामों को बताने के लिए करते हैं।<br>
+                👉 जब कोई काम अतीत में पूरा हो गया हो, तब हम Past Indefinite का प्रयोग करते हैं।</p>
 
+                <div class="section-title">📝 Formula (Structure)</div>
 
-<b>📖 Past Indefinite Tense (Simple Past Tense)</b><br>
+                <div class="section-title">1. Affirmative (Positive Sentence)</div>
+                <p><strong>Structure:</strong> Subject + V2 (Second form of verb) + Object</p>
+                <div class="example-box">
+                    I went to school. (मैं स्कूल गया।)<br>
+                    She played cricket. (उसने क्रिकेट खेला।)
+                </div>
 
-👉 इसका उपयोग हम बीती हुई घटनाओं या कामों को बताने के लिए करते हैं।<br> 👉 जब कोई काम अतीत में पूरा हो गया हो, तब हम Past Indefinite का प्रयोग करते हैं।<br>
+                <div class="section-title">2. Negative Sentence</div>
+                <p><strong>Structure:</strong> Subject + did not (didn’t) + V1 (First form of verb) + Object</p>
+                <div class="example-box">
+                    I did not go to school. (मैं स्कूल नहीं गया।)<br>
+                    She did not play cricket. (उसने क्रिकेट नहीं खेला।)
+                </div>
 
-<b>📝 Formula (Structure)</b><br>
+                <div class="section-title">3. Interrogative (Yes/No Question)</div>
+                <p><strong>Structure:</strong> Did + Subject + V1 + Object ?</p>
+                <div class="example-box">
+                    Did you go to school? (क्या तुम स्कूल गए थे?)<br>
+                    Did she play cricket? (क्या उसने क्रिकेट खेला था?)
+                </div>
 
-<b>1. Affirmative (Positive Sentence)</b><br>
+                <div class="section-title">4. Interrogative with Wh-word (Wh-Questions)</div>
+                <p><strong>Structure:</strong> Wh-word + did + Subject + V1 + Object ?</p>
+                <div class="example-box">
+                    Where did you go yesterday? (तुम कल कहाँ गए थे?)<br>
+                    What did she eat? (उसने क्या खाया?)
+                </div>
 
-Subject + V2 (Second form of verb) + Object<br>
+                <div class="section-title">⏰ Signal Words (पहचान शब्द)</div>
+                <p>ये शब्द अक्सर Past Indefinite में मिलते हैं:<br>
+                Yesterday (कल), Last night (पिछली रात), Last week (पिछले हफ्ते), Ago (पहले), In 2005 (सन 2005 में)</p>
 
-I went to school. (मैं स्कूल गया।)<br>
+                <div class="section-title">📊 Quick Summary Table</div>
+                <table class="summary-table">
+                    <thead>
+                        <tr><th>Format</th><th>Structure</th><th>Example (English)</th><th>Example (Hindi)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Affirmative</td><td>Subject + V2 + Object</td><td>He visited Delhi.</td><td>वह दिल्ली गया।</td></tr>
+                        <tr><td>Negative</td><td>Subject + did not + V1 + Object</td><td>He did not visit Delhi.</td><td>वह दिल्ली नहीं गया।</td></tr>
+                        <tr><td>Interrogative</td><td>Did + Subject + V1 + Object?</td><td>Did he visit Delhi?</td><td>क्या वह दिल्ली गया था?</td></tr>
+                        <tr><td>Wh-Question</td><td>Wh + did + Subject + V1 + Object?</td><td>Where did he go?</td><td>वह कहाँ गया था?</td></tr>
+                    </tbody>
+                </table>
 
-She played cricket. (उसने क्रिकेट खेला।)<br>
-
-
-<b>2. Negative Sentence</b><br>
-
-Subject + did not (didn’t) + V1 (First form of verb) + Object<br>
-
-I did not go to school. (मैं स्कूल नहीं गया।)<br>
-
-She did not play cricket. (उसने क्रिकेट नहीं खेला।)<br>
-
-
-<b>3. Interrogative (Yes/No Question)</b><br>
-
-Did + Subject + V1 + Object + ?<br>
-
-Did you go to school? (क्या तुम स्कूल गए थे?)<br>
-
-Did she play cricket? (क्या उसने क्रिकेट खेला था?)<br>
-
-
-<b>4. Interrogative with Wh-word (Wh-Questions)</b><br>
-
-Wh-word + did + Subject + V1 + Object + ?<br>
-
-Where did you go yesterday? (तुम कल कहाँ गए थे?)<br>
-
-What did she eat? (उसने क्या खाया?)<br>
-
-
-<b>⏰ Signal Words (पहचान शब्द)</b><br>
-
-ये शब्द अक्सर Past Indefinite में मिलते हैं:<br>
-
-Yesterday (कल)<br>
-
-Last night (पिछली रात)<br>
-
-Last week (पिछले हफ्ते)<br>
-
-Ago (पहले)<br>
-
-In 2005 (सन 2005 में)<br>
-
-
-<b>📊 Quick Summary Table</b><br>
-
-Format<br>
-Structure<br>
-Example (English)<br>
-Example (Hindi)<br>
-
-Affirmative<br>
-Subject + V2 + Object<br>
-He visited Delhi.<br>
-वह दिल्ली गया।<br>
-
-Negative<br>
-Subject + did not + V1 + Object<br>
-He did not visit Delhi.<br>
-वह दिल्ली नहीं गया।<br>
-
-Interrogative<br>
-Did + Subject + V1 + Object?<br>
-Did he visit Delhi?<br>
-क्या वह दिल्ली गया था?<br>
-
-Wh-Question<br>
-Wh + did + Subject + V1 + Object?<br>
-Where did he go?<br>
-वह कहाँ गया था?<br>
-
-<b>👉 याद रखो:</b><br>
-
-Affirmative में Verb की 2nd form लगती है।<br>
-
-Negative और Interrogative में हमेशा did + V1 लगता है।<br>
-
-
-
----
-
-
-
-
-
+                <div class="example-box">
+                    <strong>👉 याद रखो:</strong><br>
+                    Affirmative में Verb की 2nd form लगती है।<br>
+                    Negative और Interrogative में हमेशा did + V1 लगता है।
+                </div>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2024 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
