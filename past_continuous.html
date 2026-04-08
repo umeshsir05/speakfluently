@@ -2,9 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Past Continuous Tense - Speak Fluently</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles for tense lesson pages */
+        .lesson-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 0 0 1rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--text-primary, #1e2a3e);
+            margin: 1.5rem 0 0.5rem;
+            font-size: 1.3rem;
+        }
+        body.dark .lesson-content h3 {
+            color: var(--text-primary, #e2e8f0);
+        }
+        .lesson-content p, .lesson-content li {
+            color: var(--text-secondary, #4a627a);
+            line-height: 1.7;
+        }
+        .lesson-content b, .lesson-content strong {
+            color: var(--accent, #00b4d8);
+        }
+        .example-box {
+            background: var(--glass-bg, rgba(0,180,216,0.05));
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border-left: 3px solid var(--accent, #00b4d8);
+        }
+        hr {
+            margin: 1rem 0;
+            border-color: var(--border, rgba(0,180,216,0.2));
+        }
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent, #00b4d8);
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-content {
+                padding: 1rem;
+            }
+            .lesson-content h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,124 +81,128 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
+
     <main>
-        <h2>🎯 Past continuous Tense क्या है? </h2>
-<br>
-<br>
+        <div class="lesson-container">
+            <div class="lesson-content">
+                <h2>🎯 Past Continuous Tense क्या है?</h2>
+                <p><strong>🌟 Past Continuous Tense (भूतकालीन अपूर्ण काल)</strong></p>
+                <p>It shows an action that was going on at some time in the past.<br> यह उस क्रिया को दर्शाता है जो भूतकाल में किसी समय चल रही थी।</p>
+                <p>👉 Keywords: while, when, at that time, yesterday at 5 pm, all day yesterday, etc.<br>
+                👉 मुख्य शब्द: जब, जबकि, उस समय, कल शाम 5 बजे, पूरे दिन कल, आदि</p>
 
+                <div class="section-title">1. Affirmative (सकारात्मक वाक्य)</div>
+                <p><strong>Structure:</strong> Subject + was/were + verb(ing) + object</p>
+                <div class="example-box">
+                    I was playing cricket.<br> मैं क्रिकेट खेल रहा था।<br>
+                    They were watching TV.<br> वे टीवी देख रहे थे।
+                </div>
+                <p><strong>👉 Rule:</strong><br>
+                I, He, She, It, Singular noun → was<br>
+                You, We, They, Plural noun → were</p>
 
-<b>🌟 Past Continuous Tense (भूतकालीन अपूर्ण काल)</b><br>
+                <div class="section-title">2. Negative (नकारात्मक वाक्य)</div>
+                <p><strong>Structure:</strong> Subject + was/were + not + verb(ing) + object</p>
+                <div class="example-box">
+                    I was not reading a book.<br> मैं किताब नहीं पढ़ रहा था।<br>
+                    They were not dancing.<br> वे नाच नहीं रहे थे।
+                </div>
 
+                <div class="section-title">3. Interrogative (प्रश्नवाचक वाक्य)</div>
+                <p><strong>(a) Yes/No Questions</strong><br>
+                Was/Were + subject + verb(ing) + object?</p>
+                <div class="example-box">
+                    Was he sleeping?<br> क्या वह सो रहा था?<br>
+                    Were they playing football?<br> क्या वे फुटबॉल खेल रहे थे?
+                </div>
+                <p><strong>(b) WH-Questions</strong><br>
+                Wh-word + was/were + subject + verb(ing) + object?</p>
+                <div class="example-box">
+                    What were you doing?<br> तुम क्या कर रहे थे?<br>
+                    Where was she going?<br> वह कहाँ जा रही थी?<br>
+                    Why were they shouting?<br> वे क्यों चिल्ला रहे थे?
+                </div>
 
-It shows an action that was going on at some time in the past.<br> यह उस क्रिया को दर्शाता है जो भूतकाल में किसी समय चल रही थी।<br>
+                <div class="section-title">📌 Usage of Past Continuous (प्रयोग)</div>
+                <ul>
+                    <li><strong>किसी विशेष समय पर भूतकाल में चल रही क्रिया</strong><br>At 8 pm yesterday, I was studying.<br> कल रात 8 बजे मैं पढ़ रहा था।</li>
+                    <li><strong>जब कोई दूसरी क्रिया हुई, तब पहली क्रिया चल रही थी</strong><br>She was cooking when I called her.<br> जब मैंने उसे फोन किया, वह खाना बना रही थी।</li>
+                    <li><strong>दो क्रियाएँ साथ-साथ चल रही थीं</strong><br>He was reading while I was writing.<br> वह पढ़ रहा था जबकि मैं लिख रहा था।</li>
+                </ul>
 
-👉 Keywords: while, when, at that time, yesterday at 5 pm, all day yesterday, etc.<br> 👉 मुख्य शब्द: जब, जबकि, उस समय, कल शाम 5 बजे, पूरे दिन कल, आदि<br>
-
-
-<b>1. Affirmative (सकारात्मक वाक्य)</b><br>
-
-Subject + was/were + verb(ing) + object<br>
-
-I was playing cricket.<br> मैं क्रिकेट खेल रहा था।<br>
-
-They were watching TV.<br> वे टीवी देख रहे थे।<br>
-
-
-<b>👉 Rule:</b><br>
-
-I, He, She, It, Singular noun → was<br>
-
-You, We, They, Plural noun → were<br>
-
-
-<b>2. Negative (नकारात्मक वाक्य)</b><br>
-
-Subject + was/were + not + verb(ing) + object<br>
-
-I was not reading a book.<br> मैं किताब नहीं पढ़ रहा था।<br>
-
-They were not dancing.<br> वे नाच नहीं रहे थे।<br>
-
-
-<b>3. Interrogative (प्रश्नवाचक वाक्य)</b><br>
-
-<b>(a) Yes/No Questions</b><br>
-
-Was/Were + subject + verb(ing) + object?<br>
-
-Was he sleeping?<br> क्या वह सो रहा था?<br>
-
-Were they playing football?<br> क्या वे फुटबॉल खेल रहे थे?<br>
-
-
-<b>(b) WH-Questions</b><br>
-
-Wh-word + was/were + subject + verb(ing) + object?<br>
-
-What were you doing?<br> तुम क्या कर रहे थे?<br>
-
-Where was she going?<br> वह कहाँ जा रही थी?<br>
-
-Why were they shouting?<br> वे क्यों चिल्ला रहे थे?<br>
-
-
-<b>📌 Usage of Past Continuous (प्रयोग)</b><br>
-
-1. किसी विशेष समय पर भूतकाल में चल रही क्रिया<br>
-
-At 8 pm yesterday, I was studying.<br> कल रात 8 बजे मैं पढ़ रहा था।<br>
-
-
-
-2. जब कोई दूसरी क्रिया हुई, तब पहली क्रिया चल रही थी<br>
-
-She was cooking when I called her.<br> जब मैंने उसे फोन किया, वह खाना बना रही थी।<br>
-
-
-
-3. दो क्रियाएँ साथ-साथ चल रही थीं<br>
-
-He was reading while I was writing.<br> वह पढ़ रहा था जबकि मैं लिख रहा था।<br>
-
-
-
-
-<b>🎯 Quick Examples (झटपट उदाहरण)</b><br>
-
-I was eating dinner.<br> मैं खाना खा रहा था।<br>
-
-She was singing a song.<br> वह गाना गा रही थी।<br>
-
-They were playing outside.<br> वे बाहर खेल रहे थे।<br>
-
-We were not sleeping.<br> हम सो नहीं रहे थे।<br>
-
-Were you studying yesterday at 10 pm?<br> क्या तुम कल रात 10 बजे पढ़ रहे थे?<br>
-
-
----
-
-
-
-
-
+                <div class="section-title">🎯 Quick Examples (झटपट उदाहरण)</div>
+                <div class="example-box">
+                    I was eating dinner.<br> मैं खाना खा रहा था।<br>
+                    She was singing a song.<br> वह गाना गा रही थी।<br>
+                    They were playing outside.<br> वे बाहर खेल रहे थे।<br>
+                    We were not sleeping.<br> हम सो नहीं रहे थे।<br>
+                    Were you studying yesterday at 10 pm?<br> क्या तुम कल रात 10 बजे पढ़ रहे थे?
+                </div>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2024 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
