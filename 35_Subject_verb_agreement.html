@@ -2,9 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Subject-Verb Agreement - Speak Fluently</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 0 0 1rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+        .rule-card {
+            background: var(--glass-bg, rgba(0,180,216,0.03));
+            border-radius: 16px;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-left: 3px solid var(--accent, #00b4d8);
+        }
+        .example-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 0.8rem;
+            margin: 1rem 0;
+        }
+        .example-card {
+            background: var(--card-bg, white);
+            padding: 0.6rem 1rem;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+        .eng {
+            font-weight: 500;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .hindi {
+            color: var(--text-secondary, #4a627a);
+            font-size: 0.85rem;
+            margin-top: 4px;
+        }
+        .note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            color: var(--text-secondary);
+        }
+        hr {
+            margin: 1rem 0;
+            border-color: var(--border);
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-content {
+                padding: 1rem;
+            }
+            .example-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,161 +93,152 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-               <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
+
     <main>
-        <h2>
-      Subject Verb Agreement</h2><br>
-<br>
-<b>Sentence Structure</b><br>
-<br>
-Subject + Verb<br>
-<br>
- <br>
-<b>Subject:</b><br>
-<br>
-  - Singular<br>
-  - Plural<br>
-<br>
-<br>
-<br>
-<b>Verb:</b><br>
-<br>
-  - Singular<br>
-  - Plural<br>
-<br>
-<br>
-<br>
-<b>Subject</b><br>
-<br>
--Subject हमेशा Noun या Pronoun ही होता है।<br>
-<br>
-<b>Singular Subjects</b><br>
-<br>
-- He<br>
-- She<br>
-- It<br>
-<br>
-<b>Plural Subjects</b><br>
-<br>
-- We<br>
-- You<br>
-- They<br>
-<br>
-<br>
-<b>Verb Forms</b><br>
-<br>
-Singular Verb<br>
-<br>
-- is<br>
-- was<br>
-- has<br>
-- Verb + s/es → Singular<br>
-<br>
-Plural Verb<br>
-<br>
-- are<br>
-- were<br>
-- have<br>
-<br>
-<br>
-<b>Note-</b><br>
-<br>
-- Noun के अंत में s/es जोड़ने पर वह **Plural** बन जाता है।<br>
-- Verb के अंत में s/es जोड़ने पर वह **Singular** बन जाती है।<br>
-<br>
-<b>Examples</b><br>
-<br>
-1. A dog chase / <b>chases</b> a cat.<br>
-2. Dogs <b>chase</b> / chases cats.**<br>
-<br>
-<br>
-<b>Rule: Noun + and + Noun</b><br>
-<br>
-जब दो subjects "and" से जुड़े हों:<br>
-<br>
-Plural verb<br>
-→ जब दोनों nouns अलग-अलग हों।<br>
-<br>
-Singular verb<br>
-→ जब दोनों nouns एक single unit के रूप में हों।<br>
-<br>
-</b>Examples</b><br>
-<br>
-1. Gold and silver is / <b>are</b> precious metals.<br>
-2. Water and oil <b>do</b> / does not mix.<br>
-3. Fire and ice <b>is</b> / are a famous poem.<br>
-4. Bread and butter <b>is</b> / are my main worry.<br>
-5. Dal, bati and churma <b>is</b> / are a popular dish in Rajasthan.<br>
-<br>
-<br>
-<b>More Examples</b><br>
-<br>
-1. The horse and the carriage <b>is</b> / are waiting outside.<br>
-<br>
-2. Early to bed and early to rise ___ a man healthy, wealthy and wise.
- (a) make <b>(b)makes</b> (c) have made (d) NOTA<br>
-<br>
-3. To take pay and then not to work <b>is</b> / are dishonest.<br>
-<br>
-<br>
-<b>Fixed Pairs (Always Singular)</b><br>
-<br>
-- Rise and fall<br>
-- Slow and steady<br>
-- Law and order<br>
-- Rice and curry<br>
-<br>
-<b>Rules for Singular verb</b><br>
-<br>
-<br>
-1.When two nouns refer to the same person<br>
-<br>
-2.Article first noun के साथ आएगा, दूसरा noun same व्यक्ति को बताएगा। → Verb singular होगी।<br>
-<br>
-<b>Examples</b><br>
-<br>
-1. The teacher and singer <b>has</b> / have invited me to his birthday party.<br>
-<br>
-2. The poet and philosopher <b>is</b> / are coming here.<br>
-<br>
-3. The poet and the philosopher is / <b>are</b> coming here. (Here both nouns refer to two different persons.)<br>
-<br>
-4. My friend and guide live / <b>lives</b> in the U.S.A. (Same person → singular verb)<br>
-<br>
-5. My friend and my guide <b>live</b> / lives in the U.S.A. (Two persons → plural verb)<br>
-<br>
-<br>
-<b>Note</b><br>
-<br>
-If the subject has <b>each</b> or <b>every</b>, singular verb is used.<br>
-<br>
-<b>Examples</b><br>
-<br>
-1. Each boy and girl <b>is</b> / are willing to join this competition.<br>
-<br>
-2. Every Peter, Tom, and Harry <b>has</b> / have a mobile now-a-days.<br>
-<br>
-3. Every leaf and flower proclaim / <b>proclaims</b> the glory of God.<br>
-<br>
+        <div class="lesson-container">
+            <div class="lesson-content">
+                <h2>📖 Subject-Verb Agreement (Syntax)</h2>
+                <p><strong>Sentence Structure:</strong> Subject + Verb</p>
 
+                <h3>Subject</h3>
+                <p>Subject हमेशा Noun या Pronoun ही होता है।</p>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng"><strong>Singular Subjects:</strong> He, She, It</div></div>
+                    <div class="example-card"><div class="eng"><strong>Plural Subjects:</strong> We, You, They</div></div>
+                </div>
 
+                <h3>Verb Forms</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng"><strong>Singular Verb:</strong> is, was, has, Verb + s/es</div></div>
+                    <div class="example-card"><div class="eng"><strong>Plural Verb:</strong> are, were, have</div></div>
+                </div>
 
+                <div class="note">
+                    <i class="fas fa-lightbulb"></i> <strong>Note:</strong><br>
+                    - Noun के अंत में s/es जोड़ने पर वह <strong>Plural</strong> बन जाता है।<br>
+                    - Verb के अंत में s/es जोड़ने पर वह <strong>Singular</strong> बन जाती है।
+                </div>
+
+                <div class="example-card">
+                    <div class="eng">1. A dog chase / <strong>chases</strong> a cat.</div>
+                    <div class="eng">2. Dogs <strong>chase</strong> / chases cats.</div>
+                </div>
+
+                <h3>Rule: Noun + and + Noun</h3>
+                <p>जब दो subjects "and" से जुड़े हों:</p>
+                <ul>
+                    <li><strong>Plural verb</strong> → जब दोनों nouns अलग-अलग हों।</li>
+                    <li><strong>Singular verb</strong> → जब दोनों nouns एक single unit के रूप में हों।</li>
+                </ul>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">Gold and silver <strong>are</strong> precious metals.</div></div>
+                    <div class="example-card"><div class="eng">Water and oil <strong>do</strong> not mix.</div></div>
+                    <div class="example-card"><div class="eng">Fire and ice <strong>is</strong> a famous poem.</div></div>
+                    <div class="example-card"><div class="eng">Bread and butter <strong>is</strong> my main worry.</div></div>
+                    <div class="example-card"><div class="eng">Dal, bati and churma <strong>is</strong> a popular dish in Rajasthan.</div></div>
+                </div>
+
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">The horse and the carriage <strong>is</strong> waiting outside.</div></div>
+                    <div class="example-card"><div class="eng">Early to bed and early to rise <strong>makes</strong> a man healthy, wealthy and wise.</div></div>
+                    <div class="example-card"><div class="eng">To take pay and then not to work <strong>is</strong> dishonest.</div></div>
+                </div>
+
+                <h3>Fixed Pairs (Always Singular)</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">Rise and fall</div></div>
+                    <div class="example-card"><div class="eng">Slow and steady</div></div>
+                    <div class="example-card"><div class="eng">Law and order</div></div>
+                    <div class="example-card"><div class="eng">Rice and curry</div></div>
+                </div>
+
+                <h3>Rules for Singular Verb</h3>
+                <p>1. When two nouns refer to the same person<br>
+                2. Article first noun के साथ आएगा, दूसरा noun same व्यक्ति को बताएगा। → Verb singular होगी।</p>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">The teacher and singer <strong>has</strong> invited me to his birthday party.</div></div>
+                    <div class="example-card"><div class="eng">The poet and philosopher <strong>is</strong> coming here.</div></div>
+                    <div class="example-card"><div class="eng">The poet and the philosopher <strong>are</strong> coming here. (Two different persons)</div></div>
+                    <div class="example-card"><div class="eng">My friend and guide <strong>lives</strong> in the U.S.A. (Same person)</div></div>
+                    <div class="example-card"><div class="eng">My friend and my guide <strong>live</strong> in the U.S.A. (Two persons)</div></div>
+                </div>
+
+                <div class="note">
+                    <i class="fas fa-lightbulb"></i> <strong>Note:</strong> If the subject has <strong>each</strong> or <strong>every</strong>, singular verb is used.
+                </div>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">Each boy and girl <strong>is</strong> willing to join this competition.</div></div>
+                    <div class="example-card"><div class="eng">Every Peter, Tom, and Harry <strong>has</strong> a mobile nowadays.</div></div>
+                    <div class="example-card"><div class="eng">Every leaf and flower <strong>proclaims</strong> the glory of God.</div></div>
+                </div>
+
+                <hr>
+                <p style="text-align: center; color: var(--accent);"><i class="fas fa-check-circle"></i> Master subject-verb agreement to write and speak correct English!</p>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2024 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
