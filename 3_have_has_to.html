@@ -2,9 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Have to / Has to / Will have to - Speak Fluently</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 0 0 1rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+        .example-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        .example-card {
+            background: var(--glass-bg, rgba(0,180,216,0.03));
+            padding: 0.8rem 1rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent, #00b4d8);
+            transition: transform 0.2s;
+        }
+        .example-card:hover {
+            transform: translateX(5px);
+            background: rgba(0,180,216,0.08);
+        }
+        .eng {
+            font-weight: 600;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .hindi {
+            color: var(--text-secondary, #4a627a);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        .note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            color: var(--text-secondary);
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-content {
+                padding: 1rem;
+            }
+            .example-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,90 +87,145 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
+
     <main>
-        <h2>Have/has/will have to</h2>
-        
+        <div class="lesson-container">
+            <div class="lesson-content">
+                <h2>📌 Have to / Has to / Will have to</h2>
+                <p>These expressions show <strong>obligation, necessity, or compulsion</strong> (करना पड़ता है, पड़ेगा, पड़ा था, etc.)</p>
 
-1. Have to/has to = करना पड़ता है<br>
-→ मुझे खाना बनाना पड़ता है।<br>
-Ex- I have to cook<br><br>
+                <!-- Original Content (Preserved) -->
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">Have to / Has to</div><div class="hindi">करना पड़ता है</div><div class="eng">I have to cook</div><div class="hindi">मुझे खाना बनाना पड़ता है।</div></div>
+                    <div class="example-card"><div class="eng">Had to</div><div class="hindi">करना पड़ा था / करना पड़ा</div><div class="eng">I had to cook</div><div class="hindi">मुझे खाना बनाना पड़ता था।</div></div>
+                    <div class="example-card"><div class="eng">Will have to</div><div class="hindi">करना पड़ेगा</div><div class="eng">I will have to cook</div><div class="hindi">मुझे खाना बनाना पड़ेगा।</div></div>
+                    <div class="example-card"><div class="eng">Be having to (Present continuous)</div><div class="hindi">करना पड़ रहा है</div><div class="eng">I am having to cook</div><div class="hindi">मुझे खाना बनाना पड़ रहा है।</div></div>
+                    <div class="example-card"><div class="eng">Was having to (Past continuous)</div><div class="hindi">करना पड़ रहा था</div><div class="eng">I was having to cook</div><div class="hindi">मुझे खाना बनाना पड़ रहा था।</div></div>
+                    <div class="example-card"><div class="eng">I have to go</div><div class="hindi">1) मुझे जाना है 2) मुझे जाना पड़ता है</div></div>
+                    <div class="example-card"><div class="eng">She does not have to cook</div><div class="hindi">उसे खाना नहीं बनाना पड़ता है।</div></div>
+                    <div class="example-card"><div class="eng">She did not have to cook</div><div class="hindi">उसे खाना नहीं बनाना पड़ता था।</div></div>
+                    <div class="example-card"><div class="eng">She will not have to cook</div><div class="hindi">उसे खाना नहीं बनाना पड़ेगा।</div></div>
+                    <div class="example-card"><div class="eng">She is not having to cook</div><div class="hindi">उसे खाना नहीं बनाना पड़ रहा है।</div></div>
+                    <div class="example-card"><div class="eng">Does she have to cook?</div><div class="hindi">क्या उसे खाना बनाना पड़ता है?</div></div>
+                    <div class="example-card"><div class="eng">Did she have to cook?</div><div class="hindi">क्या उसे खाना बनाना पड़ा था?</div></div>
+                </div>
 
+                <!-- Additional Examples - Affirmative -->
+                <h3>✅ Affirmative Sentences (सकारात्मक वाक्य)</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">He has to wake up early.</div><div class="hindi">उसे जल्दी उठना पड़ता है।</div></div>
+                    <div class="example-card"><div class="eng">We have to finish the project by tomorrow.</div><div class="hindi">हमें कल तक प्रोजेक्ट खत्म करना पड़ेगा।</div></div>
+                    <div class="example-card"><div class="eng">She had to wait for an hour.</div><div class="hindi">उसे एक घंटा इंतज़ार करना पड़ा।</div></div>
+                    <div class="example-card"><div class="eng">They will have to pay the fine.</div><div class="hindi">उन्हें जुर्माना भरना पड़ेगा।</div></div>
+                    <div class="example-card"><div class="eng">You have to wear a helmet.</div><div class="hindi">तुम्हें हेलमेट पहनना पड़ता है।</div></div>
+                    <div class="example-card"><div class="eng">Rahul has to study harder.</div><div class="hindi">राहुल को और मेहनत से पढ़ना पड़ेगा।</div></div>
+                </div>
 
-2. Had to = करना पड़ा था/करना पड़ा<br>
-→ मुझे खाना बनाना पड़ता था।<br>
-I had to cook<br><br>
+                <!-- Additional Examples - Negative -->
+                <h3>❌ Negative Sentences (नकारात्मक वाक्य)</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">You don't have to come tomorrow.</div><div class="hindi">तुम्हें कल आने की ज़रूरत नहीं है।</div></div>
+                    <div class="example-card"><div class="eng">He doesn't have to explain anything.</div><div class="hindi">उसे कुछ समझाने की ज़रूरत नहीं है।</div></div>
+                    <div class="example-card"><div class="eng">We didn't have to pay extra.</div><div class="hindi">हमें अतिरिक्त भुगतान नहीं करना पड़ा।</div></div>
+                    <div class="example-card"><div class="eng">She won't have to work on Sunday.</div><div class="hindi">उसे रविवार को काम नहीं करना पड़ेगा।</div></div>
+                    <div class="example-card"><div class="eng">I am not having to do this alone.</div><div class="hindi">मुझे यह अकेले नहीं करना पड़ रहा है।</div></div>
+                </div>
 
+                <!-- Additional Examples - Interrogative -->
+                <h3>❓ Interrogative Sentences (प्रश्नवाचक वाक्य)</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">Do you have to leave now?</div><div class="hindi">क्या तुम्हें अभी जाना है?</div></div>
+                    <div class="example-card"><div class="eng">Does he have to attend the meeting?</div><div class="hindi">क्या उसे मीटिंग में शामिल होना है?</div></div>
+                    <div class="example-card"><div class="eng">Did they have to wait long?</div><div class="hindi">क्या उन्हें लंबा इंतज़ार करना पड़ा?</div></div>
+                    <div class="example-card"><div class="eng">Will you have to work on Saturday?</div><div class="hindi">क्या तुम्हें शनिवार को काम करना पड़ेगा?</div></div>
+                    <div class="example-card"><div class="eng">Is she having to manage everything alone?</div><div class="hindi">क्या उसे सब कुछ अकेले संभालना पड़ रहा है?</div></div>
+                </div>
 
-3. Will have to - करना पड़ेगा<br>
-→ मुझे खाना बनाना पड़ेगा।<br>
-I will have to cook<br><br>
+                <!-- Additional Examples - Wh- Questions -->
+                <h3>❓ Wh- Questions</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">Why do you have to go so early?</div><div class="hindi">तुम्हें इतनी जल्दी क्यों जाना है?</div></div>
+                    <div class="example-card"><div class="eng">What time does she have to reach the station?</div><div class="hindi">उसे स्टेशन कितने बजे पहुँचना है?</div></div>
+                    <div class="example-card"><div class="eng">How much did you have to pay?</div><div class="hindi">तुम्हें कितना भुगतान करना पड़ा?</div></div>
+                    <div class="example-card"><div class="eng">Where will we have to go?</div><div class="hindi">हमें कहाँ जाना पड़ेगा?</div></div>
+                </div>
 
+                <!-- Notes -->
+                <div class="note">
+                    <i class="fas fa-lightbulb"></i> <strong>Important Notes:</strong><br>
+                    • <strong>Have to</strong> – used with I, you, we, they, plural nouns<br>
+                    • <strong>Has to</strong> – used with he, she, it, singular nouns<br>
+                    • <strong>Had to</strong> – past form for all subjects<br>
+                    • <strong>Will have to</strong> – future form for all subjects<br>
+                    • <strong>Do/Does/Did</strong> – used to form negatives and questions (with "have to")
+                </div>
 
-4. Be having to - करना पड़ रहा है/था<br>
-→ मुझे खाना बनाना पड़ रहा है।<br>
-I am having to cook<br><br>
-
-
-5. → मुझे खाना बनाना पड़ रहा था।<br>
-I was having to cook<br><br>
-
-
-6. → I have to go - <br>
- 1) मुझे जाना है<br>
- 2) मुझे जाना पड़ता है<br>
-I have to go<br><br>
-
-
-7. → मुझे खाना बनाना पड़ रहा था।<br>
-I was having to cook<br><br>
-
-
-8. → उसे खाना नहीं बनाना पड़ रहा है।<br>
-She is not having to cook<br><br>
-
-
-9. → She does not have to cook<br>
-उसे खाना नहीं बनाना पड़ता है।<br><br>
-
-
-10. → She did not have to cook<br>
-उसे खाना नहीं बनाना पड़ता था<br><br>
-
-
-11. → उसे खाना नहीं बनाना पड़ेगा<br>
-She will not have to cook<br><br>
-
-
-12. → उसे खाना नहीं बनाना पड़ रहा है<br>
-She is not having to cook<br><br>
-
-
-13. → क्या उसे खाना बनाना पड़ रहा है?<br>
-Does she have to cook?<br><br>
-
-
-14. → क्या उसे खाना बनाना पड़ा था?<br>
-Did she have to cook<br><br>
-
-
-
+                <p style="margin-top: 1rem; text-align: center; color: var(--accent);"><i class="fas fa-check-circle"></i> Practice these structures to express obligation and necessity correctly!</p>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2024 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
