@@ -2,9 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>WH Words - Speak Fluently</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 0 0 1rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+        .example-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        .example-card {
+            background: var(--glass-bg, rgba(0,180,216,0.03));
+            padding: 0.7rem 1rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent, #00b4d8);
+            transition: transform 0.2s;
+        }
+        .example-card:hover {
+            transform: translateX(5px);
+            background: rgba(0,180,216,0.08);
+        }
+        .eng {
+            font-weight: 600;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .hindi {
+            color: var(--text-secondary, #4a627a);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        .note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            color: var(--text-secondary);
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-content {
+                padding: 1rem;
+            }
+            .example-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,245 +87,231 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
+
     <main>
-        <h2>WH Words</h2>
-
-<b>🟦 Wh-Question Words with Examples (Wh + hv + s + mv + o ?)</b><br><br>
-
-
-<b>🟦 1.When – कब</b><br><br>
-
-1. When do you get up?<br> 👉 आप कब उठते हो?<br><br>
-
-
-2. When do you go to school?<br> 👉 आप स्कूल कब जाते हो?<br><br>
-
-
-3. When will you come back?<br> 👉 आप वापस कब आओगे?<br><br>
-
-
-4. When did you meet him?<br> 👉 आप उससे कब मिले थे?<br><br>
-
-
-5. When should I call you?<br> 👉 मुझे आपको कब कॉल करना चाहिए?<br><br>
-
-
-
-<b>🟦 2.How – कैसे</b><br><br>
-
-1. How do you go to school?<br> 👉 आप स्कूल कैसे जाते हो?<br><br>
-
-
-2. How did you make this project?<br> 👉 आपने यह प्रोजेक्ट कैसे बनाया?<br><br>
-
-
-3. How will you solve this problem?<br> 👉 आप इस समस्या को कैसे सुलझाओगे?<br><br>
-
-
-4. How are you learning English?<br> 👉 आप अंग्रेजी कैसे सीख रहे हैं?<br><br>
-
-
-5. How can I help you?<br> 👉 मैं आपकी मदद कैसे कर सकता हूँ?<br><br>
-
-
-<b>3. Why – क्यों</b><br><br>
-
-1. Why do you speak English?<br> 👉 आप अंग्रेजी क्यों बोलते हो?<br><br>
-
-
-2. Why do you come here?<br> 👉 आप यहाँ क्यों आते हो?<br><br>
-
-
-3. Why do you go there?<br> 👉 आप वहाँ क्यों जाते हो?<br><br>
-
-
-4. Why do you learn English?<br> 👉 आप अंग्रेजी क्यों सीखते हो?<br><br>
-
-
-5. Why did you learn English?<br> 👉 आपने अंग्रेजी क्यों सीखी?<br><br>
-
-
-6. Why will you learn English?<br> 👉 आप अंग्रेजी क्यों सीखोगे?<br><br>
-
-
-7. Why are you learning English?<br> 👉 आप अंग्रेजी क्यों सीख रहे हैं?<br><br>
-
-
-8. Why are you going?<br> 👉 आप क्यों जा रहे हो?<br><br>
-
-
-9. Why are you come here? ❌ ✅ Why do you come here?<br> 👉 आप यहाँ क्यों आते हो?<br><br>
-
-
-10. Why do you help him?<br> 👉 आप उसकी मदद क्यों करते हो?<br><br>
-
-
-11. Why can you help him?<br> 👉 आप उसकी मदद क्यों कर सकते हो?<br><br>
-
-
-12. Why should I help him?<br> 👉 मुझे उसकी मदद क्यों करनी चाहिए?<br><br>
-
-
-13. Why should I go there?<br> 👉 मुझे वहाँ क्यों जाना चाहिए?<br><br>
-
-
-
-<b>4. How far – कितनी दूर</b><br><br>
-
-1. How far is your home?<br> 👉 आपका घर कितनी दूर है?<br><br> ➡ My house is 12 km far from coaching.<br><br>
-
-
-2. How far is your college?<br> 👉 आपका कॉलेज कितनी दूर है?<br><br>
-
-
-
-<b>5. How long – कितनी देर</b><br><br>
-
-1. How long do you sleep?<br> 👉 आप कितनी देर सोते हो?<br><br> ➡ I sleep for 10 hours.<br><br>
-
-
-
-<b>6. How many – कितने / कितनी (Countable Nouns)</b><br><br>
-
-1. How many people are going there?<br> 👉 कितने लोग वहाँ जा रहे हैं?<br><br>
-
-
-2. How many boys are absent today?<br> 👉 आज कितने लड़के अनुपस्थित हैं?<br><br> ➡ Ten boys are absent today.<br><br>
-
-
-3. How many pens are you buying?<br> 👉 आप कितने पेन खरीद रहे हैं?<br><br>
-
-
-4. How many children are there in class?<br> 👉 कक्षा में कितने बच्चे हैं?<br><br>
-
-
-
-<b>7. How much – कितना (Uncountable Nouns)</b><br><br>
-
-1. How much water do you drink?<br> 👉 आप कितना पानी पीते हो?<br><br> ➡ I drink two liters of water.<br><br>
-
-
-2. How much milk will you buy?<br> 👉 आप कितना दूध खरीदोगे?<br><br>
-
-
-
-<b>8. How many times – कितनी बार</b><br><br>
-
-1. How many times have you watched this movie?<br> 👉 आपने यह फ़िल्म कितनी बार देखी है?<br><br>
-
-
-2. How many times have you gone there?<br> 👉 आप वहाँ कितनी बार गए हैं?<br><br> ➡ I have gone there ten times.<br><br>
-
-
-
-<b>9. How much time – कितना समय</b><br><br>
-
-1. How much time do you sleep?<br> 👉 आप कितना समय सोते हो?<br><br>
-
-
-2. How much time do you take rest?<br> 👉 आप कितना समय आराम करते हो?<br><br>
-
-
-
-<b>10. For whom – किसके लिए</b><br><br>
-
-1. For whom are you making tea?<br> 👉 आप किसके लिए चाय बना रहे हो?<br><br>
-
-
-2. For whom are you cooking food?<br> 👉 आप किसके लिए खाना बना रहे हो?<br><br> ➡ I am cooking food for father.<br><br>
-
-
-
-<b>11. With whom – किसके साथ</b><br><br>
-
-1. With whom do you come here?<br> 👉 आप यहाँ किसके साथ आते हो?<br><br> ➡ I come here with my sister.<br><br>
-
-
-
-<b>12. Which – कौन-सा</b><br><br>
-
-1. Which pen is yours?<br> 👉 कौन-सा पेन आपका है?<br><br>
-
-
-2. Which is your favourite colour?<br> 👉 आपका पसंदीदा रंग कौन-सा है?<br><br>
-
-
-3. In which city is your institute?<br> 👉 आपका संस्थान किस शहर में है?<br><br>
-
-
-
-
----
-
-<b>🟩 Daily Classroom Sentences</b><br><br>
-
-1. I am going first.<br> 👉 मैं पहले जा रहा हूँ।<br><br>
-
-
-2. Who can tell?<br> 👉 कौन बता सकता है?<br><br>
-
-
-3. Today we will study computer.<br> 👉 आज हम कम्प्यूटर पढ़ेंगे।<br><br>
-
-
-4. I am taking attendance.<br> 👉 मैं उपस्थिति ले रहा हूँ।<br><br>
-
-
-5. How many children are absent?<br> 👉 कितने बच्चे अनुपस्थित हैं?<br><br>
-
-
-6. Take out the computer book.<br> 👉 कम्प्यूटर की पुस्तक निकालो।<br><br>
-
-
-7. Put the book in the bag.<br> 👉 पुस्तक को बैग में डालो।<br><br>
-
-
-8. Put your finger on the book.<br> 👉 पुस्तक पर उंगली रखो।<br><br>
-
-
-9. Listen and repeat.<br> 👉 सुनो और दोहराओ।<br><br>
-
-
-10. Yesterday we studied about computer language.<br> 👉 कल हमने कम्प्यूटर भाषा पढ़ी थी।<br><br>
-
-
-11. Today we will study types of computer.<br> 👉 आज हम कम्प्यूटर के प्रकार पढ़ेंगे।<br><br>
-
-
-12. Who didn’t do homework?<br> 👉 किसने होमवर्क नहीं किया?<br><br>
-
-
-13. Who is in class now?<br> 👉 अभी कक्षा में कौन है?<br><br>
-
-
-14. Read it.<br> 👉 इसे पढ़ो।<br><br>
-
-
-15. Write it down.<br> 👉 इसे लिखो।<br><br>
-
-
-
-
----
-
-
+        <div class="lesson-container">
+            <div class="lesson-content">
+                <h2>❓ WH Question Words (प्रश्नवाचक शब्द)</h2>
+                <p>Structure: <strong>Wh-word + helping verb + subject + main verb + object ?</strong></p>
+
+                <!-- 1. What -->
+                <h3>🔹 What – क्या</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">What is your name?</div><div class="hindi">आपका नाम क्या है?</div></div>
+                    <div class="example-card"><div class="eng">What do you want?</div><div class="hindi">आप क्या चाहते हैं?</div></div>
+                    <div class="example-card"><div class="eng">What are you doing?</div><div class="hindi">आप क्या कर रहे हैं?</div></div>
+                    <div class="example-card"><div class="eng">What will you eat?</div><div class="hindi">आप क्या खाओगे?</div></div>
+                    <div class="example-card"><div class="eng">What did you see?</div><div class="hindi">आपने क्या देखा?</div></div>
+                </div>
+
+                <!-- 2. Where -->
+                <h3>📍 Where – कहाँ</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">Where do you live?</div><div class="hindi">आप कहाँ रहते हैं?</div></div>
+                    <div class="example-card"><div class="eng">Where are you going?</div><div class="hindi">आप कहाँ जा रहे हैं?</div></div>
+                    <div class="example-card"><div class="eng">Where is the station?</div><div class="hindi">स्टेशन कहाँ है?</div></div>
+                    <div class="example-card"><div class="eng">Where did you keep my phone?</div><div class="hindi">आपने मेरा फोन कहाँ रखा?</div></div>
+                </div>
+
+                <!-- 3. When -->
+                <h3>⏰ When – कब</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">When do you get up?</div><div class="hindi">आप कब उठते हो?</div></div>
+                    <div class="example-card"><div class="eng">When do you go to school?</div><div class="hindi">आप स्कूल कब जाते हो?</div></div>
+                    <div class="example-card"><div class="eng">When will you come back?</div><div class="hindi">आप वापस कब आओगे?</div></div>
+                    <div class="example-card"><div class="eng">When did you meet him?</div><div class="hindi">आप उससे कब मिले थे?</div></div>
+                    <div class="example-card"><div class="eng">When should I call you?</div><div class="hindi">मुझे आपको कब कॉल करना चाहिए?</div></div>
+                </div>
+
+                <!-- 4. Why -->
+                <h3>🤔 Why – क्यों</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">Why do you speak English?</div><div class="hindi">आप अंग्रेजी क्यों बोलते हो?</div></div>
+                    <div class="example-card"><div class="eng">Why are you learning English?</div><div class="hindi">आप अंग्रेजी क्यों सीख रहे हैं?</div></div>
+                    <div class="example-card"><div class="eng">Why did you come late?</div><div class="hindi">आप देर से क्यों आए?</div></div>
+                    <div class="example-card"><div class="eng">Why will you go there?</div><div class="hindi">आप वहाँ क्यों जाओगे?</div></div>
+                    <div class="example-card"><div class="eng">Why should I help him?</div><div class="hindi">मुझे उसकी मदद क्यों करनी चाहिए?</div></div>
+                </div>
+
+                <!-- 5. Who -->
+                <h3>👤 Who – कौन</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">Who is your teacher?</div><div class="hindi">आपका शिक्षक कौन है?</div></div>
+                    <div class="example-card"><div class="eng">Who will come with me?</div><div class="hindi">मेरे साथ कौन आएगा?</div></div>
+                    <div class="example-card"><div class="eng">Who did this?</div><div class="hindi">यह किसने किया?</div></div>
+                    <div class="example-card"><div class="eng">Who is standing there?</div><div class="hindi">वहाँ कौन खड़ा है?</div></div>
+                </div>
+
+                <!-- 6. Whom -->
+                <h3>👥 Whom – किसको / किसे (formal)</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">Whom did you meet?</div><div class="hindi">आप किससे मिले?</div></div>
+                    <div class="example-card"><div class="eng">Whom are you calling?</div><div class="hindi">आप किसे बुला रहे हैं?</div></div>
+                    <div class="example-card"><div class="eng">With whom did you go?</div><div class="hindi">आप किसके साथ गए थे?</div></div>
+                </div>
+
+                <!-- 7. Whose -->
+                <h3>🔑 Whose – किसका</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">Whose book is this?</div><div class="hindi">यह किसकी किताब है?</div></div>
+                    <div class="example-card"><div class="eng">Whose phone is ringing?</div><div class="hindi">किसका फोन बज रहा है?</div></div>
+                    <div class="example-card"><div class="eng">Whose car is parked outside?</div><div class="hindi">बाहर किसकी गाड़ी खड़ी है?</div></div>
+                </div>
+
+                <!-- 8. Which -->
+                <h3>🔎 Which – कौन-सा / कौन-सी</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">Which pen is yours?</div><div class="hindi">कौन-सा पेन आपका है?</div></div>
+                    <div class="example-card"><div class="eng">Which is your favourite colour?</div><div class="hindi">आपका पसंदीदा रंग कौन-सा है?</div></div>
+                    <div class="example-card"><div class="eng">In which city is your institute?</div><div class="hindi">आपका संस्थान किस शहर में है?</div></div>
+                </div>
+
+                <!-- 9. How (General) -->
+                <h3>⚙️ How – कैसे</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">How do you go to school?</div><div class="hindi">आप स्कूल कैसे जाते हो?</div></div>
+                    <div class="example-card"><div class="eng">How did you make this project?</div><div class="hindi">आपने यह प्रोजेक्ट कैसे बनाया?</div></div>
+                    <div class="example-card"><div class="eng">How will you solve this problem?</div><div class="hindi">आप इस समस्या को कैसे सुलझाओगे?</div></div>
+                    <div class="example-card"><div class="eng">How can I help you?</div><div class="hindi">मैं आपकी मदद कैसे कर सकता हूँ?</div></div>
+                </div>
+
+                <!-- 10. How far -->
+                <h3>📏 How far – कितनी दूर</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">How far is your home?</div><div class="hindi">आपका घर कितनी दूर है?</div></div>
+                    <div class="example-card"><div class="eng">How far is the railway station?</div><div class="hindi">रेलवे स्टेशन कितनी दूर है?</div></div>
+                </div>
+
+                <!-- 11. How long -->
+                <h3>⏳ How long – कितनी देर / कितने समय</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">How long do you sleep?</div><div class="hindi">आप कितनी देर सोते हो?</div></div>
+                    <div class="example-card"><div class="eng">How long will you stay here?</div><div class="hindi">आप यहाँ कितनी देर रुकोगे?</div></div>
+                    <div class="example-card"><div class="eng">How long have you been waiting?</div><div class="hindi">आप कितनी देर से इंतज़ार कर रहे हैं?</div></div>
+                </div>
+
+                <!-- 12. How many (Countable) -->
+                <h3>🔢 How many – कितने / कितनी (गणनीय)</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">How many people are going there?</div><div class="hindi">कितने लोग वहाँ जा रहे हैं?</div></div>
+                    <div class="example-card"><div class="eng">How many boys are absent today?</div><div class="hindi">आज कितने लड़के अनुपस्थित हैं?</div></div>
+                    <div class="example-card"><div class="eng">How many pens are you buying?</div><div class="hindi">आप कितने पेन खरीद रहे हैं?</div></div>
+                </div>
+
+                <!-- 13. How much (Uncountable) -->
+                <h3>⚖️ How much – कितना (अगणनीय)</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">How much water do you drink?</div><div class="hindi">आप कितना पानी पीते हो?</div></div>
+                    <div class="example-card"><div class="eng">How much milk will you buy?</div><div class="hindi">आप कितना दूध खरीदोगे?</div></div>
+                    <div class="example-card"><div class="eng">How much does this cost?</div><div class="hindi">इसकी कीमत कितनी है?</div></div>
+                </div>
+
+                <!-- 14. How many times / How often -->
+                <h3>🔄 How many times / How often – कितनी बार</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">How many times have you watched this movie?</div><div class="hindi">आपने यह फ़िल्म कितनी बार देखी है?</div></div>
+                    <div class="example-card"><div class="eng">How often do you exercise?</div><div class="hindi">आप कितनी बार व्यायाम करते हैं?</div></div>
+                    <div class="example-card"><div class="eng">How many times have you gone there?</div><div class="hindi">आप वहाँ कितनी बार गए हैं?</div></div>
+                </div>
+
+                <!-- 15. For whom / With whom -->
+                <h3>👥 For whom / With whom – किसके लिए / किसके साथ</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">For whom are you cooking food?</div><div class="hindi">आप किसके लिए खाना बना रहे हो?</div></div>
+                    <div class="example-card"><div class="eng">With whom do you come here?</div><div class="hindi">आप यहाँ किसके साथ आते हो?</div></div>
+                </div>
+
+                <!-- Bonus: Daily Classroom Sentences -->
+                <h3>🏫 Daily Classroom Sentences</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">I am going first.</div><div class="hindi">मैं पहले जा रहा हूँ।</div></div>
+                    <div class="example-card"><div class="eng">Who can tell?</div><div class="hindi">कौन बता सकता है?</div></div>
+                    <div class="example-card"><div class="eng">Today we will study computer.</div><div class="hindi">आज हम कम्प्यूटर पढ़ेंगे।</div></div>
+                    <div class="example-card"><div class="eng">I am taking attendance.</div><div class="hindi">मैं उपस्थिति ले रहा हूँ।</div></div>
+                    <div class="example-card"><div class="eng">How many children are absent?</div><div class="hindi">कितने बच्चे अनुपस्थित हैं?</div></div>
+                    <div class="example-card"><div class="eng">Take out the computer book.</div><div class="hindi">कम्प्यूटर की पुस्तक निकालो।</div></div>
+                    <div class="example-card"><div class="eng">Put the book in the bag.</div><div class="hindi">पुस्तक को बैग में डालो।</div></div>
+                    <div class="example-card"><div class="eng">Put your finger on the book.</div><div class="hindi">पुस्तक पर उंगली रखो।</div></div>
+                    <div class="example-card"><div class="eng">Listen and repeat.</div><div class="hindi">सुनो और दोहराओ।</div></div>
+                    <div class="example-card"><div class="eng">Yesterday we studied about computer language.</div><div class="hindi">कल हमने कम्प्यूटर भाषा पढ़ी थी।</div></div>
+                    <div class="example-card"><div class="eng">Today we will study types of computer.</div><div class="hindi">आज हम कम्प्यूटर के प्रकार पढ़ेंगे।</div></div>
+                    <div class="example-card"><div class="eng">Who didn’t do homework?</div><div class="hindi">किसने होमवर्क नहीं किया?</div></div>
+                    <div class="example-card"><div class="eng">Who is in class now?</div><div class="hindi">अभी कक्षा में कौन है?</div></div>
+                    <div class="example-card"><div class="eng">Read it.</div><div class="hindi">इसे पढ़ो।</div></div>
+                    <div class="example-card"><div class="eng">Write it down.</div><div class="hindi">इसे लिखो।</div></div>
+                </div>
+
+                <div class="note">
+                    <i class="fas fa-lightbulb"></i> <strong>Tip:</strong> WH questions usually follow the pattern: <strong>Wh-word + helping verb (do/does/did/is/are/was/were/have/has/will) + subject + main verb + object?</strong><br>
+                    For "Who" as the subject, no helping verb is needed (e.g., Who came?). For "Whom" and "Whose", use more formal structures.
+                </div>
+
+                <p style="margin-top: 1rem; text-align: center; color: var(--accent);"><i class="fas fa-question-circle"></i> Master these WH words to ask questions fluently in English!</p>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2024 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
