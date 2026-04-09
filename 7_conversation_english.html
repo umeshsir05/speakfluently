@@ -2,9 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>बोलचाल वाला English - Speak Fluently</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 0 0 1rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+        .phrase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        .phrase-card {
+            background: var(--glass-bg, rgba(0,180,216,0.03));
+            padding: 0.7rem 1rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent, #00b4d8);
+            transition: transform 0.2s;
+        }
+        .phrase-card:hover {
+            transform: translateX(5px);
+            background: rgba(0,180,216,0.08);
+        }
+        .eng {
+            font-weight: 600;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .hindi {
+            color: var(--text-secondary, #4a627a);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-content {
+                padding: 1rem;
+            }
+            .phrase-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,77 +80,152 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
+
     <main>
-        <h2>बोलचाल वाला English</h2>
-        <pre>
+        <div class="lesson-container">
+            <div class="lesson-content">
+                <h2>🗣️ बोलचाल वाला English (Daily Spoken Phrases)</h2>
+                <p>ये रोज़मर्रा के छोटे-छोटे वाक्य हैं जो बातचीत को आसान और प्राकृतिक बनाते हैं।</p>
 
+                <!-- Original phrases (1-15) -->
+                <h3>📌 Basic Command Phrases</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Speak out</div><div class="hindi">बोल दो</div></div>
+                    <div class="phrase-card"><div class="eng">Tell off</div><div class="hindi">बता दो</div></div>
+                    <div class="phrase-card"><div class="eng">Call him out / Call her out</div><div class="hindi">बुला लो</div></div>
+                    <div class="phrase-card"><div class="eng">Make me understand / Make him understand</div><div class="hindi">समझा दो</div></div>
+                    <div class="phrase-card"><div class="eng">Wait a while</div><div class="hindi">इंतज़ार करो</div></div>
+                    <div class="phrase-card"><div class="eng">Dig it out</div><div class="hindi">खोद दो</div></div>
+                    <div class="phrase-card"><div class="eng">Tie it</div><div class="hindi">बाँध दो</div></div>
+                    <div class="phrase-card"><div class="eng">Sell it out</div><div class="hindi">बेच दो</div></div>
+                    <div class="phrase-card"><div class="eng">Buy it off</div><div class="hindi">खरीद लो</div></div>
+                    <div class="phrase-card"><div class="eng">Lie him down</div><div class="hindi">लिटा दो</div></div>
+                    <div class="phrase-card"><div class="eng">Make him sleep</div><div class="hindi">सुला दो</div></div>
+                    <div class="phrase-card"><div class="eng">Remove it</div><div class="hindi">हटा दो</div></div>
+                    <div class="phrase-card"><div class="eng">Burst it out</div><div class="hindi">फोड़ दो</div></div>
+                    <div class="phrase-card"><div class="eng">Hold it</div><div class="hindi">पकड़ लो</div></div>
+                    <div class="phrase-card"><div class="eng">Throw it away</div><div class="hindi">फेंक दो</div></div>
+                </div>
 
+                <!-- More everyday phrases -->
+                <h3>🙏 Polite & Helpful Phrases</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Come in</div><div class="hindi">अंदर आओ</div></div>
+                    <div class="phrase-card"><div class="eng">Sit down</div><div class="hindi">बैठ जाओ</div></div>
+                    <div class="phrase-card"><div class="eng">Stand up</div><div class="hindi">खड़े हो जाओ</div></div>
+                    <div class="phrase-card"><div class="eng">Look here</div><div class="hindi">यहाँ देखो</div></div>
+                    <div class="phrase-card"><div class="eng">Listen carefully</div><div class="hindi">ध्यान से सुनो</div></div>
+                    <div class="phrase-card"><div class="eng">Repeat after me</div><div class="hindi">मेरे बाद दोहराओ</div></div>
+                    <div class="phrase-card"><div class="eng">Don't worry</div><div class="hindi">चिंता मत करो</div></div>
+                    <div class="phrase-card"><div class="eng">Take care</div><div class="hindi">अपना ख्याल रखना</div></div>
+                    <div class="phrase-card"><div class="eng">Calm down</div><div class="hindi">शांत हो जाओ</div></div>
+                    <div class="phrase-card"><div class="eng">Cheer up</div><div class="hindi">खुश हो जाओ</div></div>
+                </div>
 
-1. बोल दो – Speak out
+                <h3>⚡ Quick Actions</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Turn on the light</div><div class="hindi">लाइट चालू करो</div></div>
+                    <div class="phrase-card"><div class="eng">Turn off the fan</div><div class="hindi">पंखा बंद करो</div></div>
+                    <div class="phrase-card"><div class="eng">Open the door</div><div class="hindi">दरवाजा खोलो</div></div>
+                    <div class="phrase-card"><div class="eng">Close the window</div><div class="hindi">खिड़की बंद करो</div></div>
+                    <div class="phrase-card"><div class="eng">Lock it</div><div class="hindi">ताला लगा दो</div></div>
+                    <div class="phrase-card"><div class="eng">Unlock it</div><div class="hindi">ताला खोल दो</div></div>
+                    <div class="phrase-card"><div class="eng">Hurry up</div><div class="hindi">जल्दी करो</div></div>
+                    <div class="phrase-card"><div class="eng">Slow down</div><div class="hindi">धीरे करो</div></div>
+                    <div class="phrase-card"><div class="eng">Stop it</div><div class="hindi">इसे रोको</div></div>
+                    <div class="phrase-card"><div class="eng">Go ahead</div><div class="hindi">आगे बढ़ो</div></div>
+                </div>
 
+                <h3>🏠 Household Chores</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Clean the room</div><div class="hindi">कमरा साफ करो</div></div>
+                    <div class="phrase-card"><div class="eng">Wash the dishes</div><div class="hindi">बर्तन धोओ</div></div>
+                    <div class="phrase-card"><div class="eng">Sweep the floor</div><div class="hindi">फर्श झाड़ू लगाओ</div></div>
+                    <div class="phrase-card"><div class="eng">Mop the floor</div><div class="hindi">पोछा लगाओ</div></div>
+                    <div class="phrase-card"><div class="eng">Fold the clothes</div><div class="hindi">कपड़े मोड़ो</div></div>
+                    <div class="phrase-card"><div class="eng">Water the plants</div><div class="hindi">पौधों को पानी दो</div></div>
+                    <div class="phrase-card"><div class="eng">Feed the pet</div><div class="hindi">पालतू जानवर को खाना खिलाओ</div></div>
+                    <div class="phrase-card"><div class="eng">Take out the trash</div><div class="hindi">कचरा बाहर निकालो</div></div>
+                </div>
 
-2. बता दो – Tell Off
+                <h3>📱 Digital & Office</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Send a message</div><div class="hindi">मैसेज भेजो</div></div>
+                    <div class="phrase-card"><div class="eng">Make a call</div><div class="hindi">कॉल करो</div></div>
+                    <div class="phrase-card"><div class="eng">Check your email</div><div class="hindi">अपना ईमेल देखो</div></div>
+                    <div class="phrase-card"><div class="eng">Save the file</div><div class="hindi">फ़ाइल सेव करो</div></div>
+                    <div class="phrase-card"><div class="eng">Print it</div><div class="hindi">इसे प्रिंट करो</div></div>
+                    <div class="phrase-card"><div class="eng">Scan the document</div><div class="hindi">दस्तावेज़ स्कैन करो</div></div>
+                    <div class="phrase-card"><div class="eng">Charge your phone</div><div class="hindi">अपना फोन चार्ज करो</div></div>
+                    <div class="phrase-card"><div class="eng">Turn off the computer</div><div class="hindi">कंप्यूटर बंद करो</div></div>
+                </div>
 
-
-3. बुला लो – Call him out / Call her out
-
-
-4. समझा दो – Make me understand / Make him understand
-
-
-5. इंतजार करो – Wait a while
-
-
-6. खोद दो – Dig it out
-
-
----
-
-Date: / /      Note 61
-
-7. बाँध दो – Tie it
-
-
-8. बेच दो – Sell it out
-
-
-9. खरीद लो – Buy it off
-
-
-10. Lie him down – लिटा दो
-
-
-11. सुला दो – Make him sleep
-
-
-12. हटा दो – Remove it
-
-
-13. फोड़ दो – Burst it out
-
-14. पकड़ लो – Hold it
-
-15. फेंक दो – Throw it away
-
-
-</pre>
+                <p style="margin-top: 1.5rem; text-align: center; color: var(--accent);"><i class="fas fa-comments"></i> इन छोटे-छोटे वाक्यों को रोज़ बोलने की आदत डालें। इससे आपकी अंग्रेज़ी बोलने में सहजता आएगी!</p>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2024 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
