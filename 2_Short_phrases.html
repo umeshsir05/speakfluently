@@ -2,9 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Short Phrases - Speak Fluently</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 0 0 1rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+        .phrase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        .phrase-card {
+            background: var(--glass-bg, rgba(0,180,216,0.03));
+            padding: 0.6rem 1rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent, #00b4d8);
+            transition: transform 0.2s;
+        }
+        .phrase-card:hover {
+            transform: translateX(5px);
+            background: rgba(0,180,216,0.08);
+        }
+        .eng {
+            font-weight: 600;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .hindi {
+            color: var(--text-secondary, #4a627a);
+            font-size: 0.9rem;
+            margin-top: 4px;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-content {
+                padding: 1rem;
+            }
+            .phrase-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,141 +80,256 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
+
     <main>
-        <h2>Short Phrases</h2><br>
-
-1. That one – वो वाला<br><br>
-
-
-2. This one – ये वाला<br><br>
-
-
-3. Which one? – कौन सा वाला?<br><br>
-
-
-4. After you – आपके बाद / पहले आप<br><br>
-
-
-5. What for? – किस लिए?<br><br>
-
-6. Are you done? – क्या आपका काम हो गया?<br><br>
-
-7. What time? – कितने बजे / किस समय?<br><br>
-
-
-8. Can’t say! – कह नहीं सकता<br><br>
-
-
-9. Not at all! – बिल्कुल नहीं<br><br>
-
-
-10. No way! – हो ही नहीं सकता<br><br>
-
-
-11. Do you like it? – क्या ये आपको पसंद है?<br><br>
-
-12. Kind of! – थोड़ा सा<br><br>
-
-
-13. Never mind! – छोड़ो इसे<br><br>
-
-
-14. What’s going on? – क्या चल रहा है?<br><br>
-
-
-15. Same old! – वही पुराना<br><br>
-
-
-16. What’s up? – क्या हो रहा है?<br><br>
-
-
-17. Nothing special! – कुछ खास नहीं<br><br>
-
-
-18. For whom? – किसके लिए?<br><br>
-
-
-19. For you! – आपके लिए<br><br>
-
-
-20. Really? Is it? – सच में?<br><br>
-
-
-21. Try it on – पहन कर देखो<br><br>
-
-
-22. Try it out – आज़मा कर देखो<br><br>
-
-
-23. Try it out – (फिर से) आज़मा कर देखो<br><br>
-
-
-24. How come? – कैसे आये? / क्यों आये?<br><br>
-
-
-25. That’s true! – सही तो है!<br><br>
-
-26. Since when? – कब से<br><br>
-
-
-27. Who did it? – ये किसने किया?<br><br>
-
-
-28. Who knows? – कौन जाने?<br><br>
-
-
-29. God knows! – भगवान जाने<br><br>
-
-
-30. That’s it! – बस<br><br>
-
-
-31. Enough is enough – बहुत हो गया<br><br>
-
-
-32. Thank you – धन्यवाद<br><br>
-
-
-33. Speak out – बोल दो<br><br>
-
-
-34. Tell off – बता दो<br><br>
-
-
-35. Call him out – बुला लो<br><br>
-
-36. Make me understand – समझा दो<br><br>
-
-
-37. Wait a while – इंतज़ार कर लो<br><br>
-
-
-38. Dig it out – खोद दो<br><br>
-
-
-39. Tie it – बाँध दो<br><br>
-
-
-40. Lie him down – लिटा दो<br><br>
-
-
+        <div class="lesson-container">
+            <div class="lesson-content">
+                <h2>🗣️ Short Phrases for Daily Conversation</h2>
+                <p>Master these useful short phrases to sound more natural in English. Each phrase comes with Hindi meaning.</p>
+
+                <!-- Category 1: Basic Phrases (original + extra) -->
+                <h3>🔹 Basic Everyday Phrases</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">That one</div><div class="hindi">वो वाला</div></div>
+                    <div class="phrase-card"><div class="eng">This one</div><div class="hindi">ये वाला</div></div>
+                    <div class="phrase-card"><div class="eng">Which one?</div><div class="hindi">कौन सा वाला?</div></div>
+                    <div class="phrase-card"><div class="eng">After you</div><div class="hindi">आपके बाद / पहले आप</div></div>
+                    <div class="phrase-card"><div class="eng">What for?</div><div class="hindi">किस लिए?</div></div>
+                    <div class="phrase-card"><div class="eng">Are you done?</div><div class="hindi">क्या आपका काम हो गया?</div></div>
+                    <div class="phrase-card"><div class="eng">What time?</div><div class="hindi">कितने बजे / किस समय?</div></div>
+                    <div class="phrase-card"><div class="eng">Can't say!</div><div class="hindi">कह नहीं सकता</div></div>
+                    <div class="phrase-card"><div class="eng">Not at all!</div><div class="hindi">बिल्कुल नहीं</div></div>
+                    <div class="phrase-card"><div class="eng">No way!</div><div class="hindi">हो ही नहीं सकता</div></div>
+                    <div class="phrase-card"><div class="eng">Do you like it?</div><div class="hindi">क्या ये आपको पसंद है?</div></div>
+                    <div class="phrase-card"><div class="eng">Kind of!</div><div class="hindi">थोड़ा सा</div></div>
+                    <div class="phrase-card"><div class="eng">Never mind!</div><div class="hindi">छोड़ो इसे</div></div>
+                    <div class="phrase-card"><div class="eng">What's going on?</div><div class="hindi">क्या चल रहा है?</div></div>
+                    <div class="phrase-card"><div class="eng">Same old!</div><div class="hindi">वही पुराना</div></div>
+                    <div class="phrase-card"><div class="eng">What's up?</div><div class="hindi">क्या हो रहा है?</div></div>
+                    <div class="phrase-card"><div class="eng">Nothing special!</div><div class="hindi">कुछ खास नहीं</div></div>
+                    <div class="phrase-card"><div class="eng">For whom?</div><div class="hindi">किसके लिए?</div></div>
+                    <div class="phrase-card"><div class="eng">For you!</div><div class="hindi">आपके लिए</div></div>
+                    <div class="phrase-card"><div class="eng">Really? Is it?</div><div class="hindi">सच में?</div></div>
+                    <div class="phrase-card"><div class="eng">Try it on</div><div class="hindi">पहन कर देखो</div></div>
+                    <div class="phrase-card"><div class="eng">Try it out</div><div class="hindi">आज़मा कर देखो</div></div>
+                    <div class="phrase-card"><div class="eng">How come?</div><div class="hindi">कैसे आये? / क्यों आये?</div></div>
+                    <div class="phrase-card"><div class="eng">That's true!</div><div class="hindi">सही तो है!</div></div>
+                    <div class="phrase-card"><div class="eng">Since when?</div><div class="hindi">कब से</div></div>
+                    <div class="phrase-card"><div class="eng">Who did it?</div><div class="hindi">ये किसने किया?</div></div>
+                    <div class="phrase-card"><div class="eng">Who knows?</div><div class="hindi">कौन जाने?</div></div>
+                    <div class="phrase-card"><div class="eng">God knows!</div><div class="hindi">भगवान जाने</div></div>
+                    <div class="phrase-card"><div class="eng">That's it!</div><div class="hindi">बस</div></div>
+                    <div class="phrase-card"><div class="eng">Enough is enough</div><div class="hindi">बहुत हो गया</div></div>
+                    <div class="phrase-card"><div class="eng">Thank you</div><div class="hindi">धन्यवाद</div></div>
+                    <div class="phrase-card"><div class="eng">Speak out</div><div class="hindi">बोल दो</div></div>
+                    <div class="phrase-card"><div class="eng">Tell off</div><div class="hindi">बता दो</div></div>
+                    <div class="phrase-card"><div class="eng">Call him out</div><div class="hindi">बुला लो</div></div>
+                    <div class="phrase-card"><div class="eng">Make me understand</div><div class="hindi">समझा दो</div></div>
+                    <div class="phrase-card"><div class="eng">Wait a while</div><div class="hindi">इंतज़ार कर लो</div></div>
+                    <div class="phrase-card"><div class="eng">Dig it out</div><div class="hindi">खोद दो</div></div>
+                    <div class="phrase-card"><div class="eng">Tie it</div><div class="hindi">बाँध दो</div></div>
+                    <div class="phrase-card"><div class="eng">Lie him down</div><div class="hindi">लिटा दो</div></div>
+                </div>
+
+                <!-- Category 2: Politeness & Courtesy -->
+                <h3>🙏 Politeness & Courtesy</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Please</div><div class="hindi">कृपया</div></div>
+                    <div class="phrase-card"><div class="eng">Sorry</div><div class="hindi">माफ़ कीजिए</div></div>
+                    <div class="phrase-card"><div class="eng">Excuse me</div><div class="hindi">माफ़ कीजिए / सुनिए</div></div>
+                    <div class="phrase-card"><div class="eng">Pardon me</div><div class="hindi">क्षमा करें</div></div>
+                    <div class="phrase-card"><div class="eng">You're welcome</div><div class="hindi">आपका स्वागत है</div></div>
+                    <div class="phrase-card"><div class="eng">My pleasure</div><div class="hindi">मुझे खुशी है</div></div>
+                    <div class="phrase-card"><div class="eng">Don't mention it</div><div class="hindi">कोई बात नहीं</div></div>
+                    <div class="phrase-card"><div class="eng">After you, please</div><div class="hindi">आप पहले जाइए</div></div>
+                    <div class="phrase-card"><div class="eng">Allow me</div><div class="hindi">मुझे अनुमति दें</div></div>
+                    <div class="phrase-card"><div class="eng">With pleasure</div><div class="hindi">ख़ुशी से</div></div>
+                </div>
+
+                <!-- Category 3: Agreeing & Disagreeing -->
+                <h3>👍 Agreeing & Disagreeing</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Absolutely</div><div class="hindi">बिल्कुल</div></div>
+                    <div class="phrase-card"><div class="eng">Exactly</div><div class="hindi">बिल्कुल सही</div></div>
+                    <div class="phrase-card"><div class="eng">Of course</div><div class="hindi">बिल्कुल</div></div>
+                    <div class="phrase-card"><div class="eng">Definitely</div><div class="hindi">निश्चित रूप से</div></div>
+                    <div class="phrase-card"><div class="eng">I agree</div><div class="hindi">मैं सहमत हूँ</div></div>
+                    <div class="phrase-card"><div class="eng">I disagree</div><div class="hindi">मैं असहमत हूँ</div></div>
+                    <div class="phrase-card"><div class="eng">Not really</div><div class="hindi">वैसा नहीं</div></div>
+                    <div class="phrase-card"><div class="eng">I'm not sure</div><div class="hindi">मुझे यकीन नहीं है</div></div>
+                    <div class="phrase-card"><div class="eng">That's right</div><div class="hindi">यह सही है</div></div>
+                    <div class="phrase-card"><div class="eng">That's wrong</div><div class="hindi">यह गलत है</div></div>
+                    <div class="phrase-card"><div class="eng">You have a point</div><div class="hindi">तुम सही कह रहे हो</div></div>
+                    <div class="phrase-card"><div class="eng">Fair enough</div><div class="hindi">ठीक है</div></div>
+                </div>
+
+                <!-- Category 4: Asking for Help/Opinion -->
+                <h3>❓ Asking for Help / Opinion</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Can you help me?</div><div class="hindi">क्या आप मेरी मदद कर सकते हैं?</div></div>
+                    <div class="phrase-card"><div class="eng">What do you think?</div><div class="hindi">आप क्या सोचते हैं?</div></div>
+                    <div class="phrase-card"><div class="eng">Any idea?</div><div class="hindi">कोई विचार?</div></div>
+                    <div class="phrase-card"><div class="eng">What's your opinion?</div><div class="hindi">आपकी राय क्या है?</div></div>
+                    <div class="phrase-card"><div class="eng">Could you please...?</div><div class="hindi">क्या आप कृपया... सकते हैं?</div></div>
+                    <div class="phrase-card"><div class="eng">Would you mind...?</div><div class="hindi">क्या आपको कोई आपत्ति है...?</div></div>
+                    <div class="phrase-card"><div class="eng">Is that okay?</div><div class="hindi">क्या यह ठीक है?</div></div>
+                    <div class="phrase-card"><div class="eng">Do you mind?</div><div class="hindi">कोई परेशानी तो नहीं?</div></div>
+                </div>
+
+                <!-- Category 5: Short Responses & Reactions -->
+                <h3>😮 Short Responses & Reactions</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Oh really?</div><div class="hindi">ओह सच में?</div></div>
+                    <div class="phrase-card"><div class="eng">That's great!</div><div class="hindi">यह बहुत अच्छा है!</div></div>
+                    <div class="phrase-card"><div class="eng">That's awful</div><div class="hindi">यह भयानक है</div></div>
+                    <div class="phrase-card"><div class="eng">Oh no!</div><div class="hindi">अरे नहीं!</div></div>
+                    <div class="phrase-card"><div class="eng">Wow!</div><div class="hindi">वाह!</div></div>
+                    <div class="phrase-card"><div class="eng">Oh my God!</div><div class="hindi">हे भगवान!</div></div>
+                    <div class="phrase-card"><div class="eng">What a pity!</div><div class="hindi">कितने अफ़सोस की बात है!</div></div>
+                    <div class="phrase-card"><div class="eng">How nice!</div><div class="hindi">कितना अच्छा है!</div></div>
+                    <div class="phrase-card"><div class="eng">How sad!</div><div class="hindi">कितना दुखद है!</div></div>
+                    <div class="phrase-card"><div class="eng">Lucky you!</div><div class="hindi">तुम भाग्यशाली हो!</div></div>
+                    <div class="phrase-card"><div class="eng">Too bad!</div><div class="hindi">बहुत बुरा!</div></div>
+                    <div class="phrase-card"><div class="eng">That's interesting</div><div class="hindi">यह दिलचस्प है</div></div>
+                </div>
+
+                <!-- Category 6: Time & Place -->
+                <h3>⏰ Time & Place</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Right now</div><div class="hindi">अभी</div></div>
+                    <div class="phrase-card"><div class="eng">Later</div><div class="hindi">बाद में</div></div>
+                    <div class="phrase-card"><div class="eng">Soon</div><div class="hindi">जल्द ही</div></div>
+                    <div class="phrase-card"><div class="eng">Already</div><div class="hindi">पहले से ही</div></div>
+                    <div class="phrase-card"><div class="eng">Not yet</div><div class="hindi">अभी तक नहीं</div></div>
+                    <div class="phrase-card"><div class="eng">Over there</div><div class="hindi">वहाँ पर</div></div>
+                    <div class="phrase-card"><div class="eng">Right here</div><div class="hindi">यहीं पर</div></div>
+                    <div class="phrase-card"><div class="eng">Somewhere else</div><div class="hindi">कहीं और</div></div>
+                    <div class="phrase-card"><div class="eng">Everywhere</div><div class="hindi">हर जगह</div></div>
+                    <div class="phrase-card"><div class="eng">Nowhere</div><div class="hindi">कहीं नहीं</div></div>
+                </div>
+
+                <!-- Category 7: Giving Advice / Encouragement -->
+                <h3>💪 Giving Advice & Encouragement</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Don't worry</div><div class="hindi">चिंता मत करो</div></div>
+                    <div class="phrase-card"><div class="eng">Take it easy</div><div class="hindi">आराम से लो</div></div>
+                    <div class="phrase-card"><div class="eng">Cheer up!</div><div class="hindi">खुश हो जाओ!</div></div>
+                    <div class="phrase-card"><div class="eng">Keep going</div><div class="hindi">लगे रहो</div></div>
+                    <div class="phrase-card"><div class="eng">You can do it</div><div class="hindi">तुम यह कर सकते हो</div></div>
+                    <div class="phrase-card"><div class="eng">Believe in yourself</div><div class="hindi">अपने आप पर विश्वास रखो</div></div>
+                    <div class="phrase-card"><div class="eng">Don't give up</div><div class="hindi">हार मत मानो</div></div>
+                    <div class="phrase-card"><div class="eng">Try again</div><div class="hindi">फिर से कोशिश करो</div></div>
+                    <div class="phrase-card"><div class="eng">Be careful</div><div class="hindi">सावधान रहो</div></div>
+                    <div class="phrase-card"><div class="eng">Take care</div><div class="hindi">अपना ख्याल रखना</div></div>
+                </div>
+
+                <!-- Category 8: Shopping & Money -->
+                <h3>🛍️ Shopping & Money</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">How much?</div><div class="hindi">कितने का?</div></div>
+                    <div class="phrase-card"><div class="eng">Too expensive</div><div class="hindi">बहुत महंगा</div></div>
+                    <div class="phrase-card"><div class="eng">Any discount?</div><div class="hindi">कोई छूट?</div></div>
+                    <div class="phrase-card"><div class="eng">I'll take it</div><div class="hindi">मैं यह लूँगा</div></div>
+                    <div class="phrase-card"><div class="eng">Just looking</div><div class="hindi">बस देख रहा हूँ</div></div>
+                    <div class="phrase-card"><div class="eng">Cash or card?</div><div class="hindi">नकद या कार्ड?</div></div>
+                    <div class="phrase-card"><div class="eng">Can I try this on?</div><div class="hindi">क्या मैं यह पहनकर देख सकता हूँ?</div></div>
+                    <div class="phrase-card"><div class="eng">Do you have a smaller size?</div><div class="hindi">क्या आपके पास छोटा साइज है?</div></div>
+                </div>
+
+                <!-- Category 9: Emergency / Help -->
+                <h3>🚨 Emergency / Help</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Help!</div><div class="hindi">बचाओ!</div></div>
+                    <div class="phrase-card"><div class="eng">Call the police</div><div class="hindi">पुलिस को बुलाओ</div></div>
+                    <div class="phrase-card"><div class="eng">Call an ambulance</div><div class="hindi">एम्बुलेंस बुलाओ</div></div>
+                    <div class="phrase-card"><div class="eng">Fire!</div><div class="hindi">आग लग गई!</div></div>
+                    <div class="phrase-card"><div class="eng">I'm lost</div><div class="hindi">मैं खो गया हूँ</div></div>
+                    <div class="phrase-card"><div class="eng">Leave me alone</div><div class="hindi">मुझे अकेला छोड़ दो</div></div>
+                    <div class="phrase-card"><div class="eng">Stay away</div><div class="hindi">दूर रहो</div></div>
+                    <div class="phrase-card"><div class="eng">It's an emergency</div><div class="hindi">यह आपातकाल है</div></div>
+                </div>
+
+                <!-- Category 10: Feelings & Emotions -->
+                <h3>😊 Feelings & Emotions</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">I'm happy</div><div class="hindi">मैं खुश हूँ</div></div>
+                    <div class="phrase-card"><div class="eng">I'm sad</div><div class="hindi">मैं उदास हूँ</div></div>
+                    <div class="phrase-card"><div class="eng">I'm tired</div><div class="hindi">मैं थक गया हूँ</div></div>
+                    <div class="phrase-card"><div class="eng">I'm hungry</div><div class="hindi">मुझे भूख लगी है</div></div>
+                    <div class="phrase-card"><div class="eng">I'm thirsty</div><div class="hindi">मुझे प्यास लगी है</div></div>
+                    <div class="phrase-card"><div class="eng">I'm sleepy</div><div class="hindi">मुझे नींद आ रही है</div></div>
+                    <div class="phrase-card"><div class="eng">I'm angry</div><div class="hindi">मैं गुस्से में हूँ</div></div>
+                    <div class="phrase-card"><div class="eng">I'm excited</div><div class="hindi">मैं उत्साहित हूँ</div></div>
+                    <div class="phrase-card"><div class="eng">I'm bored</div><div class="hindi">मैं ऊब गया हूँ</div></div>
+                    <div class="phrase-card"><div class="eng">I'm scared</div><div class="hindi">मैं डर गया हूँ</div></div>
+                </div>
+
+                <p style="margin-top: 1.5rem; text-align: center; color: var(--accent);"><i class="fas fa-comments"></i> Practice these short phrases daily to improve your fluency!</p>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2024 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
