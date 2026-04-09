@@ -2,9 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Spoken English for Teachers - Speak Fluently</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 0 0 1rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+        .phrase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        .phrase-card {
+            background: var(--glass-bg, rgba(0,180,216,0.03));
+            padding: 0.7rem 1rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent, #00b4d8);
+            transition: transform 0.2s;
+        }
+        .phrase-card:hover {
+            transform: translateX(5px);
+            background: rgba(0,180,216,0.08);
+        }
+        .eng {
+            font-weight: 600;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .hindi {
+            color: var(--text-secondary, #4a627a);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        .note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            color: var(--text-secondary);
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-content {
+                padding: 1rem;
+            }
+            .phrase-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,110 +87,161 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
+
     <main>
-        <h2>spoken for Teachers</h2>
-        
+        <div class="lesson-container">
+            <div class="lesson-content">
+                <h2>👩‍🏫 Spoken English for Teachers</h2>
+                <p>Useful English phrases for classroom instruction, discipline, encouragement, and daily interaction with students.</p>
 
+                <!-- Original phrases (1-20) -->
+                <h3>📌 Essential Classroom Phrases</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Just coming.</div><div class="hindi">मैं अभी आ रहा हूँ</div></div>
+                    <div class="phrase-card"><div class="eng">Very well.</div><div class="hindi">बहुत अच्छा</div></div>
+                    <div class="phrase-card"><div class="eng">As you like.</div><div class="hindi">जैसे आपकी मर्ज़ी</div></div>
+                    <div class="phrase-card"><div class="eng">Anything else?</div><div class="hindi">और कुछ?</div></div>
+                    <div class="phrase-card"><div class="eng">That is too much.</div><div class="hindi">बहुत है</div></div>
+                    <div class="phrase-card"><div class="eng">Never mind.</div><div class="hindi">कोई बात नहीं</div></div>
+                    <div class="phrase-card"><div class="eng">Nothing else.</div><div class="hindi">और कुछ नहीं</div></div>
+                    <div class="phrase-card"><div class="eng">Nothing special.</div><div class="hindi">कोई खास बात नहीं</div></div>
+                    <div class="phrase-card"><div class="eng">Not a bit.</div><div class="hindi">थोड़ा सा भी नहीं</div></div>
+                    <div class="phrase-card"><div class="eng">No, not at all.</div><div class="hindi">नहीं, कभी नहीं</div></div>
+                    <div class="phrase-card"><div class="eng">This is mine.</div><div class="hindi">यह मेरा है</div></div>
+                    <div class="phrase-card"><div class="eng">After you.</div><div class="hindi">आपके बाद</div></div>
+                    <div class="phrase-card"><div class="eng">Talk to me.</div><div class="hindi">मुझसे बात करो</div></div>
+                    <div class="phrase-card"><div class="eng">Write it down.</div><div class="hindi">इसे लिखो</div></div>
+                    <div class="phrase-card"><div class="eng">Read it out.</div><div class="hindi">इसे पढ़ो</div></div>
+                    <div class="phrase-card"><div class="eng">Walk ahead.</div><div class="hindi">आगे चलो</div></div>
+                    <div class="phrase-card"><div class="eng">Don't shout.</div><div class="hindi">चिल्लाओ मत</div></div>
+                    <div class="phrase-card"><div class="eng">Time is up.</div><div class="hindi">समय समाप्त</div></div>
+                    <div class="phrase-card"><div class="eng">Erase the board.</div><div class="hindi">श्यामपट्ट (ब्लैकबोर्ड) मिटाओ</div></div>
+                    <div class="phrase-card"><div class="eng">How disgraceful.</div><div class="hindi">कितना अपमानजनक है</div></div>
+                </div>
 
-1. Just coming.<br>
-मैं अभी आ रहा हूँ<br><br>
+                <!-- More classroom instructions -->
+                <h3>📚 Giving Instructions</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Open your books to page 10.</div><div class="hindi">अपनी किताबें पेज 10 पर खोलो</div></div>
+                    <div class="phrase-card"><div class="eng">Close your notebooks.</div><div class="hindi">अपनी कॉपियाँ बंद करो</div></div>
+                    <div class="phrase-card"><div class="eng">Pay attention, please.</div><div class="hindi">कृपया ध्यान दो</div></div>
+                    <div class="phrase-card"><div class="eng">Look at the board.</div><div class="hindi">बोर्ड की तरफ देखो</div></div>
+                    <div class="phrase-card"><div class="eng">Repeat after me.</div><div class="hindi">मेरे बाद दोहराओ</div></div>
+                    <div class="phrase-card"><div class="eng">Raise your hand.</div><div class="hindi">हाथ उठाओ</div></div>
+                    <div class="phrase-card"><div class="eng">Come to the front.</div><div class="hindi">आगे आओ</div></div>
+                    <div class="phrase-card"><div class="eng">Go back to your seat.</div><div class="hindi">अपनी सीट पर जाओ</div></div>
+                    <div class="phrase-card"><div class="eng">Form a line.</div><div class="hindi">लाइन बनाओ</div></div>
+                    <div class="phrase-card"><div class="eng">Work in pairs.</div><div class="hindi">जोड़ियों में काम करो</div></div>
+                </div>
 
+                <h3>🗣️ Encouragement & Feedback</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Excellent!</div><div class="hindi">बहुत बढ़िया!</div></div>
+                    <div class="phrase-card"><div class="eng">Well done!</div><div class="hindi">शाबाश!</div></div>
+                    <div class="phrase-card"><div class="eng">Good job!</div><div class="hindi">अच्छा किया!</div></div>
+                    <div class="phrase-card"><div class="eng">Keep it up.</div><div class="hindi">इसी तरह लगे रहो</div></div>
+                    <div class="phrase-card"><div class="eng">That's correct.</div><div class="hindi">यह सही है</div></div>
+                    <div class="phrase-card"><div class="eng">That's not correct.</div><div class="hindi">यह सही नहीं है</div></div>
+                    <div class="phrase-card"><div class="eng">Try again.</div><div class="hindi">फिर से कोशिश करो</div></div>
+                    <div class="phrase-card"><div class="eng">Don't give up.</div><div class="hindi">हार मत मानो</div></div>
+                    <div class="phrase-card"><div class="eng">I appreciate your effort.</div><div class="hindi">मैं आपकी मेहनत की सराहना करता हूँ</div></div>
+                    <div class="phrase-card"><div class="eng">You are improving.</div><div class="hindi">तुम सुधार कर रहे हो</div></div>
+                </div>
 
-2. Very well.<br>
-बहुत अच्छा<br><br>
+                <h3>⚠️ Classroom Management</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Be quiet, please.</div><div class="hindi">कृपया शांत रहो</div></div>
+                    <div class="phrase-card"><div class="eng">Stop talking.</div><div class="hindi">बात करना बंद करो</div></div>
+                    <div class="phrase-card"><div class="eng">Settle down.</div><div class="hindi">शांत हो जाओ</div></div>
+                    <div class="phrase-card"><div class="eng">Wait for your turn.</div><div class="hindi">अपनी बारी का इंतज़ार करो</div></div>
+                    <div class="phrase-card"><div class="eng">Don't cheat.</div><div class="hindi">नकल मत करो</div></div>
+                    <div class="phrase-card"><div class="eng">Mind your manners.</div><div class="hindi">अपने शिष्टाचार का ध्यान रखो</div></div>
+                    <div class="phrase-card"><div class="eng">I'll check your homework.</div><div class="hindi">मैं तुम्हारा होमवर्क देखूंगा</div></div>
+                    <div class="phrase-card"><div class="eng">Submit your assignments by Friday.</div><div class="hindi">अपना असाइनमेंट शुक्रवार तक जमा करो</div></div>
+                </div>
 
+                <h3>🎯 Questions Teachers Often Ask</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Do you understand?</div><div class="hindi">क्या तुम समझ गए?</div></div>
+                    <div class="phrase-card"><div class="eng">Any questions?</div><div class="hindi">कोई सवाल?</div></div>
+                    <div class="phrase-card"><div class="eng">Can you repeat that?</div><div class="hindi">क्या तुम उसे दोहरा सकते हो?</div></div>
+                    <div class="phrase-card"><div class="eng">Who knows the answer?</div><div class="hindi">जवाब कौन जानता है?</div></div>
+                    <div class="phrase-card"><div class="eng">What do you think?</div><div class="hindi">तुम क्या सोचते हो?</div></div>
+                    <div class="phrase-card"><div class="eng">Why is this important?</div><div class="hindi">यह क्यों महत्वपूर्ण है?</div></div>
+                    <div class="phrase-card"><div class="eng">Can you give an example?</div><div class="hindi">क्या तुम उदाहरण दे सकते हो?</div></div>
+                    <div class="phrase-card"><div class="eng">Have you finished?</div><div class="hindi">क्या तुमने पूरा कर लिया?</div></div>
+                </div>
 
-3. As you like.<br>
-जैसे आपकी मर्ज़ी<br><br>
+                <div class="note">
+                    <i class="fas fa-lightbulb"></i> <strong>Teacher's Tip:</strong> Use a friendly but firm tone. Encourage students with positive phrases like "Good effort!" and "You can do it." Consistent use of these phrases will create an English-rich environment.
+                </div>
 
-
-4. Anything else?<br>
-और कुछ?<br><br>
-
-
-5. That is too much.<br>
-बहुत है<br><br>
-
-
-6. Never mind.<br>
-कोई बात नहीं<br><br>
-
-
-7. Nothing else.<br>
-और कुछ नहीं<br><br>
-
-
-8. Nothing special.<br>
-कोई खास बात नहीं<br><br>
-
-
-9. Not a bit.<br>
-थोड़ा सा भी नहीं<br><br>
-
-
-10. No, not at all.<br>
-नहीं, कभी नहीं<br><br>
-
-
-11. This is mine.<br>
-यह मेरा है<br><br>
-
-
-12. After you.<br>
-आपके बाद<br><br>
-
-
-13. Talk to me.<br>
-मुझसे बात करो<br><br>
-
-
-14. Write it down.<br>
-इसे लिखो<br><br>
-
-
-15. Read it out.<br>
-इसे पढ़ो<br><br>
-
-
-16. Walk ahead.<br>
-आगे चलो<br><br>
-
-
-17. Don't shout.<br>
-चिल्लाओ मत<br><br>
-
-
-18. Time is up.<br>
-समय समाप्त<br><br>
-
-
-19. Erase the board.<br>
-श्यामपट्ट (ब्लैकबोर्ड) मिटाओ<br><br>
-
-
-20. How disgraceful.<br>
-कितना अपमानजनक है<br><br>
-
-
-
-
+                <p style="margin-top: 1rem; text-align: center; color: var(--accent);"><i class="fas fa-chalkboard-teacher"></i> Use these phrases daily to make your classroom more interactive and English-friendly!</p>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2024 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
