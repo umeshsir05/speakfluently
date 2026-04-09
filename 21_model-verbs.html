@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Modal Verbs - English Grammar | Speak Fluently</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 0 0 1rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+        .modal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .modal-card {
+            background: var(--glass-bg, rgba(0,180,216,0.03));
+            border-radius: 16px;
+            padding: 1rem;
+            border-left: 3px solid var(--accent, #00b4d8);
+            transition: transform 0.2s;
+        }
+        .modal-card:hover {
+            transform: translateY(-3px);
+            background: rgba(0,180,216,0.08);
+        }
+        .modal-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--accent, #00b4d8);
+            margin-bottom: 0.5rem;
+        }
+        .eng {
+            font-weight: 500;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .hindi {
+            color: var(--text-secondary, #4a627a);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        .rule-box {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+        .note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            color: var(--text-secondary);
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-content {
+                padding: 1rem;
+            }
+            .modal-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Speak Fluently</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
+            </ul>
+        </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="lesson-container">
+            <div class="lesson-content">
+                <h2>📌 Modal Verbs (मोडल क्रियाएँ)</h2>
+                <p>Modal verbs are helping verbs that express necessity, possibility, permission, ability, obligation, etc. They are always followed by the base form of the main verb.</p>
+                <div class="rule-box">
+                    <strong>Rules:</strong>
+                    <ul>
+                        <li>Modal verbs never change form (no -s, -ing, -ed).</li>
+                        <li>They are followed by the base form of the main verb (without 'to').</li>
+                        <li>To make negative, add 'not' after the modal.</li>
+                        <li>To make questions, invert the modal and subject.</li>
+                    </ul>
+                </div>
+
+                <h3>🔹 List of Modal Verbs with Examples</h3>
+                <div class="modal-grid">
+                    <!-- Can -->
+                    <div class="modal-card">
+                        <div class="modal-title">Can (सकता है / सकती है)</div>
+                        <div class="eng">Ability, permission, possibility</div>
+                        <div class="eng">I can swim.</div>
+                        <div class="hindi">मैं तैर सकता हूँ।</div>
+                        <div class="eng">Can I go out?</div>
+                        <div class="hindi">क्या मैं बाहर जा सकता हूँ?</div>
+                    </div>
+
+                    <!-- Could -->
+                    <div class="modal-card">
+                        <div class="modal-title">Could (सकता था)</div>
+                        <div class="eng">Past ability, polite request, possibility</div>
+                        <div class="eng">I could run fast when I was young.</div>
+                        <div class="hindi">जब मैं छोटा था तो तेज़ दौड़ सकता था।</div>
+                        <div class="eng">Could you please help me?</div>
+                        <div class="hindi">क्या आप कृपया मेरी मदद कर सकते हैं?</div>
+                    </div>
+
+                    <!-- May -->
+                    <div class="modal-card">
+                        <div class="modal-title">May (सकता है / सकती है)</div>
+                        <div class="eng">Permission, possibility (formal)</div>
+                        <div class="eng">May I come in?</div>
+                        <div class="hindi">क्या मैं अंदर आ सकता हूँ?</div>
+                        <div class="eng">It may rain today.</div>
+                        <div class="hindi">आज बारिश हो सकती है।</div>
+                    </div>
+
+                    <!-- Might -->
+                    <div class="modal-card">
+                        <div class="modal-title">Might (शायद)</div>
+                        <div class="eng">Less certain possibility</div>
+                        <div class="eng">She might come to the party.</div>
+                        <div class="hindi">वह शायद पार्टी में आए।</div>
+                    </div>
+
+                    <!-- Will -->
+                    <div class="modal-card">
+                        <div class="modal-title">Will (गा / गी / गे)</div>
+                        <div class="eng">Future, intention, promise</div>
+                        <div class="eng">I will call you tomorrow.</div>
+                        <div class="hindi">मैं तुम्हें कल फोन करूँगा।</div>
+                    </div>
+
+                    <!-- Would -->
+                    <div class="modal-card">
+                        <div class="modal-title">Would (गा / गी / गे – past habit)</div>
+                        <div class="eng">Past habit, polite request, conditional</div>
+                        <div class="eng">He would visit us every Sunday.</div>
+                        <div class="hindi">वह हर रविवार हमसे मिलने आता था।</div>
+                        <div class="eng">Would you like some tea?</div>
+                        <div class="hindi">क्या आप चाय पसंद करेंगे?</div>
+                    </div>
+
+                    <!-- Shall -->
+                    <div class="modal-card">
+                        <div class="modal-title">Shall (गा / गी – formal)</div>
+                        <div class="eng">Future (I/we), suggestion, obligation</div>
+                        <div class="eng">I shall return by 6 PM.</div>
+                        <div class="hindi">मैं शाम 6 बजे तक लौट आऊँगा।</div>
+                        <div class="eng">Shall we go for a walk?</div>
+                        <div class="hindi">क्या हम टहलने चलें?</div>
+                    </div>
+
+                    <!-- Should -->
+                    <div class="modal-card">
+                        <div class="modal-title">Should (चाहिए)</div>
+                        <div class="eng">Advice, obligation, expectation</div>
+                        <div class="eng">You should study regularly.</div>
+                        <div class="hindi">तुम्हें नियमित रूप से पढ़ना चाहिए।</div>
+                    </div>
+
+                    <!-- Must -->
+                    <div class="modal-card">
+                        <div class="modal-title">Must (जरूर / चाहिए)</div>
+                        <div class="eng">Strong obligation, necessity, certainty</div>
+                        <div class="eng">You must obey the rules.</div>
+                        <div class="hindi">तुम्हें नियमों का पालन करना चाहिए।</div>
+                        <div class="eng">It must be true.</div>
+                        <div class="hindi">यह सच होना चाहिए।</div>
+                    </div>
+
+                    <!-- Ought to -->
+                    <div class="modal-card">
+                        <div class="modal-title">Ought to (चाहिए)</div>
+                        <div class="eng">Moral obligation, advice</div>
+                        <div class="eng">You ought to respect your elders.</div>
+                        <div class="hindi">तुम्हें अपने बड़ों का सम्मान करना चाहिए।</div>
+                    </div>
+
+                    <!-- Used to -->
+                    <div class="modal-card">
+                        <div class="modal-title">Used to (करता था)</div>
+                        <div class="eng">Past habit, past state</div>
+                        <div class="eng">I used to play cricket daily.</div>
+                        <div class="hindi">मैं रोज क्रिकेट खेलता था।</div>
+                    </div>
+
+                    <!-- Need (modal) -->
+                    <div class="modal-card">
+                        <div class="modal-title">Need (ज़रूरत)</div>
+                        <div class="eng">Necessity (mainly in negatives and questions)</div>
+                        <div class="eng">You need not worry.</div>
+                        <div class="hindi">तुम्हें चिंता करने की ज़रूरत नहीं है।</div>
+                    </div>
+
+                    <!-- Dare -->
+                    <div class="modal-card">
+                        <div class="modal-title">Dare (हिम्मत)</div>
+                        <div class="eng">Courage (mainly in negatives and questions)</div>
+                        <div class="eng">He dare not speak the truth.</div>
+                        <div class="hindi">वह सच बोलने की हिम्मत नहीं करता।</div>
+                    </div>
+                </div>
+
+                <h3>📝 Negative and Interrogative Forms</h3>
+                <div class="modal-grid">
+                    <div class="modal-card">
+                        <div class="modal-title">Negative</div>
+                        <div class="eng">Add 'not' after the modal</div>
+                        <div class="eng">Cannot (can't), could not, may not, might not, will not (won't), would not (wouldn't), shall not (shan't), should not (shouldn't), must not (mustn't), ought not to, used not to, need not, dare not.</div>
+                    </div>
+                    <div class="modal-card">
+                        <div class="modal-title">Interrogative</div>
+                        <div class="eng">Invert the modal and subject</div>
+                        <div class="eng">Can you swim? / Should I go? / May I come in?</div>
+                    </div>
+                </div>
+
+                <h3>🎯 Perfect Modals (Modal + have + V3)</h3>
+                <div class="modal-grid">
+                    <div class="modal-card">
+                        <div class="modal-title">Could have</div>
+                        <div class="eng">Past possibility that did not happen</div>
+                        <div class="eng">I could have helped you.</div>
+                        <div class="hindi">मैं तुम्हारी मदद कर सकता था।</div>
+                    </div>
+                    <div class="modal-card">
+                        <div class="modal-title">May have / Might have</div>
+                        <div class="eng">Past possibility</div>
+                        <div class="eng">She may have forgotten.</div>
+                        <div class="hindi">वह भूल गई होगी।</div>
+                    </div>
+                    <div class="modal-card">
+                        <div class="modal-title">Must have</div>
+                        <div class="eng">Strong past certainty</div>
+                        <div class="eng">He must have left already.</div>
+                        <div class="hindi">वह जा चुका होगा।</div>
+                    </div>
+                    <div class="modal-card">
+                        <div class="modal-title">Should have</div>
+                        <div class="eng">Past advice (not followed)</div>
+                        <div class="eng">You should have studied harder.</div>
+                        <div class="hindi">तुम्हें और मेहनत से पढ़ना चाहिए था।</div>
+                    </div>
+                    <div class="modal-card">
+                        <div class="modal-title">Would have</div>
+                        <div class="eng">Past conditional</div>
+                        <div class="eng">I would have come if I had known.</div>
+                        <div class="hindi">अगर मुझे पता होता तो मैं आ गया होता।</div>
+                    </div>
+                </div>
+
+                <div class="note">
+                    <i class="fas fa-lightbulb"></i> <strong>Note:</strong> Modal verbs do not take '-s' in the third person singular. They are followed by the base form of the verb (without 'to'). 'Ought to' and 'used to' are exceptions – they are followed by 'to'.
+                </div>
+
+                <p style="margin-top: 1rem; text-align: center; color: var(--accent);"><i class="fas fa-check-circle"></i> Practice modal verbs daily to express ability, possibility, and obligation correctly!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
