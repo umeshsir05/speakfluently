@@ -2,9 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>WH Family 2 - Speak Fluently</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 0 0 1rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .example-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+        .example-card {
+            background: var(--glass-bg, rgba(0,180,216,0.03));
+            padding: 0.7rem 1rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent, #00b4d8);
+            transition: transform 0.2s;
+        }
+        .example-card:hover {
+            transform: translateX(5px);
+            background: rgba(0,180,216,0.08);
+        }
+        .eng {
+            font-weight: 600;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .hindi {
+            color: var(--text-secondary, #4a627a);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-content {
+                padding: 1rem;
+            }
+            .example-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,151 +73,113 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
+
     <main>
-        <h2>WH family 2</h2>
-        
-1. Who opened the door?<br>
-दरवाज़ा किसने खोला?<br><br>
+        <div class="lesson-container">
+            <div class="lesson-content">
+                <h2>❓ WH Family 2 (प्रश्नवाचक शब्द)</h2>
+                <p>More examples of WH questions for daily conversation practice.</p>
 
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">Who opened the door?</div><div class="hindi">दरवाज़ा किसने खोला?</div></div>
+                    <div class="example-card"><div class="eng">Whom did you meet?</div><div class="hindi">तुम किससे मिले?</div></div>
+                    <div class="example-card"><div class="eng">What are you doing?</div><div class="hindi">तुम क्या कर रहे हो?</div></div>
+                    <div class="example-card"><div class="eng">What did you do that for?</div><div class="hindi">तुमने वो किस लिए किया?</div></div>
+                    <div class="example-card"><div class="eng">Whose marker is this?</div><div class="hindi">यह मार्कर किसका है?</div></div>
+                    <div class="example-card"><div class="eng">Why didn't you come to me?</div><div class="hindi">तुम मेरे पास क्यों नहीं आए?</div></div>
+                    <div class="example-card"><div class="eng">Why don't you go there?</div><div class="hindi">तुम वहाँ क्यों नहीं जाते?</div></div>
+                    <div class="example-card"><div class="eng">When are you coming?</div><div class="hindi">तुम कब आ रहे हो?</div></div>
+                    <div class="example-card"><div class="eng">Where do you work?</div><div class="hindi">तुम कहाँ काम करते हो?</div></div>
+                    <div class="example-card"><div class="eng">Which pen do you want?</div><div class="hindi">तुम्हें कौन सा पेन चाहिए?</div></div>
+                    <div class="example-card"><div class="eng">How does this thing work?</div><div class="hindi">यह चीज़ कैसे काम करती है?</div></div>
+                    <div class="example-card"><div class="eng">Why do you speak English?</div><div class="hindi">आप अंग्रेज़ी क्यों बोलते हैं?</div></div>
+                    <div class="example-card"><div class="eng">Why do you come here?</div><div class="hindi">आप यहाँ क्यों आते हैं?</div></div>
+                    <div class="example-card"><div class="eng">Why did you learn English?</div><div class="hindi">आपने अंग्रेज़ी क्यों सीखी?</div></div>
+                    <div class="example-card"><div class="eng">Why will you learn English?</div><div class="hindi">आप अंग्रेज़ी क्यों सीखोगे?</div></div>
+                    <div class="example-card"><div class="eng">Why are you learning English?</div><div class="hindi">आप अंग्रेज़ी क्यों सीख रहे हैं?</div></div>
+                    <div class="example-card"><div class="eng">Why can you help him?</div><div class="hindi">आप उसकी मदद क्यों कर सकते हो?</div></div>
+                    <div class="example-card"><div class="eng">How should I go there?</div><div class="hindi">मुझे वहाँ कैसे जाना चाहिए?</div></div>
+                    <div class="example-card"><div class="eng">When should I go there?</div><div class="hindi">मुझे वहाँ कब जाना चाहिए?</div></div>
+                    <div class="example-card"><div class="eng">How far is your home?</div><div class="hindi">आपका घर कितना दूर है?</div></div>
+                    <div class="example-card"><div class="eng">How long do you sleep?</div><div class="hindi">आप कितनी देर सोते हैं?</div></div>
+                    <div class="example-card"><div class="eng">How many people?</div><div class="hindi">कितने लोग?</div></div>
+                    <div class="example-card"><div class="eng">How many boys are absent today?</div><div class="hindi">आज कितने लड़के अनुपस्थित हैं?</div></div>
+                    <div class="example-card"><div class="eng">How much water do you buy?</div><div class="hindi">आप कितना पानी खरीदते हैं?</div></div>
+                    <div class="example-card"><div class="eng">How many times have you watched this movie?</div><div class="hindi">आपने यह मूवी कितनी बार देखी है?</div></div>
+                    <div class="example-card"><div class="eng">How many times have you gone there?</div><div class="hindi">आप वहाँ कितनी बार गए हैं?</div></div>
+                    <div class="example-card"><div class="eng">How much time do you sleep?</div><div class="hindi">आप कितना समय सोते हैं?</div></div>
+                    <div class="example-card"><div class="eng">How much time do you take rest?</div><div class="hindi">आप कितना समय आराम करते हैं?</div></div>
+                    <div class="example-card"><div class="eng">For whom are you making tea?</div><div class="hindi">आप किसके लिए चाय बना रहे हैं?</div></div>
+                    <div class="example-card"><div class="eng">With whom do you come here?</div><div class="hindi">आप किसके साथ यहाँ आए हैं?</div></div>
+                    <div class="example-card"><div class="eng">Which pen is yours?</div><div class="hindi">कौन सा पेन आपका है?</div></div>
+                </div>
 
-2. Whom did you meet?<br>
-तुम किससे मिले?<br><br>
-
-
-3. What are you doing?<br>
-तुम क्या कर रहे हो?<br><br>
-
-
-4. What did you do that for?<br>
-तुमने वो किस लिए किया?<br><br>
-
-
-5. Whose marker is this?<br>
-यह मार्कर किसका है?<br><br>
-
-
-6. Why didn't you come to me?<br>
-तुम मेरे पास क्यों नहीं आए?<br><br>
-
-
-7. Why don't you go there?<br>
-तुम वहाँ क्यों नहीं जाते?<br><br>
-
-
-8. When are you coming?<br>
-तुम कब आ रहे हो?<br><br>
-
-
-9. Where do you work?<br>
-तुम कहाँ काम करते हो?<br><br>
-
-
-10. Which pen do you want?<br>
-तुम्हें कौन सा पेन चाहिए?<br><br>
-
-
-11. How does this thing work?<br>
-यह चीज़ कैसे काम करती है?<br><br>
-
-
-12. Why do you speak English?<br>
-आप अंग्रेज़ी क्यों बोलते हैं?<br><br>
-
-
-13. Why do you come here?<br>
-आप यहाँ क्यों आते हैं?<br><br>
-
-
-14. Why did you learn English?<br>
-आपने अंग्रेज़ी क्यों सीखी?<br><br>
-
-
-15. Why will you learn English?<br>
-आप अंग्रेज़ी क्यों सीखोगे?<br><br>
-
-
-16. Why are you learning English?<br>
-आप अंग्रेज़ी क्यों सीख रहे हैं?<br><br>
-
-
-17. Why can you help him?<br>
-आप उसकी मदद क्यों कर सकते हो?<br><br>
-
-
-18. How should I go there?<br>
-मुझे वहाँ कैसे जाना चाहिए?<br><br>
-
-
-19. When should I go there?<br>
-मुझे वहाँ कब जाना चाहिए?<br><br>
-
-
-20. How far is your home?<br>
-आपका घर कितना दूर है?<br><br>
-
-
-21. How long do you sleep?<br>
-आप कितनी देर सोते हैं?<br><br>
-
-
-22. How many people?<br>
-कितने लोग?<br><br>
-
-
-23. How many boys are absent today?<br>
-आज कितने लड़के अनुपस्थित हैं?<br><br>
-
-
-24. How much water do you buy?<br>
-आप कितना पानी खरीदते हैं?<br><br>
-
-
-25. How many times have you watched this movie?<br>
-आपने यह मूवी कितनी बार देखी है?<br><br>
-
-
-26. How many times have you gone there?<br>
-आप वहाँ कितनी बार गए हैं?<br><br>
-
-
-27. How much time do you sleep?<br>
-आप कितना समय सोते हैं?<br><br>
-
-
-28. How much time do you take rest?<br>
-आप कितना समय आराम करते हैं?<br><br>
-
-
-29. For whom are you making tea?<br>
-आप किसके लिए चाय बना रहे हैं?<br><br>
-
-
-30. With whom do you come here?<br>
-आप किसके साथ यहाँ आए हैं?<br><br>
-
-
-31. Which pen is yours?<br>
-कौन सा पेन आपका है?<br><br>
-
-
-
+                <p style="margin-top: 1.5rem; text-align: center; color: var(--accent);"><i class="fas fa-question-circle"></i> Practice these WH questions to improve your spoken English!</p>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2024 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
