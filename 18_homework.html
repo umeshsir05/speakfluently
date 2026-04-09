@@ -2,9 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Homework & Assignment - Speak Fluently</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 0 0 1rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .phrase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+        .phrase-card {
+            background: var(--glass-bg, rgba(0,180,216,0.03));
+            padding: 0.7rem 1rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent, #00b4d8);
+            transition: transform 0.2s;
+        }
+        .phrase-card:hover {
+            transform: translateX(5px);
+            background: rgba(0,180,216,0.08);
+        }
+        .eng {
+            font-weight: 600;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .hindi {
+            color: var(--text-secondary, #4a627a);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-content {
+                padding: 1rem;
+            }
+            .phrase-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,427 +73,183 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
+
     <main>
-        <h2>Homework / Assignment Related Sentences </h2><br>
-
-
-1. Do your homework daily.<br>
-रोज़ अपना होमवर्क करो।<br><br>
-
-
-2. Don’t forget to complete your homework.<br>
-अपना होमवर्क करना मत भूलना।<br><br>
-
-
-3. Submit your homework tomorrow.<br>
-कल अपना होमवर्क जमा करना।<br><br>
-
-
-4. Show me your homework notebook.<br>
-अपनी होमवर्क कॉपी दिखाओ।<br><br>
-
-
-5. Who has not done the homework?<br>
-किसने होमवर्क नहीं किया?<br><br>
-
-
-6. Raise your hand if you have not done homework.<br>
-अगर तुमने होमवर्क नहीं किया तो हाथ उठाओ।<br><br>
-
-
-7. Always complete your homework on time.<br>
-हमेशा समय पर होमवर्क पूरा करो।<br><br>
-
-
-8. Don’t copy your homework from others.<br>
-अपना होमवर्क दूसरों से मत नकल करो।<br><br>
-
-
-9. Write your homework neatly.<br>
-अपना होमवर्क साफ-सुथरा लिखो।<br><br>
-
-
-10. Don’t tear homework pages.<br>
-होमवर्क के पन्ने मत फाड़ो।<br><br>
-
-
-11. Bring your homework every day.<br>
-रोज़ अपना होमवर्क लेकर आओ।<br><br>
-
-
-12. Don’t leave your homework incomplete.<br>
-अपना होमवर्क अधूरा मत छोड़ो।<br><br>
-
-
-13. Why didn’t you do your homework?<br>
-तुमने होमवर्क क्यों नहीं किया?<br><br>
-
-
-14. Give me a reason for not doing homework.<br>
-होमवर्क न करने का कारण बताओ।<br><br>
-
-
-15. No excuses for incomplete homework.<br>
-अधूरे होमवर्क के लिए कोई बहाना नहीं।<br><br>
-
-
-16. I will punish those who didn’t do homework.<br>
-जिनका होमवर्क नहीं हुआ, उन्हें मैं दंड दूँगा।<br><br>
-
-
-17. Homework is important for practice.<br>
-अभ्यास के लिए होमवर्क ज़रूरी है।<br><br>
-
-
-18. Don’t take homework lightly.<br>
-होमवर्क को हल्के में मत लो।<br><br>
-
-
-19. Do your homework regularly.<br>
-नियमित रूप से होमवर्क करो।<br><br>
-
-
-20. Open your homework notebook.<br>
-अपनी होमवर्क कॉपी खोलो।<br><br>
-
-
-21. Close your homework notebook.<br>
-अपनी होमवर्क कॉपी बंद करो।<br><br>
-
-
-22. Homework should be complete.<br>
-होमवर्क पूरा होना चाहिए।<br><br>
-
-
-23. Don’t leave blank pages in homework.<br>
-होमवर्क में खाली पन्ने मत छोड़ो।<br><br>
-
-
-24. Get your parents’ signature on homework.<br>
-होमवर्क पर अपने माता-पिता के हस्ताक्षर लो।<br><br>
-
-
-25. Did your parents check your homework?<br>
-क्या तुम्हारे माता-पिता ने तुम्हारा होमवर्क जाँचा?<br><br>
-
-
-26. Do your homework without help.<br>
-अपना होमवर्क बिना मदद के करो।<br><br>
-
-
-27. Don’t depend on others for homework.<br>
-होमवर्क के लिए दूसरों पर निर्भर मत रहो।<br><br>
-
-
-28. Revise the lesson while doing homework.<br>
-होमवर्क करते समय पाठ को दोहराओ।<br><br>
-
-
-29. Homework will improve your learning.<br>
-होमवर्क तुम्हारी पढ़ाई में सुधार करेगा।<br><br>
-
-
-30. Don’t show careless work in homework.<br>
-होमवर्क में लापरवाही मत दिखाओ।<br><br>
-
-
-31. Be honest while doing homework.<br>
-होमवर्क करते समय ईमानदार रहो।<br><br>
-
-
-32. Complete your homework before playing.<br>
-खेलने से पहले अपना होमवर्क पूरा करो।<br><br>
-
-
-33. Finish homework first, then watch TV.<br>
-पहले होमवर्क पूरा करो, फिर टीवी देखो।<br><br>
-
-
-34. Don’t bring incomplete homework.<br>
-अधूरा होमवर्क मत लाओ।<br><br>
-
-
-35. You will lose marks for incomplete homework.<br>
-अधूरे होमवर्क के लिए तुम्हारे अंक कटेंगे।<br><br>
-
-
-36. Where is your homework notebook?<br>
-तुम्हारी होमवर्क कॉपी कहाँ है?<br><br>
-
-
-37. Keep your homework notebook carefully.<br>
-अपनी होमवर्क कॉपी ध्यान से रखो।<br><br>
-
-
-38. Don’t forget your homework notebook.<br>
-अपनी होमवर्क कॉपी मत भूलो।<br><br>
-
-
-39. Submit homework at the teacher’s desk.<br>
-होमवर्क शिक्षक की मेज़ पर जमा करो।<br><br>
-
-
-40. Don’t waste time while doing homework.<br>
-होमवर्क करते समय समय बर्बाद मत करो।<br><br>
-
-
-41. Don’t make spelling mistakes in homework.<br>
-होमवर्क में वर्तनी की गलती मत करो।<br><br>
-
-
-42. Write answers neatly in homework.<br>
-होमवर्क में उत्तर साफ़ लिखो।<br><br>
-
-
-43. Don’t overwrite in homework.<br>
-होमवर्क में बार-बार मत लिखो।<br><br>
-
-
-44. Correct your mistakes in homework.<br>
-होमवर्क में अपनी गलतियाँ सुधारो।<br><br>
-
-
-45. Homework should be done in sequence.<br>
-होमवर्क क्रमवार होना चाहिए।<br><br>
-
-
-46. Don’t skip any question in homework.<br>
-होमवर्क में कोई प्रश्न मत छोड़ो।<br><br>
-
-
-47. Write complete answers in homework.<br>
-होमवर्क में पूरे उत्तर लिखो।<br><br>
-
-
-48. Homework should be submitted on time.<br>
-होमवर्क समय पर जमा होना चाहिए।<br><br>
-
-
-49. Incomplete homework will not be accepted.<br>
-अधूरा होमवर्क स्वीकार नहीं किया जाएगा।<br><br>
-
-
-50. Don’t be irregular in homework.<br>
-होमवर्क में अनियमित मत रहो।<br><br>
-
-
-51. Practice your homework daily.<br>
-रोज़ अपना होमवर्क अभ्यास करो।<br><br>
-
-
-52. Don’t postpone your homework.<br>
-अपना होमवर्क टालो मत।<br><br>
-
-
-53. Take your homework seriously.<br>
-अपने होमवर्क को गंभीरता से लो।<br><br>
-
-
-54. Homework will help you in exams.<br>
-होमवर्क तुम्हें परीक्षा में मदद करेगा।<br><br>
-
-
-55. Do your homework independently.<br>
-अपना होमवर्क स्वतंत्र रूप से करो।<br><br>
-
-
-56. Don’t leave homework for the last moment.<br>
-होमवर्क आख़िरी समय के लिए मत छोड़ो।<br><br>
-
-
-57. Start homework as soon as you reach home.<br>
-घर पहुँचते ही होमवर्क शुरू करो।<br><br>
-
-
-58. Don’t make excuses for homework.<br>
-होमवर्क के लिए बहाने मत बनाओ।<br><br>
-
-
-59. Bring completed homework tomorrow.<br>
-कल पूरा होमवर्क लेकर आना।<br><br>
-
-
-60. Homework is part of your study.<br>
-होमवर्क तुम्हारी पढ़ाई का हिस्सा है।<br><br>
-
-
-61. Do your homework with concentration.<br>
-ध्यान लगाकर होमवर्क करो।<br><br>
-
-
-62. Don’t scribble in homework.<br>
-होमवर्क में कच्चा-पक्का मत लिखो।<br><br>
-
-
-63. Draw diagrams neatly in homework.<br>
-होमवर्क में चित्र साफ़ बनाओ।<br><br>
-
-
-64. Label your diagrams properly.<br>
-अपने चित्र ठीक से लेबल करो।<br><br>
-
-
-65. Write in points when required.<br>
-जब ज़रूरत हो तो बिंदुओं में लिखो।<br><br>
-
-
-66. Write in detail if asked.<br>
-अगर पूछा जाए तो विस्तार से लिखो।<br><br>
-
-
-67. Don’t leave margins empty.<br>
-मार्जिन खाली मत छोड़ो।<br><br>
-
-
-68. Draw margins in homework.<br>
-होमवर्क में मार्जिन बनाओ।<br><br>
-
-
-69. Write the date on homework.<br>
-होमवर्क पर तारीख लिखो।<br><br>
-
-
-70. Write the heading in homework.<br>
-होमवर्क में शीर्षक लिखो।<br><br>
-
-
-71. Follow the instructions given in homework.<br>
-होमवर्क में दिए गए निर्देशों का पालन करो।<br><br>
-
-
-72. Don’t copy homework from the guide.<br>
-गाइड से होमवर्क मत नकल करो।<br><br>
-
-
-73. Use your own words in homework.<br>
-होमवर्क में अपने शब्दों का प्रयोग करो।<br><br>
-
-
-74. Don’t submit others’ homework as yours.<br>
-दूसरों का होमवर्क अपना बताकर मत दो।<br><br>
-
-
-75. Homework will be graded.<br>
-होमवर्क को अंक दिए जाएँगे।<br><br>
-
-
-76. Neat homework will get good marks.<br>
-साफ़-सुथरे होमवर्क को अच्छे अंक मिलेंगे।<br><br>
-
-
-77. Untidy homework will lose marks.<br>
-गंदे होमवर्क में अंक कटेंगे।<br><br>
-
-
-78. Keep your homework notebook updated.<br>
-अपनी होमवर्क कॉपी अपडेट रखो।<br><br>
-
-
-79. Don’t forget to bring completed assignments.<br>
-पूरा असाइनमेंट लाना मत भूलो।<br><br>
-
-
-80. Submit your assignment by the deadline.<br>
-अपना असाइनमेंट समय सीमा तक जमा करो।<br><br>
-
-
-81. Late submission will not be accepted.<br>
-देर से जमा किया गया असाइनमेंट स्वीकार नहीं होगा।<br><br>
-
-
-82. Assignment should be original.<br>
-असाइनमेंट मौलिक होना चाहिए।<br><br>
-
-
-83. Don’t copy-paste from the internet.<br>
-इंटरनेट से कॉपी-पेस्ट मत करो।<br><br>
-
-
-84. Write the assignment in your own handwriting.<br>
-असाइनमेंट अपनी लिखावट में लिखो।<br><br>
-
-
-85. Don’t skip the project work.<br>
-प्रोजेक्ट कार्य मत छोड़ो।<br><br>
-
-
-86. Bring your project on the given date.<br>
-अपना प्रोजेक्ट दी गई तारीख पर लाओ।<br><br>
-
-
-87. Submit your project file neatly.<br>
-अपनी प्रोजेक्ट फ़ाइल साफ़-सुथरी जमा करो।<br><br>
-
-
-88. Don’t waste time on incomplete projects.<br>
-अधूरे प्रोजेक्ट पर समय मत बर्बाद करो।<br><br>
-
-
-89. Group assignments should be done together.<br>
-समूह असाइनमेंट मिलकर करो।<br><br>
-
-
-90. Don’t let others do your homework.<br>
-अपना होमवर्क दूसरों से मत करवाओ।<br><br>
-
-
-91. Discuss homework with your friends.<br>
-अपने दोस्तों से होमवर्क पर चर्चा करो।<br><br>
-
-
-92. Share your ideas in assignments.<br>
-असाइनमेंट में अपने विचार साझा करो।<br><br>
-
-
-93. Be creative in your homework.<br>
-अपने होमवर्क में रचनात्मक बनो।<br><br>
-
-
-94. Add examples in homework answers.<br>
-होमवर्क के उत्तरों में उदाहरण जोड़ो।<br><br>
-
-
-95. Don’t forget to revise after homework.<br>
-होमवर्क के बाद दोहराना मत भूलो।<br><br>
-
-
-96. Homework will help you to revise the lesson.<br>
-होमवर्क तुम्हें पाठ दोहराने में मदद करेगा।<br><br>
-
-
-97. I will check homework tomorrow.<br>
-मैं कल होमवर्क जाँचूँगा।<br><br>
-
-
-98. Don’t be careless about assignments.<br>
-असाइनमेंट के प्रति लापरवाह मत बनो।<br><br>
-
-
-99. Homework is your responsibility.<br>
-होमवर्क तुम्हारी ज़िम्मेदारी है।<br><br>
-
-
-100. Be punctual in homework submission.<br>
-होमवर्क जमा करने में समय के पाबंद बनो।<br><br>
-
-
+        <div class="lesson-container">
+            <div class="lesson-content">
+                <h2>📚 Homework / Assignment Related Sentences</h2>
+                <p>Essential English sentences for teachers and students about homework and assignments.</p>
+
+                <div class="phrase-grid">
+                    <!-- All 100 sentences from original file -->
+                    <div class="phrase-card"><div class="eng">Do your homework daily.</div><div class="hindi">रोज़ अपना होमवर्क करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t forget to complete your homework.</div><div class="hindi">अपना होमवर्क करना मत भूलना।</div></div>
+                    <div class="phrase-card"><div class="eng">Submit your homework tomorrow.</div><div class="hindi">कल अपना होमवर्क जमा करना।</div></div>
+                    <div class="phrase-card"><div class="eng">Show me your homework notebook.</div><div class="hindi">अपनी होमवर्क कॉपी दिखाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Who has not done the homework?</div><div class="hindi">किसने होमवर्क नहीं किया?</div></div>
+                    <div class="phrase-card"><div class="eng">Raise your hand if you have not done homework.</div><div class="hindi">अगर तुमने होमवर्क नहीं किया तो हाथ उठाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Always complete your homework on time.</div><div class="hindi">हमेशा समय पर होमवर्क पूरा करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t copy your homework from others.</div><div class="hindi">अपना होमवर्क दूसरों से मत नकल करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Write your homework neatly.</div><div class="hindi">अपना होमवर्क साफ-सुथरा लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t tear homework pages.</div><div class="hindi">होमवर्क के पन्ने मत फाड़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Bring your homework every day.</div><div class="hindi">रोज़ अपना होमवर्क लेकर आओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t leave your homework incomplete.</div><div class="hindi">अपना होमवर्क अधूरा मत छोड़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Why didn’t you do your homework?</div><div class="hindi">तुमने होमवर्क क्यों नहीं किया?</div></div>
+                    <div class="phrase-card"><div class="eng">Give me a reason for not doing homework.</div><div class="hindi">होमवर्क न करने का कारण बताओ।</div></div>
+                    <div class="phrase-card"><div class="eng">No excuses for incomplete homework.</div><div class="hindi">अधूरे होमवर्क के लिए कोई बहाना नहीं।</div></div>
+                    <div class="phrase-card"><div class="eng">I will punish those who didn’t do homework.</div><div class="hindi">जिनका होमवर्क नहीं हुआ, उन्हें मैं दंड दूँगा।</div></div>
+                    <div class="phrase-card"><div class="eng">Homework is important for practice.</div><div class="hindi">अभ्यास के लिए होमवर्क ज़रूरी है।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t take homework lightly.</div><div class="hindi">होमवर्क को हल्के में मत लो।</div></div>
+                    <div class="phrase-card"><div class="eng">Do your homework regularly.</div><div class="hindi">नियमित रूप से होमवर्क करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Open your homework notebook.</div><div class="hindi">अपनी होमवर्क कॉपी खोलो।</div></div>
+                    <div class="phrase-card"><div class="eng">Close your homework notebook.</div><div class="hindi">अपनी होमवर्क कॉपी बंद करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Homework should be complete.</div><div class="hindi">होमवर्क पूरा होना चाहिए।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t leave blank pages in homework.</div><div class="hindi">होमवर्क में खाली पन्ने मत छोड़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Get your parents’ signature on homework.</div><div class="hindi">होमवर्क पर अपने माता-पिता के हस्ताक्षर लो।</div></div>
+                    <div class="phrase-card"><div class="eng">Did your parents check your homework?</div><div class="hindi">क्या तुम्हारे माता-पिता ने तुम्हारा होमवर्क जाँचा?</div></div>
+                    <div class="phrase-card"><div class="eng">Do your homework without help.</div><div class="hindi">अपना होमवर्क बिना मदद के करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t depend on others for homework.</div><div class="hindi">होमवर्क के लिए दूसरों पर निर्भर मत रहो।</div></div>
+                    <div class="phrase-card"><div class="eng">Revise the lesson while doing homework.</div><div class="hindi">होमवर्क करते समय पाठ को दोहराओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Homework will improve your learning.</div><div class="hindi">होमवर्क तुम्हारी पढ़ाई में सुधार करेगा।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t show careless work in homework.</div><div class="hindi">होमवर्क में लापरवाही मत दिखाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Be honest while doing homework.</div><div class="hindi">होमवर्क करते समय ईमानदार रहो।</div></div>
+                    <div class="phrase-card"><div class="eng">Complete your homework before playing.</div><div class="hindi">खेलने से पहले अपना होमवर्क पूरा करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Finish homework first, then watch TV.</div><div class="hindi">पहले होमवर्क पूरा करो, फिर टीवी देखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t bring incomplete homework.</div><div class="hindi">अधूरा होमवर्क मत लाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">You will lose marks for incomplete homework.</div><div class="hindi">अधूरे होमवर्क के लिए तुम्हारे अंक कटेंगे।</div></div>
+                    <div class="phrase-card"><div class="eng">Where is your homework notebook?</div><div class="hindi">तुम्हारी होमवर्क कॉपी कहाँ है?</div></div>
+                    <div class="phrase-card"><div class="eng">Keep your homework notebook carefully.</div><div class="hindi">अपनी होमवर्क कॉपी ध्यान से रखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t forget your homework notebook.</div><div class="hindi">अपनी होमवर्क कॉपी मत भूलो।</div></div>
+                    <div class="phrase-card"><div class="eng">Submit homework at the teacher’s desk.</div><div class="hindi">होमवर्क शिक्षक की मेज़ पर जमा करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t waste time while doing homework.</div><div class="hindi">होमवर्क करते समय समय बर्बाद मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t make spelling mistakes in homework.</div><div class="hindi">होमवर्क में वर्तनी की गलती मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Write answers neatly in homework.</div><div class="hindi">होमवर्क में उत्तर साफ़ लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t overwrite in homework.</div><div class="hindi">होमवर्क में बार-बार मत लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Correct your mistakes in homework.</div><div class="hindi">होमवर्क में अपनी गलतियाँ सुधारो।</div></div>
+                    <div class="phrase-card"><div class="eng">Homework should be done in sequence.</div><div class="hindi">होमवर्क क्रमवार होना चाहिए।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t skip any question in homework.</div><div class="hindi">होमवर्क में कोई प्रश्न मत छोड़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Write complete answers in homework.</div><div class="hindi">होमवर्क में पूरे उत्तर लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Homework should be submitted on time.</div><div class="hindi">होमवर्क समय पर जमा होना चाहिए।</div></div>
+                    <div class="phrase-card"><div class="eng">Incomplete homework will not be accepted.</div><div class="hindi">अधूरा होमवर्क स्वीकार नहीं किया जाएगा।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t be irregular in homework.</div><div class="hindi">होमवर्क में अनियमित मत रहो।</div></div>
+                    <div class="phrase-card"><div class="eng">Practice your homework daily.</div><div class="hindi">रोज़ अपना होमवर्क अभ्यास करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t postpone your homework.</div><div class="hindi">अपना होमवर्क टालो मत।</div></div>
+                    <div class="phrase-card"><div class="eng">Take your homework seriously.</div><div class="hindi">अपने होमवर्क को गंभीरता से लो।</div></div>
+                    <div class="phrase-card"><div class="eng">Homework will help you in exams.</div><div class="hindi">होमवर्क तुम्हें परीक्षा में मदद करेगा।</div></div>
+                    <div class="phrase-card"><div class="eng">Do your homework independently.</div><div class="hindi">अपना होमवर्क स्वतंत्र रूप से करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t leave homework for the last moment.</div><div class="hindi">होमवर्क आख़िरी समय के लिए मत छोड़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Start homework as soon as you reach home.</div><div class="hindi">घर पहुँचते ही होमवर्क शुरू करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t make excuses for homework.</div><div class="hindi">होमवर्क के लिए बहाने मत बनाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Bring completed homework tomorrow.</div><div class="hindi">कल पूरा होमवर्क लेकर आना।</div></div>
+                    <div class="phrase-card"><div class="eng">Homework is part of your study.</div><div class="hindi">होमवर्क तुम्हारी पढ़ाई का हिस्सा है।</div></div>
+                    <div class="phrase-card"><div class="eng">Do your homework with concentration.</div><div class="hindi">ध्यान लगाकर होमवर्क करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t scribble in homework.</div><div class="hindi">होमवर्क में कच्चा-पक्का मत लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Draw diagrams neatly in homework.</div><div class="hindi">होमवर्क में चित्र साफ़ बनाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Label your diagrams properly.</div><div class="hindi">अपने चित्र ठीक से लेबल करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Write in points when required.</div><div class="hindi">जब ज़रूरत हो तो बिंदुओं में लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Write in detail if asked.</div><div class="hindi">अगर पूछा जाए तो विस्तार से लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t leave margins empty.</div><div class="hindi">मार्जिन खाली मत छोड़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Draw margins in homework.</div><div class="hindi">होमवर्क में मार्जिन बनाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Write the date on homework.</div><div class="hindi">होमवर्क पर तारीख लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Write the heading in homework.</div><div class="hindi">होमवर्क में शीर्षक लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Follow the instructions given in homework.</div><div class="hindi">होमवर्क में दिए गए निर्देशों का पालन करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t copy homework from the guide.</div><div class="hindi">गाइड से होमवर्क मत नकल करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Use your own words in homework.</div><div class="hindi">होमवर्क में अपने शब्दों का प्रयोग करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t submit others’ homework as yours.</div><div class="hindi">दूसरों का होमवर्क अपना बताकर मत दो।</div></div>
+                    <div class="phrase-card"><div class="eng">Homework will be graded.</div><div class="hindi">होमवर्क को अंक दिए जाएँगे।</div></div>
+                    <div class="phrase-card"><div class="eng">Neat homework will get good marks.</div><div class="hindi">साफ़-सुथरे होमवर्क को अच्छे अंक मिलेंगे।</div></div>
+                    <div class="phrase-card"><div class="eng">Untidy homework will lose marks.</div><div class="hindi">गंदे होमवर्क में अंक कटेंगे।</div></div>
+                    <div class="phrase-card"><div class="eng">Keep your homework notebook updated.</div><div class="hindi">अपनी होमवर्क कॉपी अपडेट रखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t forget to bring completed assignments.</div><div class="hindi">पूरा असाइनमेंट लाना मत भूलो।</div></div>
+                    <div class="phrase-card"><div class="eng">Submit your assignment by the deadline.</div><div class="hindi">अपना असाइनमेंट समय सीमा तक जमा करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Late submission will not be accepted.</div><div class="hindi">देर से जमा किया गया असाइनमेंट स्वीकार नहीं होगा।</div></div>
+                    <div class="phrase-card"><div class="eng">Assignment should be original.</div><div class="hindi">असाइनमेंट मौलिक होना चाहिए।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t copy-paste from the internet.</div><div class="hindi">इंटरनेट से कॉपी-पेस्ट मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Write the assignment in your own handwriting.</div><div class="hindi">असाइनमेंट अपनी लिखावट में लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t skip the project work.</div><div class="hindi">प्रोजेक्ट कार्य मत छोड़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Bring your project on the given date.</div><div class="hindi">अपना प्रोजेक्ट दी गई तारीख पर लाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Submit your project file neatly.</div><div class="hindi">अपनी प्रोजेक्ट फ़ाइल साफ़-सुथरी जमा करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t waste time on incomplete projects.</div><div class="hindi">अधूरे प्रोजेक्ट पर समय मत बर्बाद करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Group assignments should be done together.</div><div class="hindi">समूह असाइनमेंट मिलकर करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t let others do your homework.</div><div class="hindi">अपना होमवर्क दूसरों से मत करवाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Discuss homework with your friends.</div><div class="hindi">अपने दोस्तों से होमवर्क पर चर्चा करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Share your ideas in assignments.</div><div class="hindi">असाइनमेंट में अपने विचार साझा करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Be creative in your homework.</div><div class="hindi">अपने होमवर्क में रचनात्मक बनो।</div></div>
+                    <div class="phrase-card"><div class="eng">Add examples in homework answers.</div><div class="hindi">होमवर्क के उत्तरों में उदाहरण जोड़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t forget to revise after homework.</div><div class="hindi">होमवर्क के बाद दोहराना मत भूलो।</div></div>
+                    <div class="phrase-card"><div class="eng">Homework will help you to revise the lesson.</div><div class="hindi">होमवर्क तुम्हें पाठ दोहराने में मदद करेगा।</div></div>
+                    <div class="phrase-card"><div class="eng">I will check homework tomorrow.</div><div class="hindi">मैं कल होमवर्क जाँचूँगा।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t be careless about assignments.</div><div class="hindi">असाइनमेंट के प्रति लापरवाह मत बनो।</div></div>
+                    <div class="phrase-card"><div class="eng">Homework is your responsibility.</div><div class="hindi">होमवर्क तुम्हारी ज़िम्मेदारी है।</div></div>
+                    <div class="phrase-card"><div class="eng">Be punctual in homework submission.</div><div class="hindi">होमवर्क जमा करने में समय के पाबंद बनो।</div></div>
+                </div>
+
+                <p style="margin-top: 1.5rem; text-align: center; color: var(--accent);"><i class="fas fa-book-open"></i> Regular homework practice leads to better learning and exam success!</p>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2025 SpeakFluently . All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
