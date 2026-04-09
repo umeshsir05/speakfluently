@@ -2,9 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>That's why & Connectors - Speak Fluently</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 0 0 1rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+        .phrase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        .phrase-card {
+            background: var(--glass-bg, rgba(0,180,216,0.03));
+            padding: 0.8rem 1rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent, #00b4d8);
+            transition: transform 0.2s;
+        }
+        .phrase-card:hover {
+            transform: translateX(5px);
+            background: rgba(0,180,216,0.08);
+        }
+        .connector {
+            font-weight: 700;
+            color: var(--accent, #00b4d8);
+            font-size: 1.1rem;
+        }
+        .eng {
+            font-weight: 500;
+            color: var(--text-primary, #1e2a3e);
+            margin-top: 5px;
+        }
+        .hindi {
+            color: var(--text-secondary, #4a627a);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-content {
+                padding: 1rem;
+            }
+            .phrase-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,123 +86,212 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
+
     <main>
-        <h2>That's why </h2>
-       
+        <div class="lesson-container">
+            <div class="lesson-content">
+                <h2>🔗 That's why & Connectors</h2>
+                <p>Important conjunctions and connectors used in English to link ideas, show cause-effect, contrast, condition, etc.</p>
 
-1. That's what – यही तो<br>
-Ex – That's what I was saying.<br>
-👉 यही तो मैं कह रहा था।<br>
+                <div class="phrase-grid">
+                    <div class="phrase-card">
+                        <div class="connector">That's what</div>
+                        <div class="eng">That's what I was saying.</div>
+                        <div class="hindi">यही तो मैं कह रहा था।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">That's where</div>
+                        <div class="eng">That's where we will go there.</div>
+                        <div class="hindi">वही जगह है जहाँ हम जाएंगे।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">That's whom</div>
+                        <div class="eng">That's whom we were talking about.</div>
+                        <div class="hindi">यही तो है जिसके बारे में हम बात कर रहे थे।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">That's why</div>
+                        <div class="eng">That's why I don't go there.</div>
+                        <div class="hindi">इसी वजह से मैं वहाँ नहीं जाता।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">That's how</div>
+                        <div class="eng">That's how I want to speak English.</div>
+                        <div class="hindi">इसी तरह से मैं अंग्रेज़ी बोलना चाहता हूँ।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">Otherwise</div>
+                        <div class="eng">Otherwise I will not come to the party.</div>
+                        <div class="hindi">नहीं तो मैं पार्टी में नहीं आऊँगा।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">Either...or</div>
+                        <div class="eng">Either I will listen to a song or watch a movie.</div>
+                        <div class="hindi">या तो मैं गाना सुनूँगा या फिल्म देखूँगा।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">Whereas</div>
+                        <div class="eng">I am reading whereas you are playing.</div>
+                        <div class="hindi">मैं पढ़ रहा हूँ जबकि तुम खेल रहे हो।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">So that</div>
+                        <div class="eng">Give me money so that I could buy a car.</div>
+                        <div class="hindi">मुझे पैसे दो ताकि मैं कार खरीद सकूँ।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">Or else</div>
+                        <div class="eng">Send Sachin or else India may lose the match.</div>
+                        <div class="hindi">सचिन को भेजो अन्यथा भारत मैच हार सकता है।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">Even then</div>
+                        <div class="eng">I invited him, even then he did not come.</div>
+                        <div class="hindi">मैंने उसे बुलाया, फिर भी वह नहीं आया।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">Even if</div>
+                        <div class="eng">Even if he is poor, he is rich at heart.</div>
+                        <div class="hindi">भले ही वह गरीब है, लेकिन दिल का अमीर है।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">Although</div>
+                        <div class="eng">Although he is poor, he is rich at heart.</div>
+                        <div class="hindi">हालांकि वह गरीब है, लेकिन दिल का अमीर है।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">Neither...nor</div>
+                        <div class="eng">I will neither go there nor anywhere else.</div>
+                        <div class="hindi">मैं न तो वहाँ जाऊँगा न ही कहीं और।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">As soon as</div>
+                        <div class="eng">As soon as I went there, it started raining.</div>
+                        <div class="hindi">जैसे ही मैं वहाँ गया, बारिश शुरू हो गई।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">As well as</div>
+                        <div class="eng">I can speak Hindi as well as English.</div>
+                        <div class="hindi">मैं हिंदी के साथ-साथ अंग्रेज़ी भी बोल सकता हूँ।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">As far as</div>
+                        <div class="eng">As far as I know, he won't come.</div>
+                        <div class="hindi">जहाँ तक मुझे पता है, वह नहीं आएगा।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">As long as</div>
+                        <div class="eng">You can stay as long as you want.</div>
+                        <div class="hindi">तुम जब तक चाहो रह सकते हो।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">As good as</div>
+                        <div class="eng">I can walk as good as you.</div>
+                        <div class="hindi">जितना तुम चल सकते हो उतना मैं चल सकता हूँ।</div>
+                    </div>
+                </div>
 
+                <!-- Additional commonly used connectors -->
+                <h3>➕ More Useful Connectors</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card">
+                        <div class="connector">In spite of / Despite</div>
+                        <div class="eng">In spite of the rain, we went out.</div>
+                        <div class="hindi">बारिश के बावजूद, हम बाहर गए।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">Because / Since</div>
+                        <div class="eng">Because he worked hard, he passed.</div>
+                        <div class="hindi">क्योंकि उसने मेहनत की, इसलिए वह पास हो गया।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">Therefore / Hence</div>
+                        <div class="eng">He is honest; therefore, I trust him.</div>
+                        <div class="hindi">वह ईमानदार है; इसलिए मैं उस पर भरोसा करता हूँ।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">Nevertheless</div>
+                        <div class="eng">It was difficult; nevertheless, we succeeded.</div>
+                        <div class="hindi">यह कठिन था; फिर भी, हम सफल हुए।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">Provided that</div>
+                        <div class="eng">You can go out provided that you finish your work.</div>
+                        <div class="hindi">तुम बाहर जा सकते हो बशर्ते तुम अपना काम पूरा कर लो।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="connector">Unless</div>
+                        <div class="eng">You will not pass unless you study.</div>
+                        <div class="hindi">जब तक तुम पढ़ोगे नहीं, तुम पास नहीं होगे।</div>
+                    </div>
+                </div>
 
-2. That's where – उसी जगह तो<br>
-Ex – That's where we will go there.<br>
-👉 वही जगह है जहाँ हम जाएंगे।<br>
-
-
-3. That's whom – यही तो<br>
-Ex – That's whom we were talking about.<br>
-👉 यही तो है जिसके बारे में हम बात कर रहे थे।<br>
-
-
-4. That's why – इसी वजह से<br>
-Ex – That's why I don't go there.<br>
-👉 इसी वजह से मैं वहाँ नहीं जाता।<br>
-
-
-5. That's how – इसी तरह से<br>
-Ex – That's how I want to speak English.<br>
-👉 इसी तरह से मैं अंग्रेज़ी बोलना चाहता हूँ।<br>
-
-
-6. Otherwise – नहीं तो<br>
-Ex – Otherwise I will not come in the party.<br>
-👉 नहीं तो मैं पार्टी में नहीं आऊँगा।<br>
-
-
-7. Either…or – या तो – या<br>
-Ex – Either I will listen song or watch movie.<br>
-👉 या तो मैं गाना सुनूँगा या फिल्म देखूँगा।<br>
-
-
-8. Whereas – जबकि<br>
-Ex – I am reading whereas you are playing.<br>
-👉 मैं पढ़ रहा हूँ जबकि तुम खेल रहे हो।<br>
-
-
-9. So that – ताकि<br>
-Ex – Give me money so that I could buy a car.<br>
-👉 मुझे पैसे दो ताकि मैं कार खरीद सकूँ।<br>
-
-
-10. Or else – अन्यथा<br>
-Ex – Send the Sachin or else India may lose the match.<br>
-👉 सचिन को भेजो अन्यथा भारत मैच हार सकता है।<br>
-
-
-11. Even then – फिर भी<br>
-Ex – I invited him even then he did not come.<br>
-👉 मैंने उसे बुलाया, फिर भी वह नहीं आया।<br>
-
-
-12. Even if – भले ही<br>
-Ex – Even if he is poor but he is rich of heart.<br>
-👉 भले ही वह गरीब है लेकिन दिल का अमीर है।<br>
-
-
-13. Although – हालांकि<br>
-Ex – Although he is poor but he is rich of heart.<br>
-👉 हालांकि वह गरीब है लेकिन दिल का अमीर है।<br>
-
-
-14. Neither…nor – न तो – न ही<br>
-Ex – I will neither go there.<br>
-👉 मैं न तो वहाँ जाऊँगा न ही कहीं और।<br>
-
-
-15. As soon as – जैसे ही<br>
-Ex – As soon as I went there.<br>
-👉 जैसे ही मैं वहाँ गया।<br>
-
-
-16. As well as – साथ ही साथ<br>
-Ex – I can speak Hindi as well as English.<br>
-👉 मैं हिंदी के साथ-साथ अंग्रेज़ी भी बोल सकता हूँ।<br>
-
-
-17. As far as – जहाँ तक<br>
-Ex – As far as I know he won’t come.<br>
-👉 जहाँ तक मुझे पता है, वह नहीं आएगा।<br>
-
-
-18. As long as – जब तक / जितना दूर<br>
-Ex – As long as you can walk.<br>
-👉 जब तक तुम चल सकते हो।<br>
-
-
-19. As good as – जितना अच्छा<br>
-Ex – I can walk as good as you.<br>
-👉 जितना तुम चल सकते हो उतना मैं चल सकता हूँ।<br>
-
----
-
+                <p style="margin-top: 1.5rem; text-align: center; color: var(--accent);"><i class="fas fa-link"></i> Use these connectors to make your English more fluent and natural!</p>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2024 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
