@@ -2,9 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Teaching Instructions - Speak Fluently</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 0 0 1rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .phrase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+        .phrase-card {
+            background: var(--glass-bg, rgba(0,180,216,0.03));
+            padding: 0.7rem 1rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent, #00b4d8);
+            transition: transform 0.2s;
+        }
+        .phrase-card:hover {
+            transform: translateX(5px);
+            background: rgba(0,180,216,0.08);
+        }
+        .eng {
+            font-weight: 600;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .hindi {
+            color: var(--text-secondary, #4a627a);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-content {
+                padding: 1rem;
+            }
+            .phrase-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,428 +73,183 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
+
     <main>
-        <h2>Teaching Instructions</h2>
-        
-1. Open page number ten.<br>
-पेज नंबर दस खोलो।<br><br>
-
-
-2. Read the first paragraph.<br>
-पहला पैरा पढ़ो।<br><br>
-
-
-3. Repeat after me.<br>
-मेरे बाद दोहराओ।<br><br>
-
-
-4. Read aloud.<br>
-जोर से पढ़ो।<br><br>
-
-
-5. Read silently.<br>
-चुपचाप पढ़ो।<br><br>
-
-
-6. Point to the words.<br>
-शब्दों पर उंगली रखो।<br><br>
-
-
-7. Don’t skip any line.<br>
-कोई लाइन मत छोड़ो।<br><br>
-
-
-8. Write the date.<br>
-तारीख लिखो।<br><br>
-
-
-9. Write the heading.<br>
-शीर्षक लिखो।<br><br>
-
-
-10. Write in neat handwriting.<br>
-साफ-सुथरी लिखावट में लिखो।<br><br>
-
-
-11. Don’t overwrite.<br>
-बार-बार मत लिखो।<br><br>
-
-
-12. Erase it properly.<br>
-इसे ठीक से मिटाओ।<br><br>
-
-
-13. Draw a margin.<br>
-मार्जिन खींचो।<br><br>
-
-
-14. Underline the answer.<br>
-उत्तर को रेखांकित करो।<br><br>
-
-
-15. Mark the important point.<br>
-महत्वपूर्ण बिंदु चिन्हित करो।<br><br>
-
-
-16. Note it down.<br>
-इसे लिख लो।<br><br>
-
-
-17. Copy the notes.<br>
-नोट्स कॉपी करो।<br><br>
-
-
-18. Learn it by heart.<br>
-इसे कंठस्थ करो।<br><br>
-
-
-19. Don’t cram.<br>
-रटाई मत करो।<br><br>
-
-
-20. Try to understand.<br>
-समझने की कोशिश करो।<br><br>
-
-
-21. Do it yourself.<br>
-खुद करो।<br><br>
-
-
-22. Complete the exercise.<br>
-अभ्यास पूरा करो।<br><br>
-
-
-23. Write the question first.<br>
-पहले प्रश्न लिखो।<br><br>
-
-
-24. Write the answer below.<br>
-नीचे उत्तर लिखो।<br><br>
-
-
-25. Don’t misspell the words.<br>
-शब्द गलत मत लिखो।<br><br>
-
-
-26. Use capital letters.<br>
-बड़े अक्षर इस्तेमाल करो।<br><br>
-
-
-27. Use small letters.<br>
-छोटे अक्षर इस्तेमाल करो।<br><br>
-
-
-28. Check your spelling.<br>
-अपनी वर्तनी जाँचो।<br><br>
-
-
-29. Match the following.<br>
-निम्नलिखित का मिलान करो।<br><br>
-
-
-30. Fill in the blanks.<br>
-रिक्त स्थान भरो।<br><br>
-
-
-31. Tick the correct answer.<br>
-सही उत्तर पर टिक लगाओ।<br><br>
-
-
-32. Cross the wrong answer.<br>
-गलत उत्तर काट दो।<br><br>
-
-
-33. Write true or false.<br>
-सही या गलत लिखो।<br><br>
-
-
-34. Rearrange the words.<br>
-शब्दों को सही क्रम में लगाओ।<br><br>
-
-
-35. Frame a sentence.<br>
-एक वाक्य बनाओ।<br><br>
-
-
-36. Use it in a sentence.<br>
-इसे वाक्य में प्रयोग करो।<br><br>
-
-
-37. Write synonyms.<br>
-समानार्थी शब्द लिखो।<br><br>
-
-
-38. Write antonyms.<br>
-विपरीतार्थक शब्द लिखो।<br><br>
-
-
-39. Give examples.<br>
-उदाहरण दो।<br><br>
-
-
-40. Explain it in your own words.<br>
-इसे अपने शब्दों में समझाओ।<br><br>
-
-
-41. Tell the meaning.<br>
-अर्थ बताओ।<br><br>
-
-
-42. Translate it.<br>
-इसका अनुवाद करो।<br><br>
-
-
-43. Pronounce it correctly.<br>
-सही उच्चारण करो।<br><br>
-
-
-44. Speak loudly.<br>
-जोर से बोलो।<br><br>
-
-
-45. Speak clearly.<br>
-साफ बोलो।<br><br>
-
-
-46. Don’t mumble.<br>
-बड़बड़ाओ मत।<br><br>
-
-
-47. Raise your voice.<br>
-आवाज़ ऊँची करो।<br><br>
-
-
-48. Lower your voice.<br>
-आवाज़ धीमी करो।<br><br>
-
-
-49. Don’t guess.<br>
-अंदाज़ा मत लगाओ।<br><br>
-
-
-50. Give the correct answer.<br>
-सही उत्तर दो।<br><br>
-
-
-51. Try again.<br>
-फिर से कोशिश करो।<br><br>
-
-
-52. Think before you answer.<br>
-उत्तर देने से पहले सोचो।<br><br>
-
-
-53. Don’t look at others’ books.<br>
-दूसरों की किताब मत देखो।<br><br>
-
-
-54. Solve this problem.<br>
-यह सवाल हल करो।<br><br>
-
-
-55. Do the sum.<br>
-सवाल हल करो।<br><br>
-
-
-56. Check your answer.<br>
-अपना उत्तर जाँचो।<br><br>
-
-
-57. Correct your mistake.<br>
-अपनी गलती सुधारो।<br><br>
-
-
-58. Don’t repeat the mistake.<br>
-वही गलती फिर मत करो।<br><br>
-
-
-59. Revise the lesson.<br>
-पाठ को दोहराओ।<br><br>
-
-
-60. Prepare for the test.<br>
-परीक्षा की तैयारी करो।<br><br>
-
-
-61. Learn the poem.<br>
-कविता याद करो।<br><br>
-
-
-62. Recite the poem.<br>
-कविता सुनाओ।<br><br>
-
-
-63. Spell the word.<br>
-शब्द की स्पेलिंग बताओ।<br><br>
-
-
-64. Write the spelling.<br>
-स्पेलिंग लिखो।<br><br>
-
-
-65. Read the story.<br>
-कहानी पढ़ो।<br><br>
-
-
-66. Narrate the story.<br>
-कहानी सुनाओ।<br><br>
-
-
-67. Ask a question.<br>
-प्रश्न पूछो।<br><br>
-
-
-68. Answer my question.<br>
-मेरे प्रश्न का उत्तर दो।<br><br>
-
-
-69. Don’t copy from the book.<br>
-किताब से मत नकल करो।<br><br>
-
-
-70. Close the book.<br>
-किताब बंद करो।<br><br>
-
-
-71. Open the notebook.<br>
-कॉपी खोलो।<br><br>
-
-
-72. Close the notebook.<br>
-कॉपी बंद करो।<br><br>
-
-
-73. Take out your pen.<br>
-पेन निकालो।<br><br>
-
-
-74. Put your pen down.<br>
-पेन नीचे रखो।<br><br>
-
-
-75. Don’t use a pencil here.<br>
-यहाँ पेंसिल का प्रयोग मत करो।<br><br>
-
-
-76. Use a blue pen.<br>
-नीला पेन इस्तेमाल करो।<br><br>
-
-
-77. Use a black pen.<br>
-काला पेन इस्तेमाल करो।<br><br>
-
-
-78. Use a scale.<br>
-स्केल इस्तेमाल करो।<br><br>
-
-
-79. Draw a diagram.<br>
-चित्र बनाओ।<br><br>
-
-
-80. Label the diagram.<br>
-चित्र पर नाम लिखो।<br><br>
-
-
-81. Write in points.<br>
-बिंदुओं में लिखो।<br><br>
-
-
-82. Write in detail.<br>
-विस्तार से लिखो।<br><br>
-
-
-83. Give a short answer.<br>
-संक्षिप्त उत्तर दो।<br><br>
-
-
-84. Give a long answer.<br>
-विस्तृत उत्तर दो।<br><br>
-
-
-85. Write the definition.<br>
-परिभाषा लिखो।<br><br>
-
-
-86. Define it.<br>
-इसे परिभाषित करो।<br><br>
-
-
-87. Make a chart.<br>
-चार्ट बनाओ।<br><br>
-
-
-88. Do the project work.<br>
-प्रोजेक्ट कार्य करो।<br><br>
-
-
-89. Submit your work.<br>
-अपना कार्य जमा करो।<br><br>
-
-
-90. Submit on time.<br>
-समय पर जमा करो।<br><br>
-
-
-91. Don’t be late.<br>
-देर मत करो।<br><br>
-
-
-92. Revise at home.<br>
-घर पर दोहराओ।<br><br>
-
-
-93. Practice daily.<br>
-रोज़ अभ्यास करो।<br><br>
-
-
-94. Bring your homework tomorrow.<br>
-कल अपना होमवर्क लाओ।<br><br>
-
-
-95. Complete your homework.<br>
-अपना होमवर्क पूरा करो।<br><br>
-
-
-96. Don’t forget your homework.<br>
-अपना होमवर्क मत भूलो।<br><br>
-
-
-97. Do the classwork neatly.<br>
-क्लासवर्क साफ-सुथरा करो।<br><br>
-
-
-98. Don’t tear the page.<br>
-पन्ना मत फाड़ो।<br><br>
-
-
-99. Don’t waste pages.<br>
-पन्ने मत बर्बाद करो।<br><br>
-
-
-100. Finish your work quickly.<br>
-अपना काम जल्दी खत्म करो।<br><br>
-
----
-
-
+        <div class="lesson-container">
+            <div class="lesson-content">
+                <h2>📚 Teaching Instructions</h2>
+                <p>Essential classroom commands and instructions for teachers to guide students effectively.</p>
+
+                <div class="phrase-grid">
+                    <!-- All 100 instructions from original file -->
+                    <div class="phrase-card"><div class="eng">Open page number ten.</div><div class="hindi">पेज नंबर दस खोलो।</div></div>
+                    <div class="phrase-card"><div class="eng">Read the first paragraph.</div><div class="hindi">पहला पैरा पढ़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Repeat after me.</div><div class="hindi">मेरे बाद दोहराओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Read aloud.</div><div class="hindi">जोर से पढ़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Read silently.</div><div class="hindi">चुपचाप पढ़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Point to the words.</div><div class="hindi">शब्दों पर उंगली रखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t skip any line.</div><div class="hindi">कोई लाइन मत छोड़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Write the date.</div><div class="hindi">तारीख लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Write the heading.</div><div class="hindi">शीर्षक लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Write in neat handwriting.</div><div class="hindi">साफ-सुथरी लिखावट में लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t overwrite.</div><div class="hindi">बार-बार मत लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Erase it properly.</div><div class="hindi">इसे ठीक से मिटाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Draw a margin.</div><div class="hindi">मार्जिन खींचो।</div></div>
+                    <div class="phrase-card"><div class="eng">Underline the answer.</div><div class="hindi">उत्तर को रेखांकित करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Mark the important point.</div><div class="hindi">महत्वपूर्ण बिंदु चिन्हित करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Note it down.</div><div class="hindi">इसे लिख लो।</div></div>
+                    <div class="phrase-card"><div class="eng">Copy the notes.</div><div class="hindi">नोट्स कॉपी करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Learn it by heart.</div><div class="hindi">इसे कंठस्थ करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t cram.</div><div class="hindi">रटाई मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Try to understand.</div><div class="hindi">समझने की कोशिश करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Do it yourself.</div><div class="hindi">खुद करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Complete the exercise.</div><div class="hindi">अभ्यास पूरा करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Write the question first.</div><div class="hindi">पहले प्रश्न लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Write the answer below.</div><div class="hindi">नीचे उत्तर लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t misspell the words.</div><div class="hindi">शब्द गलत मत लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Use capital letters.</div><div class="hindi">बड़े अक्षर इस्तेमाल करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Use small letters.</div><div class="hindi">छोटे अक्षर इस्तेमाल करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Check your spelling.</div><div class="hindi">अपनी वर्तनी जाँचो।</div></div>
+                    <div class="phrase-card"><div class="eng">Match the following.</div><div class="hindi">निम्नलिखित का मिलान करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Fill in the blanks.</div><div class="hindi">रिक्त स्थान भरो।</div></div>
+                    <div class="phrase-card"><div class="eng">Tick the correct answer.</div><div class="hindi">सही उत्तर पर टिक लगाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Cross the wrong answer.</div><div class="hindi">गलत उत्तर काट दो।</div></div>
+                    <div class="phrase-card"><div class="eng">Write true or false.</div><div class="hindi">सही या गलत लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Rearrange the words.</div><div class="hindi">शब्दों को सही क्रम में लगाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Frame a sentence.</div><div class="hindi">एक वाक्य बनाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Use it in a sentence.</div><div class="hindi">इसे वाक्य में प्रयोग करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Write synonyms.</div><div class="hindi">समानार्थी शब्द लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Write antonyms.</div><div class="hindi">विपरीतार्थक शब्द लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Give examples.</div><div class="hindi">उदाहरण दो।</div></div>
+                    <div class="phrase-card"><div class="eng">Explain it in your own words.</div><div class="hindi">इसे अपने शब्दों में समझाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Tell the meaning.</div><div class="hindi">अर्थ बताओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Translate it.</div><div class="hindi">इसका अनुवाद करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Pronounce it correctly.</div><div class="hindi">सही उच्चारण करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Speak loudly.</div><div class="hindi">जोर से बोलो।</div></div>
+                    <div class="phrase-card"><div class="eng">Speak clearly.</div><div class="hindi">साफ बोलो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t mumble.</div><div class="hindi">बड़बड़ाओ मत।</div></div>
+                    <div class="phrase-card"><div class="eng">Raise your voice.</div><div class="hindi">आवाज़ ऊँची करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Lower your voice.</div><div class="hindi">आवाज़ धीमी करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t guess.</div><div class="hindi">अंदाज़ा मत लगाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Give the correct answer.</div><div class="hindi">सही उत्तर दो।</div></div>
+                    <div class="phrase-card"><div class="eng">Try again.</div><div class="hindi">फिर से कोशिश करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Think before you answer.</div><div class="hindi">उत्तर देने से पहले सोचो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t look at others’ books.</div><div class="hindi">दूसरों की किताब मत देखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Solve this problem.</div><div class="hindi">यह सवाल हल करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Do the sum.</div><div class="hindi">सवाल हल करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Check your answer.</div><div class="hindi">अपना उत्तर जाँचो।</div></div>
+                    <div class="phrase-card"><div class="eng">Correct your mistake.</div><div class="hindi">अपनी गलती सुधारो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t repeat the mistake.</div><div class="hindi">वही गलती फिर मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Revise the lesson.</div><div class="hindi">पाठ को दोहराओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Prepare for the test.</div><div class="hindi">परीक्षा की तैयारी करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Learn the poem.</div><div class="hindi">कविता याद करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Recite the poem.</div><div class="hindi">कविता सुनाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Spell the word.</div><div class="hindi">शब्द की स्पेलिंग बताओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Write the spelling.</div><div class="hindi">स्पेलिंग लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Read the story.</div><div class="hindi">कहानी पढ़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Narrate the story.</div><div class="hindi">कहानी सुनाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Ask a question.</div><div class="hindi">प्रश्न पूछो।</div></div>
+                    <div class="phrase-card"><div class="eng">Answer my question.</div><div class="hindi">मेरे प्रश्न का उत्तर दो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t copy from the book.</div><div class="hindi">किताब से मत नकल करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Close the book.</div><div class="hindi">किताब बंद करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Open the notebook.</div><div class="hindi">कॉपी खोलो।</div></div>
+                    <div class="phrase-card"><div class="eng">Close the notebook.</div><div class="hindi">कॉपी बंद करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Take out your pen.</div><div class="hindi">पेन निकालो।</div></div>
+                    <div class="phrase-card"><div class="eng">Put your pen down.</div><div class="hindi">पेन नीचे रखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t use a pencil here.</div><div class="hindi">यहाँ पेंसिल का प्रयोग मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Use a blue pen.</div><div class="hindi">नीला पेन इस्तेमाल करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Use a black pen.</div><div class="hindi">काला पेन इस्तेमाल करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Use a scale.</div><div class="hindi">स्केल इस्तेमाल करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Draw a diagram.</div><div class="hindi">चित्र बनाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Label the diagram.</div><div class="hindi">चित्र पर नाम लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Write in points.</div><div class="hindi">बिंदुओं में लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Write in detail.</div><div class="hindi">विस्तार से लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Give a short answer.</div><div class="hindi">संक्षिप्त उत्तर दो।</div></div>
+                    <div class="phrase-card"><div class="eng">Give a long answer.</div><div class="hindi">विस्तृत उत्तर दो।</div></div>
+                    <div class="phrase-card"><div class="eng">Write the definition.</div><div class="hindi">परिभाषा लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Define it.</div><div class="hindi">इसे परिभाषित करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Make a chart.</div><div class="hindi">चार्ट बनाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Do the project work.</div><div class="hindi">प्रोजेक्ट कार्य करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Submit your work.</div><div class="hindi">अपना कार्य जमा करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Submit on time.</div><div class="hindi">समय पर जमा करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t be late.</div><div class="hindi">देर मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Revise at home.</div><div class="hindi">घर पर दोहराओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Practice daily.</div><div class="hindi">रोज़ अभ्यास करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Bring your homework tomorrow.</div><div class="hindi">कल अपना होमवर्क लाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Complete your homework.</div><div class="hindi">अपना होमवर्क पूरा करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t forget your homework.</div><div class="hindi">अपना होमवर्क मत भूलो।</div></div>
+                    <div class="phrase-card"><div class="eng">Do the classwork neatly.</div><div class="hindi">क्लासवर्क साफ-सुथरा करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t tear the page.</div><div class="hindi">पन्ना मत फाड़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t waste pages.</div><div class="hindi">पन्ने मत बर्बाद करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Finish your work quickly.</div><div class="hindi">अपना काम जल्दी खत्म करो।</div></div>
+                </div>
+
+                <p style="margin-top: 1.5rem; text-align: center; color: var(--accent);"><i class="fas fa-chalkboard"></i> Use these clear instructions to guide your students effectively!</p>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2024 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
