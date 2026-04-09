@@ -1,12 +1,70 @@
-14_discipline.html
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Classroom Discipline - Speak Fluently</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 0 0 1rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .phrase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+        .phrase-card {
+            background: var(--glass-bg, rgba(0,180,216,0.03));
+            padding: 0.7rem 1rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent, #00b4d8);
+            transition: transform 0.2s;
+        }
+        .phrase-card:hover {
+            transform: translateX(5px);
+            background: rgba(0,180,216,0.08);
+        }
+        .eng {
+            font-weight: 600;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .hindi {
+            color: var(--text-secondary, #4a627a);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-content {
+                padding: 1rem;
+            }
+            .phrase-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -15,432 +73,183 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
+
     <main>
-        <h2>📝 Classroom Discipline 📝</h2><br>
-
-
- 
-1. Sit properly. <br>
-ठीक से बैठो। <br><br>
-
-
-2. Don’t make noise. <br>
-शोर मत करो। <br><br>
-
-
-3. Keep quiet. <br>
-शांत रहो। <br><br>
-
-
-4. Maintain silence. <br>
-शांति बनाए रखो। <br><br>
-
-
-5. Don’t talk in the class. <br>
-कक्षा में बात मत करो। <br><br>
-
-
-6. Listen carefully. <br>
-ध्यान से सुनो। <br><br>
-
-
-7. Pay attention. <br>
-ध्यान दो। <br><br>
-
-
-8. Don’t disturb others. <br>
-दूसरों को परेशान मत करो। <br><br>
-
-
-9. Raise your hand to speak. <br>
-बोलने के लिए हाथ उठाओ। <br><br>
-
-
-10. Don’t shout. <br>
-चिल्लाओ मत। <br><br>
-
-
-11. Follow the rules. <br>
-नियमों का पालन करो। <br><br>
-
-
-12. Obey the teacher. <br>
-शिक्षक की बात मानो। <br><br>
-
-
-13. Respect your teacher. <br>
-अपने शिक्षक का सम्मान करो। <br><br>
-
-
-14. Respect your classmates. <br>
-अपने सहपाठियों का सम्मान करो। <br><br>
-
-
-15. Stand in a line. <br>
-लाइन में खड़े हो जाओ। <br><br>
-
-
-16. Don’t push each other. <br>
-एक-दूसरे को मत धक्का दो। <br><br>
-
-
-17. Walk slowly. <br>
-धीरे चलो। <br><br>
-
-
-18. Don’t run in the classroom. <br>
-कक्षा में मत दौड़ो। <br><br>
-
-
-19. Sit in your place. <br>
-अपनी जगह बैठो। <br><br>
-
-
-20. Don’t fight. <br>
-लड़ाई मत करो। <br><br>
-
-
-21. Be polite. <br>
-विनम्र रहो। <br><br>
-
-
-22. Be honest. <br>
-ईमानदार रहो। <br><br>
-
-
-23. Wait for your turn. <br>
-अपनी बारी का इंतजार करो। <br><br>
-
-
-24. Share with others. <br>
-दूसरों के साथ बाँटो। <br><br>
-
-
-25. Don’t cheat. <br>
-नकल मत करो। <br><br>
-
-
-26. Don’t lie. <br>
-झूठ मत बोलो। <br><br>
-
-
-27. Apologize if you are wrong. <br>
-गलती हो तो माफी माँगो। <br><br>
-
-
-28. Say sorry politely. <br>
-विनम्रता से सॉरी कहो। <br><br>
-
-
-29. Don’t throw things. <br>
-चीजें मत फेंको। <br><br>
-
-
-30. Keep your desk clean. <br>
-अपनी डेस्क साफ रखो। <br><br>
-
-
-31. Keep your classroom clean. <br>
-अपनी कक्षा साफ रखो। <br><br>
-
-
-32. Don’t litter. <br>
-कचरा मत फैलाओ। <br><br>
-
-
-33. Put the garbage in the bin. <br>
-कचरा डिब्बे में डालो। <br><br>
-
-
-34. Don’t write on the wall. <br>
-दीवार पर मत लिखो। <br><br>
-
-
-35. Don’t scribble on the desk. <br>
-डेस्क पर मत लिखो। <br><br>
-
-
-36. Respect school property. <br>
-स्कूल की संपत्ति का सम्मान करो। <br><br>
-
-
-37. Don’t damage books. <br>
-किताबें खराब मत करो। <br><br>
-
-
-38. Don’t tear the pages. <br>
-पन्ने मत फाड़ो। <br><br>
-
-
-39. Return the books on time. <br>
-किताबें समय पर लौटाओ। <br><br>
-
-
-40. Wear your uniform properly. <br>
-अपनी वर्दी सही से पहनो। <br><br>
-
-
-41. Keep your shoes polished. <br>
-अपने जूते पॉलिश रखो। <br><br>
-
-
-42. Comb your hair neatly. <br>
-अपने बाल ठीक से बनाओ। <br><br>
-
-
-43. Cut your nails regularly. <br>
-नाखून नियमित रूप से काटो। <br><br>
-
-
-44. Stand straight. <br>
-सीधे खड़े हो जाओ। <br><br>
-
-
-45. Don’t lean on the wall. <br>
-दीवार पर मत टिको। <br><br>
-
-
-46. Walk in a queue. <br>
-लाइन में चलो। <br><br>
-
-
-47. Respect the national flag. <br>
-राष्ट्रीय ध्वज का सम्मान करो। <br><br>
-
-
-48. Respect the national anthem. <br>
-राष्ट्रीय गान का सम्मान करो। <br><br>
-
-
-49. Don’t make fun of others. <br>
-दूसरों का मज़ाक मत उड़ाओ। <br><br>
-
-
-50. Help your friends. <br>
-अपने दोस्तों की मदद करो। <br><br>
-
-
-51. Don’t hurt anyone. <br>
-किसी को चोट मत पहुँचाओ। <br><br>
-
-
-52. Say thank you. <br>
-धन्यवाद कहो। <br><br>
-
-
-53. Say please. <br>
-कृपया कहो। <br><br>
-
-
-54. Greet your teachers. <br>
-अपने शिक्षकों को नमस्ते करो। <br><br>
-
-
-55. Don’t interrupt others. <br>
-दूसरों की बात बीच में मत काटो। <br><br>
-
-
-56. Be punctual. <br>
-समय पर रहो। <br><br>
-
-
-57. Don’t be late. <br>
-देर मत करो। <br><br>
-
-
-58. Be disciplined. <br>
-अनुशासित रहो। <br><br>
-
-
-59. Follow instructions. <br>
-निर्देशों का पालन करो। <br><br>
-
-
-60. Wait patiently. <br>
-धैर्य से इंतजार करो। <br><br>
-
-
-61. Don’t waste time. <br>
-समय बर्बाद मत करो। <br><br>
-
-
-62. Value time. <br>
-समय की कदर करो। <br><br>
-
-
-63. Be attentive. <br>
-सतर्क रहो। <br><br>
-
-
-64. Sit silently. <br>
-चुपचाप बैठो। <br><br>
-
-
-65. Don’t sleep in the class. <br>
-कक्षा में मत सोओ। <br><br>
-
-
-66. Don’t eat in the class. <br>
-कक्षा में मत खाओ। <br><br>
-
-
-67. Don’t bring junk food. <br>
-जंक फूड मत लाओ। <br><br>
-
-
-68. Don’t run in the corridor. <br>
-गलियारे में मत दौड़ो। <br><br>
-
-
-69. Don’t climb on the desk. <br>
-डेस्क पर मत चढ़ो। <br><br>
-
-
-70. Take care of your belongings. <br>
-अपनी चीज़ों का ध्यान रखो। <br><br>
-
-
-71. Don’t lose your things. <br>
-अपनी चीज़ें मत खोओ। <br><br>
-
-
-72. Don’t quarrel. <br>
-झगड़ा मत करो। <br><br>
-
-
-73. Be kind to everyone. <br>
-सबके प्रति दयालु रहो। <br><br>
-
-
-74. Be helpful. <br>
-सहायता करने वाले बनो। <br><br>
-
-
-75. Be cooperative. <br>
-सहयोगी बनो। <br><br>
-
-
-76. Be responsible. <br>
-जिम्मेदार बनो। <br><br>
-
-
-77. Respect elders. <br>
-बड़ों का सम्मान करो। <br><br>
-
-
-78. Don’t argue with teachers. <br>
-शिक्षकों से बहस मत करो। <br><br>
-
-
-79. Don’t argue with friends. <br>
-दोस्तों से बहस मत करो। <br><br>
-
-
-80. Don’t be rude. <br>
-बदतमीज़ मत बनो। <br><br>
-
-
-81. Don’t bully others. <br>
-दूसरों को परेशान मत करो। <br><br>
-
-
-82. Speak politely. <br>
-विनम्रता से बोलो। <br><br>
-
-
-83. Sit quietly in the assembly. <br>
-सभा में चुपचाप बैठो। <br><br>
-
-
-84. Stand quietly in the line. <br>
-लाइन में चुपचाप खड़े रहो। <br><br>
-
-
-85. Don’t misuse things. <br>
-चीज़ों का गलत इस्तेमाल मत करो। <br><br>
-
-
-86. Take permission before leaving. <br>
-जाने से पहले अनुमति लो। <br><br>
-
-
-87. Don’t leave the class without permission. <br>
-अनुमति के बिना कक्षा मत छोड़ो। <br><br>
-
-
-88. Be regular in school. <br>
-स्कूल नियमित रूप से आओ। <br><br>
-
-
-89. Don’t bunk the class. <br>
-कक्षा मत छोड़ो। <br><br>
-
-
-90. Don’t fight with juniors. <br>
-छोटों से मत लड़ो। <br><br>
-
-
-91. Don’t disobey the teacher. <br>
-शिक्षक की अवहेलना मत करो। <br><br>
-
-
-92. Keep your bag properly. <br>
-अपना बैग ठीक से रखो। <br><br>
-
-
-93. Don’t misuse water. <br>
-पानी का गलत उपयोग मत करो। <br><br>
-
-
-94. Save electricity. <br>
-बिजली बचाओ। <br><br>
-
-
-95. Don’t waste food. <br>
-भोजन बर्बाद मत करो। <br><br>
-
-
-96. Respect the school bell. <br>
-स्कूल की घंटी का सम्मान करो। <br><br>
-
-
-97. Leave the class in order. <br>
-कक्षा से अनुशासन में निकलो। <br><br>
-
-
-98. Don’t hide others’ belongings. <br>
-दूसरों की चीज़ें मत छिपाओ। <br><br>
-
-
-99. Don’t use bad words. <br>
-गलत शब्द मत बोलो। <br><br>
-
-
-100. Be a good student. <br>
-एक अच्छे विद्यार्थी बनो। <br><br>
-
----
-
-
-
-
+        <div class="lesson-container">
+            <div class="lesson-content">
+                <h2>📝 Classroom Discipline</h2>
+                <p>Essential rules and instructions to maintain discipline and a positive learning environment.</p>
+
+                <div class="phrase-grid">
+                    <!-- 100 discipline phrases from original file -->
+                    <div class="phrase-card"><div class="eng">Sit properly.</div><div class="hindi">ठीक से बैठो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t make noise.</div><div class="hindi">शोर मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Keep quiet.</div><div class="hindi">शांत रहो।</div></div>
+                    <div class="phrase-card"><div class="eng">Maintain silence.</div><div class="hindi">शांति बनाए रखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t talk in the class.</div><div class="hindi">कक्षा में बात मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Listen carefully.</div><div class="hindi">ध्यान से सुनो।</div></div>
+                    <div class="phrase-card"><div class="eng">Pay attention.</div><div class="hindi">ध्यान दो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t disturb others.</div><div class="hindi">दूसरों को परेशान मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Raise your hand to speak.</div><div class="hindi">बोलने के लिए हाथ उठाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t shout.</div><div class="hindi">चिल्लाओ मत।</div></div>
+                    <div class="phrase-card"><div class="eng">Follow the rules.</div><div class="hindi">नियमों का पालन करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Obey the teacher.</div><div class="hindi">शिक्षक की बात मानो।</div></div>
+                    <div class="phrase-card"><div class="eng">Respect your teacher.</div><div class="hindi">अपने शिक्षक का सम्मान करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Respect your classmates.</div><div class="hindi">अपने सहपाठियों का सम्मान करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Stand in a line.</div><div class="hindi">लाइन में खड़े हो जाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t push each other.</div><div class="hindi">एक-दूसरे को मत धक्का दो।</div></div>
+                    <div class="phrase-card"><div class="eng">Walk slowly.</div><div class="hindi">धीरे चलो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t run in the classroom.</div><div class="hindi">कक्षा में मत दौड़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Sit in your place.</div><div class="hindi">अपनी जगह बैठो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t fight.</div><div class="hindi">लड़ाई मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Be polite.</div><div class="hindi">विनम्र रहो।</div></div>
+                    <div class="phrase-card"><div class="eng">Be honest.</div><div class="hindi">ईमानदार रहो।</div></div>
+                    <div class="phrase-card"><div class="eng">Wait for your turn.</div><div class="hindi">अपनी बारी का इंतजार करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Share with others.</div><div class="hindi">दूसरों के साथ बाँटो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t cheat.</div><div class="hindi">नकल मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t lie.</div><div class="hindi">झूठ मत बोलो।</div></div>
+                    <div class="phrase-card"><div class="eng">Apologize if you are wrong.</div><div class="hindi">गलती हो तो माफी माँगो।</div></div>
+                    <div class="phrase-card"><div class="eng">Say sorry politely.</div><div class="hindi">विनम्रता से सॉरी कहो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t throw things.</div><div class="hindi">चीजें मत फेंको।</div></div>
+                    <div class="phrase-card"><div class="eng">Keep your desk clean.</div><div class="hindi">अपनी डेस्क साफ रखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Keep your classroom clean.</div><div class="hindi">अपनी कक्षा साफ रखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t litter.</div><div class="hindi">कचरा मत फैलाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Put the garbage in the bin.</div><div class="hindi">कचरा डिब्बे में डालो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t write on the wall.</div><div class="hindi">दीवार पर मत लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t scribble on the desk.</div><div class="hindi">डेस्क पर मत लिखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Respect school property.</div><div class="hindi">स्कूल की संपत्ति का सम्मान करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t damage books.</div><div class="hindi">किताबें खराब मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t tear the pages.</div><div class="hindi">पन्ने मत फाड़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Return the books on time.</div><div class="hindi">किताबें समय पर लौटाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Wear your uniform properly.</div><div class="hindi">अपनी वर्दी सही से पहनो।</div></div>
+                    <div class="phrase-card"><div class="eng">Keep your shoes polished.</div><div class="hindi">अपने जूते पॉलिश रखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Comb your hair neatly.</div><div class="hindi">अपने बाल ठीक से बनाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Cut your nails regularly.</div><div class="hindi">नाखून नियमित रूप से काटो।</div></div>
+                    <div class="phrase-card"><div class="eng">Stand straight.</div><div class="hindi">सीधे खड़े हो जाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t lean on the wall.</div><div class="hindi">दीवार पर मत टिको।</div></div>
+                    <div class="phrase-card"><div class="eng">Walk in a queue.</div><div class="hindi">लाइन में चलो।</div></div>
+                    <div class="phrase-card"><div class="eng">Respect the national flag.</div><div class="hindi">राष्ट्रीय ध्वज का सम्मान करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Respect the national anthem.</div><div class="hindi">राष्ट्रीय गान का सम्मान करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t make fun of others.</div><div class="hindi">दूसरों का मज़ाक मत उड़ाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Help your friends.</div><div class="hindi">अपने दोस्तों की मदद करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t hurt anyone.</div><div class="hindi">किसी को चोट मत पहुँचाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Say thank you.</div><div class="hindi">धन्यवाद कहो।</div></div>
+                    <div class="phrase-card"><div class="eng">Say please.</div><div class="hindi">कृपया कहो।</div></div>
+                    <div class="phrase-card"><div class="eng">Greet your teachers.</div><div class="hindi">अपने शिक्षकों को नमस्ते करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t interrupt others.</div><div class="hindi">दूसरों की बात बीच में मत काटो।</div></div>
+                    <div class="phrase-card"><div class="eng">Be punctual.</div><div class="hindi">समय पर रहो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t be late.</div><div class="hindi">देर मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Be disciplined.</div><div class="hindi">अनुशासित रहो।</div></div>
+                    <div class="phrase-card"><div class="eng">Follow instructions.</div><div class="hindi">निर्देशों का पालन करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Wait patiently.</div><div class="hindi">धैर्य से इंतजार करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t waste time.</div><div class="hindi">समय बर्बाद मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Value time.</div><div class="hindi">समय की कदर करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Be attentive.</div><div class="hindi">सतर्क रहो।</div></div>
+                    <div class="phrase-card"><div class="eng">Sit silently.</div><div class="hindi">चुपचाप बैठो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t sleep in the class.</div><div class="hindi">कक्षा में मत सोओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t eat in the class.</div><div class="hindi">कक्षा में मत खाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t bring junk food.</div><div class="hindi">जंक फूड मत लाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t run in the corridor.</div><div class="hindi">गलियारे में मत दौड़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t climb on the desk.</div><div class="hindi">डेस्क पर मत चढ़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Take care of your belongings.</div><div class="hindi">अपनी चीज़ों का ध्यान रखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t lose your things.</div><div class="hindi">अपनी चीज़ें मत खोओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t quarrel.</div><div class="hindi">झगड़ा मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Be kind to everyone.</div><div class="hindi">सबके प्रति दयालु रहो।</div></div>
+                    <div class="phrase-card"><div class="eng">Be helpful.</div><div class="hindi">सहायता करने वाले बनो।</div></div>
+                    <div class="phrase-card"><div class="eng">Be cooperative.</div><div class="hindi">सहयोगी बनो।</div></div>
+                    <div class="phrase-card"><div class="eng">Be responsible.</div><div class="hindi">जिम्मेदार बनो।</div></div>
+                    <div class="phrase-card"><div class="eng">Respect elders.</div><div class="hindi">बड़ों का सम्मान करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t argue with teachers.</div><div class="hindi">शिक्षकों से बहस मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t argue with friends.</div><div class="hindi">दोस्तों से बहस मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t be rude.</div><div class="hindi">बदतमीज़ मत बनो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t bully others.</div><div class="hindi">दूसरों को परेशान मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Speak politely.</div><div class="hindi">विनम्रता से बोलो।</div></div>
+                    <div class="phrase-card"><div class="eng">Sit quietly in the assembly.</div><div class="hindi">सभा में चुपचाप बैठो।</div></div>
+                    <div class="phrase-card"><div class="eng">Stand quietly in the line.</div><div class="hindi">लाइन में चुपचाप खड़े रहो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t misuse things.</div><div class="hindi">चीज़ों का गलत इस्तेमाल मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Take permission before leaving.</div><div class="hindi">जाने से पहले अनुमति लो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t leave the class without permission.</div><div class="hindi">अनुमति के बिना कक्षा मत छोड़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Be regular in school.</div><div class="hindi">स्कूल नियमित रूप से आओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t bunk the class.</div><div class="hindi">कक्षा मत छोड़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t fight with juniors.</div><div class="hindi">छोटों से मत लड़ो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t disobey the teacher.</div><div class="hindi">शिक्षक की अवहेलना मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Keep your bag properly.</div><div class="hindi">अपना बैग ठीक से रखो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t misuse water.</div><div class="hindi">पानी का गलत उपयोग मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Save electricity.</div><div class="hindi">बिजली बचाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t waste food.</div><div class="hindi">भोजन बर्बाद मत करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Respect the school bell.</div><div class="hindi">स्कूल की घंटी का सम्मान करो।</div></div>
+                    <div class="phrase-card"><div class="eng">Leave the class in order.</div><div class="hindi">कक्षा से अनुशासन में निकलो।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t hide others’ belongings.</div><div class="hindi">दूसरों की चीज़ें मत छिपाओ।</div></div>
+                    <div class="phrase-card"><div class="eng">Don’t use bad words.</div><div class="hindi">गलत शब्द मत बोलो।</div></div>
+                    <div class="phrase-card"><div class="eng">Be a good student.</div><div class="hindi">एक अच्छे विद्यार्थी बनो।</div></div>
+                </div>
+
+                <p style="margin-top: 1.5rem; text-align: center; color: var(--accent);"><i class="fas fa-gavel"></i> Discipline is the bridge between goals and accomplishment. Follow these rules to create a positive learning environment!</p>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2024 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
