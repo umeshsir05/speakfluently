@@ -2,9 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Wh-ever Words - Speak Fluently</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 0 0 1rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+        .phrase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        .phrase-card {
+            background: var(--glass-bg, rgba(0,180,216,0.03));
+            padding: 0.8rem 1rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent, #00b4d8);
+            transition: transform 0.2s;
+        }
+        .phrase-card:hover {
+            transform: translateX(5px);
+            background: rgba(0,180,216,0.08);
+        }
+        .wh-word {
+            font-weight: 700;
+            color: var(--accent, #00b4d8);
+            font-size: 1.1rem;
+        }
+        .eng {
+            font-weight: 500;
+            color: var(--text-primary, #1e2a3e);
+            margin-top: 5px;
+        }
+        .hindi {
+            color: var(--text-secondary, #4a627a);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        .note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            color: var(--text-secondary);
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-content {
+                padding: 1rem;
+            }
+            .phrase-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,79 +93,172 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
+
     <main>
-        <h2>Whatever, Whenever, Whoever</h2>
-       
+        <div class="lesson-container">
+            <div class="lesson-content">
+                <h2>🔁 Whatever, Whenever, Whoever (Wh-ever Words)</h2>
+                <p>Wh-ever words are used to express "any" or "no matter" in a general sense. They add emphasis and flexibility.</p>
 
-1. Whatever<br>
-Meaning: जो कुछ भी / किसी भी चीज़<br><br>
-Example: Whatever you say, I will do.<br><br>
-Hindi: जो भी तुम कहो, मैं करूंगा।<br><br>
+                <div class="phrase-grid">
+                    <div class="phrase-card">
+                        <div class="wh-word">Whatever</div>
+                        <div class="eng">Meaning: जो कुछ भी / किसी भी चीज़</div>
+                        <div class="eng">Whatever you say, I will do.</div>
+                        <div class="hindi">जो भी तुम कहो, मैं करूंगा।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="wh-word">Whenever</div>
+                        <div class="eng">Meaning: जब भी / किसी भी समय</div>
+                        <div class="eng">Call me whenever you want.</div>
+                        <div class="hindi">जब भी तुम चाहो, मुझे कॉल करो।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="wh-word">Whoever</div>
+                        <div class="eng">Meaning: जो कोई भी / कोई भी व्यक्ति</div>
+                        <div class="eng">Whoever comes first will get a prize.</div>
+                        <div class="hindi">जो भी पहले आएगा, उसे इनाम मिलेगा।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="wh-word">Wherever</div>
+                        <div class="eng">Meaning: जहाँ भी / किसी भी जगह</div>
+                        <div class="eng">Sit wherever you like.</div>
+                        <div class="hindi">जहाँ भी बैठना चाहो, बैठो।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="wh-word">However</div>
+                        <div class="eng">Meaning: जैसे भी / किसी भी तरह</div>
+                        <div class="eng">Do it however you like.</div>
+                        <div class="hindi">जैसे भी करना चाहो, करो।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="wh-word">Whichever</div>
+                        <div class="eng">Meaning: जो भी / किसी भी एक का चयन</div>
+                        <div class="eng">Choose whichever book you like.</div>
+                        <div class="hindi">जो भी किताब पसंद हो, चुन लो।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="wh-word">Whatever + noun</div>
+                        <div class="eng">Whatever reason, I don't agree.</div>
+                        <div class="hindi">किसी भी वजह से, मैं सहमत नहीं हूँ।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="wh-word">Whenever + clause</div>
+                        <div class="eng">Whenever I see him, I smile.</div>
+                        <div class="hindi">जब भी मैं उसे देखता हूँ, मैं मुस्कुराता हूँ।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="wh-word">Whoever + verb</div>
+                        <div class="eng">Whoever breaks the rule will be punished.</div>
+                        <div class="hindi">जो भी नियम तोड़ेगा, उसे सजा मिलेगी।</div>
+                    </div>
+                </div>
 
+                <!-- Additional examples for better understanding -->
+                <h3>📝 More Examples</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card">
+                        <div class="wh-word">Whatever</div>
+                        <div class="eng">Whatever happens, stay calm.</div>
+                        <div class="hindi">जो भी हो, शांत रहो।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="wh-word">Whenever</div>
+                        <div class="eng">Whenever you need help, call me.</div>
+                        <div class="hindi">जब भी तुम्हें मदद चाहिए, मुझे बुलाओ।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="wh-word">Whoever</div>
+                        <div class="eng">Whoever did this is very clever.</div>
+                        <div class="hindi">जिसने भी यह किया, वह बहुत होशियार है।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="wh-word">Wherever</div>
+                        <div class="eng">Wherever you go, I will follow.</div>
+                        <div class="hindi">तुम जहाँ भी जाओगे, मैं पीछे आऊँगा।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="wh-word">However</div>
+                        <div class="eng">However hard he tried, he failed.</div>
+                        <div class="hindi">उसने कितनी भी कोशिश की, वह असफल रहा।</div>
+                    </div>
+                    <div class="phrase-card">
+                        <div class="wh-word">Whichever</div>
+                        <div class="eng">Whichever road you take, you'll reach the station.</div>
+                        <div class="hindi">तुम जो भी रास्ता लो, स्टेशन पहुँच जाओगे।</div>
+                    </div>
+                </div>
 
-2. Whenever<br>
-Meaning: जब भी / किसी भी समय<br><br>
-Example: Call me whenever you want.<br><br>
-Hindi: जब भी तुम चाहो, मुझे कॉल करो।<br><br>
+                <div class="note">
+                    <i class="fas fa-lightbulb"></i> <strong>Note:</strong> Wh-ever words function as conjunctions or relative pronouns. They are often used to mean "no matter what/who/where/when/how/which". They add a sense of universality or indifference to the specific choice.
+                </div>
 
-
-3. Whoever<br>
-Meaning: जो कोई भी / कोई भी व्यक्ति<br><br>
-Example: Whoever comes first will get a prize.<br><br>
-Hindi: जो भी पहले आएगा, उसे इनाम मिलेगा।<br><br>
-
-
-4. Wherever<br>
-Meaning: जहाँ भी / किसी भी जगह<br><br>
-Example: Sit wherever you like.<br><br>
-Hindi: जहाँ भी बैठना चाहो, बैठो।<br><br>
-
-
-5. However<br>
-Meaning: जैसे भी / किसी भी तरह<br><br>
-Example: Do it however you like.<br><br>
-Hindi: जैसे भी करना चाहो, करो।<br><br>
-
-
-6. Whichever<br>
-Meaning: जो भी / किसी भी एक का चयन<br><br>
-Example: Choose whichever book you like.<br><br>
-Hindi: जो भी किताब पसंद हो, चुन लो।<br><br>
-
-
-7. Whatever + noun<br>
-Example: Whatever reason, I don’t agree.<br><br>
-Hindi: किसी भी वजह से, मैं सहमत नहीं हूँ।<br><br>
-
-
-8. Whenever + clause<br>
-Example: Whenever I see him, I smile.<br><br>
-Hindi: जब भी मैं उसे देखता हूँ, मैं मुस्कुराता हूँ।<br><br>
-
-
-9. Whoever + verb<br>
-Example: Whoever breaks the rule will be punished.<br><br>
-Hindi: जो भी नियम तोड़ेगा, उसे सजा मिलेगी।<br><br>
-
-
-
+                <p style="margin-top: 1rem; text-align: center; color: var(--accent);"><i class="fas fa-language"></i> Practice these words to make your English more natural and expressive!</p>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2024 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
