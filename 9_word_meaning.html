@@ -2,9 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Word Meaning - Speak Fluently</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 0 0 1rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+        .word-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        .word-card {
+            background: var(--glass-bg, rgba(0,180,216,0.03));
+            padding: 0.7rem 1rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent, #00b4d8);
+            transition: transform 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+        .word-card:hover {
+            transform: translateX(5px);
+            background: rgba(0,180,216,0.08);
+        }
+        .eng-word {
+            font-weight: 700;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .hindi-meaning {
+            color: var(--accent, #00b4d8);
+            font-size: 0.9rem;
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-content {
+                padding: 1rem;
+            }
+            .word-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,126 +83,188 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
+
     <main>
-        <h2>Word meaning</h2><br>
-       
+        <div class="lesson-container">
+            <div class="lesson-content">
+                <h2>📖 Word Meaning (शब्दार्थ)</h2>
+                <p>Common English words and phrases with their Hindi meanings. Perfect for building vocabulary.</p>
 
-1. Take out your book<br>
-अपनी किताब निकालो<br><br>
+                <!-- Original words (1-24) -->
+                <h3>📌 Daily Use Words & Phrases</h3>
+                <div class="word-grid">
+                    <div class="word-card"><span class="eng-word">Take out your book</span><span class="hindi-meaning">अपनी किताब निकालो</span></div>
+                    <div class="word-card"><span class="eng-word">Use</span><span class="hindi-meaning">उपयोग</span></div>
+                    <div class="word-card"><span class="eng-word">School</span><span class="hindi-meaning">विद्यालय</span></div>
+                    <div class="word-card"><span class="eng-word">Whom</span><span class="hindi-meaning">किसे, किसको (person, Obj.)</span></div>
+                    <div class="word-card"><span class="eng-word">Whose</span><span class="hindi-meaning">किसका</span></div>
+                    <div class="word-card"><span class="eng-word">Why</span><span class="hindi-meaning">क्यों</span></div>
+                    <div class="word-card"><span class="eng-word">Why don't</span><span class="hindi-meaning">क्यों नहीं</span></div>
+                    <div class="word-card"><span class="eng-word">When</span><span class="hindi-meaning">कब</span></div>
+                    <div class="word-card"><span class="eng-word">Where</span><span class="hindi-meaning">कहाँ</span></div>
+                    <div class="word-card"><span class="eng-word">Which</span><span class="hindi-meaning">कौन सा</span></div>
+                    <div class="word-card"><span class="eng-word">What...for</span><span class="hindi-meaning">किस लिए</span></div>
+                    <div class="word-card"><span class="eng-word">How far</span><span class="hindi-meaning">कितनी दूर</span></div>
+                    <div class="word-card"><span class="eng-word">How long</span><span class="hindi-meaning">कितनी देर</span></div>
+                    <div class="word-card"><span class="eng-word">How many</span><span class="hindi-meaning">कितना (countable)</span></div>
+                    <div class="word-card"><span class="eng-word">How much</span><span class="hindi-meaning">कितना (uncountable)</span></div>
+                    <div class="word-card"><span class="eng-word">How many times</span><span class="hindi-meaning">कितनी बार</span></div>
+                    <div class="word-card"><span class="eng-word">How much time</span><span class="hindi-meaning">कितना समय</span></div>
+                    <div class="word-card"><span class="eng-word">For whom</span><span class="hindi-meaning">किसके लिए</span></div>
+                    <div class="word-card"><span class="eng-word">With whom</span><span class="hindi-meaning">किसके साथ</span></div>
+                    <div class="word-card"><span class="eng-word">What all</span><span class="hindi-meaning">क्या-क्या</span></div>
+                    <div class="word-card"><span class="eng-word">How all</span><span class="hindi-meaning">कैसे-कैसे</span></div>
+                    <div class="word-card"><span class="eng-word">Where all</span><span class="hindi-meaning">कहाँ-कहाँ</span></div>
+                    <div class="word-card"><span class="eng-word">Who all</span><span class="hindi-meaning">कौन-कौन</span></div>
+                    <div class="word-card"><span class="eng-word">Whom all</span><span class="hindi-meaning">किसको-किसको</span></div>
+                </div>
 
+                <!-- Additional Common Verbs -->
+                <h3>🏃 Common Verbs (क्रियाएँ)</h3>
+                <div class="word-grid">
+                    <div class="word-card"><span class="eng-word">Go</span><span class="hindi-meaning">जाना</span></div>
+                    <div class="word-card"><span class="eng-word">Come</span><span class="hindi-meaning">आना</span></div>
+                    <div class="word-card"><span class="eng-word">Eat</span><span class="hindi-meaning">खाना</span></div>
+                    <div class="word-card"><span class="eng-word">Drink</span><span class="hindi-meaning">पीना</span></div>
+                    <div class="word-card"><span class="eng-word">Sleep</span><span class="hindi-meaning">सोना</span></div>
+                    <div class="word-card"><span class="eng-word">Wake up</span><span class="hindi-meaning">जागना</span></div>
+                    <div class="word-card"><span class="eng-word">Read</span><span class="hindi-meaning">पढ़ना</span></div>
+                    <div class="word-card"><span class="eng-word">Write</span><span class="hindi-meaning">लिखना</span></div>
+                    <div class="word-card"><span class="eng-word">Speak</span><span class="hindi-meaning">बोलना</span></div>
+                    <div class="word-card"><span class="eng-word">Listen</span><span class="hindi-meaning">सुनना</span></div>
+                    <div class="word-card"><span class="eng-word">Work</span><span class="hindi-meaning">काम करना</span></div>
+                    <div class="word-card"><span class="eng-word">Play</span><span class="hindi-meaning">खेलना</span></div>
+                    <div class="word-card"><span class="eng-word">Learn</span><span class="hindi-meaning">सीखना</span></div>
+                    <div class="word-card"><span class="eng-word">Teach</span><span class="hindi-meaning">पढ़ाना</span></div>
+                    <div class="word-card"><span class="eng-word">Help</span><span class="hindi-meaning">मदद करना</span></div>
+                    <div class="word-card"><span class="eng-word">Ask</span><span class="hindi-meaning">पूछना</span></div>
+                    <div class="word-card"><span class="eng-word">Answer</span><span class="hindi-meaning">जवाब देना</span></div>
+                    <div class="word-card"><span class="eng-word">Open</span><span class="hindi-meaning">खोलना</span></div>
+                    <div class="word-card"><span class="eng-word">Close</span><span class="hindi-meaning">बंद करना</span></div>
+                    <div class="word-card"><span class="eng-word">Start</span><span class="hindi-meaning">शुरू करना</span></div>
+                    <div class="word-card"><span class="eng-word">Finish</span><span class="hindi-meaning">समाप्त करना</span></div>
+                </div>
 
-2. Use<br>
-उपयोग<br><br>
+                <!-- Nouns: People, Places, Things -->
+                <h3>🏠 Nouns (संज्ञाएँ)</h3>
+                <div class="word-grid">
+                    <div class="word-card"><span class="eng-word">Book</span><span class="hindi-meaning">किताब</span></div>
+                    <div class="word-card"><span class="eng-word">Pen</span><span class="hindi-meaning">पेन</span></div>
+                    <div class="word-card"><span class="eng-word">Table</span><span class="hindi-meaning">मेज</span></div>
+                    <div class="word-card"><span class="eng-word">Chair</span><span class="hindi-meaning">कुर्सी</span></div>
+                    <div class="word-card"><span class="eng-word">Door</span><span class="hindi-meaning">दरवाजा</span></div>
+                    <div class="word-card"><span class="eng-word">Window</span><span class="hindi-meaning">खिड़की</span></div>
+                    <div class="word-card"><span class="eng-word">Room</span><span class="hindi-meaning">कमरा</span></div>
+                    <div class="word-card"><span class="eng-word">House</span><span class="hindi-meaning">घर</span></div>
+                    <div class="word-card"><span class="eng-word">School</span><span class="hindi-meaning">स्कूल</span></div>
+                    <div class="word-card"><span class="eng-word">College</span><span class="hindi-meaning">कॉलेज</span></div>
+                    <div class="word-card"><span class="eng-word">Teacher</span><span class="hindi-meaning">शिक्षक</span></div>
+                    <div class="word-card"><span class="eng-word">Student</span><span class="hindi-meaning">छात्र</span></div>
+                    <div class="word-card"><span class="eng-word">Friend</span><span class="hindi-meaning">दोस्त</span></div>
+                    <div class="word-card"><span class="eng-word">Father</span><span class="hindi-meaning">पिता</span></div>
+                    <div class="word-card"><span class="eng-word">Mother</span><span class="hindi-meaning">माता</span></div>
+                    <div class="word-card"><span class="eng-word">Brother</span><span class="hindi-meaning">भाई</span></div>
+                    <div class="word-card"><span class="eng-word">Sister</span><span class="hindi-meaning">बहन</span></div>
+                </div>
 
+                <!-- Adjectives -->
+                <h3>🎨 Adjectives (विशेषण)</h3>
+                <div class="word-grid">
+                    <div class="word-card"><span class="eng-word">Good</span><span class="hindi-meaning">अच्छा</span></div>
+                    <div class="word-card"><span class="eng-word">Bad</span><span class="hindi-meaning">बुरा</span></div>
+                    <div class="word-card"><span class="eng-word">Big</span><span class="hindi-meaning">बड़ा</span></div>
+                    <div class="word-card"><span class="eng-word">Small</span><span class="hindi-meaning">छोटा</span></div>
+                    <div class="word-card"><span class="eng-word">Happy</span><span class="hindi-meaning">खुश</span></div>
+                    <div class="word-card"><span class="eng-word">Sad</span><span class="hindi-meaning">उदास</span></div>
+                    <div class="word-card"><span class="eng-word">Beautiful</span><span class="hindi-meaning">सुंदर</span></div>
+                    <div class="word-card"><span class="eng-word">Ugly</span><span class="hindi-meaning">बदसूरत</span></div>
+                    <div class="word-card"><span class="eng-word">Easy</span><span class="hindi-meaning">आसान</span></div>
+                    <div class="word-card"><span class="eng-word">Difficult</span><span class="hindi-meaning">कठिन</span></div>
+                    <div class="word-card"><span class="eng-word">Fast</span><span class="hindi-meaning">तेज़</span></div>
+                    <div class="word-card"><span class="eng-word">Slow</span><span class="hindi-meaning">धीमा</span></div>
+                </div>
 
-3. School<br>
-विद्यालय<br><br>
+                <!-- Prepositions & Conjunctions -->
+                <h3>🔗 Prepositions & Conjunctions</h3>
+                <div class="word-grid">
+                    <div class="word-card"><span class="eng-word">In</span><span class="hindi-meaning">में</span></div>
+                    <div class="word-card"><span class="eng-word">On</span><span class="hindi-meaning">पर</span></div>
+                    <div class="word-card"><span class="eng-word">Under</span><span class="hindi-meaning">नीचे</span></div>
+                    <div class="word-card"><span class="eng-word">Over</span><span class="hindi-meaning">ऊपर</span></div>
+                    <div class="word-card"><span class="eng-word">With</span><span class="hindi-meaning">साथ</span></div>
+                    <div class="word-card"><span class="eng-word">Without</span><span class="hindi-meaning">बिना</span></div>
+                    <div class="word-card"><span class="eng-word">But</span><span class="hindi-meaning">लेकिन</span></div>
+                    <div class="word-card"><span class="eng-word">So</span><span class="hindi-meaning">इसलिए</span></div>
+                    <div class="word-card"><span class="eng-word">Because</span><span class="hindi-meaning">क्योंकि</span></div>
+                    <div class="word-card"><span class="eng-word">If</span><span class="hindi-meaning">अगर</span></div>
+                </div>
 
-
-4. Whom<br>
-किसे, किसको (person, Obj.)<br><br>
-
-
-5. Whose<br>
-किसका<br><br>
-
-
-6. Why<br>
-क्यों<br><br>
-
-
-7. Why don't<br>
-क्यों नहीं<br><br>
-
-
-8. When<br>
-कब<br><br>
-
-
-9. Where<br>
-कहाँ<br><br>
-
-
-10. Which<br>
-कौन सा<br><br>
-
-
-11. What...for<br>
-किस लिए<br><br>
-
-
-12. How far<br>
-कितनी दूर<br><br>
-
-
-13. How long<br>
-कितनी देर<br><br>
-
-
-14. How many<br>
-कितना (countable)<br><br>
-
-
-15. How much<br>
-कितना (uncountable)<br><br>
-
-
-16. How many times<br>
-कितनी बार<br><br>
-
-
-17. How much time<br>
-कितना समय<br><br>
-
-
-18. For whom<br>
-किसके लिए<br><br>
-
-
-19. With whom<br>
-किसके साथ<br><br>
-
-
-20. What all<br>
-क्या-क्या<br><br>
-
-
-21. How all<br>
-कैसे-कैसे<br><br>
-
-
-22. Where all<br>
-कहाँ-कहाँ<br><br>
-
-
-23. Who all<br>
-कौन-कौन<br><br>
-
-
-24. Whom all<br>
-किसको-किसको<br><br>
-
-
-
-
-
+                <p style="margin-top: 1rem; text-align: center; color: var(--accent);"><i class="fas fa-language"></i> Learn these words daily to build a strong vocabulary foundation!</p>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2024 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
