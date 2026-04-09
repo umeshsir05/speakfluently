@@ -2,9 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Causative Verbs - Speak Fluently</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 0 0 1rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+        .example-box {
+            background: var(--glass-bg, rgba(0,180,216,0.05));
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border-left: 3px solid var(--accent, #00b4d8);
+        }
+        .example-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 0.8rem;
+            margin: 1rem 0;
+        }
+        .example-card {
+            background: var(--glass-bg, rgba(0,180,216,0.03));
+            padding: 0.7rem 1rem;
+            border-radius: 10px;
+            border-left: 2px solid var(--accent, #00b4d8);
+        }
+        .eng {
+            font-weight: 600;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .hindi {
+            color: var(--text-secondary, #4a627a);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        .structure {
+            background: rgba(0,180,216,0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 1rem;
+            margin: 0.5rem 0;
+            color: var(--accent-dark);
+        }
+        .note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            color: var(--text-secondary);
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-content {
+                padding: 1rem;
+            }
+            .example-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,168 +98,157 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
+
     <main>
-        <h2>CAUSATIVE VERB</h2>
-        
-
-
-
-
-<b>🌟 What is a Causative Verb?</b><br>
-
-👉 A causative verb shows that one person makes another person do something. <br>
-(मतलब: जब कोई इंसान किसी और से काम करवाता है।)<br>
-
-
----
-
-🎯 Main causative verbs in English<br>
-
-1. Make → मजबूर करना / करवाना<br>
-
-
-2. Have → किसी से काम करवाना<br>
-
-
-3. Get → किसी से काम करवाना / समझाना<br>
-
-
-4. Let → अनुमति देना (allow करना)<br>
-
-
-
-
-
-<b> 1. Make (force/compel) </b><br>
-👉 Structure:<br>
-Subject + make/makes + object + V¹ + object<br>
-Example <br>
- My teacher made me do homework.<br>
-
- मेरे शिक्षक ने मुझे होमवर्क करने पर मजबूर किया।<br>
-<pre>
-
-Ex①  मैं रोहन को हँसाता हूँ।
-I make Rohan laugh.
-
-(ii) तुम उसे रोज़ रुलाते हो।
-You make him cry everyday.
-
-(iii) वह अपनी बहन को रुलाता है।
-He makes his sister cry.
-
-(iv) मैं तुम्हे लिखवाता हूँ।
-I make you write.
-
-(v) I am making you write.
-मैं तुम्हे लिखवा रहा हूँ।
-
-(vi) I am making him do my work. 
-(मैं उसे अपना काम करा रहा हूँ)
-
-(vii) मैं रोहन को नहीं हँसाता हूँ।
-I don’t make Rohan laugh.
-
-(viii) मैं रवि को वहाँ भिजवाऊँगा।
-I will make Ravi go there.
-
-(ix) हम लोग उससे यह काम करवा सकते हैं।
-We can make him do this work.
-(i) मैंने अपनी बहन से खाना बनवाया।
-I made my sister cook food.
-
-(ii) वह मुझसे अपनी कार चलवा रहा था।
-He was making me drive his car.
-
-</pre>
----<br>
-
-<b> 2. Have (give responsibility) </b><br>
-इसका use किसी को कोई काम सौंपना (assign) या ज़िम्मेदारी देने के लिए करते हैं।)<br>
-
-👉 Structure:
-Subject + have/has + object + V¹ + object
-English: I had the mechanic repair my bike.<br>
-
-Hindi: मैंने मेकैनिक से अपनी बाइक ठीक करवाई।<br>
-
-
-
----<br>
-
-<b> 3. Get (persuade/arrange) </b><br>
-इसका उपयोग किसी को convince (मनाना, राज़ी करना) और कोई काम करवाने के लिए करते हैं।<br>
-👉 Structure:
-Subject + get/gets + object + to + V¹ + object
-English: I got my brother to clean the room.<br>
-
-Hindi: मैंने अपने भाई से कमरा साफ करवाया।<br>
-
-Ex. (i) वह अपनी माँ से कपड़े धुलवाता है।)<br>
-
-→ He makes his mother wash clothes. (Force)
-→ He gets his mother to wash clothes. (Convince))<br>
-
-(ii) मैं उससे अपना काम करवा रहा हूँ।)<br>
-
-→ I am making him do my work. (Force))<br>
-→ I am getting him to do my work. (Convince)
-)<br>
-(iii) मैंने उससे एक पत्र लिखवाया।)<br>
-
-→ He made me write a letter. (Force))<br>
-→ He got me write a letter. (Convince))<br>
-
-(iv) मैं उससे यह काम करवा सकता हूँ।)<br>
-
-
----<br>
-
-<b>4. Let (allow/permission) </b><br>
-
-👉 Structure:<br>
-Subject + let/lets + object + V¹ + object<br>
-
-English: My father let me go to the party.<br>
-
-Hindi: मेरे पिताजी ने मुझे पार्टी में जाने की इजाजत दी।<br>
-
-
-
----<br>
-
-<b> ✅ Shortcut to remember: </b><br>
-
-Make = force (मजबूरी)<br>
-
-Have = arrange (ज़िम्मेदारी देना)<br>
-
-Get = convince (समझाकर/मनाकर)<br>
-
-Let = allow (अनुमति देना)<br>
-
-
-
----<br>
-
-
+        <div class="lesson-container">
+            <div class="lesson-content">
+                <h2>🌟 Causative Verbs (प्रेरणार्थक क्रियाएँ)</h2>
+                <p>A causative verb shows that one person makes another person do something. <br>
+                (मतलब: जब कोई इंसान किसी और से काम करवाता है।)</p>
+
+                <h3>🎯 Main Causative Verbs in English</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">Make</div><div class="hindi">मजबूर करना / करवाना</div></div>
+                    <div class="example-card"><div class="eng">Have</div><div class="hindi">किसी से काम करवाना</div></div>
+                    <div class="example-card"><div class="eng">Get</div><div class="hindi">किसी से काम करवाना / समझाना</div></div>
+                    <div class="example-card"><div class="eng">Let</div><div class="hindi">अनुमति देना (allow करना)</div></div>
+                </div>
+
+                <!-- 1. Make -->
+                <h3>1. Make (force/compel)</h3>
+                <div class="structure">Structure: Subject + make/makes + object + V¹ + object</div>
+                <div class="example-box">
+                    <div class="eng">My teacher made me do homework.</div>
+                    <div class="hindi">मेरे शिक्षक ने मुझे होमवर्क करने पर मजबूर किया।</div>
+                </div>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">I make Rohan laugh.</div><div class="hindi">मैं रोहन को हँसाता हूँ।</div></div>
+                    <div class="example-card"><div class="eng">You make him cry everyday.</div><div class="hindi">तुम उसे रोज़ रुलाते हो।</div></div>
+                    <div class="example-card"><div class="eng">He makes his sister cry.</div><div class="hindi">वह अपनी बहन को रुलाता है।</div></div>
+                    <div class="example-card"><div class="eng">I make you write.</div><div class="hindi">मैं तुम्हे लिखवाता हूँ।</div></div>
+                    <div class="example-card"><div class="eng">I am making you write.</div><div class="hindi">मैं तुम्हे लिखवा रहा हूँ।</div></div>
+                    <div class="example-card"><div class="eng">I am making him do my work.</div><div class="hindi">मैं उसे अपना काम करा रहा हूँ।</div></div>
+                    <div class="example-card"><div class="eng">I don’t make Rohan laugh.</div><div class="hindi">मैं रोहन को नहीं हँसाता हूँ।</div></div>
+                    <div class="example-card"><div class="eng">I will make Ravi go there.</div><div class="hindi">मैं रवि को वहाँ भिजवाऊँगा।</div></div>
+                    <div class="example-card"><div class="eng">We can make him do this work.</div><div class="hindi">हम लोग उससे यह काम करवा सकते हैं।</div></div>
+                    <div class="example-card"><div class="eng">I made my sister cook food.</div><div class="hindi">मैंने अपनी बहन से खाना बनवाया।</div></div>
+                    <div class="example-card"><div class="eng">He was making me drive his car.</div><div class="hindi">वह मुझसे अपनी कार चलवा रहा था।</div></div>
+                </div>
+
+                <!-- 2. Have -->
+                <h3>2. Have (give responsibility)</h3>
+                <p>इसका उपयोग किसी को कोई काम सौंपना (assign) या ज़िम्मेदारी देने के लिए करते हैं।</p>
+                <div class="structure">Structure: Subject + have/has + object + V¹ + object</div>
+                <div class="example-box">
+                    <div class="eng">I had the mechanic repair my bike.</div>
+                    <div class="hindi">मैंने मेकैनिक से अपनी बाइक ठीक करवाई।</div>
+                </div>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">I have my assistant prepare the report.</div><div class="hindi">मैं अपने सहायक से रिपोर्ट तैयार करवाता हूँ।</div></div>
+                    <div class="example-card"><div class="eng">She will have her brother carry the luggage.</div><div class="hindi">वह अपने भाई से सामान उठवाएगी।</div></div>
+                </div>
+
+                <!-- 3. Get -->
+                <h3>3. Get (persuade/arrange)</h3>
+                <p>इसका उपयोग किसी को convince (मनाना, राज़ी करना) और कोई काम करवाने के लिए करते हैं।</p>
+                <div class="structure">Structure: Subject + get/gets + object + to + V¹ + object</div>
+                <div class="example-box">
+                    <div class="eng">I got my brother to clean the room.</div>
+                    <div class="hindi">मैंने अपने भाई से कमरा साफ करवाया।</div>
+                </div>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">He makes his mother wash clothes. (Force)</div><div class="hindi">वह अपनी माँ से कपड़े धुलवाता है (जबरदस्ती)</div></div>
+                    <div class="example-card"><div class="eng">He gets his mother to wash clothes. (Convince)</div><div class="hindi">वह अपनी माँ से कपड़े धुलवाता है (मनाकर)</div></div>
+                    <div class="example-card"><div class="eng">I am making him do my work. (Force)</div><div class="hindi">मैं उससे अपना काम करवा रहा हूँ (जबरदस्ती)</div></div>
+                    <div class="example-card"><div class="eng">I am getting him to do my work. (Convince)</div><div class="hindi">मैं उससे अपना काम करवा रहा हूँ (मनाकर)</div></div>
+                    <div class="example-card"><div class="eng">He made me write a letter. (Force)</div><div class="hindi">उसने मुझसे एक पत्र लिखवाया (जबरदस्ती)</div></div>
+                    <div class="example-card"><div class="eng">He got me to write a letter. (Convince)</div><div class="hindi">उसने मुझसे एक पत्र लिखवाया (मनाकर)</div></div>
+                </div>
+
+                <!-- 4. Let -->
+                <h3>4. Let (allow/permission)</h3>
+                <div class="structure">Structure: Subject + let/lets + object + V¹ + object</div>
+                <div class="example-box">
+                    <div class="eng">My father let me go to the party.</div>
+                    <div class="hindi">मेरे पिताजी ने मुझे पार्टी में जाने की इजाजत दी।</div>
+                </div>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">She lets her child play outside.</div><div class="hindi">वह अपने बच्चे को बाहर खेलने देती है।</div></div>
+                    <div class="example-card"><div class="eng">Please let me explain.</div><div class="hindi">कृपया मुझे समझाने दें।</div></div>
+                </div>
+
+                <div class="note">
+                    <i class="fas fa-lightbulb"></i> <strong>✅ Shortcut to remember:</strong><br>
+                    <strong>Make</strong> = force (मजबूरी)<br>
+                    <strong>Have</strong> = arrange / give responsibility (ज़िम्मेदारी देना)<br>
+                    <strong>Get</strong> = convince (समझाकर/मनाकर)<br>
+                    <strong>Let</strong> = allow (अनुमति देना)
+                </div>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2024 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
