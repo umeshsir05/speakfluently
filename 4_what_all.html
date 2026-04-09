@@ -2,9 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>What all / Who all - Speak Fluently</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 0 0 1rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+        .phrase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        .phrase-card {
+            background: var(--glass-bg, rgba(0,180,216,0.03));
+            padding: 0.7rem 1rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent, #00b4d8);
+            transition: transform 0.2s;
+        }
+        .phrase-card:hover {
+            transform: translateX(5px);
+            background: rgba(0,180,216,0.08);
+        }
+        .eng {
+            font-weight: 600;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .hindi {
+            color: var(--text-secondary, #4a627a);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        .note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            color: var(--text-secondary);
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-content {
+                padding: 1rem;
+            }
+            .phrase-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,114 +87,152 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="notes.html">Tenses</a></li>
-                <li><a href="notes2.html">Notes-2</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
             </ul>
         </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
+
     <main>
-        <h2>What all/Who all </h2>
-        <pre>
+        <div class="lesson-container">
+            <div class="lesson-content">
+                <h2>❓ What all / Who all / Where all / How often</h2>
+                <p>In spoken English, we often add <strong>"all"</strong> to question words to ask about multiple things, people, places, or ways.</p>
 
+                <!-- What all -->
+                <h3>📦 What all (क्या-क्या)</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">What all do you have?</div><div class="hindi">आपके पास क्या-क्या है?</div></div>
+                    <div class="phrase-card"><div class="eng">What all have you entered?</div><div class="hindi">आपने क्या-क्या दर्ज किया है?</div></div>
+                    <div class="phrase-card"><div class="eng">What all will you eat?</div><div class="hindi">आप क्या-क्या खाओगे?</div></div>
+                    <div class="phrase-card"><div class="eng">What all did you do there?</div><div class="hindi">आपने वहाँ क्या-क्या किया?</div></div>
+                    <div class="phrase-card"><div class="eng">What all did you see?</div><div class="hindi">आपने क्या-क्या देखा?</div></div>
+                    <div class="phrase-card"><div class="eng">What all do you need for the trip?</div><div class="hindi">यात्रा के लिए आपको क्या-क्या चाहिए?</div></div>
+                    <div class="phrase-card"><div class="eng">What all did she bring?</div><div class="hindi">वह क्या-क्या लाई?</div></div>
+                    <div class="phrase-card"><div class="eng">What all have you learned today?</div><div class="hindi">आज आपने क्या-क्या सीखा?</div></div>
+                </div>
 
-What All (क्या-क्या)
+                <!-- Who all -->
+                <h3>👥 Who all (कौन-कौन)</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Who all are coming to the party?</div><div class="hindi">पार्टी में कौन-कौन आ रहे हैं?</div></div>
+                    <div class="phrase-card"><div class="eng">Who all want to come?</div><div class="hindi">कौन-कौन आना चाहता है?</div></div>
+                    <div class="phrase-card"><div class="eng">Who all are participating in the competition?</div><div class="hindi">प्रतियोगिता में कौन-कौन भाग ले रहे हैं?</div></div>
+                    <div class="phrase-card"><div class="eng">Who all have finished their homework?</div><div class="hindi">किस-किस ने अपना होमवर्क पूरा कर लिया?</div></div>
+                    <div class="phrase-card"><div class="eng">Who all were present at the meeting?</div><div class="hindi">मीटिंग में कौन-कौन मौजूद थे?</div></div>
+                    <div class="phrase-card"><div class="eng">Who all will join us for dinner?</div><div class="hindi">रात के खाने में हमारे साथ कौन-कौन शामिल होगा?</div></div>
+                    <div class="phrase-card"><div class="eng">Who all did you invite?</div><div class="hindi">आपने किन-किन को आमंत्रित किया?</div></div>
+                </div>
 
-1. What all do you have? आपके पास क्या-क्या है?
+                <!-- Where all -->
+                <h3>📍 Where all (कहाँ-कहाँ)</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Where all will you go tomorrow?</div><div class="hindi">आप कल कहाँ-कहाँ जाओगे?</div></div>
+                    <div class="phrase-card"><div class="eng">Where all did he go?</div><div class="hindi">वह कहाँ-कहाँ गया?</div></div>
+                    <div class="phrase-card"><div class="eng">Where all have you traveled?</div><div class="hindi">आप कहाँ-कहाँ घूम चुके हैं?</div></div>
+                    <div class="phrase-card"><div class="eng">Where all do you want to visit?</div><div class="hindi">आप कहाँ-कहाँ घूमना चाहते हैं?</div></div>
+                    <div class="phrase-card"><div class="eng">Where all did she live before?</div><div class="hindi">वह पहले कहाँ-कहाँ रहती थी?</div></div>
+                </div>
 
+                <!-- How often / How all -->
+                <h3>🔄 How often / How many times (कितनी बार)</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">How often should I take medicine?</div><div class="hindi">मुझे दवा कितनी बार लेनी चाहिए?</div></div>
+                    <div class="phrase-card"><div class="eng">How often does he wash his hair?</div><div class="hindi">वह अपने बाल कितनी बार धोता है?</div></div>
+                    <div class="phrase-card"><div class="eng">How many times have you been to Delhi?</div><div class="hindi">आप कितनी बार दिल्ली जा चुके हैं?</div></div>
+                    <div class="phrase-card"><div class="eng">How often do you exercise?</div><div class="hindi">आप कितनी बार व्यायाम करते हैं?</div></div>
+                    <div class="phrase-card"><div class="eng">How many times did you call him?</div><div class="hindi">आपने उसे कितनी बार फोन किया?</div></div>
+                </div>
 
-2. What all have you entered? आपने क्या-क्या दर्ज किया है?
+                <!-- When all -->
+                <h3>⏰ When all (कब-कब)</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">When all do you get free time?</div><div class="hindi">आपको कब-कब खाली समय मिलता है?</div></div>
+                    <div class="phrase-card"><div class="eng">When all will you be available?</div><div class="hindi">आप कब-कब उपलब्ध रहोगे?</div></div>
+                    <div class="phrase-card"><div class="eng">When all did they visit you?</div><div class="hindi">वे कब-कब आपसे मिलने आए?</div></div>
+                </div>
 
+                <!-- Which all -->
+                <h3>🤔 Which all (कौन-कौन सी / किन-किन)</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Which all books have you read?</div><div class="hindi">आपने कौन-कौन सी किताबें पढ़ी हैं?</div></div>
+                    <div class="phrase-card"><div class="eng">Which all places did you like?</div><div class="hindi">आपको कौन-कौन सी जगहें पसंद आईं?</div></div>
+                    <div class="phrase-card"><div class="eng">Which all subjects do you study?</div><div class="hindi">आप कौन-कौन से विषय पढ़ते हो?</div></div>
+                    <div class="phrase-card"><div class="eng">Which all colors are available?</div><div class="hindi">कौन-कौन से रंग उपलब्ध हैं?</div></div>
+                </div>
 
-3. What all will you eat? आप क्या-क्या खाओगे?
+                <!-- Why all (informal) -->
+                <h3>🤷 Why all (क्यों-क्यों) – less common, but used in informal speech</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-card"><div class="eng">Why all did you have to go there?</div><div class="hindi">तुम्हें वहाँ क्यों-क्यों जाना पड़ा?</div></div>
+                    <div class="phrase-card"><div class="eng">Why all are you asking so many questions?</div><div class="hindi">तुम इतने सारे सवाल क्यों-क्यों पूछ रहे हो?</div></div>
+                </div>
 
+                <div class="note">
+                    <i class="fas fa-lightbulb"></i> <strong>Note:</strong> In standard English, "What all", "Who all", "Where all", etc., are mainly used in informal spoken English (especially Indian English). They emphasize plurality. For formal writing, use "What", "Who", "Where" + context, or rephrase.
+                </div>
 
-4. What all did you do there? आपने वहां क्या-क्या किया?
-
-
-5. What all did you see? आपने वहां क्या-क्या देखा?
-
-
-6. What all do you have? आपके पास क्या-क्या है?
-
-
-7. What all have you entered? आपने क्या-क्या दर्ज किया है?
-
-
-8. What all will you eat? आप क्या-क्या खाओगे?
-
-
-9. What all did you do there? आपने वहां क्या-क्या किया?
-
-
-10. What all did you see? आपने वहां क्या-क्या देखा?
-
-
----
-
-Where All (कहाँ-कहाँ)
-
-1. Where all will you go tomorrow? आप कल कहाँ-कहाँ जाओंगे?
-
-
-2. Where all did he go? वह कहाँ-कहाँ गया?
-
-
-3. Where all will you go tomorrow? आप कल कहाँ-कहाँ जाओंगे?
-
-
-4. Where all did he go? वह कहाँ-कहाँ गया?
-
-
----
-
-How All (कैसे-कैसे / कितनी बार)
-
-1. How often should I take medicine? मुझे दवा कितनी बार लेनी चाहिए?
-
-
-2. How often does he wash his hair? वह अपने बाल कितनी बार धोता है?
-
-
-3. How often should I take medicine? मुझे दवा कितनी बार लेनी चाहिए?
-
-
-4. How often does he wash his hair? वह अपने बाल कितनी बार धोता है?
-
-
-
-Who All (कौन-कौन)
-
-1. Who all are coming to the party? पार्टी में कौन-कौन आ रहे हैं?
-
-
-2. Who all want to come? कौन-कौन आना चाहता है?
-
-
-3. Who all are participating in the competition? प्रतियोगिता में कौन-कौन भाग ले रहे हैं?
-
-
-4. Who all are coming to the party? पार्टी में कौन-कौन आ रहे हैं?
-
-
-5. Who all want to come? कौन-कौन आना चाहता है?
-
-
-6. Who all are participating in the competition? प्रतियोगिता में कौन-कौन भाग ले रहे हैं?
-
-
-</pre>
+                <p style="margin-top: 1rem; text-align: center; color: var(--accent);"><i class="fas fa-comments"></i> Practice these to sound more natural in everyday conversations!</p>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <b>2024 SpeakFluent. All rights reserved.Developed by Umesh Banjare</b></p>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
