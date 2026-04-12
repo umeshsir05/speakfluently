@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Interrogative Sentences - English Grammar | Speak Fluently</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .lesson-content {
+            background: var(--card-bg, white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow, 0 10px 30px rgba(0,0,0,0.1));
+            border: 1px solid var(--border, rgba(0,180,216,0.2));
+        }
+        .lesson-content h2 {
+            color: var(--accent, #00b4d8);
+            margin: 0 0 1rem;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent, #00b4d8);
+            padding-left: 15px;
+        }
+        .lesson-content h3 {
+            color: var(--accent, #00b4d8);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+        .rule-box {
+            background: var(--glass-bg, rgba(0,180,216,0.05));
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border-left: 3px solid var(--accent);
+        }
+        .example-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 0.8rem;
+            margin: 1rem 0;
+        }
+        .example-card {
+            background: var(--glass-bg, rgba(0,180,216,0.03));
+            padding: 0.8rem 1rem;
+            border-radius: 10px;
+            border-left: 2px solid var(--accent);
+        }
+        .eng {
+            font-weight: 500;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .hindi {
+            color: var(--text-secondary, #4a627a);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--bg, #f4f7fc);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .grammar-table th, .grammar-table td {
+            border: 1px solid var(--border, #ddd);
+            padding: 10px;
+            text-align: left;
+            color: var(--text-primary, #1e2a3e);
+        }
+        .grammar-table th {
+            background: var(--accent, #00b4d8);
+            color: white;
+            font-weight: 600;
+        }
+        body.dark .grammar-table th {
+            background: var(--accent-dark, #0284c7);
+        }
+        .note {
+            background: rgba(0,180,216,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            color: var(--text-secondary);
+        }
+        @media screen and (max-width: 768px) {
+            .lesson-content {
+                padding: 1rem;
+            }
+            .example-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Speak Fluently</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="notes.html"><i class="fas fa-language"></i> Tenses</a></li>
+                <li><a href="notes2.html"><i class="fas fa-book-open"></i> Notes-2</a></li>
+                <li><a href="grammar.html"><i class="fas fa-spell-check"></i> Grammar</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
+            </ul>
+        </nav>
+        <div class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="lesson-container">
+            <div class="lesson-content">
+                <h2>❓ Interrogative Sentences (प्रश्नवाचक वाक्य)</h2>
+                <p>Interrogative sentences are used to ask questions. They end with a question mark (?). There are two main types:</p>
+                <ul>
+                    <li><strong>Yes/No Questions</strong> – जिनका उत्तर 'हाँ' या 'नहीं' में होता है (Helping verbs से शुरू)</li>
+                    <li><strong>Wh-Questions</strong> – जिनमें Wh-word (what, where, when, why, who, whom, whose, which, how) का प्रयोग होता है।</li>
+                </ul>
+
+                <!-- ========== PART 1: YES/NO QUESTIONS ========== -->
+                <h2>📌 Yes/No Questions (Helping Verbs Interrogative)</h2>
+                <p>इन प्रश्नों की शुरुआत Helping Verb (is, am, are, was, were, do, does, did, has, have, had, will, shall, can, could, may, might, should, would, must) से होती है।</p>
+
+                <h3>🔹 Structure</h3>
+                <div class="rule-box">
+                    <strong>Formula:</strong> Helping Verb + Subject + Main Verb + Object ?<br>
+                    <strong>Example:</strong> Is she writing a letter?
+                </div>
+
+                <h3>🔹 Helping Verbs List for Yes/No Questions</h3>
+                <table class="grammar-table">
+                    <thead><tr><th>Helping Verb</th><th>Used For</th><th>Example</th></tr></thead>
+                    <tbody>
+                        <tr><td>is/am/are</td><td>Present Continuous, Passive, etc.</td><td>Is he coming?</td></tr>
+                        <tr><td>was/were</td><td>Past Continuous, Passive</td><td>Were they playing?</td></tr>
+                        <tr><td>do/does</td><td>Present Simple</td><td>Do you like tea?</td></tr>
+                        <tr><td>did</td><td>Past Simple</td><td>Did she call you?</td></tr>
+                        <tr><td>has/have</td><td>Present Perfect</td><td>Have you eaten?</td></tr>
+                        <tr><td>had</td><td>Past Perfect</td><td>Had he left?</td></tr>
+                        <tr><td>will/shall</td><td>Future</td><td>Will they come?</td></tr>
+                        <tr><td>can/could</td><td>Ability/Permission</td><td>Can you swim?</td></tr>
+                        <tr><td>may/might</td><td>Possibility/Permission</td><td>May I come in?</td></tr>
+                        <tr><td>should/would/must</td><td>Advice/Request/Obligation</td><td>Should I go?</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>📝 Examples of Yes/No Questions (with Hindi)</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">Is she your sister?</div><div class="hindi">क्या वह तुम्हारी बहन है?</div></div>
+                    <div class="example-card"><div class="eng">Are you coming with us?</div><div class="hindi">क्या तुम हमारे साथ आ रहे हो?</div></div>
+                    <div class="example-card"><div class="eng">Do you speak English?</div><div class="hindi">क्या तुम अंग्रेज़ी बोलते हो?</div></div>
+                    <div class="example-card"><div class="eng">Does he play cricket?</div><div class="hindi">क्या वह क्रिकेट खेलता है?</div></div>
+                    <div class="example-card"><div class="eng">Did you finish your homework?</div><div class="hindi">क्या तुमने अपना होमवर्क पूरा कर लिया?</div></div>
+                    <div class="example-card"><div class="eng">Have you seen the Taj Mahal?</div><div class="hindi">क्या तुमने ताजमहल देखा है?</div></div>
+                    <div class="example-card"><div class="eng">Will you help me?</div><div class="hindi">क्या तुम मेरी मदद करोगे?</div></div>
+                    <div class="example-card"><div class="eng">Can you drive a car?</div><div class="hindi">क्या तुम कार चला सकते हो?</div></div>
+                    <div class="example-card"><div class="eng">May I use your phone?</div><div class="hindi">क्या मैं आपका फोन इस्तेमाल कर सकता हूँ?</div></div>
+                    <div class="example-card"><div class="eng">Should I wait for you?</div><div class="hindi">क्या मुझे तुम्हारा इंतज़ार करना चाहिए?</div></div>
+                </div>
+
+                <!-- ========== PART 2: WH-QUESTIONS ========== -->
+                <h2>📌 Wh-Questions (प्रश्नवाचक शब्दों वाले वाक्य)</h2>
+                <p>इन प्रश्नों की शुरुआत Wh-word (What, Where, When, Why, Who, Whom, Whose, Which, How) से होती है। ये open-ended questions होते हैं।</p>
+
+                <h3>🔹 Structure</h3>
+                <div class="rule-box">
+                    <strong>Formula:</strong> Wh-word + Helping Verb + Subject + Main Verb + Object ?<br>
+                    <strong>Example:</strong> Why are you crying?
+                </div>
+
+                <h3>🔹 Wh-Words and Their Uses</h3>
+                <table class="grammar-table">
+                    <thead><tr><th>Wh-Word</th><th>Use (Hindi)</th><th>Example</th></tr></thead>
+                    <tbody>
+                        <tr><td>What</td><td>क्या (thing, action)</td><td>What is your name?</td></tr>
+                        <tr><td>Where</td><td>कहाँ (place)</td><td>Where do you live?</td></tr>
+                        <tr><td>When</td><td>कब (time)</td><td>When will you come?</td></tr>
+                        <tr><td>Why</td><td>क्यों (reason)</td><td>Why are you sad?</td></tr>
+                        <tr><td>Who</td><td>कौन (person - subject)</td><td>Who broke the glass?</td></tr>
+                        <tr><td>Whom</td><td>किसे / किसको (person - object)</td><td>Whom did you meet?</td></tr>
+                        <tr><td>Whose</td><td>किसका (possession)</td><td>Whose book is this?</td></tr>
+                        <tr><td>Which</td><td>कौन सा (choice)</td><td>Which color do you like?</td></tr>
+                        <tr><td>How</td><td>कैसे (manner)</td><td>How do you go to school?</td></tr>
+                        <tr><td>How many</td><td>कितने (countable)</td><td>How many students are present?</td></tr>
+                        <tr><td>How much</td><td>कितना (uncountable)</td><td>How much water do you drink?</td></tr>
+                        <tr><td>How long</td><td>कितनी देर</td><td>How long will you stay?</td></tr>
+                        <tr><td>How far</td><td>कितनी दूर</td><td>How far is the station?</td></tr>
+                        <tr><td>How often</td><td>कितनी बार</td><td>How often do you exercise?</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>📝 Examples of Wh-Questions (with Hindi)</h3>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">What are you doing?</div><div class="hindi">तुम क्या कर रहे हो?</div></div>
+                    <div class="example-card"><div class="eng">Where is the nearest hospital?</div><div class="hindi">नज़दीकी अस्पताल कहाँ है?</div></div>
+                    <div class="example-card"><div class="eng">When did you arrive?</div><div class="hindi">तुम कब पहुंचे?</div></div>
+                    <div class="example-card"><div class="eng">Why are you late?</div><div class="hindi">तुम देर से क्यों हो?</div></div>
+                    <div class="example-card"><div class="eng">Who is your best friend?</div><div class="hindi">तुम्हारा सबसे अच्छा दोस्त कौन है?</div></div>
+                    <div class="example-card"><div class="eng">Whom did you call?</div><div class="hindi">तुमने किसे फोन किया?</div></div>
+                    <div class="example-card"><div class="eng">Whose car is this?</div><div class="hindi">यह किसकी गाड़ी है?</div></div>
+                    <div class="example-card"><div class="eng">Which movie do you want to watch?</div><div class="hindi">तुम कौन सी फिल्म देखना चाहते हो?</div></div>
+                    <div class="example-card"><div class="eng">How do you solve this problem?</div><div class="hindi">तुम इस समस्या को कैसे हल करते हो?</div></div>
+                    <div class="example-card"><div class="eng">How many people are coming?</div><div class="hindi">कितने लोग आ रहे हैं?</div></div>
+                    <div class="example-card"><div class="eng">How much money do you need?</div><div class="hindi">तुम्हें कितने पैसे चाहिए?</div></div>
+                    <div class="example-card"><div class="eng">How long have you been waiting?</div><div class="hindi">तुम कितनी देर से इंतज़ार कर रहे हो?</div></div>
+                </div>
+
+                <h3>📝 Special Case: Question without Helping Verb (Who as Subject)</h3>
+                <div class="rule-box">
+                    जब प्रश्न Subject से शुरू होता है (जैसे Who, Which, What), तो Helping Verb का प्रयोग नहीं होता।<br>
+                    <strong>Structure:</strong> Who/Which/What + Main Verb + Object ?<br>
+                    <strong>Examples:</strong><br>
+                    - Who <span class="eng">broke</span> the window? (किसने खिड़की तोड़ी?)<br>
+                    - Which train <span class="eng">goes</span> to Delhi? (कौन सी ट्रेन दिल्ली जाती है?)<br>
+                    - What <span class="eng">happened</span> yesterday? (कल क्या हुआ?)
+                </div>
+
+                <h3>🔹 Negative Interrogative Sentences</h3>
+                <p>प्रश्नों को नकारात्मक बनाने के लिए 'not' का प्रयोग करते हैं।</p>
+                <div class="example-grid">
+                    <div class="example-card"><div class="eng">Don't you like coffee?</div><div class="hindi">क्या तुम्हें कॉफी पसंद नहीं है?</div></div>
+                    <div class="example-card"><div class="eng">Why didn't you come?</div><div class="hindi">तुम क्यों नहीं आए?</div></div>
+                    <div class="example-card"><div class="eng">Hasn't she finished her work?</div><div class="hindi">क्या उसने अपना काम पूरा नहीं किया है?</div></div>
+                </div>
+
+                <!-- Practice Exercises -->
+                <h2>✍️ Practice Exercises</h2>
+                <div class="rule-box">
+                    <strong>Change the following sentences into interrogative (Yes/No or Wh- as indicated):</strong><br><br>
+                    1. She is reading a book. (Yes/No) → ____________________<br>
+                    2. They went to the park. (Yes/No) → ____________________<br>
+                    3. He has completed his homework. (Yes/No) → ____________________<br>
+                    4. You like pizza. (Yes/No) → ____________________<br>
+                    5. The train is arriving at 5 PM. (When) → ____________________<br>
+                    6. He lives in Mumbai. (Where) → ____________________<br>
+                    7. She is crying because she failed. (Why) → ____________________<br>
+                    8. This pen belongs to Rohan. (Whose) → ____________________<br>
+                    9. She met the President. (Whom) → ____________________<br>
+                    10. He can speak French. (Can) → ____________________
+                </div>
+                <div class="note">
+                    <i class="fas fa-lightbulb"></i> <strong>Answers:</strong><br>
+                    1. Is she reading a book?<br>
+                    2. Did they go to the park?<br>
+                    3. Has he completed his homework?<br>
+                    4. Do you like pizza?<br>
+                    5. When is the train arriving?<br>
+                    6. Where does he live?<br>
+                    7. Why is she crying?<br>
+                    8. Whose pen is this?<br>
+                    9. Whom did she meet?<br>
+                    10. Can he speak French?
+                </div>
+
+                <div class="note">
+                    <i class="fas fa-lightbulb"></i> <strong>Remember:</strong> For Yes/No questions, answer is 'Yes' or 'No'. For Wh-questions, answer is a complete sentence. Always put question mark at the end.
+                </div>
+
+                <p style="margin-top: 1rem; text-align: center; color: var(--accent);"><i class="fas fa-question-circle"></i> Practice these question forms to become fluent in English conversation!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <b>2025 SpeakFluently. All rights reserved. Developed by Umesh Banjare</b></p>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark');
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (darkToggle) darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        if (darkToggle) {
+            darkToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-menu ul li a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target))
+                    navMenu.classList.remove('active');
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
